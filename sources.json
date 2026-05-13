@@ -5,7 +5,6 @@
     "category": "orchestrator",
     "threat": "crit",
     "urls": [
-      "https://cursor.com",
       "https://cursor.com/changelog"
     ],
     "watch_keywords": ["session", "agent", "background", "multi-agent", "workspace", "context"]
@@ -16,8 +15,8 @@
     "category": "orchestrator",
     "threat": "crit",
     "urls": [
-      "https://claude.ai",
-      "https://www.anthropic.com/news"
+      "https://www.anthropic.com/news",
+      "https://www.anthropic.com/blog"
     ],
     "watch_keywords": ["project", "artifact", "collaboration", "session", "workspace", "agent", "routines"]
   },
@@ -27,7 +26,7 @@
     "category": "orchestrator",
     "threat": "hi",
     "urls": [
-      "https://github.blog/category/product/",
+      "https://github.blog/ai-and-ml/feed/",
       "https://github.com/features/copilot"
     ],
     "watch_keywords": ["agent", "workspace", "multi-file", "background", "session", "autonomous"]
@@ -38,7 +37,6 @@
     "category": "workspace",
     "threat": "hi",
     "urls": [
-      "https://linear.app",
       "https://linear.app/changelog"
     ],
     "watch_keywords": ["AI", "agent", "automation", "session", "ambient", "background"]
@@ -49,8 +47,8 @@
     "category": "workspace",
     "threat": "md",
     "urls": [
-      "https://www.notion.so/product/ai",
-      "https://www.notion.so/releases"
+      "https://www.notion.so/releases/rss.xml",
+      "https://www.notion.so/product/ai"
     ],
     "watch_keywords": ["agent", "session", "automation", "connector", "live", "sync"]
   },
@@ -71,7 +69,6 @@
     "category": "workspace",
     "threat": "md",
     "urls": [
-      "https://reflect.app",
       "https://reflect.app/blog"
     ],
     "watch_keywords": ["AI", "agent", "session", "sync", "peripheral", "menu bar"]
@@ -82,8 +79,8 @@
     "category": "peripheral",
     "threat": "md",
     "urls": [
-      "https://www.raycast.com",
-      "https://www.raycast.com/changelog"
+      "https://raycast.com/changelog/feed.xml",
+      "https://www.raycast.com"
     ],
     "watch_keywords": ["AI", "agent", "session", "collaboration", "team", "context"]
   },
@@ -93,8 +90,8 @@
     "category": "orchestrator",
     "threat": "md",
     "urls": [
-      "https://replit.com",
-      "https://blog.replit.com"
+      "https://blog.replit.com/feed.xml",
+      "https://replit.com"
     ],
     "watch_keywords": ["agent", "multi-agent", "session", "collaborative", "ambient", "workspace"]
   },
