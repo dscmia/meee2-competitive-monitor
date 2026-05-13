@@ -1,0 +1,76 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg:        #0d0d0f;
+  --bg2:       #141418;
+  --bg3:       #1a1a1f;
+  --border:    #252530;
+  --border2:   #2e2e3a;
+  --text:      #e8e8f0;
+  --text2:     #8888a0;
+  --text3:     #555568;
+  --accent:    #7c6af5;
+  --accent-dim:#3d3578;
+  --red:       #f04040;
+  --red-dim:   #3d1515;
+  --amber:     #e8a020;
+  --amber-dim: #3a2a08;
+  --green:     #30b870;
+  --green-dim: #0d3020;
+}
+
+html, body {
+  height: 100%;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans), system-ui, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* scrollbar */
+::-webkit-scrollbar { width: 3px; height: 3px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border2); border-radius: 2px; }
+::-webkit-scrollbar-thumb:hover { background: var(--text3); }
+
+a { color: inherit; text-decoration: none; }
+button { font-family: inherit; cursor: pointer; }
+
+/* ── Global badge base ── */
+.badge {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 9px;
+  font-weight: 500;
+  padding: 2px 7px;
+  border-radius: 3px;
+  text-transform: uppercase;
+  letter-spacing: .03em;
+  white-space: nowrap;
+}
+.badge-crit {
+  background: var(--red-dim);
+  color: var(--red);
+  border: 1px solid rgba(240,64,64,.3);
+}
+.badge-hi {
+  background: var(--amber-dim);
+  color: var(--amber);
+  border: 1px solid rgba(232,160,32,.3);
+}
+.badge-md {
+  background: rgba(136,136,160,.1);
+  color: var(--text2);
+  border: 1px solid var(--border2);
+}
+.badge-lo {
+  background: var(--green-dim);
+  color: var(--green);
+  border: 1px solid rgba(48,184,112,.25);
+}

@@ -1,0 +1,47 @@
+.banner {
+  background: var(--red-dim);
+  border-bottom: 1px solid rgba(240,64,64,.3);
+  padding: 0 20px;
+}
+.bannerInner {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 0;
+}
+.bannerLeft { display: flex; align-items: flex-start; gap: 12px; flex: 1; min-width: 0; }
+.bannerLabel {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 500;
+  color: var(--red);
+  padding: 3px 8px;
+  border: 1px solid rgba(240,64,64,.4);
+  border-radius: 3px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+.alertList { display: flex; flex-direction: column; gap: 4px; flex: 1; min-width: 0; }
+.alert {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  font-size: 12px;
+  line-height: 1.4;
+  flex-wrap: wrap;
+}
+.alertName { font-weight: 500; color: var(--red); flex-shrink: 0; }
+.alertHeadline { color: var(--text2); }
+.dismiss {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text3);
+  background: transparent;
+  border: none;
+  padding: 4px;
+  flex-shrink: 0;
+  transition: color .15s;
+}
+.dismiss:hover { color: var(--red); }

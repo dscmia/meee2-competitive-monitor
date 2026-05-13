@@ -1,0 +1,13 @@
+{
+  "report_date": null,
+  "generated_at": null,
+  "summary": {
+    "total_tracked": 0,
+    "fetched_ok": 0,
+    "fetch_error": 0,
+    "has_changes": 0,
+    "new_alerts": 0
+  },
+  "competitors": [],
+  "alerts": []
+}

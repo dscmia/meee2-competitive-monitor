@@ -1,0 +1,111 @@
+[
+  {
+    "id": "cursor",
+    "name": "Cursor",
+    "category": "orchestrator",
+    "threat": "crit",
+    "urls": [
+      "https://cursor.com",
+      "https://cursor.com/changelog"
+    ],
+    "watch_keywords": ["session", "agent", "background", "multi-agent", "workspace", "context"]
+  },
+  {
+    "id": "claude-ai",
+    "name": "Claude.ai",
+    "category": "orchestrator",
+    "threat": "crit",
+    "urls": [
+      "https://claude.ai",
+      "https://www.anthropic.com/news"
+    ],
+    "watch_keywords": ["project", "artifact", "collaboration", "session", "workspace", "agent", "routines"]
+  },
+  {
+    "id": "github-copilot",
+    "name": "GitHub Copilot",
+    "category": "orchestrator",
+    "threat": "hi",
+    "urls": [
+      "https://github.blog/category/product/",
+      "https://github.com/features/copilot"
+    ],
+    "watch_keywords": ["agent", "workspace", "multi-file", "background", "session", "autonomous"]
+  },
+  {
+    "id": "linear",
+    "name": "Linear",
+    "category": "workspace",
+    "threat": "hi",
+    "urls": [
+      "https://linear.app",
+      "https://linear.app/changelog"
+    ],
+    "watch_keywords": ["AI", "agent", "automation", "session", "ambient", "background"]
+  },
+  {
+    "id": "notion-ai",
+    "name": "Notion AI",
+    "category": "workspace",
+    "threat": "md",
+    "urls": [
+      "https://www.notion.so/product/ai",
+      "https://www.notion.so/releases"
+    ],
+    "watch_keywords": ["agent", "session", "automation", "connector", "live", "sync"]
+  },
+  {
+    "id": "slack",
+    "name": "Slack",
+    "category": "comms",
+    "threat": "md",
+    "urls": [
+      "https://slack.com/blog/productivity",
+      "https://slack.com/features"
+    ],
+    "watch_keywords": ["AI", "agent", "canvas", "automation", "workspace", "huddle"]
+  },
+  {
+    "id": "reflect",
+    "name": "Reflect",
+    "category": "workspace",
+    "threat": "md",
+    "urls": [
+      "https://reflect.app",
+      "https://reflect.app/blog"
+    ],
+    "watch_keywords": ["AI", "agent", "session", "sync", "peripheral", "menu bar"]
+  },
+  {
+    "id": "raycast",
+    "name": "Raycast",
+    "category": "peripheral",
+    "threat": "md",
+    "urls": [
+      "https://www.raycast.com",
+      "https://www.raycast.com/changelog"
+    ],
+    "watch_keywords": ["AI", "agent", "session", "collaboration", "team", "context"]
+  },
+  {
+    "id": "replit",
+    "name": "Replit",
+    "category": "orchestrator",
+    "threat": "md",
+    "urls": [
+      "https://replit.com",
+      "https://blog.replit.com"
+    ],
+    "watch_keywords": ["agent", "multi-agent", "session", "collaborative", "ambient", "workspace"]
+  },
+  {
+    "id": "superwhisper",
+    "name": "Superwhisper",
+    "category": "peripheral",
+    "threat": "lo",
+    "urls": [
+      "https://superwhisper.com"
+    ],
+    "watch_keywords": ["AI", "agent", "integration", "workspace", "session"]
+  }
+]
