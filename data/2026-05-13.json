@@ -1,6 +1,6 @@
 {
   "report_date": "2026-05-13",
-  "generated_at": "2026-05-13T00:00:00Z",
+  "generated_at": "2026-05-13T06:00:00Z",
   "summary": {
     "total_tracked": 10,
     "fetched_ok": 1,
@@ -17,7 +17,7 @@
       "threat_changed": false,
       "has_changes": false,
       "fetch_status": "error",
-      "fetched_urls": ["https://cursor.com", "https://cursor.com/changelog"],
+      "fetched_urls": ["https://cursor.com/changelog"],
       "raw_snapshot": null,
       "content_hash": null,
       "last_seen_at": null,
@@ -33,7 +33,7 @@
       "threat_changed": false,
       "has_changes": false,
       "fetch_status": "error",
-      "fetched_urls": ["https://claude.ai", "https://www.anthropic.com/news"],
+      "fetched_urls": ["https://www.anthropic.com/news", "https://www.anthropic.com/blog"],
       "raw_snapshot": null,
       "content_hash": null,
       "last_seen_at": null,
@@ -50,46 +50,38 @@
       "has_changes": true,
       "fetch_status": "ok",
       "fetched_urls": ["https://github.com/features/copilot"],
-      "raw_snapshot": "# GitHub Copilot: Key Marketing Copy & Features\n\n## Main Marketing Message\n\"Command your craft\" – GitHub's positioning emphasizes Copilot as \"Your AI accelerator for every workflow, from the editor to the enterprise.\"\n\n## Agent & Autonomous Features\n- **Agents on GitHub**: \"Assign tasks to agents like Copilot, Claude by Anthropic, and OpenAI Codex, and let them plan, explore, and execute work autonomously\"\n- Cloud agent capability enabling background task execution\n- Agent mode with request limits (50/month on Free tier, unlimited on Pro+)\n\n## Workspace & Context Features\n- **Copilot Spaces**: \"Turn Copilot into a project expert\" by creating shared sources of truth with docs and repository context\n- Multi-file awareness in editor context\n- Access to \"frameworks, languages, and dependencies\" information\n\n## Terminal & CLI Integration\n- GitHub Copilot CLI for directing agents \"using natural language\" to \"plan, build, and execute complex workflows\"\n- Works across GitHub, IDEs, terminals, and chat applications\n\n## Development Workflow Features\n- Code completion and inline suggestions\n- Code review capabilities\n- Chat assistance in editor and on GitHub.com\n- Supports \"IDE, CLI and GitHub Mobile\" environments\n\n## Multi-Model Support\nUsers can \"choose from leading LLMs optimized for speed, accuracy, or cost\" including Claude, GPT-5 mini, Haiku 4.5, and others.",
-      "content_hash": "# GitHub Copilot: Key Marketing Copy & Features\n\n## Main Marketing Message\n\"Command your craft\" – GitHub's positioning emphasizes Copilot as \"Your AI accelerator",
-      "last_seen_at": "2026-05-13T00:00:00Z",
+      "raw_snapshot": "# GitHub Copilot: Features, Capabilities & Positioning\n\n## Core Positioning\nGitHub Copilot is positioned as \"Your AI accelerator for every workflow, from the editor to the enterprise.\" The product emphasizes being \"the world's most widely adopted AI developer tool\" with millions of individual users and tens of thousands of business customers.\n\n## Key Capabilities\n\n**Code Development & Assistance:**\n- Inline code suggestions and completions\n- AI-powered chat assistance in IDEs\n- Code explanations and documentation answers\n- \"Agent mode\" for autonomous task execution\n- Code review functionality\n\n**Platform Integration:**\n- Native GitHub.com integration\n- Support across VS Code, Visual Studio, JetBrains IDEs, Neovim, Xcode, and other editors\n- GitHub CLI terminal support\n- GitHub Mobile access\n\n**Customization & Enterprise Features:**\n- Copilot Spaces for project expertise and shared knowledge\n- Custom agents and third-party integrations\n- Enterprise-grade audit logs and governance controls\n- MCP server security controls\n- Organization codebase indexing\n\n## Productivity Claims\nDevelopers using Copilot report \"up to 75% higher satisfaction\" with their jobs and are \"up to 55% more productive at writing code.\" A customer case study mentions \"94% increase in developer productivity.\"\n\n## Pricing Tiers\n- **Free**: 2,000 completions, 50 monthly chat requests\n- **Pro**: $10/month, unlimited features with premium model access\n- **Pro+**: $39/month, advanced models and expanded capabilities\n- **Business/Enterprise**: Organization-focused with admin controls",
+      "content_hash": "# GitHub Copilot: Features, Capabilities & Positioning\n\n## Core Positioning\nGitHub Copilot is positioned as \"Your AI accelerator for every workflow, from the editor to the enterprise.\" The product e",
+      "last_seen_at": "2026-05-13T06:00:00Z",
       "changes": [
         {
           "type": "new_feature",
-          "description": "自主 Agent 任务分配：可将任务分配给 Copilot、Claude、Codex 等 agent，让其在后台自主规划和执行",
-          "evidence": "「Assign tasks to agents like Copilot, Claude by Anthropic, and OpenAI Codex, and let them plan, explore, and execute work autonomously」",
+          "description": "MCP server security controls：Copilot 新增对 MCP 服务端的安全管理层，成为 MCP 工具接入的企业级信任锚点",
+          "evidence": "「MCP server security controls」（Customization & Enterprise Features 部分，上次快照中未见）",
           "source_url": "https://github.com/features/copilot",
-          "meee2_relevance": "锚点 #1：AI = 快 session，在后台自主执行任务，逼近「AI session 与人 session 同协议」框架",
+          "meee2_relevance": "锚点 #2：跨工具 artifact live link——Copilot 托管 MCP server 安全层意味着它正在成为跨工具集成的控制平面；锚点 #4：跨 session / 跨工具 / 跨 owner artifact pull 的基础设施管控层",
           "threat_signal": true
         },
         {
           "type": "new_feature",
-          "description": "Copilot Spaces：为项目创建跨 repo + 文档的共享 context 源，成为团队共享知识节点",
-          "evidence": "「Copilot Spaces: Turn Copilot into a project expert by creating shared sources of truth with docs and repository context」",
+          "description": "Organization codebase indexing：新增组织级代码库索引，建立跨 repo 的企业范围 context 感知",
+          "evidence": "「Organization codebase indexing」（Customization & Enterprise Features 部分，上次快照中未见）",
           "source_url": "https://github.com/features/copilot",
-          "meee2_relevance": "锚点 #2：跨工具 artifact live context；锚点 #4：跨 session / 跨工具 artifact pull 的早期形态",
-          "threat_signal": true
-        },
-        {
-          "type": "new_feature",
-          "description": "CLI 自然语言指令驱动 agent 执行复杂工作流，覆盖 GitHub、IDE、终端、移动端",
-          "evidence": "「GitHub Copilot CLI for directing agents using natural language to plan, build, and execute complex workflows」",
-          "source_url": "https://github.com/features/copilot",
-          "meee2_relevance": "锚点 #5：Peripheral 层延伸——CLI + 终端 = 不切焦点触发 agent session",
+          "meee2_relevance": "锚点 #4：跨 session / 跨工具 / 跨 owner artifact pull——组织级索引是跨 owner artifact 拉取的底层基础设施",
           "threat_signal": false
         },
         {
-          "type": "positioning",
-          "description": "多模型支持（Claude、GPT-5 mini、Haiku 4.5），向模型无关的 agent 平台定位演化",
-          "evidence": "「choose from leading LLMs optimized for speed, accuracy, or cost including Claude, GPT-5 mini, Haiku 4.5, and others」",
+          "type": "new_feature",
+          "description": "Custom agents and third-party integrations：自定义 agent 与第三方集成被正式列为独立特性类别，agent 生态扩展意图明确",
+          "evidence": "「Custom agents and third-party integrations」（Customization & Enterprise Features 部分）",
           "source_url": "https://github.com/features/copilot",
           "meee2_relevance": null,
           "threat_signal": false
         }
       ],
       "key_findings": [
-        "Agents on GitHub 已支持跨 Copilot/Claude/Codex 的自主任务执行，后台运行能力明确",
-        "Copilot Spaces 构建跨 repo + 文档的项目级 context 共享，向 meee2 cross-tool artifact 方向靠拢"
+        "MCP server security controls 是本次最显著新增：Copilot 正式成为 MCP 生态的企业安全管控层，直接切入 meee2 跨工具 artifact 集成的基础设施位置",
+        "Organization codebase indexing 表明 Copilot 正在构建跨 repo、跨 owner 的上下文感知能力，与 meee2 锚点 #4 方向一致"
       ],
       "no_change_reason": null
     },
@@ -101,7 +93,7 @@
       "threat_changed": false,
       "has_changes": false,
       "fetch_status": "error",
-      "fetched_urls": ["https://linear.app", "https://linear.app/changelog"],
+      "fetched_urls": ["https://linear.app/changelog"],
       "raw_snapshot": null,
       "content_hash": null,
       "last_seen_at": null,
@@ -117,7 +109,7 @@
       "threat_changed": false,
       "has_changes": false,
       "fetch_status": "error",
-      "fetched_urls": ["https://www.notion.so/product/ai", "https://www.notion.so/releases"],
+      "fetched_urls": ["https://www.notion.so/releases/rss.xml", "https://www.notion.so/product/ai"],
       "raw_snapshot": null,
       "content_hash": null,
       "last_seen_at": null,
@@ -149,7 +141,7 @@
       "threat_changed": false,
       "has_changes": false,
       "fetch_status": "error",
-      "fetched_urls": ["https://reflect.app", "https://reflect.app/blog"],
+      "fetched_urls": ["https://reflect.app/blog"],
       "raw_snapshot": null,
       "content_hash": null,
       "last_seen_at": null,
@@ -165,7 +157,7 @@
       "threat_changed": false,
       "has_changes": false,
       "fetch_status": "error",
-      "fetched_urls": ["https://www.raycast.com", "https://www.raycast.com/changelog"],
+      "fetched_urls": ["https://raycast.com/changelog/feed.xml", "https://www.raycast.com"],
       "raw_snapshot": null,
       "content_hash": null,
       "last_seen_at": null,
@@ -181,7 +173,7 @@
       "threat_changed": false,
       "has_changes": false,
       "fetch_status": "error",
-      "fetched_urls": ["https://replit.com", "https://blog.replit.com"],
+      "fetched_urls": ["https://blog.replit.com/feed.xml", "https://replit.com"],
       "raw_snapshot": null,
       "content_hash": null,
       "last_seen_at": null,
@@ -211,9 +203,9 @@
       "competitor_id": "github-copilot",
       "competitor_name": "GitHub Copilot",
       "severity": "hi",
-      "headline": "Agents on GitHub 实现后台自主执行 + Copilot Spaces 构建跨工具 context 共享，双向逼近 meee2 核心锚点",
-      "evidence": "「Assign tasks to agents like Copilot, Claude by Anthropic, and OpenAI Codex, and let them plan, explore, and execute work autonomously」；「Copilot Spaces: Turn Copilot into a project expert by creating shared sources of truth with docs and repository context」",
-      "action_suggestion": "重点关注 Copilot Spaces 的跨工具 artifact 拉取能力是否演化为 live link（而非 snapshot）；若出现 session 级别的 human-AI 协作协议，威胁等级应升至 crit"
+      "headline": "Copilot 新增 MCP server security controls，正式成为跨工具 MCP 生态的企业安全管控层",
+      "evidence": "「MCP server security controls」（Enterprise Features 部分，上次快照未见此条目）",
+      "action_suggestion": "重点追踪 Copilot MCP 安全层是否演化为跨工具 artifact 的统一代理/路由层；若 Copilot 开始托管跨工具 live context（而非 snapshot），应将威胁等级升至 crit；可考虑在 meee2 中明确 live link vs. snapshot 的差异化叙事，以此与 Copilot 的 MCP 管控定位拉开距离"
     }
   ]
 }
