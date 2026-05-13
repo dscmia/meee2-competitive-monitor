@@ -1,12 +1,12 @@
 {
   "report_date": "2026-05-13",
-  "generated_at": "2026-05-13T00:00:00Z",
+  "generated_at": "2026-05-13T08:42:00Z",
   "summary": {
     "total_tracked": 10,
     "fetched_ok": 1,
     "fetch_error": 9,
     "has_changes": 1,
-    "new_alerts": 1
+    "new_alerts": 0
   },
   "competitors": [
     {
@@ -17,7 +17,7 @@
       "threat_changed": false,
       "has_changes": false,
       "fetch_status": "error",
-      "fetched_urls": ["https://cursor.com", "https://cursor.com/changelog"],
+      "fetched_urls": ["https://cursor.com/changelog"],
       "raw_snapshot": null,
       "content_hash": null,
       "last_seen_at": null,
@@ -33,7 +33,7 @@
       "threat_changed": false,
       "has_changes": false,
       "fetch_status": "error",
-      "fetched_urls": ["https://claude.ai", "https://www.anthropic.com/news"],
+      "fetched_urls": ["https://www.anthropic.com/news", "https://www.anthropic.com/blog"],
       "raw_snapshot": null,
       "content_hash": null,
       "last_seen_at": null,
@@ -50,46 +50,30 @@
       "has_changes": true,
       "fetch_status": "ok",
       "fetched_urls": ["https://github.com/features/copilot"],
-      "raw_snapshot": "# GitHub Copilot: Key Marketing Copy & Features\n\n## Main Marketing Message\n\"Command your craft\" – GitHub's positioning emphasizes Copilot as \"Your AI accelerator for every workflow, from the editor to the enterprise.\"\n\n## Agent & Autonomous Features\n- **Agents on GitHub**: \"Assign tasks to agents like Copilot, Claude by Anthropic, and OpenAI Codex, and let them plan, explore, and execute work autonomously\"\n- Cloud agent capability enabling background task execution\n- Agent mode with request limits (50/month on Free tier, unlimited on Pro+)\n\n## Workspace & Context Features\n- **Copilot Spaces**: \"Turn Copilot into a project expert\" by creating shared sources of truth with docs and repository context\n- Multi-file awareness in editor context\n- Access to \"frameworks, languages, and dependencies\" information\n\n## Terminal & CLI Integration\n- GitHub Copilot CLI for directing agents \"using natural language\" to \"plan, build, and execute complex workflows\"\n- Works across GitHub, IDEs, terminals, and chat applications\n\n## Development Workflow Features\n- Code completion and inline suggestions\n- Code review capabilities\n- Chat assistance in editor and on GitHub.com\n- Supports \"IDE, CLI and GitHub Mobile\" environments\n\n## Multi-Model Support\nUsers can \"choose from leading LLMs optimized for speed, accuracy, or cost\" including Claude, GPT-5 mini, Haiku 4.5, and others.",
-      "content_hash": "# GitHub Copilot: Key Marketing Copy & Features\n\n## Main Marketing Message\n\"Command your craft\" – GitHub's positioning emphasizes Copilot as \"Your AI accelerator",
-      "last_seen_at": "2026-05-13T00:00:00Z",
+      "raw_snapshot": "# GitHub Copilot Marketing Copy & Feature Descriptions\n\n## Agents & Autonomous Execution\n\"Assign tasks to agents like Copilot, Claude by Anthropic, and OpenAI Codex, and let them plan, explore, and execute work autonomously in the background.\"\n\nGitHub positions agents as task-handling systems capable of operating independently while developers focus on other priorities. The platform supports multiple AI providers for agent functionality.\n\n## Copilot Spaces\n\"Turn Copilot into a project expert\" through shared knowledge repositories. This feature enables teams to establish consistent reference materials by combining organizational documentation and codebase information.\n\n## Context & Session Management\nThe system examines code in user editors, focusing on surrounding lines while incorporating information from open files and repository URLs to inform suggestions. For chat functionality, the system builds contextual prompts combining user input with active document code, selections, and workspace details.\n\nGitHub retains prompts and suggestions for 28 days across most access methods, though IDE-based chat and completions don't retain this data. Session continuity depends on thread history for effective responses.\n\n## Background Task Execution\nThe platform emphasizes autonomous workflow execution, allowing developers to \"watch it plan, build, and execute complex workflows powered by your GitHub context\" through the Copilot CLI.\n\n## Customization & Enterprise Controls\n\"Manage agent usage with enterprise-grade controls\" including detailed audit logs and centralized governance from a single control plane.",
+      "content_hash": "# GitHub Copilot Marketing Copy & Feature Descriptions\n\n## Agents & Autonomous Execution\n\"Assign tasks to agents like Copilot, Claude by Anthropic, and OpenAI Codex",
+      "last_seen_at": "2026-05-13T08:42:00Z",
       "changes": [
         {
           "type": "new_feature",
-          "description": "自主 Agent 任务分配：可将任务分配给 Copilot、Claude、Codex 等 agent，让其在后台自主规划和执行",
-          "evidence": "「Assign tasks to agents like Copilot, Claude by Anthropic, and OpenAI Codex, and let them plan, explore, and execute work autonomously」",
+          "description": "页面新增 'Context & Session Management' 章节，明确阐述 session 连续性依赖线程历史，并披露 28 天 prompt 数据保留策略",
+          "evidence": "「Session continuity depends on thread history for effective responses. GitHub retains prompts and suggestions for 28 days across most access methods」",
           "source_url": "https://github.com/features/copilot",
-          "meee2_relevance": "锚点 #1：AI = 快 session，在后台自主执行任务，逼近「AI session 与人 session 同协议」框架",
-          "threat_signal": true
-        },
-        {
-          "type": "new_feature",
-          "description": "Copilot Spaces：为项目创建跨 repo + 文档的共享 context 源，成为团队共享知识节点",
-          "evidence": "「Copilot Spaces: Turn Copilot into a project expert by creating shared sources of truth with docs and repository context」",
-          "source_url": "https://github.com/features/copilot",
-          "meee2_relevance": "锚点 #2：跨工具 artifact live context；锚点 #4：跨 session / 跨工具 artifact pull 的早期形态",
-          "threat_signal": true
-        },
-        {
-          "type": "new_feature",
-          "description": "CLI 自然语言指令驱动 agent 执行复杂工作流，覆盖 GitHub、IDE、终端、移动端",
-          "evidence": "「GitHub Copilot CLI for directing agents using natural language to plan, build, and execute complex workflows」",
-          "source_url": "https://github.com/features/copilot",
-          "meee2_relevance": "锚点 #5：Peripheral 层延伸——CLI + 终端 = 不切焦点触发 agent session",
+          "meee2_relevance": "锚点 #1：Copilot 的 session 模型是线程历史驱动，与 meee2 session 同构协议有本质差异——可作为产品差异化论据",
           "threat_signal": false
         },
         {
           "type": "positioning",
-          "description": "多模型支持（Claude、GPT-5 mini、Haiku 4.5），向模型无关的 agent 平台定位演化",
-          "evidence": "「choose from leading LLMs optimized for speed, accuracy, or cost including Claude, GPT-5 mini, Haiku 4.5, and others」",
+          "description": "新增 'Enterprise Controls' 板块，强调 agent 使用的企业级管控和审计日志，向企业市场延伸",
+          "evidence": "「Manage agent usage with enterprise-grade controls including detailed audit logs and centralized governance from a single control plane」",
           "source_url": "https://github.com/features/copilot",
           "meee2_relevance": null,
           "threat_signal": false
         }
       ],
       "key_findings": [
-        "Agents on GitHub 已支持跨 Copilot/Claude/Codex 的自主任务执行，后台运行能力明确",
-        "Copilot Spaces 构建跨 repo + 文档的项目级 context 共享，向 meee2 cross-tool artifact 方向靠拢"
+        "Copilot 将 session 连续性定义为「线程历史驱动」，与 meee2 session 协议存在本质差异，可作为差异化论据",
+        "企业级 agent 管控能力（audit logs + centralized governance）新增，Copilot 加速向组织维度扩张"
       ],
       "no_change_reason": null
     },
@@ -101,7 +85,7 @@
       "threat_changed": false,
       "has_changes": false,
       "fetch_status": "error",
-      "fetched_urls": ["https://linear.app", "https://linear.app/changelog"],
+      "fetched_urls": ["https://linear.app/changelog"],
       "raw_snapshot": null,
       "content_hash": null,
       "last_seen_at": null,
@@ -117,7 +101,7 @@
       "threat_changed": false,
       "has_changes": false,
       "fetch_status": "error",
-      "fetched_urls": ["https://www.notion.so/product/ai", "https://www.notion.so/releases"],
+      "fetched_urls": ["https://www.notion.so/releases/rss.xml", "https://www.notion.so/product/ai"],
       "raw_snapshot": null,
       "content_hash": null,
       "last_seen_at": null,
@@ -149,7 +133,7 @@
       "threat_changed": false,
       "has_changes": false,
       "fetch_status": "error",
-      "fetched_urls": ["https://reflect.app", "https://reflect.app/blog"],
+      "fetched_urls": ["https://reflect.app/blog"],
       "raw_snapshot": null,
       "content_hash": null,
       "last_seen_at": null,
@@ -165,7 +149,7 @@
       "threat_changed": false,
       "has_changes": false,
       "fetch_status": "error",
-      "fetched_urls": ["https://www.raycast.com", "https://www.raycast.com/changelog"],
+      "fetched_urls": ["https://raycast.com/changelog/feed.xml", "https://www.raycast.com"],
       "raw_snapshot": null,
       "content_hash": null,
       "last_seen_at": null,
@@ -181,7 +165,7 @@
       "threat_changed": false,
       "has_changes": false,
       "fetch_status": "error",
-      "fetched_urls": ["https://replit.com", "https://blog.replit.com"],
+      "fetched_urls": ["https://blog.replit.com/feed.xml", "https://replit.com"],
       "raw_snapshot": null,
       "content_hash": null,
       "last_seen_at": null,
@@ -206,14 +190,5 @@
       "no_change_reason": "抓取失败（HTTP 403），无法分析"
     }
   ],
-  "alerts": [
-    {
-      "competitor_id": "github-copilot",
-      "competitor_name": "GitHub Copilot",
-      "severity": "hi",
-      "headline": "Agents on GitHub 实现后台自主执行 + Copilot Spaces 构建跨工具 context 共享，双向逼近 meee2 核心锚点",
-      "evidence": "「Assign tasks to agents like Copilot, Claude by Anthropic, and OpenAI Codex, and let them plan, explore, and execute work autonomously」；「Copilot Spaces: Turn Copilot into a project expert by creating shared sources of truth with docs and repository context」",
-      "action_suggestion": "重点关注 Copilot Spaces 的跨工具 artifact 拉取能力是否演化为 live link（而非 snapshot）；若出现 session 级别的 human-AI 协作协议，威胁等级应升至 crit"
-    }
-  ]
+  "alerts": []
 }
