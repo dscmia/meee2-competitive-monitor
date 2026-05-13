@@ -5,9 +5,11 @@
     "category": "orchestrator",
     "threat": "crit",
     "urls": [
-      "https://cursor.com/changelog"
+      "https://cursor.com/changelog",
+      "https://cursor.com/blog"
     ],
-    "watch_keywords": ["session", "agent", "background", "multi-agent", "workspace", "context"]
+    "watch_keywords": ["session", "agent", "background", "multi-agent", "workspace", "context"],
+    "fallback_search": "Cursor editor new features OR changelog agent session 2026"
   },
   {
     "id": "claude-ai",
@@ -15,10 +17,11 @@
     "category": "orchestrator",
     "threat": "crit",
     "urls": [
-      "https://www.anthropic.com/news",
-      "https://www.anthropic.com/blog"
+      "https://docs.anthropic.com/en/release-notes/overview",
+      "https://www.anthropic.com/news"
     ],
-    "watch_keywords": ["project", "artifact", "collaboration", "session", "workspace", "agent", "routines"]
+    "watch_keywords": ["project", "artifact", "collaboration", "session", "workspace", "agent", "routines"],
+    "fallback_search": "Anthropic Claude new features agent project artifact 2026"
   },
   {
     "id": "github-copilot",
@@ -26,10 +29,11 @@
     "category": "orchestrator",
     "threat": "hi",
     "urls": [
-      "https://github.blog/ai-and-ml/feed/",
-      "https://github.com/features/copilot"
+      "https://github.com/features/copilot",
+      "https://github.blog/category/ai/"
     ],
-    "watch_keywords": ["agent", "workspace", "multi-file", "background", "session", "autonomous"]
+    "watch_keywords": ["agent", "workspace", "multi-file", "background", "session", "autonomous"],
+    "fallback_search": "GitHub Copilot new features agent workspace autonomous 2026"
   },
   {
     "id": "linear",
@@ -37,9 +41,11 @@
     "category": "workspace",
     "threat": "hi",
     "urls": [
-      "https://linear.app/changelog"
+      "https://linear.app/changelog",
+      "https://linear.app/blog"
     ],
-    "watch_keywords": ["AI", "agent", "automation", "session", "ambient", "background"]
+    "watch_keywords": ["AI", "agent", "automation", "session", "ambient", "background"],
+    "fallback_search": "Linear app changelog AI agent automation new features 2026"
   },
   {
     "id": "notion-ai",
@@ -48,9 +54,10 @@
     "threat": "md",
     "urls": [
       "https://www.notion.so/releases/rss.xml",
-      "https://www.notion.so/product/ai"
+      "https://www.notion.so/blog"
     ],
-    "watch_keywords": ["agent", "session", "automation", "connector", "live", "sync"]
+    "watch_keywords": ["agent", "session", "automation", "connector", "live", "sync"],
+    "fallback_search": "Notion AI new features agent automation connector 2026"
   },
   {
     "id": "slack",
@@ -61,7 +68,8 @@
       "https://slack.com/blog/productivity",
       "https://slack.com/features"
     ],
-    "watch_keywords": ["AI", "agent", "canvas", "automation", "workspace", "huddle"]
+    "watch_keywords": ["AI", "agent", "canvas", "automation", "workspace", "huddle"],
+    "fallback_search": "Slack AI agent canvas automation new features 2026"
   },
   {
     "id": "reflect",
@@ -69,9 +77,11 @@
     "category": "workspace",
     "threat": "md",
     "urls": [
-      "https://reflect.app/blog"
+      "https://reflect.app/blog",
+      "https://reflect.app"
     ],
-    "watch_keywords": ["AI", "agent", "session", "sync", "peripheral", "menu bar"]
+    "watch_keywords": ["AI", "agent", "session", "sync", "peripheral", "menu bar"],
+    "fallback_search": "Reflect app new features AI agent menu bar 2026"
   },
   {
     "id": "raycast",
@@ -79,10 +89,11 @@
     "category": "peripheral",
     "threat": "md",
     "urls": [
-      "https://raycast.com/changelog/feed.xml",
+      "https://www.raycast.com/changelog",
       "https://www.raycast.com"
     ],
-    "watch_keywords": ["AI", "agent", "session", "collaboration", "team", "context"]
+    "watch_keywords": ["AI", "agent", "session", "collaboration", "team", "context"],
+    "fallback_search": "Raycast changelog AI agent collaboration new features 2026"
   },
   {
     "id": "replit",
@@ -90,10 +101,11 @@
     "category": "orchestrator",
     "threat": "md",
     "urls": [
-      "https://blog.replit.com/feed.xml",
-      "https://replit.com"
+      "https://blog.replit.com",
+      "https://replit.com/blog"
     ],
-    "watch_keywords": ["agent", "multi-agent", "session", "collaborative", "ambient", "workspace"]
+    "watch_keywords": ["agent", "multi-agent", "session", "collaborative", "ambient", "workspace"],
+    "fallback_search": "Replit agent multi-agent workspace new features 2026"
   },
   {
     "id": "superwhisper",
@@ -103,6 +115,7 @@
     "urls": [
       "https://superwhisper.com"
     ],
-    "watch_keywords": ["AI", "agent", "integration", "workspace", "session"]
+    "watch_keywords": ["AI", "agent", "integration", "workspace", "session"],
+    "fallback_search": "Superwhisper new features AI agent integration 2026"
   }
 ]

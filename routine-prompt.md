@@ -32,18 +32,29 @@ cat sources.json
 
 对 sources.json 中每个竞品，按顺序执行：
 
-### 2a. 抓取
+### 2a. 抓取（两阶段策略）
 
-用 WebFetch 工具直接抓取该竞品的每个 source URL（无需任何代理前缀）。
+**阶段 1 — WebFetch 直接抓取**
 
-**并发策略：**
+用 WebFetch 工具抓取该竞品的每个 source URL（无需任何代理前缀）。
+
+并发策略：
 - `crit` / `hi` 竞品：逐个串行处理（确保分析质量）
 - `md` / `lo` 竞品：同一批次内的所有 URL 可在同一轮并行 WebFetch，节省时间
 
-**抓取规则：**
-- 提取正文文本，去掉导航栏、页脚等噪音
-- 记录抓取时间
-- 如果抓取失败（403/404/timeout），标注 `fetch_status: "error"`，跳过分析，不得推测内容
+抓取规则：提取正文文本，去掉导航栏、页脚等噪音，记录抓取时间。
+
+**阶段 2 — WebSearch 兜底（当阶段 1 所有 URL 均返回 403/404/timeout 时自动触发）**
+
+用 WebSearch 工具，对该竞品执行 sources.json 中的 `fallback_search` 查询（若无该字段则自行构造：`[竞品名] changelog new features [当前年份]`）。
+
+从搜索结果摘要提取有效内容时：
+- 只记录搜索结果中明确描述的产品变化，不得填充联想
+- `fetch_status` 记为 `"search"`（区别于直接抓取的 `"ok"`）
+- `fetched_urls` 填入实际搜索结果来源 URL（非搜索引擎主页）
+- 每条 `evidence` 须注明内容来自搜索摘要
+
+**失败处理：** 两阶段均无有效内容 → `fetch_status: "error"`，不得推测。
 
 ### 2b. 快速 diff
 
