@@ -36,10 +36,18 @@ cat sources.json
 
 用 WebFetch 工具抓取该竞品的每个 source URL。
 
-抓取规则：
+**抓取规则：**
+
+判断 URL 类型：
+- **RSS/XML**：URL 以 `.xml` 结尾，或路径包含 `/feed`（如 `/feed/`, `/feed.xml`）→ 直接 WebFetch 原始 URL
+- **HTML 页面**：其他所有 URL → 在原 URL 前加 `https://r.jina.ai/` 再 WebFetch
+  - 例：`https://cursor.com/changelog` → `https://r.jina.ai/https://cursor.com/changelog`
+  - Jina AI 会渲染页面并返回干净文本，绕过大多数反爬机制
+
+其他规则：
 - 提取正文文本，去掉导航栏、页脚等噪音
 - 记录抓取时间
-- 如果抓取失败，标注 `fetch_status: "error"`，跳过分析，不得推测内容
+- 如果抓取失败（403/404/timeout），标注 `fetch_status: "error"`，跳过分析，不得推测内容
 
 ### 2b. 快速 diff
 
