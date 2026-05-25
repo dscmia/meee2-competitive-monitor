@@ -34,16 +34,36 @@ cat sources.json
 
 ### 2a. 抓取
 
-用 WebFetch 工具直接抓取该竞品的每个 source URL（无需任何代理前缀）。
+对每个竞品按以下三级策略依次尝试，任意一级成功即停止，记录实际使用的 URL。
+
+**第一级 — 主 URL（`urls` 字段）**
+
+用 WebFetch 抓取 `urls` 中的每个地址。
+
+- 提取正文文本，去掉导航栏、页脚等噪音
+- 只要有一个 URL 返回有效内容，即视为成功，进入 2b
+
+**第二级 — Fallback URL（`fallback_urls` 字段，仅当第一级全部 403/404/timeout 时）**
+
+用 WebFetch 抓取 `fallback_urls`（主要是 HN Algolia JSON API）。
+
+- HN Algolia 返回 JSON，提取 `hits` 数组中每条的 `title`、`url`、`story_text`（前 300 字符）
+- 只要返回有效 JSON，即视为成功，进入 2b
+- 注意：此级来源是社区讨论，不是官方发布，分析时须标注来源性质
+
+**第三级 — WebSearch 兜底（仅当前两级均失败时）**
+
+用 WebSearch 工具搜索 `websearch_query` 字段中的查询词。
+
+- 取前 3 条结果的标题 + 摘要
+- 只要返回任何结果，即视为成功，进入 2b
+- 同样须在分析中标注「来源：WebSearch 结果，非官方原文」
+
+**三级全部失败才标注 `fetch_status: "error"`。**
 
 **并发策略：**
 - `crit` / `hi` 竞品：逐个串行处理（确保分析质量）
 - `md` / `lo` 竞品：同一批次内的所有 URL 可在同一轮并行 WebFetch，节省时间
-
-**抓取规则：**
-- 提取正文文本，去掉导航栏、页脚等噪音
-- 记录抓取时间
-- 如果抓取失败（403/404/timeout），标注 `fetch_status: "error"`，跳过分析，不得推测内容
 
 ### 2b. 快速 diff
 
