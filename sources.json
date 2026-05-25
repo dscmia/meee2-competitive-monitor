@@ -7,6 +7,10 @@
     "urls": [
       "https://cursor.com/changelog"
     ],
+    "fallback_urls": [
+      "https://hn.algolia.com/api/v1/search?query=Cursor+AI+editor&tags=story&hitsPerPage=5"
+    ],
+    "websearch_query": "Cursor AI editor new features changelog 2026",
     "watch_keywords": ["session", "agent", "background", "multi-agent", "workspace", "context"]
   },
   {
@@ -18,6 +22,10 @@
       "https://www.anthropic.com/news",
       "https://www.anthropic.com/blog"
     ],
+    "fallback_urls": [
+      "https://hn.algolia.com/api/v1/search?query=Anthropic+Claude+new+feature&tags=story&hitsPerPage=5"
+    ],
+    "websearch_query": "Anthropic Claude new features projects artifacts 2026",
     "watch_keywords": ["project", "artifact", "collaboration", "session", "workspace", "agent", "routines"]
   },
   {
@@ -26,9 +34,13 @@
     "category": "orchestrator",
     "threat": "hi",
     "urls": [
-      "https://github.blog/ai-and-ml/feed/",
+      "https://github.blog/changelog/feed/",
       "https://github.com/features/copilot"
     ],
+    "fallback_urls": [
+      "https://hn.algolia.com/api/v1/search?query=GitHub+Copilot+agent+workspace&tags=story&hitsPerPage=5"
+    ],
+    "websearch_query": "GitHub Copilot new features agent workspace 2026",
     "watch_keywords": ["agent", "workspace", "multi-file", "background", "session", "autonomous"]
   },
   {
@@ -39,6 +51,10 @@
     "urls": [
       "https://linear.app/changelog"
     ],
+    "fallback_urls": [
+      "https://hn.algolia.com/api/v1/search?query=Linear+app+changelog+AI&tags=story&hitsPerPage=5"
+    ],
+    "websearch_query": "Linear app changelog new features AI automation 2026",
     "watch_keywords": ["AI", "agent", "automation", "session", "ambient", "background"]
   },
   {
@@ -50,6 +66,10 @@
       "https://www.notion.so/releases/rss.xml",
       "https://www.notion.so/product/ai"
     ],
+    "fallback_urls": [
+      "https://hn.algolia.com/api/v1/search?query=Notion+AI+new+features&tags=story&hitsPerPage=5"
+    ],
+    "websearch_query": "Notion AI new features agent automation connector 2026",
     "watch_keywords": ["agent", "session", "automation", "connector", "live", "sync"]
   },
   {
@@ -61,6 +81,10 @@
       "https://slack.com/blog/productivity",
       "https://slack.com/features"
     ],
+    "fallback_urls": [
+      "https://hn.algolia.com/api/v1/search?query=Slack+AI+agent+features&tags=story&hitsPerPage=5"
+    ],
+    "websearch_query": "Slack new AI features agent canvas automation 2026",
     "watch_keywords": ["AI", "agent", "canvas", "automation", "workspace", "huddle"]
   },
   {
@@ -71,6 +95,10 @@
     "urls": [
       "https://reflect.app/blog"
     ],
+    "fallback_urls": [
+      "https://hn.algolia.com/api/v1/search?query=Reflect+notes+app+AI&tags=story&hitsPerPage=5"
+    ],
+    "websearch_query": "Reflect notes app new features AI sync 2026",
     "watch_keywords": ["AI", "agent", "session", "sync", "peripheral", "menu bar"]
   },
   {
@@ -82,6 +110,10 @@
       "https://raycast.com/changelog/feed.xml",
       "https://www.raycast.com"
     ],
+    "fallback_urls": [
+      "https://hn.algolia.com/api/v1/search?query=Raycast+AI+features&tags=story&hitsPerPage=5"
+    ],
+    "websearch_query": "Raycast new features AI agent changelog 2026",
     "watch_keywords": ["AI", "agent", "session", "collaboration", "team", "context"]
   },
   {
@@ -93,6 +125,10 @@
       "https://blog.replit.com/feed.xml",
       "https://replit.com"
     ],
+    "fallback_urls": [
+      "https://hn.algolia.com/api/v1/search?query=Replit+AI+agent+workspace&tags=story&hitsPerPage=5"
+    ],
+    "websearch_query": "Replit AI agent multi-agent workspace new features 2026",
     "watch_keywords": ["agent", "multi-agent", "session", "collaborative", "ambient", "workspace"]
   },
   {
@@ -103,6 +139,10 @@
     "urls": [
       "https://superwhisper.com"
     ],
+    "fallback_urls": [
+      "https://hn.algolia.com/api/v1/search?query=Superwhisper+app&tags=story&hitsPerPage=5"
+    ],
+    "websearch_query": "Superwhisper app new features AI integration 2026",
     "watch_keywords": ["AI", "agent", "integration", "workspace", "session"]
   }
 ]
