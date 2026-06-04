@@ -5,28 +5,60 @@
     "category": "orchestrator",
     "threat": "crit",
     "urls": [
+      "https://hn.algolia.com/api/v1/search?query=Cursor+IDE+editor+update+feature&tags=story&hitsPerPage=8",
       "https://cursor.com/changelog"
     ],
     "fallback_urls": [
-      "https://hn.algolia.com/api/v1/search?query=Cursor+AI+editor&tags=story&hitsPerPage=5"
+      "https://hn.algolia.com/api/v1/search?query=Cursor+AI+editor+2026&hitsPerPage=5"
     ],
-    "websearch_query": "Cursor AI editor new features changelog 2026",
-    "watch_keywords": ["session", "agent", "background", "multi-agent", "workspace", "context"]
+    "websearch_query": "Cursor IDE new features changelog 2026 site:cursor.com OR site:x.com/cursor_ai",
+    "watch_keywords": ["session", "agent", "background", "multi-agent", "workspace", "context", "BugBot", "shadow workspace", "tab", "composer"]
   },
   {
-    "id": "claude-ai",
-    "name": "Claude.ai",
+    "id": "openai",
+    "name": "OpenAI / ChatGPT",
     "category": "orchestrator",
     "threat": "crit",
     "urls": [
-      "https://www.anthropic.com/news",
-      "https://www.anthropic.com/blog"
+      "https://openai.com/news/rss.xml",
+      "https://hn.algolia.com/api/v1/search?query=OpenAI+ChatGPT+new+feature+update&tags=story&hitsPerPage=8"
     ],
     "fallback_urls": [
-      "https://hn.algolia.com/api/v1/search?query=Anthropic+Claude+new+feature&tags=story&hitsPerPage=5"
+      "https://hn.algolia.com/api/v1/search?query=ChatGPT+agent+canvas+project+2026&hitsPerPage=5"
     ],
-    "websearch_query": "Anthropic Claude new features projects artifacts 2026",
-    "watch_keywords": ["project", "artifact", "collaboration", "session", "workspace", "agent", "routines"]
+    "websearch_query": "OpenAI ChatGPT Canvas Projects new features agent tasks 2026",
+    "watch_keywords": ["canvas", "project", "agent", "session", "workspace", "collaboration", "artifact", "memory", "tasks", "computer use", "operator", "responses api"]
+  },
+  {
+    "id": "windsurf",
+    "name": "Windsurf (Codeium)",
+    "category": "orchestrator",
+    "threat": "crit",
+    "urls": [
+      "https://hn.algolia.com/api/v1/search?query=Windsurf+Codeium+AI+editor+update&tags=story&hitsPerPage=8",
+      "https://codeium.com/blog",
+      "https://windsurf.com/changelog"
+    ],
+    "fallback_urls": [
+      "https://hn.algolia.com/api/v1/search?query=Windsurf+Codeium+IDE+feature+2026&hitsPerPage=5"
+    ],
+    "websearch_query": "Windsurf Codeium AI editor new features changelog 2026 site:codeium.com OR site:windsurf.com",
+    "watch_keywords": ["agent", "flow", "cascade", "session", "multi-agent", "workspace", "background", "context", "supercomplete", "wave"]
+  },
+  {
+    "id": "claude-ai",
+    "name": "Claude.ai / Anthropic",
+    "category": "orchestrator",
+    "threat": "crit",
+    "urls": [
+      "https://hn.algolia.com/api/v1/search?query=Anthropic+Claude+new+feature+release&tags=story&hitsPerPage=8",
+      "https://www.anthropic.com/news"
+    ],
+    "fallback_urls": [
+      "https://hn.algolia.com/api/v1/search?query=Claude+AI+agent+routines+2026&hitsPerPage=5"
+    ],
+    "websearch_query": "Anthropic Claude new features projects artifacts routines agent 2026 site:anthropic.com",
+    "watch_keywords": ["project", "artifact", "collaboration", "session", "workspace", "agent", "routines", "memory", "computer use", "tool use", "claude code"]
   },
   {
     "id": "github-copilot",
@@ -34,14 +66,30 @@
     "category": "orchestrator",
     "threat": "hi",
     "urls": [
+      "https://github.blog/ai-and-ml/feed/",
       "https://github.blog/changelog/feed/",
-      "https://github.com/features/copilot"
+      "https://hn.algolia.com/api/v1/search?query=GitHub+Copilot+agent+workspace+update&tags=story&hitsPerPage=8"
     ],
     "fallback_urls": [
-      "https://hn.algolia.com/api/v1/search?query=GitHub+Copilot+agent+workspace&tags=story&hitsPerPage=5"
+      "https://hn.algolia.com/api/v1/search?query=GitHub+Copilot+coding+agent+2026&hitsPerPage=5"
     ],
-    "websearch_query": "GitHub Copilot new features agent workspace 2026",
-    "watch_keywords": ["agent", "workspace", "multi-file", "background", "session", "autonomous"]
+    "websearch_query": "GitHub Copilot new features agent workspace background tasks 2026",
+    "watch_keywords": ["agent", "workspace", "multi-file", "background", "session", "autonomous", "coding agent", "spark", "extensions", "multi-agent"]
+  },
+  {
+    "id": "gemini",
+    "name": "Google Gemini / AI Studio",
+    "category": "orchestrator",
+    "threat": "hi",
+    "urls": [
+      "https://blog.google/products-and-platforms/products/gemini/rss/",
+      "https://hn.algolia.com/api/v1/search?query=Google+Gemini+AI+Studio+new+feature+update&tags=story&hitsPerPage=8"
+    ],
+    "fallback_urls": [
+      "https://hn.algolia.com/api/v1/search?query=Gemini+Google+workspace+agent+canvas+2026&hitsPerPage=5"
+    ],
+    "websearch_query": "Google Gemini AI Studio Workspace new features agent canvas 2026",
+    "watch_keywords": ["agent", "workspace", "canvas", "session", "artifacts", "collaboration", "deep research", "notebook", "gems", "project", "veo", "flow"]
   },
   {
     "id": "linear",
@@ -49,13 +97,14 @@
     "category": "workspace",
     "threat": "hi",
     "urls": [
+      "https://hn.algolia.com/api/v1/search?query=Linear+app+update+AI+feature+changelog&tags=story&hitsPerPage=8",
       "https://linear.app/changelog"
     ],
     "fallback_urls": [
-      "https://hn.algolia.com/api/v1/search?query=Linear+app+changelog+AI&tags=story&hitsPerPage=5"
+      "https://hn.algolia.com/api/v1/search?query=Linear+project+management+AI+agent+2026&hitsPerPage=5"
     ],
-    "websearch_query": "Linear app changelog new features AI automation 2026",
-    "watch_keywords": ["AI", "agent", "automation", "session", "ambient", "background"]
+    "websearch_query": "Linear app changelog new features AI automation agent 2026 site:linear.app",
+    "watch_keywords": ["AI", "agent", "automation", "session", "ambient", "background", "cycles", "triage", "git", "inbox", "breaker", "autopilot"]
   },
   {
     "id": "notion-ai",
@@ -64,13 +113,13 @@
     "threat": "md",
     "urls": [
       "https://www.notion.so/releases/rss.xml",
-      "https://www.notion.so/product/ai"
+      "https://hn.algolia.com/api/v1/search?query=Notion+AI+update+feature+release&tags=story&hitsPerPage=8"
     ],
     "fallback_urls": [
-      "https://hn.algolia.com/api/v1/search?query=Notion+AI+new+features&tags=story&hitsPerPage=5"
+      "https://hn.algolia.com/api/v1/search?query=Notion+AI+agent+automation+connector+2026&hitsPerPage=5"
     ],
-    "websearch_query": "Notion AI new features agent automation connector 2026",
-    "watch_keywords": ["agent", "session", "automation", "connector", "live", "sync"]
+    "websearch_query": "Notion AI new features agent automation connector 2026 site:notion.so",
+    "watch_keywords": ["agent", "session", "automation", "connector", "live", "sync", "Q&A", "database", "workflow", "AI block"]
   },
   {
     "id": "slack",
@@ -78,14 +127,14 @@
     "category": "comms",
     "threat": "md",
     "urls": [
-      "https://slack.com/blog/productivity",
-      "https://slack.com/features"
+      "https://hn.algolia.com/api/v1/search?query=Slack+AI+agent+new+features+update&tags=story&hitsPerPage=8",
+      "https://slack.com/blog/productivity"
     ],
     "fallback_urls": [
-      "https://hn.algolia.com/api/v1/search?query=Slack+AI+agent+features&tags=story&hitsPerPage=5"
+      "https://hn.algolia.com/api/v1/search?query=Slack+canvas+agent+automation+2026&hitsPerPage=5"
     ],
-    "websearch_query": "Slack new AI features agent canvas automation 2026",
-    "watch_keywords": ["AI", "agent", "canvas", "automation", "workspace", "huddle"]
+    "websearch_query": "Slack new AI features agent canvas automation 2026 site:slack.com",
+    "watch_keywords": ["AI", "agent", "canvas", "automation", "workspace", "huddle", "clip", "workflow builder", "lists", "channels"]
   },
   {
     "id": "reflect",
@@ -93,13 +142,14 @@
     "category": "workspace",
     "threat": "md",
     "urls": [
+      "https://hn.algolia.com/api/v1/search?query=Reflect+notes+app+AI+update&tags=story&hitsPerPage=5",
       "https://reflect.app/blog"
     ],
     "fallback_urls": [
-      "https://hn.algolia.com/api/v1/search?query=Reflect+notes+app+AI&tags=story&hitsPerPage=5"
+      "https://hn.algolia.com/api/v1/search?query=Reflect+app+feature+2026&hitsPerPage=5"
     ],
-    "websearch_query": "Reflect notes app new features AI sync 2026",
-    "watch_keywords": ["AI", "agent", "session", "sync", "peripheral", "menu bar"]
+    "websearch_query": "Reflect notes app new features AI sync 2026 site:reflect.app OR site:x.com",
+    "watch_keywords": ["AI", "agent", "session", "sync", "peripheral", "menu bar", "backlink", "graph", "meeting notes"]
   },
   {
     "id": "raycast",
@@ -108,13 +158,13 @@
     "threat": "md",
     "urls": [
       "https://raycast.com/changelog/feed.xml",
-      "https://www.raycast.com"
+      "https://hn.algolia.com/api/v1/search?query=Raycast+AI+new+feature+update&tags=story&hitsPerPage=8"
     ],
     "fallback_urls": [
-      "https://hn.algolia.com/api/v1/search?query=Raycast+AI+features&tags=story&hitsPerPage=5"
+      "https://hn.algolia.com/api/v1/search?query=Raycast+AI+agent+notes+team+2026&hitsPerPage=5"
     ],
-    "websearch_query": "Raycast new features AI agent changelog 2026",
-    "watch_keywords": ["AI", "agent", "session", "collaboration", "team", "context"]
+    "websearch_query": "Raycast new features AI agent changelog 2026 site:raycast.com",
+    "watch_keywords": ["AI", "agent", "session", "collaboration", "team", "context", "menu bar", "extension", "notes", "focus", "pro"]
   },
   {
     "id": "replit",
@@ -123,13 +173,13 @@
     "threat": "md",
     "urls": [
       "https://blog.replit.com/feed.xml",
-      "https://replit.com"
+      "https://hn.algolia.com/api/v1/search?query=Replit+AI+agent+workspace+update&tags=story&hitsPerPage=8"
     ],
     "fallback_urls": [
-      "https://hn.algolia.com/api/v1/search?query=Replit+AI+agent+workspace&tags=story&hitsPerPage=5"
+      "https://hn.algolia.com/api/v1/search?query=Replit+AI+agent+multi-agent+2026&hitsPerPage=5"
     ],
-    "websearch_query": "Replit AI agent multi-agent workspace new features 2026",
-    "watch_keywords": ["agent", "multi-agent", "session", "collaborative", "ambient", "workspace"]
+    "websearch_query": "Replit AI agent multi-agent workspace new features 2026 site:replit.com OR site:blog.replit.com",
+    "watch_keywords": ["agent", "multi-agent", "session", "collaborative", "ambient", "workspace", "deployments", "teams", "bounties"]
   },
   {
     "id": "superwhisper",
@@ -137,12 +187,12 @@
     "category": "peripheral",
     "threat": "lo",
     "urls": [
-      "https://superwhisper.com"
+      "https://hn.algolia.com/api/v1/search?query=Superwhisper+voice+app+update+feature&tags=story&hitsPerPage=5"
     ],
     "fallback_urls": [
-      "https://hn.algolia.com/api/v1/search?query=Superwhisper+app&tags=story&hitsPerPage=5"
+      "https://hn.algolia.com/api/v1/search?query=Superwhisper+2026&hitsPerPage=5"
     ],
-    "websearch_query": "Superwhisper app new features AI integration 2026",
-    "watch_keywords": ["AI", "agent", "integration", "workspace", "session"]
+    "websearch_query": "Superwhisper app new features AI integration 2026 site:superwhisper.com",
+    "watch_keywords": ["AI", "agent", "integration", "workspace", "session", "menu bar", "voice", "dictation", "actions"]
   }
 ]

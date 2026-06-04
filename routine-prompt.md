@@ -38,18 +38,23 @@ cat sources.json
 
 **第一级 — 主 URL（`urls` 字段）**
 
-用 WebFetch 抓取 `urls` 中的每个地址。
+用 WebFetch 依次尝试 `urls` 列表中的每个地址（优先顺序已在 sources.json 中排定）。
 
-- 提取正文文本，去掉导航栏、页脚等噪音
-- 只要有一个 URL 返回有效内容，即视为成功，进入 2b
+**各类数据源解析规则（按 URL 特征判断类型）：**
 
-**第二级 — Fallback URL（`fallback_urls` 字段，仅当第一级全部 403/404/timeout 时）**
+- **HN Algolia API**（URL 含 `hn.algolia.com`）：返回 JSON，提取 `hits[]` 每条的 `title`、`url`、`story_text`（前 300 字符）、`created_at`。标注「来源：HN 社区讨论，非官方」
+- **RSS/Atom feed**（URL 含 `feed.xml`、`rss.xml`、`/feed/`、`/rss/`）：返回 XML，提取 `<item>` 或 `<entry>` 的 `<title>`、`<link>`、`<description>/<summary>` 和 `<pubDate>/<updated>`。这是一手官方内容
+- **普通网页**：提取正文文本，去掉导航栏、页脚等噪音
 
-用 WebFetch 抓取 `fallback_urls`（主要是 HN Algolia JSON API）。
+判断抓取是否成功：内容长度 > 200 字符 且 不是错误页（含 "403 Forbidden"、"Access Denied"、"Just a moment..." 等）。
 
-- HN Algolia 返回 JSON，提取 `hits` 数组中每条的 `title`、`url`、`story_text`（前 300 字符）
-- 只要返回有效 JSON，即视为成功，进入 2b
-- 注意：此级来源是社区讨论，不是官方发布，分析时须标注来源性质
+只要有一个 URL 成功，即停止尝试，进入 2b。
+
+**第二级 — Fallback URL（`fallback_urls` 字段，仅当第一级全部失败时）**
+
+用 WebFetch 抓取 `fallback_urls`（均为 HN Algolia 备用查询），解析规则同上。
+
+- 只要返回有效内容，即视为成功，进入 2b
 
 **第三级 — WebSearch 兜底（仅当前两级均失败时）**
 
@@ -91,7 +96,7 @@ cat sources.json
   "report_date": "YYYY-MM-DD",
   "generated_at": "ISO8601",
   "summary": {
-    "total_tracked": 18,
+    "total_tracked": 13,
     "fetched_ok": 0,
     "fetch_error": 0,
     "has_changes": 0,
