@@ -1,12 +1,26 @@
 [
   {
+    "id": "producthunt-ai",
+    "name": "Product Hunt AI 新品雷达",
+    "category": "new_entrant_watch",
+    "threat": "md",
+    "urls": [
+      "https://www.producthunt.com/feed?category=artificial-intelligence",
+      "https://hn.algolia.com/api/v1/search?query=Show+HN+AI+workspace+productivity+tool&tags=story&hitsPerPage=8"
+    ],
+    "fallback_urls": [
+      "https://hn.algolia.com/api/v1/search?query=new+AI+tool+launch+workspace+agent+2026&hitsPerPage=8"
+    ],
+    "websearch_query": "new AI workspace productivity tool launch 2026 site:producthunt.com",
+    "watch_keywords": ["session", "agent", "workspace", "canvas", "collaboration", "live", "background", "menu bar", "artifact", "human-AI", "async"]
+  },
+  {
     "id": "cursor",
     "name": "Cursor",
     "category": "orchestrator",
     "threat": "crit",
     "urls": [
-      "https://hn.algolia.com/api/v1/search?query=Cursor+IDE+editor+update+feature&tags=story&hitsPerPage=8",
-      "https://cursor.com/changelog"
+      "https://hn.algolia.com/api/v1/search?query=Cursor+IDE+editor+update+feature&tags=story&hitsPerPage=8"
     ],
     "fallback_urls": [
       "https://hn.algolia.com/api/v1/search?query=Cursor+AI+editor+2026&hitsPerPage=5"
@@ -35,9 +49,7 @@
     "category": "orchestrator",
     "threat": "crit",
     "urls": [
-      "https://hn.algolia.com/api/v1/search?query=Windsurf+Codeium+AI+editor+update&tags=story&hitsPerPage=8",
-      "https://codeium.com/blog",
-      "https://windsurf.com/changelog"
+      "https://hn.algolia.com/api/v1/search?query=Windsurf+Codeium+AI+editor+update&tags=story&hitsPerPage=8"
     ],
     "fallback_urls": [
       "https://hn.algolia.com/api/v1/search?query=Windsurf+Codeium+IDE+feature+2026&hitsPerPage=5"
@@ -51,8 +63,7 @@
     "category": "orchestrator",
     "threat": "crit",
     "urls": [
-      "https://hn.algolia.com/api/v1/search?query=Anthropic+Claude+new+feature+release&tags=story&hitsPerPage=8",
-      "https://www.anthropic.com/news"
+      "https://hn.algolia.com/api/v1/search?query=Anthropic+Claude+new+feature+release&tags=story&hitsPerPage=8"
     ],
     "fallback_urls": [
       "https://hn.algolia.com/api/v1/search?query=Claude+AI+agent+routines+2026&hitsPerPage=5"
@@ -97,8 +108,7 @@
     "category": "workspace",
     "threat": "hi",
     "urls": [
-      "https://hn.algolia.com/api/v1/search?query=Linear+app+update+AI+feature+changelog&tags=story&hitsPerPage=8",
-      "https://linear.app/changelog"
+      "https://hn.algolia.com/api/v1/search?query=Linear+app+update+AI+feature+changelog&tags=story&hitsPerPage=8"
     ],
     "fallback_urls": [
       "https://hn.algolia.com/api/v1/search?query=Linear+project+management+AI+agent+2026&hitsPerPage=5"
@@ -113,6 +123,7 @@
     "threat": "md",
     "urls": [
       "https://www.notion.so/releases/rss.xml",
+      "https://itunes.apple.com/lookup?bundleId=notion.id&country=us",
       "https://hn.algolia.com/api/v1/search?query=Notion+AI+update+feature+release&tags=story&hitsPerPage=8"
     ],
     "fallback_urls": [
@@ -127,8 +138,8 @@
     "category": "comms",
     "threat": "md",
     "urls": [
-      "https://hn.algolia.com/api/v1/search?query=Slack+AI+agent+new+features+update&tags=story&hitsPerPage=8",
-      "https://slack.com/blog/productivity"
+      "https://itunes.apple.com/lookup?bundleId=com.tinyspeck.slackmacgap&country=us",
+      "https://hn.algolia.com/api/v1/search?query=Slack+AI+agent+new+features+update&tags=story&hitsPerPage=8"
     ],
     "fallback_urls": [
       "https://hn.algolia.com/api/v1/search?query=Slack+canvas+agent+automation+2026&hitsPerPage=5"
@@ -142,8 +153,7 @@
     "category": "workspace",
     "threat": "md",
     "urls": [
-      "https://hn.algolia.com/api/v1/search?query=Reflect+notes+app+AI+update&tags=story&hitsPerPage=5",
-      "https://reflect.app/blog"
+      "https://hn.algolia.com/api/v1/search?query=Reflect+notes+app+AI+update&tags=story&hitsPerPage=5"
     ],
     "fallback_urls": [
       "https://hn.algolia.com/api/v1/search?query=Reflect+app+feature+2026&hitsPerPage=5"

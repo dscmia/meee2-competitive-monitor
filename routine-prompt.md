@@ -43,7 +43,8 @@ cat sources.json
 **各类数据源解析规则（按 URL 特征判断类型）：**
 
 - **HN Algolia API**（URL 含 `hn.algolia.com`）：返回 JSON，提取 `hits[]` 每条的 `title`、`url`、`story_text`（前 300 字符）、`created_at`。标注「来源：HN 社区讨论，非官方」
-- **RSS/Atom feed**（URL 含 `feed.xml`、`rss.xml`、`/feed/`、`/rss/`）：返回 XML，提取 `<item>` 或 `<entry>` 的 `<title>`、`<link>`、`<description>/<summary>` 和 `<pubDate>/<updated>`。这是一手官方内容
+- **RSS/Atom feed**（URL 含 `feed.xml`、`rss.xml`、`/feed/`、`/rss/`，或 `producthunt.com/feed`）：返回 XML，提取 `<item>` 或 `<entry>` 的 `<title>`、`<link>`、`<description>/<summary>` 和 `<pubDate>/<updated>`。Product Hunt feed 为官方发布内容
+- **App Store Lookup API**（URL 含 `itunes.apple.com/lookup?bundleId`）：返回 JSON，提取 `results[0]` 的 `trackName`、`version`、`currentVersionReleaseDate`、`releaseNotes`（前 400 字符）。这是一手官方 release notes
 - **普通网页**：提取正文文本，去掉导航栏、页脚等噪音
 
 判断抓取是否成功：内容长度 > 200 字符 且 不是错误页（含 "403 Forbidden"、"Access Denied"、"Just a moment..." 等）。
@@ -72,11 +73,29 @@ cat sources.json
 
 ### 2b. 快速 diff
 
-计算本次抓取内容与 baseline 中该竞品 `raw_snapshot` 的差异：
-- 如果内容基本相同（关键词无变化）→ 标注 `has_changes: false`，跳过深度分析
-- 如果有变化 → 进入 2c
+**对 `new_entrant_watch` 类别（Product Hunt）：跳过此步，直接进入 2c。**  
+原因：Product Hunt feed 每天内容完全不同，raw diff 无意义。
 
-### 2c. 深度分析（仅有变化时）
+**对其他竞品：**
+
+判断 `has_changes` 的标准因来源类型而异——
+
+- **RSS feed 来源**：对比本次与 baseline 中的 `<title>` 列表。有新 title 出现 → `has_changes: true`
+- **HN Algolia 来源**：对比 `watch_keywords` 在本次 `hits` 中的出现情况与 baseline。若出现了 baseline 中未出现的关键词组合，或有明显更高频率 → `has_changes: true`。仅仅是文章列表轮换（标题与 watch_keywords 无关）→ `has_changes: false`
+- **普通网页 / App Store**：对比正文/版本号与 baseline。版本号变化或出现新功能描述 → `has_changes: true`
+
+如果 `has_changes: false` → 标注 `no_change_reason`（一句话说明），跳过 2c
+
+### 2c. 深度分析
+
+**`new_entrant_watch` 类别（Product Hunt AI 新品雷达）：**
+
+目标是检测今日上新的 AI 产品中是否有潜在新竞品。对每条 entry：
+1. 用产品名称+描述与 meee2 差异化锚点（CLAUDE.md 规则 5）快速匹配
+2. 若有 ≥2 个 `watch_keywords` 命中 → 记录到 `changes`，type 为 `new_entrant`，建议下次加入 sources.json
+3. 无命中 → `has_changes: false`，`no_change_reason` 写「今日 PH AI 上新 X 款，无与 meee2 高度重叠者」
+
+**其他竞品（仅 `has_changes: true` 时执行）：**
 
 检查是否涉及该竞品的 `watch_keywords`，以及是否触碰 meee2 的差异化锚点（见 CLAUDE.md 规则 5）。
 
@@ -96,7 +115,7 @@ cat sources.json
   "report_date": "YYYY-MM-DD",
   "generated_at": "ISO8601",
   "summary": {
-    "total_tracked": 13,
+    "total_tracked": 14,
     "fetched_ok": 0,
     "fetch_error": 0,
     "has_changes": 0,
@@ -106,7 +125,7 @@ cat sources.json
     {
       "id": "竞品id",
       "name": "竞品名",
-      "category": "orchestrator|workspace|comms|peripheral",
+      "category": "orchestrator|workspace|comms|peripheral|new_entrant_watch",
       "threat": "crit|hi|md|lo",
       "threat_changed": false,
       "has_changes": false,
