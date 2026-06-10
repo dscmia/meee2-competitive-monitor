@@ -10,9 +10,11 @@ import styles from './dashboard.module.css'
 interface Props {
   report: Report
   historyDates: string[]
+  // present when viewing an archived report under /history/<date>
+  currentDate?: string
 }
 
-export function DashboardClient({ report, historyDates }: Props) {
+export function DashboardClient({ report, historyDates, currentDate }: Props) {
   const [activeId, setActiveId] = useState<string | null>(
     report.competitors[0]?.id ?? null
   )
@@ -42,17 +44,18 @@ export function DashboardClient({ report, historyDates }: Props) {
           <div className={styles.topDate}>{reportDate} · {generatedAt}</div>
         </div>
         <div className={styles.topRight}>
-          {historyDates.length > 1 && (
+          {historyDates.length > 0 && (
             <select
               className={styles.historySelect}
-              defaultValue=""
+              value={currentDate ?? 'latest'}
               onChange={e => {
-                if (e.target.value) {
-                  window.location.href = `/history/${e.target.value}`
-                }
+                const v = e.target.value
+                window.location.href = v === 'latest' ? '/' : `/history/${v}`
               }}
             >
-              <option value="" disabled>历史报告</option>
+              <option value="latest">
+                最新{historyDates[0] ? ` · ${historyDates[0]}` : ''}
+              </option>
               {historyDates.map(d => (
                 <option key={d} value={d}>{d}</option>
               ))}

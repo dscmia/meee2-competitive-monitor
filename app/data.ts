@@ -16,8 +16,8 @@ const EMPTY_REPORT: Report = {
   alerts: [],
 }
 
-export function getReport(): Report {
-  const filePath = path.join(process.cwd(), 'data', 'latest.json')
+function readReportFile(fileName: string): Report {
+  const filePath = path.join(process.cwd(), 'data', fileName)
   try {
     const raw = fs.readFileSync(filePath, 'utf8')
     const parsed = JSON.parse(raw) as Report
@@ -27,6 +27,17 @@ export function getReport(): Report {
   } catch {
     return EMPTY_REPORT
   }
+}
+
+export function getReport(): Report {
+  return readReportFile('latest.json')
+}
+
+// Read a specific dated report, e.g. getReportByDate('2026-05-24')
+export function getReportByDate(date: string): Report {
+  // guard against path traversal — only accept YYYY-MM-DD
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(date)) return EMPTY_REPORT
+  return readReportFile(`${date}.json`)
 }
 
 export function getHistoryDates(): string[] {

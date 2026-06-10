@@ -25,10 +25,22 @@ meee2-competitive-monitor/
 Vercel 导入这个 repo，Framework 选 Next.js。
 连接后每次 `git push main` 自动触发 build。
 
-**3. GitHub 权限**
+**3. GitHub 权限（关键）**
 
-在 Routine 创建时需要勾选 **Allow unrestricted branch pushes**，
-否则 Claude 只能 push 到 `claude/` 前缀的分支，面板不会更新。
+在 Routine 创建/编辑页必须勾选 ✅ **Allow unrestricted branch pushes**。
+
+不勾选时，云端 session 只能 push 到 `claude/` 前缀的分支（并开 PR），
+报告永远到不了 `main`，Vercel 也就不会 rebuild —— 这正是之前所有报告
+都堆在 `claude/*` 分支上的原因。勾上后，`routine-prompt.md` STEP 5 的
+`git push origin main` 才能真正生效，报告直接落到 main，Vercel 自动更新。
+
+> 已经存在的一堆 `claude/*` 历史分支可以安全删除（它们的内容已通过
+> PR 合并进 main）：
+> ```bash
+> git fetch --prune origin
+> git branch -r | grep 'origin/claude/' | sed 's# *origin/##' \
+>   | xargs -I{} git push origin --delete {}
+> ```
 
 ---
 

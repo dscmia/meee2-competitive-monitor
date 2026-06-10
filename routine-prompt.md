@@ -183,9 +183,17 @@ echo "文件写入完成：data/$DATE.json 和 data/latest.json"
 
 ---
 
-## STEP 5 — Git commit + push
+## STEP 5 — Git commit + push（直接进 main，不开分支、不开 PR）
+
+**重要：报告必须直接 commit 到 `main` 分支并 push。不要创建 `claude/*` 功能分支，不要开 Pull Request。** Vercel 监听的是 `main`，只有 push 到 main 才会触发面板重新 build。
+
+如果 push 被拒绝（提示只能 push `claude/` 前缀分支），说明 Routine 配置里没勾选 **Allow unrestricted branch pushes** —— 这是配置问题，按 STEP 5 末尾的兜底逻辑把完整 JSON 打到终端，并在输出里提示需要去 Routine 设置里开启该选项。
 
 ```bash
+# 确保在 main 上，且与远端同步（避免 push 冲突）
+git checkout main
+git pull --rebase origin main || true
+
 git config user.email "routine@meee2.ai"
 git config user.name "meee2 competitive monitor"
 
