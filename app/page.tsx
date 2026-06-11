@@ -1,4 +1,4 @@
-import { getReport, getHistoryDates } from './data'
+import { getReport, getHistoryDates, getLatestWeek } from './data'
 import { DashboardClient } from './DashboardClient'
 
 // Re-build every time Vercel deploys (triggered by git push from Routine)
@@ -8,6 +8,13 @@ export const revalidate = false
 export default function Page() {
   const report = getReport()
   const historyDates = getHistoryDates()
+  const latestWeek = getLatestWeek()
 
-  return <DashboardClient report={report} historyDates={historyDates} />
+  return (
+    <DashboardClient
+      report={report}
+      historyDates={historyDates}
+      latestWeek={latestWeek}
+    />
+  )
 }

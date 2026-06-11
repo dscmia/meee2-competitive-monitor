@@ -53,3 +53,54 @@ export interface Report {
   competitors: Competitor[]
   alerts: Alert[]
 }
+
+// ── Weekly summary ──
+// Fact layer — computed deterministically at build time from daily reports.
+export interface WeeklyCompetitorChange {
+  id: string
+  name: string
+  threat: ThreatLevel
+  dates: string[]   // days within the week this competitor had changes
+  headline: string  // representative key_finding / change description
+}
+
+export interface WeeklyAlertRef {
+  date: string      // the day this alert first fired
+  alert: Alert
+}
+
+export interface ThreatMovement {
+  competitor_id: string
+  competitor_name: string
+  from: ThreatLevel | null  // null when only a threat_changed flag was seen
+  to: ThreatLevel
+  dates: string[]
+}
+
+export interface WeeklyFacts {
+  week_start: string          // Monday, YYYY-MM-DD
+  week_end: string            // Sunday, YYYY-MM-DD
+  days_covered: string[]      // daily reports that actually exist this week
+  competitors_changed: WeeklyCompetitorChange[]
+  alerts: WeeklyAlertRef[]
+  threat_movements: ThreatMovement[]
+  change_count: number
+  alert_count: number
+}
+
+// Analysis layer — written by the weekly routine (AI), grounded only in the
+// daily JSONs above. Stored at data/weekly/<sunday>.json.
+export interface WeeklyRecommendation {
+  headline: string
+  detail: string
+  priority: 'hi' | 'md' | 'lo'
+  basis?: string  // which competitor/alert/date this is grounded in
+}
+
+export interface WeeklyAnalysis {
+  week_start: string
+  week_end: string
+  generated_at: string
+  narrative: string
+  recommendations: WeeklyRecommendation[]
+}

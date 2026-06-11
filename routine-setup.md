@@ -6,13 +6,21 @@
 
 ```
 meee2-competitive-monitor/
-├── CLAUDE.md          ← 反 bias 规则，Claude Code 自动读取
-├── sources.json       ← 竞品数据源配置（你维护）
+├── CLAUDE.md                  ← 反 bias 规则，Claude Code 自动读取
+├── sources.json               ← 竞品数据源配置（你维护）
+├── routine-prompt.md          ← 每日 routine 的 prompt
+├── weekly-routine-prompt.md   ← 每周综述 routine 的 prompt
 ├── data/
-│   ├── latest.json    ← 最新报告（Vercel build 读这个）
-│   └── 2026-05-13.json
-└── app/               ← Next.js 面板（读 data/latest.json）
+│   ├── latest.json            ← 最新日报（Vercel build 读这个）
+│   ├── 2026-05-13.json        ← 每日归档
+│   └── weekly/
+│       └── 2026-05-24.json    ← 每周 AI 综述（周日为 key）
+└── app/                       ← Next.js 面板（日报 + 周报页）
 ```
+
+面板有两个视图：
+- `/` 日报 —— 读 `data/latest.json`，顶部可切到「周报 →」和历史日报 dropdown
+- `/weekly/<周日>` 周报 —— 上半「本周事实」由代码从日报**确定性聚合**，下半「分析师视角」读 `data/weekly/<周日>.json` 的 AI 综述（没有时优雅显示"待生成"）
 
 在 GitHub 上创建这个 repo，先手动放一个空的 `data/latest.json`：
 
@@ -94,6 +102,27 @@ Network access 保持 **Trusted**（默认允许 GitHub API、常见网站）。
 
 ---
 
+## 创建每周综述 Routine（第二个，独立）
+
+每周综述是**独立的第二个 routine**，不与每日 routine 共用 —— 触发时间即语义、失败互不拖累、prompt 干净。
+
+再开一个 **New routine**，大部分配置同上，只改这几项：
+
+| 字段 | 填写内容 |
+|------|---------|
+| Name | `meee2-weekly-review` |
+| Prompt | 粘贴 `weekly-routine-prompt.md` 的全部内容 |
+| Repositories | 同一个 repo，**同样勾选 ✅ Allow unrestricted branch pushes** |
+| Trigger | **Schedule → Weekly → 周一 08:00**（总结刚过完的自然周） |
+
+> **为什么排周一早上**：`weekly-routine-prompt.md` 的 STEP 0 会自动取"最近一个已结束的自然周（周一–周日）"。周一跑，总结的正好是上一周。它是幂等的——同一周重复跑不会重复写。
+
+这个 routine **完全不抓网络**，只读 `data/` 里的日报 JSON 重组成综述，所以 token 消耗很低。
+
+> ⚠️ 两个 routine 各占每日配额里的一次 run。每日 ×7 + 每周 ×1 = 一周 8 次，Pro 计划（5 次/天）完全够。
+
+---
+
 ## 验证
 
 创建后立刻点 **Run now** 测试一次：
@@ -136,17 +165,29 @@ Network access 保持 **Trusted**（默认允许 GitHub API、常见网站）。
 
 ```
 claude.ai/code/routines
-  └─ 每日 08:00 自动触发
-       └─ Claude Code 云 session 启动
-            ├─ git clone your-repo
-            ├─ 读 CLAUDE.md（反 bias 规则）
-            ├─ 读 sources.json（竞品列表）
-            ├─ 读 data/latest.json（baseline）
-            ├─ WebFetch 抓取各竞品 URL
-            ├─ Diff 分析 + 生成 JSON
-            ├─ git commit + push main
-            │    └─ Vercel 检测 push → 自动 build → 面板更新
-            └─ POST Slack webhook（如有高威胁 alert）
+  ├─ [每日 routine] 每天 08:00
+  │    └─ Claude Code 云 session
+  │         ├─ git clone your-repo
+  │         ├─ 读 CLAUDE.md（反 bias 规则）
+  │         ├─ 读 sources.json（竞品列表）
+  │         ├─ 读 data/latest.json（baseline）
+  │         ├─ WebFetch 抓取各竞品 URL
+  │         ├─ Diff 分析 + 生成 JSON
+  │         ├─ git commit + push main → Vercel 自动 build
+  │         └─ POST Slack webhook（如有高威胁 alert）
+  │
+  └─ [每周 routine] 周一 08:00
+       └─ Claude Code 云 session（不抓网络）
+            ├─ 读上一自然周的 7 份 data/<date>.json
+            ├─ 心算事实层 + 写 AI 综述 + 建议
+            ├─ 写 data/weekly/<周日>.json
+            ├─ git commit + push main → Vercel 自动 build
+            └─ POST Slack webhook（如有高优建议）
+
+页面侧：
+  /                  日报（latest.json）
+  /history/<date>    历史日报
+  /weekly/<周日>      周报 = 代码算的「事实」+ AI 写的「分析师视角」
 ```
 
 **成本**：

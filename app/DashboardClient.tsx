@@ -12,9 +12,11 @@ interface Props {
   historyDates: string[]
   // present when viewing an archived report under /history/<date>
   currentDate?: string
+  // newest natural-week end date, for the 周报 link (null if no weekly data)
+  latestWeek?: string | null
 }
 
-export function DashboardClient({ report, historyDates, currentDate }: Props) {
+export function DashboardClient({ report, historyDates, currentDate, latestWeek }: Props) {
   const [activeId, setActiveId] = useState<string | null>(
     report.competitors[0]?.id ?? null
   )
@@ -44,6 +46,9 @@ export function DashboardClient({ report, historyDates, currentDate }: Props) {
           <div className={styles.topDate}>{reportDate} · {generatedAt}</div>
         </div>
         <div className={styles.topRight}>
+          {latestWeek && (
+            <a href={`/weekly/${latestWeek}`} className={styles.navLink}>周报 →</a>
+          )}
           {historyDates.length > 0 && (
             <select
               className={styles.historySelect}

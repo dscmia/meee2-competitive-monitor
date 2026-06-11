@@ -32,6 +32,16 @@
 }
 .topRight { display: flex; align-items: center; gap: 12px; }
 
+.navLink {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text2);
+  border: 1px solid var(--border2);
+  border-radius: 4px;
+  padding: 4px 8px;
+}
+.navLink:hover { border-color: var(--accent); color: var(--accent); }
+
 .historySelect {
   font-family: var(--font-mono);
   font-size: 11px;
