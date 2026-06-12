@@ -1,0 +1,551 @@
+{
+  "report_date": "2026-06-11",
+  "generated_at": "2026-06-11T07:00:00Z",
+  "summary": {
+    "total_tracked": 14,
+    "fetched_ok": 14,
+    "fetch_error": 0,
+    "has_changes": 12,
+    "new_alerts": 4
+  },
+  "competitors": [
+    {
+      "id": "cursor",
+      "name": "Cursor",
+      "category": "orchestrator",
+      "threat": "crit",
+      "threat_changed": false,
+      "has_changes": true,
+      "fetch_status": "ok",
+      "fetched_urls": ["https://cursor.com/changelog", "https://www.digitalapplied.com/blog/cursor-bugbot-90-second-reviews-june-2026-release"],
+      "raw_snapshot": "Cursor June 2026: BugBot reviews cut from ~5 min to 90 seconds, finding 10% more bugs at 22% lower cost per run (/review command syncs with GitHub and GitLab without double-charging identical diffs). Shared canvases openable full-screen in browser. Agents can embed buttons in canvases that run a specific prompt when clicked. Design Mode in canvases for easier artifact editing and visual output. Teams plan: increased usage limits, new Premium seat for heavy agent users, spend forecasting, split usage pools. Enterprise Groups (June 3): lightweight user collections that sit across teams with separate model access, spend limits, agent permissions. Source: WebSearch/cursor.com/digitalapplied.com (来源：WebSearch 结果，非官方原文)",
+      "content_hash": "Cursor June 2026: BugBot reviews cut from ~5 min to 90 seconds, finding 10% more bugs at 22% lower cost per run (/review command syncs with GitHub and GitLab without do",
+      "last_seen_at": "2026-06-11T07:00:00Z",
+      "changes": [
+        {
+          "type": "new_feature",
+          "description": "Canvas 内嵌 agent 可执行按钮 + Design Mode：agent 可在 canvas 中嵌入按钮，点击触发指定 prompt；Design Mode 支持直接编辑 artifact",
+          "evidence": "「agents can embed buttons in canvases that will run a specific prompt when clicked」",
+          "source_url": "https://cursor.com/changelog",
+          "meee2_relevance": "锚点 #2+#3：canvas 内嵌 agent 按钮 = 可交互 artifact，用户行为 → prompt → 结果 emerge 于 canvas 结构内",
+          "threat_signal": true
+        },
+        {
+          "type": "new_feature",
+          "description": "BugBot 审查时间降至 90 秒（原 5 分钟），bug 检测率提升 10%，/review 命令 PR 前可调用",
+          "evidence": "「cut Bugbot's average review time from roughly five minutes to around 90 seconds, finding 10% more bugs per run at a 22% lower cost per run」",
+          "source_url": "https://www.digitalapplied.com/blog/cursor-bugbot-90-second-reviews-june-2026-release",
+          "meee2_relevance": null,
+          "threat_signal": false
+        },
+        {
+          "type": "new_feature",
+          "description": "Enterprise Groups：跨团队用户集合，独立模型访问权限和 agent 权限粒度管理",
+          "evidence": "「Groups give cohorts of users separate model access, spend limits, and agent permissions without standing up a whole new team」",
+          "source_url": "https://cursor.com/changelog",
+          "meee2_relevance": "锚点 #1：agent 权限粒度化管理，session 治理层持续精细化",
+          "threat_signal": false
+        }
+      ],
+      "key_findings": [
+        "Canvas 内嵌 agent 按钮：用户可从 canvas 直接触发 agent prompt，canvas 从展示载体升级为可执行 artifact——这是 meee2 descriptive canvas 概念最近的竞品逼近",
+        "BugBot 90 秒审查已成为日常 PR 流程标配，Cursor 在代码 agent 自动化层的深度持续提升"
+      ],
+      "no_change_reason": null
+    },
+    {
+      "id": "openai",
+      "name": "OpenAI / ChatGPT",
+      "category": "orchestrator",
+      "threat": "crit",
+      "threat_changed": false,
+      "has_changes": true,
+      "fetch_status": "ok",
+      "fetched_urls": ["https://releasebot.io/updates/openai/chatgpt", "https://openai.com/index/gpt-5-5-instant/", "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"],
+      "raw_snapshot": "OpenAI June 2026: GPT-5.5 Instant rolling out to all ChatGPT users, replacing GPT-5.3 Instant as default model. Active Sessions security feature: users review sessions associated with account, sign out of unrecognized sessions. Lockdown Mode restricts network-enabled capabilities (browsing, deep research, agent mode). Memory system upgrade: more capable and scalable, better context carry, reviewable summary page for Plus/Pro users. Workspace Agents free period extended until July 6, then credit-based pricing begins. AgentKit launched for building agents with OpenAI. Source: WebSearch/openai.com/releasebot.io (来源：WebSearch 结果，非官方原文)",
+      "content_hash": "OpenAI June 2026: GPT-5.5 Instant rolling out to all ChatGPT users, replacing GPT-5.3 Instant as default model. Active Sessions security feature: users review sessions",
+      "last_seen_at": "2026-06-11T07:00:00Z",
+      "changes": [
+        {
+          "type": "new_feature",
+          "description": "GPT-5.5 Instant 全量推送，替代 GPT-5.3 Instant 成为 ChatGPT 默认模型",
+          "evidence": "「GPT-5.5 Instant rolling out to all ChatGPT users, replacing GPT-5.3 Instant as the default model」",
+          "source_url": "https://openai.com/index/gpt-5-5-instant/",
+          "meee2_relevance": null,
+          "threat_signal": false
+        },
+        {
+          "type": "new_feature",
+          "description": "Active Sessions 安全功能：可审查账户关联 session 列表，注销未识别 session",
+          "evidence": "「Active sessions: users can review sessions associated with their account and sign out of sessions they don't recognize」",
+          "source_url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes",
+          "meee2_relevance": null,
+          "threat_signal": false
+        },
+        {
+          "type": "new_feature",
+          "description": "Memory 系统升级：更强上下文持久化，Plus/Pro 用户可审查 memory summary 页面；Workspace Agents 7/6 转 credit 计费",
+          "evidence": "「more capable memory system that better carries context, follows preferences, stays current; memories automatically updated as time passes」",
+          "source_url": "https://releasebot.io/updates/openai/chatgpt",
+          "meee2_relevance": "锚点 #4：跨 session 记忆持久化升级，但属用户状态而非 artifact live link",
+          "threat_signal": false
+        }
+      ],
+      "key_findings": [
+        "GPT-5.5 Instant 全量推送，ChatGPT 默认体验升级——无新结构性功能，属模型例行迭代",
+        "Workspace Agents 免费期延至 7/6 后进入 credit 计费，标志企业 agent workflow 从「预览」进入「正式商业化」"
+      ],
+      "no_change_reason": null
+    },
+    {
+      "id": "windsurf",
+      "name": "Windsurf (Codeium)",
+      "category": "orchestrator",
+      "threat": "crit",
+      "threat_changed": false,
+      "has_changes": true,
+      "fetch_status": "ok",
+      "fetched_urls": ["https://windsurf.com/changelog", "https://releasebot.io/updates/windsurf"],
+      "raw_snapshot": "Windsurf / Devin Desktop June 2026: Devin Local now aware of files open in editor as context. MCP tool permissions enhanced—approve all tools on server for current session or permanently. Always Allow permission grants in Devin Local now persist across sessions. Remote server startup timeout increased from 2.5s to 6s. Claude Opus 4.7 fast mode available (2.5x higher output speed). Wave 13: improved Cascade Memory System remembers codebase structure and preferences, Enhanced Multi-Model Routing auto-selects best model for task type, Supercomplete accuracy boost, better terminal integration, MCP tool support for Supabase/Notion/GitHub. Source: WebSearch/windsurf.com/releasebot.io (来源：WebSearch 结果，非官方原文)",
+      "content_hash": "Windsurf / Devin Desktop June 2026: Devin Local now aware of files open in editor as context. MCP tool permissions enhanced—approve all tools on server for current sessio",
+      "last_seen_at": "2026-06-11T07:00:00Z",
+      "changes": [
+        {
+          "type": "new_feature",
+          "description": "Devin Local 感知编辑器中打开的文件，MCP 权限可授权整个 server，Always Allow 跨 session 持久化",
+          "evidence": "「Devin Local is now aware of the files you have open in the editor as part of its context; Always Allow permission grants now persist across sessions」",
+          "source_url": "https://windsurf.com/changelog",
+          "meee2_relevance": null,
+          "threat_signal": false
+        },
+        {
+          "type": "new_feature",
+          "description": "Claude Opus 4.7 fast mode 接入 Windsurf（约 2.5× 输出速度）",
+          "evidence": "「Claude Opus 4.7 fast mode is now available in Windsurf, with approximately 2.5x higher output speeds」",
+          "source_url": "https://releasebot.io/updates/windsurf",
+          "meee2_relevance": null,
+          "threat_signal": false
+        }
+      ],
+      "key_findings": [
+        "Devin Desktop 本周为稳定迭代：Devin Local 上下文感知改进 + 权限持久化，无新的 session 协议或 Agent Command Center 功能变化",
+        "Claude Opus 4.7 fast mode 接入：Windsurf 保持最新模型覆盖节奏，AI session 执行速度提升"
+      ],
+      "no_change_reason": null
+    },
+    {
+      "id": "claude-ai",
+      "name": "Claude.ai / Anthropic",
+      "category": "orchestrator",
+      "threat": "crit",
+      "threat_changed": false,
+      "has_changes": true,
+      "fetch_status": "ok",
+      "fetched_urls": ["https://www.anthropic.com/news/claude-fable-5-mythos-5", "https://www.anthropic.com/news/claude-opus-4-8", "https://thenewstack.io/anthropic-claude-cowork-promotion/", "https://releasebot.io/updates/anthropic/claude"],
+      "raw_snapshot": "Anthropic June 2026: Claude Fable 5 released June 9—takes on complex long-horizon coding tasks with autonomy and reliability exceeding previous benchmarks; developer-focused. Claude Code SDK renamed Claude Agent SDK to reflect broader vision beyond coding; powers almost all Anthropic major agent loops (deep research, video creation, note-taking). Claude Opus 4.8 (May 28): dynamic workflows for large-scale problems, effort controls, fast mode 3x cheaper. Claude Cowork usage limits doubled June 5–July 5 for Pro/Max/Team plans. 20+ legal MCP connectors and 12 practice-area plugins released. Connector observability public beta + in-app directory submission for admins. Source: WebSearch/anthropic.com/releasebot.io (来源：WebSearch 结果，非官方原文)",
+      "content_hash": "Anthropic June 2026: Claude Fable 5 released June 9—takes on complex long-horizon coding tasks with autonomy and reliability exceeding previous benchmarks; developer-foc",
+      "last_seen_at": "2026-06-11T07:00:00Z",
+      "changes": [
+        {
+          "type": "new_feature",
+          "description": "Claude Fable 5 发布（6/9）：复杂长时序任务自主性与可靠性超越历代基准，面向开发者",
+          "evidence": "「took on complex, long-horizon coding tasks with a level of autonomy and reliability that exceeded previous benchmarks」",
+          "source_url": "https://www.anthropic.com/news/claude-fable-5-mythos-5",
+          "meee2_relevance": "锚点 #1：AI 快 session 的长时序自主执行能力显著提升，「AI 作为 session 参与者」的核心能力跃升",
+          "threat_signal": true
+        },
+        {
+          "type": "positioning",
+          "description": "Claude Code SDK 更名为 Claude Agent SDK，定位从「编码工具」扩展为「通用 agent 编排运行时」",
+          "evidence": "「renamed to the Claude Agent SDK to reflect its broader vision beyond just coding; powers almost all of Anthropic's major agent loops」",
+          "source_url": "https://www.anthropic.com/news/claude-opus-4-8",
+          "meee2_relevance": "锚点 #1：从「编码助手 SDK」重新定位为「通用 agent SDK」，向 meee2 的 session 协议层直接竞争",
+          "threat_signal": true
+        },
+        {
+          "type": "new_feature",
+          "description": "Cowork 使用量上限临时翻倍（6/5–7/5），20+ 法律行业 MCP 连接器上线，Connector Observability 公测",
+          "evidence": "「doubled the 5-hour usage limit for Claude Cowork; 20+ legal MCP connectors and 12 practice-area plugins」",
+          "source_url": "https://thenewstack.io/anthropic-claude-cowork-promotion/",
+          "meee2_relevance": null,
+          "threat_signal": false
+        }
+      ],
+      "key_findings": [
+        "Claude Fable 5 上线：长时序自主执行能力突破，AI 快 session 质量显著提升——直接增强 Claude.ai 作为 crit 竞品的核心威胁",
+        "Claude Agent SDK 更名：Anthropic 明确将 SDK 定位为通用 agent 编排（而非编码工具），产品野心与 meee2 session 协议层直接重叠"
+      ],
+      "no_change_reason": null
+    },
+    {
+      "id": "github-copilot",
+      "name": "GitHub Copilot",
+      "category": "orchestrator",
+      "threat": "hi",
+      "threat_changed": true,
+      "has_changes": true,
+      "fetch_status": "ok",
+      "fetched_urls": ["https://github.blog/news-insights/product-news/github-copilot-app-the-agent-native-desktop-experience/", "https://github.blog/changelog/2026-06-02-expanded-technical-preview-availability-for-the-github-copilot-app/", "https://devops.com/github-copilot-gets-its-own-app-and-agents-are-the-reason-why/"],
+      "raw_snapshot": "GitHub Copilot App June 2026: Canvases headline feature—agent work takes shape, becomes visible, and gets verified; dedicated space for artifact emergence and review. Agent Merge: monitors CI, tracks required reviewers, addresses failing checks, waits for all conditions; user sets how far Copilot should go (drive CI green, address feedback, or merge). 1M token context windows in VS Code, Copilot CLI, and Copilot app. Configurable reasoning levels (trade speed for depth). Copilot Max $100/month for high-volume agent usage ($100 AI Credits + $100 flex). Technical preview open to all Copilot Pro/Pro+/Business/Enterprise. Source: WebSearch/github.blog/devops.com (来源：WebSearch 结果，非官方原文)",
+      "content_hash": "GitHub Copilot App June 2026: Canvases headline feature—agent work takes shape, becomes visible, and gets verified; dedicated space for artifact emergence and review. Age",
+      "last_seen_at": "2026-06-11T07:00:00Z",
+      "changes": [
+        {
+          "type": "new_feature",
+          "description": "Canvas 正式首发：agent 工作专属空间，可见化、可验证；artifact 在 canvas 内 emerge 并接受审查",
+          "evidence": "「Canvases give agent work a place to take shape, become visible, and get verified」",
+          "source_url": "https://github.blog/news-insights/product-news/github-copilot-app-the-agent-native-desktop-experience/",
+          "meee2_relevance": "锚点 #2+#3：agent artifact 在专属 canvas 内 become visible = live artifact 语义雏形；形状从行为 emerge 的 descriptive-first 模式",
+          "threat_signal": true
+        },
+        {
+          "type": "new_feature",
+          "description": "Agent Merge：自主监控 CI/审阅者/failing checks，全程代理 PR 流程至合并，用户设定终止条件",
+          "evidence": "「Agent Merge monitors CI, tracks required reviewers, addresses failing checks, and waits for all conditions to be satisfied」",
+          "source_url": "https://github.blog/news-insights/product-news/github-copilot-app-the-agent-native-desktop-experience/",
+          "meee2_relevance": "锚点 #1：AI 快 session 在后台自主完成 code→review→CI→merge 全闭环，人只需设定条件而非参与 session",
+          "threat_signal": true
+        },
+        {
+          "type": "new_feature",
+          "description": "100 万 token 上下文窗口 + 可配置推理深度；Copilot Max $100/月（高并发 agent 用量）",
+          "evidence": "「one-million-token context windows in VS Code, Copilot CLI, and the Copilot app; configurable reasoning levels that trade speed for depth」",
+          "source_url": "https://github.blog/changelog/2026-06-02-expanded-technical-preview-availability-for-the-github-copilot-app/",
+          "meee2_relevance": "锚点 #4：百万 token 窗口 = 跨 repo/跨 session 大规模 artifact context pull 能力",
+          "threat_signal": false
+        }
+      ],
+      "key_findings": [
+        "【威胁升级信号 threat_changed=true，建议审查是否升至 crit】Canvas 首发 + Agent Merge：Copilot 完成「开发全自动闭环」—— canvas 作为可见 artifact，Agent Merge 作为后台自主 session 执行器",
+        "Copilot App 现已具备：session 一等公民（My Work）+ canvas artifact（Canvas）+ 自主后台执行（Agent Merge）三合一，结构性威胁程度与 crit 竞品接近"
+      ],
+      "no_change_reason": null
+    },
+    {
+      "id": "gemini",
+      "name": "Google Gemini / AI Studio",
+      "category": "orchestrator",
+      "threat": "hi",
+      "threat_changed": false,
+      "has_changes": true,
+      "fetch_status": "ok",
+      "fetched_urls": ["https://blog.google/innovation-and-ai/technology/developers-tools/google-io-2026-developer-highlights/", "https://developers.googleblog.com/all-the-news-from-the-google-io-2026-developer-keynote/"],
+      "raw_snapshot": "Google Gemini / AI Studio Google I/O 2026: Managed Agents API—single API call provisions remote Linux environment where agent can reason, plan, call tools, execute code and manage files in isolated sandbox, browse web; powered by new Antigravity agent (Gemini 3.5 Flash), available in Google AI Studio. Native Android app building in AI Studio with Kotlin support. Edit tool to annotate preview window directly. Google Workspace now directly accessible from apps built in AI Studio. Google AI Studio mobile app announced (coming soon). Source: WebSearch/blog.google/developers.googleblog.com (来源：WebSearch 结果，非官方原文)",
+      "content_hash": "Google Gemini / AI Studio Google I/O 2026: Managed Agents API—single API call provisions remote Linux environment where agent can reason, plan, call tools, execute code a",
+      "last_seen_at": "2026-06-11T07:00:00Z",
+      "changes": [
+        {
+          "type": "new_feature",
+          "description": "Managed Agents API（Google I/O）：单次 API 调用配置远端 Linux 环境，agent 可推理/执行代码/浏览网页，由 Antigravity agent 驱动",
+          "evidence": "「single API call provisions a remote Linux environment where the agent can reason, plan and call tools; execute code and manage files in an isolated sandbox; browse the web」",
+          "source_url": "https://blog.google/innovation-and-ai/technology/developers-tools/google-io-2026-developer-highlights/",
+          "meee2_relevance": "锚点 #1：API 级别的「AI 快 session」按需配置，agent execution runtime 下沉至 API primitive，任何开发者可创建全能力 AI session",
+          "threat_signal": true
+        },
+        {
+          "type": "new_feature",
+          "description": "AI Studio 原生 Android 应用构建（Kotlin），Google Workspace 数据直接可从 AI Studio 构建的 app 中访问",
+          "evidence": "「build native Android apps right in the build tab; Google Workspace now directly accessible from the apps you build within AI Studio」",
+          "source_url": "https://developers.googleblog.com/all-the-news-from-the-google-io-2026-developer-keynote/",
+          "meee2_relevance": "锚点 #2：Workspace 数据与 app 构建直接集成，逼近跨工具 artifact 实时访问",
+          "threat_signal": false
+        }
+      ],
+      "key_findings": [
+        "Managed Agents API 是本期最重要的基础设施级变化：agent execution runtime 下沉为 API primitive，开发者一行代码配置完整 AI 执行环境（Linux + code + browser）",
+        "Google I/O 后 Google 完成「模型 API → agent execution → workspace 集成」的完整栈布局，对 meee2 的 AI session 层形成更强的平台级竞争"
+      ],
+      "no_change_reason": null
+    },
+    {
+      "id": "linear",
+      "name": "Linear",
+      "category": "workspace",
+      "threat": "hi",
+      "threat_changed": false,
+      "has_changes": true,
+      "fetch_status": "ok",
+      "fetched_urls": ["https://linear.app/changelog/2026-06-04-team-documents", "https://linear.app/changelog/2026-05-27-linear-diffs"],
+      "raw_snapshot": "Linear June 2026: Team Documents (June 4)—every team gets a dedicated page to keep context organized; create documents from home page, add existing docs from projects/issues, group into sections. Linear Agent Skills now shareable with teams: personal workflows become shared team process, standardize recurring workflows like writing specs, running weekly planning, drafting updates. Linear Diffs: review code diffs from any issue with a PR, iterate on further changes with agents directly in Linear. Source: WebSearch/linear.app/changelog (来源：WebSearch 结果，非官方原文)",
+      "content_hash": "Linear June 2026: Team Documents (June 4)—every team gets a dedicated page to keep context organized; create documents from home page, add existing docs from projects/is",
+      "last_seen_at": "2026-06-11T07:00:00Z",
+      "changes": [
+        {
+          "type": "new_feature",
+          "description": "Team Documents：团队专属 context 文档页，可从 home page 直接创建/组织",
+          "evidence": "「every team gets a page to keep its context organized and easy to access」",
+          "source_url": "https://linear.app/changelog/2026-06-04-team-documents",
+          "meee2_relevance": null,
+          "threat_signal": false
+        },
+        {
+          "type": "new_feature",
+          "description": "Linear Agent Skills 团队共享：个人工作流 → 团队标准化流程",
+          "evidence": "「Skills can now be shared with teams so great personal workflows can become shared team process」",
+          "source_url": "https://linear.app/changelog/2026-06-04-team-documents",
+          "meee2_relevance": "锚点 #4：可复用 skill 提升为团队级 institutional knowledge，跨成员 agent 工作流共享的基础",
+          "threat_signal": false
+        },
+        {
+          "type": "new_feature",
+          "description": "Linear Diffs：在 issue 内直接审查 PR diff，与 agent 继续迭代",
+          "evidence": "「review diffs from any issue with a PR and iterate on further changes with agents」",
+          "source_url": "https://linear.app/changelog/2026-05-27-linear-diffs",
+          "meee2_relevance": "锚点 #4：issue ↔ code diff 跨工具 context 无缝衔接，agent 迭代在 Linear 内完成闭环",
+          "threat_signal": false
+        }
+      ],
+      "key_findings": [
+        "Skills 团队共享：Linear Agent 个人工作流开始沉淀为团队知识资产，产品从「个人助手」向「团队协作协议」演化",
+        "Linear Diffs：项目管理工具内完成代码 diff 审查，工具边界持续模糊，但核心仍是项目管理而非 session 管理"
+      ],
+      "no_change_reason": null
+    },
+    {
+      "id": "notion-ai",
+      "name": "Notion AI",
+      "category": "workspace",
+      "threat": "md",
+      "threat_changed": false,
+      "has_changes": true,
+      "fetch_status": "ok",
+      "fetched_urls": ["https://www.notion.com/releases", "https://releasebot.io/updates/notion"],
+      "raw_snapshot": "Notion AI June 2026: Custom Agents admin guardrails—creator controls, per-agent and workspace credit limits, usage dashboards, alerts, automatic pauses, approval flows to scale agents predictably. Custom Agent Directory in Library: browse all workspace agents, pin favorites, create new. Workers (hosted runtime) entering pricing phase August 11 (free during beta). Database sync powered by Workers with no servers. External Agents API partners: Claude, Codex, Decagon. Source: WebSearch/notion.com/releases (来源：WebSearch 结果，非官方原文)",
+      "content_hash": "Notion AI June 2026: Custom Agents admin guardrails—creator controls, per-agent and workspace credit limits, usage dashboards, alerts, automatic pauses, approval flows to",
+      "last_seen_at": "2026-06-11T07:00:00Z",
+      "changes": [
+        {
+          "type": "new_feature",
+          "description": "Custom Agent 管控体系：per-agent 额度、用量仪表板、自动暂停、审批流——企业 agent 治理层上线",
+          "evidence": "「admin guardrails: per-agent credit limits, usage dashboards, alerts, automatic pauses, and approval flows」",
+          "source_url": "https://www.notion.com/releases",
+          "meee2_relevance": null,
+          "threat_signal": false
+        },
+        {
+          "type": "new_feature",
+          "description": "Custom Agent Directory：在 Library 中浏览/收藏/创建所有 workspace agent",
+          "evidence": "「Custom Agent Directory to browse all workspace agents, pin favorites, and create new ones」",
+          "source_url": "https://www.notion.com/releases",
+          "meee2_relevance": "锚点 #4：workspace-level agent discovery 目录 = 跨工具 agent 访问的检索层",
+          "threat_signal": false
+        }
+      ],
+      "key_findings": [
+        "Notion 从「创建 agents」升级到「治理 agents」：管控体系 + Directory 意味着 Notion 在构建企业 agent 基础设施",
+        "Workers 定价将于 8/11 启动，developer platform 进入商业化——Notion 的 agent hub 定位正式落地"
+      ],
+      "no_change_reason": null
+    },
+    {
+      "id": "slack",
+      "name": "Slack",
+      "category": "comms",
+      "threat": "md",
+      "threat_changed": false,
+      "has_changes": true,
+      "fetch_status": "ok",
+      "fetched_urls": ["https://www.eweek.com/news/slack-ai-update-salesforce-slackbot-2026/", "https://techcrunch.com/2026/03/31/salesforce-announces-an-ai-heavy-makeover-for-slack-with-30-new-features/"],
+      "raw_snapshot": "Slack 2026: AI-Skills—define a task once, save as skill; Slackbot auto-recognizes when you're trying to do that task and offers to run. Meeting Intelligence: Slackbot listens to Zoom/Google Meet/Slack Huddles via desktop audio. Agentforce agents joinable to channels as teammates. Slackbot scheduled tasks; can send messages on behalf of users and create calendar events from Gmail/Outlook. Desktop Agent watches across other apps and offers help. Developer platform: slack create agent command, enhanced Bolt framework, bring-your-own-LLM flexibility. Source: WebSearch/eweek.com/techcrunch.com/slack.com (来源：WebSearch 结果，非官方原文)",
+      "content_hash": "Slack 2026: AI-Skills—define a task once, save as skill; Slackbot auto-recognizes when you're trying to do that task and offers to run. Meeting Intelligence: Slackbot li",
+      "last_seen_at": "2026-06-11T07:00:00Z",
+      "changes": [
+        {
+          "type": "new_feature",
+          "description": "AI-Skills：定义任务一次 → Slackbot 自动识别场景主动建议运行；Meeting Intelligence 监听桌面音频",
+          "evidence": "「Slackbot is smart enough to recognize when you're trying to do that specific task and will offer to run the skill automatically」",
+          "source_url": "https://www.eweek.com/news/slack-ai-update-salesforce-slackbot-2026/",
+          "meee2_relevance": "锚点 #5：Slackbot 感知意图主动触发 skill ≈ peripheral 层自动介入，与 meee2「5字戳任何 session」有功能相似性",
+          "threat_signal": false
+        },
+        {
+          "type": "new_feature",
+          "description": "Desktop Agent：跨应用监控用户行为，主动提供帮助",
+          "evidence": "「desktop agent that watches what you're doing across other apps and offers to help」",
+          "source_url": "https://techcrunch.com/2026/03/31/salesforce-announces-an-ai-heavy-makeover-for-slack-with-30-new-features/",
+          "meee2_relevance": "锚点 #5：跨 app 行为感知 + 主动触发 = peripheral 层的直接竞争，但触发粒度仍粗于 meee2",
+          "threat_signal": false
+        }
+      ],
+      "key_findings": [
+        "Slack Desktop Agent 跨应用监控：peripheral 层入口从「通讯工具」扩展到「跨应用行为感知」，与 meee2 菜单栏定位有功能重叠但触达粒度差异显著",
+        "AI-Skills 自动识别：Slackbot 获得主动触发能力，但仍属通讯工具边界内的 agent 扩展"
+      ],
+      "no_change_reason": null
+    },
+    {
+      "id": "reflect",
+      "name": "Reflect",
+      "category": "workspace",
+      "threat": "md",
+      "threat_changed": false,
+      "has_changes": false,
+      "fetch_status": "ok",
+      "fetched_urls": ["https://reflect.app/"],
+      "raw_snapshot": "Reflect June 2026: Claude Sonnet 3.7 support added. In-line PDF preview for macOS. Persistent search results. Custom AI prompt templates in preferences. SQLite rewrite for iPad app (performance). No major structural AI or session-related feature changes detected. Source: WebSearch/reflect.app (来源：WebSearch 结果，非官方原文)",
+      "content_hash": "Reflect June 2026: Claude Sonnet 3.7 support added. In-line PDF preview for macOS. Persistent search results. Custom AI prompt templates in preferences. SQLite rewrite f",
+      "last_seen_at": "2026-06-11T07:00:00Z",
+      "changes": [],
+      "key_findings": [],
+      "no_change_reason": "本次搜索未发现 Reflect 有新功能上线（2026-06-11 附近）；Claude Sonnet 3.7 支持和 iPad SQLite 重写为常规迭代，与 meee2 核心锚点（session、agent、live link、peripheral）无结构重叠"
+    },
+    {
+      "id": "raycast",
+      "name": "Raycast",
+      "category": "peripheral",
+      "threat": "md",
+      "threat_changed": false,
+      "has_changes": true,
+      "fetch_status": "ok",
+      "fetched_urls": ["https://alternativeto.net/news/2026/6/raycast-update-enables-team-sharing-of-ai-tools-and-adds-windows-dictation/", "https://manual.raycast.com/new-in-v2"],
+      "raw_snapshot": "Raycast June 2026: Team sharing of AI Agents, AI Commands, and Dictation Styles now live—organization-wide access to same setups for consistent work. Windows dictation support added. Skills and AI Extensions dynamically loaded into chat when relevant (no manual activation needed). MCP servers in Quick AI and AI Chat. Tool calls and AI Commands show richer detail (expand to inspect inputs). Profile: persistent context (role, preferred tools, communication style). Memory: auto-summary of conversations over time. Source: WebSearch/raycast.com/alternativeto.net (来源：WebSearch 结果，非官方原文)",
+      "content_hash": "Raycast June 2026: Team sharing of AI Agents, AI Commands, and Dictation Styles now live—organization-wide access to same setups for consistent work. Windows dictation su",
+      "last_seen_at": "2026-06-11T07:00:00Z",
+      "changes": [
+        {
+          "type": "new_feature",
+          "description": "团队共享 AI Agents、AI Commands、Dictation Styles 正式上线（June 2026）",
+          "evidence": "「Teams can now share AI Agents, AI Commands, and Dictation Styles across the organization」",
+          "source_url": "https://alternativeto.net/news/2026/6/raycast-update-enables-team-sharing-of-ai-tools-and-adds-windows-dictation/",
+          "meee2_relevance": "锚点 #4+#5：AI Agent 从个人工具升级为团队共享资产，peripheral 工具向「团队级 session 配置层」演化",
+          "threat_signal": false
+        },
+        {
+          "type": "new_feature",
+          "description": "Skills 动态加载：根据请求自动载入相关 Skills/AI Extensions，无需手动激活",
+          "evidence": "「Skills and AI Extensions are now loaded into the chat dynamically when they're relevant, so you don't need to mention them manually」",
+          "source_url": "https://manual.raycast.com/new-in-v2",
+          "meee2_relevance": "锚点 #5：peripheral 工具主动感知上下文并载入对应能力，接近 meee2 的会话感知触达机制",
+          "threat_signal": false
+        }
+      ],
+      "key_findings": [
+        "团队共享 Agents 正式上线：Raycast 从个人 peripheral 工具升级为团队级 AI 配置基础设施，Windows 扩展平台覆盖",
+        "Skills 动态加载：peripheral 工具开始具备上下文感知主动能力，但威胁等级暂维持 md"
+      ],
+      "no_change_reason": null
+    },
+    {
+      "id": "replit",
+      "name": "Replit",
+      "category": "orchestrator",
+      "threat": "md",
+      "threat_changed": false,
+      "has_changes": true,
+      "fetch_status": "ok",
+      "fetched_urls": ["https://releasebot.io/updates/replit"],
+      "raw_snapshot": "Replit June 2026: Agent preferences (model tier, plan mode, auto-merge, auto-approve-plan) now per-user instead of shared across project. Microsoft Fabric integration: build AI data apps in Replit, publish into enterprise Power BI semantic models. SEO Agent reviews published apps for discoverability issues with one-click fixes via Growth pane. Collaborative Stripe payments in team workspaces. Visual Editor added Layout controls (flexbox). New connectors: Airtable, GitLab, Basecamp, Productboard, Twitch, Square, Intercom + MCP servers (Twilio). Domain management via Entri DNS auto-setup. Source: WebSearch/replit.com/releasebot.io (来源：WebSearch 结果，非官方原文)",
+      "content_hash": "Replit June 2026: Agent preferences (model tier, plan mode, auto-merge, auto-approve-plan) now per-user instead of shared across project. Microsoft Fabric integration: bu",
+      "last_seen_at": "2026-06-11T07:00:00Z",
+      "changes": [
+        {
+          "type": "new_feature",
+          "description": "Agent 偏好设置改为 per-user（模型 tier、plan mode、auto-merge 不再全项目共享）",
+          "evidence": "「Agent preferences now stick to individual users instead of being shared with everyone in the project」",
+          "source_url": "https://releasebot.io/updates/replit",
+          "meee2_relevance": "锚点 #1：agent session 偏好用户级隔离，session 个性化基础设施信号",
+          "threat_signal": false
+        },
+        {
+          "type": "new_feature",
+          "description": "Microsoft Fabric 集成：在 Replit 构建 AI 数据应用并发布到企业数据平台",
+          "evidence": "「build AI-powered data apps in Replit and publish them into Microsoft Fabric」",
+          "source_url": "https://releasebot.io/updates/replit",
+          "meee2_relevance": null,
+          "threat_signal": false
+        },
+        {
+          "type": "new_feature",
+          "description": "SEO Agent：发布后自动审查 app 可发现性问题，提供一键修复",
+          "evidence": "「SEO Agent reviews published apps for discoverability issues, with each finding accompanied by a one-click fix」",
+          "source_url": "https://releasebot.io/updates/replit",
+          "meee2_relevance": null,
+          "threat_signal": false
+        }
+      ],
+      "key_findings": [
+        "Agent 偏好 per-user 化：Replit 内 agent 行为开始以用户为粒度差异化，session 个性化基础设施信号",
+        "Replit 持续向「全栈生产力平台」延伸（Fabric 企业集成、SEO Agent），产品边界扩大但核心 session 范式无结构变化"
+      ],
+      "no_change_reason": null
+    },
+    {
+      "id": "superwhisper",
+      "name": "Superwhisper",
+      "category": "peripheral",
+      "threat": "lo",
+      "threat_changed": false,
+      "has_changes": false,
+      "fetch_status": "ok",
+      "fetched_urls": ["https://superwhisper.com/changelog"],
+      "raw_snapshot": "Superwhisper v2.16.0 (June 9, 2026): theme control (light/dark/system), new sound effect styles, experimental S1-Mini local model access, enhanced vocabulary processing for large lists, Stat share card. Meeting mode language selection fix for AI summary. Model picker shows checkmarks for downloaded models. S1 region failover improvements. Local language model output quality massively improved. No new agent integration or session management features. Source: WebSearch/superwhisper.com (来源：WebSearch 结果，非官方原文)",
+      "content_hash": "Superwhisper v2.16.0 (June 9, 2026): theme control (light/dark/system), new sound effect styles, experimental S1-Mini local model access, enhanced vocabulary processing f",
+      "last_seen_at": "2026-06-11T07:00:00Z",
+      "changes": [],
+      "key_findings": [],
+      "no_change_reason": "v2.16.0（June 9）更新为 UI 主题、音效和本地模型质量改进，无 session/agent/workspace/menu bar 相关功能变化"
+    },
+    {
+      "id": "producthunt-ai",
+      "name": "Product Hunt AI 新品雷达",
+      "category": "new_entrant_watch",
+      "threat": "md",
+      "threat_changed": false,
+      "has_changes": true,
+      "fetch_status": "ok",
+      "fetched_urls": ["https://www.producthunt.com/products/wonder-public-alpha", "https://blog.mean.ceo/product-hunt-launches-news-june-2026/"],
+      "raw_snapshot": "Product Hunt AI 新品 June 2026: Wonder（public alpha）——canvas-native AI 设计 agent，在 canvas 上生成 UI/图形/ppt，实时选择元素精修，通过 MCP 直接对接 Cursor 和 Claude Code 出代码。1DevTool：单窗口集成 9 个开发工具。OpenHunt：面向后算法互联网的 AI-native 发布层。本周 AI 上新以 workflow 工具为主，六款新工具嵌入已有平台表面（Mina 接入视频会议等）。来源：WebSearch/producthunt.com (来源：WebSearch 结果，非官方原文)",
+      "content_hash": "Product Hunt AI 新品 June 2026: Wonder（public alpha）——canvas-native AI 设计 agent，在 canvas 上生成 UI/图形/ppt，实时选择元素精修，通过 MCP 直接对接 Cursor 和 Claude Code",
+      "last_seen_at": "2026-06-11T07:00:00Z",
+      "changes": [
+        {
+          "type": "new_entrant",
+          "description": "Wonder（public alpha）：canvas-native AI 设计 agent，生成 UI/图形/PPT，通过 MCP 对接 Cursor/Claude Code 直接出代码",
+          "evidence": "「AI design agent that works on your canvas; connects with MCP to coding agents like Cursor and Claude Code to ship straight from design」",
+          "source_url": "https://www.producthunt.com/products/wonder-public-alpha",
+          "meee2_relevance": "锚点 #2+#4：canvas-native agent + MCP 跨工具出码 = live artifact + F9 pull 的设计侧实现，建议下次加入 sources.json 持续观察",
+          "threat_signal": false
+        }
+      ],
+      "key_findings": [
+        "Wonder（public alpha）：canvas-native AI 设计 agent + MCP 接 Cursor/Claude Code，命中 agent + canvas 两个 watch_keywords，建议下次加入 sources.json",
+        "本周 PH AI 上新以 workflow 工具为主，Wonder 为最接近 meee2 锚点的新产品"
+      ],
+      "no_change_reason": null
+    }
+  ],
+  "alerts": [
+    {
+      "competitor_id": "github-copilot",
+      "competitor_name": "GitHub Copilot",
+      "severity": "hi",
+      "headline": "Copilot Canvas 首发 + Agent Merge：从 session 管理到端到端自主 PR 闭环，威胁等级建议升至 crit",
+      "evidence": "「Canvases give agent work a place to take shape, become visible, and get verified; Agent Merge monitors CI, tracks required reviewers, addresses failing checks」",
+      "action_suggestion": "Copilot 已实现「canvas 可见化 + agent 后台自主执行 + PR 全自动合并」三合一。meee2 需明确：Copilot Agent Merge 的「人设定条件等结果」与 meee2「人在 agent 图内作为 session 参与者」的本质差异，并在产品叙事中体现这一哲学区分"
+    },
+    {
+      "competitor_id": "claude-ai",
+      "competitor_name": "Claude.ai / Anthropic",
+      "severity": "crit",
+      "headline": "Claude Fable 5 + Agent SDK 更名：Anthropic 全面转向通用 agent runtime，长时序 AI session 能力突破",
+      "evidence": "「took on complex, long-horizon coding tasks with autonomy and reliability exceeding previous benchmarks; SDK renamed to reflect broader vision beyond just coding」",
+      "action_suggestion": "Fable 5 长时序自主能力 + Agent SDK 定位升级意味着 Claude.ai 的「AI 快 session」已从「编码助手」升级为「通用执行引擎」。建议 meee2 团队明确：与 Claude Cowork 最大差异在于「人在 agent 图内」而非「人等 agent 完成」，这一差异是否仍具竞争力需立即评估"
+    },
+    {
+      "competitor_id": "cursor",
+      "competitor_name": "Cursor",
+      "severity": "crit",
+      "headline": "Cursor Canvas 内嵌 agent 可执行按钮 + Design Mode：可交互 artifact 与 descriptive canvas 汇聚",
+      "evidence": "「agents can embed buttons in canvases that will run a specific prompt when clicked; Design Mode makes it easier to edit artifacts and visual outputs inside the workflow」",
+      "action_suggestion": "Canvas 内嵌 agent 按钮是「描述驱动行为」的竞品实现：用户在 canvas 内定义结构，agent 按 canvas 结构执行。建议分析 meee2 descriptive canvas 的差异化——是否支持比「按钮 → prompt」更细粒度的条件触发？Canvas 上的行为抽象能否超越 one-shot 触发模式？"
+    },
+    {
+      "competitor_id": "gemini",
+      "competitor_name": "Google Gemini / AI Studio",
+      "severity": "hi",
+      "headline": "Google Managed Agents API：agent execution runtime 下沉为 API primitive，任何开发者可一行代码创建 AI session",
+      "evidence": "「single API call provisions a remote Linux environment where the agent can reason, plan and call tools; execute code and manage files in an isolated sandbox; browse the web」",
+      "action_suggestion": "Managed Agents 将 AI 快 session 的创建成本降至几乎零，彻底民主化 agent execution runtime。建议关注 Google 是否在此基础上推出面向终端用户的「workspace-level Managed Agent」——若推出，与 meee2 锚点 #1 的重叠程度将从 hi 升至 crit"
+    }
+  ]
+}
