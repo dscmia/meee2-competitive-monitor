@@ -1,0 +1,380 @@
+{
+  "report_date": "2026-06-16",
+  "generated_at": "2026-06-16T16:15:00Z",
+  "summary": {
+    "total_tracked": 14,
+    "fetched_ok": 14,
+    "fetch_error": 0,
+    "has_changes": 4,
+    "new_alerts": 1
+  },
+  "competitors": [
+    {
+      "id": "cursor",
+      "name": "Cursor",
+      "category": "orchestrator",
+      "threat": "crit",
+      "threat_changed": false,
+      "has_changes": false,
+      "fetch_status": "ok",
+      "fetched_urls": [
+        "WebSearch:Cursor IDE AI editor new features changelog update June 16 2026",
+        "WebSearch:Cursor v3.8 new release June 2026 changelog features"
+      ],
+      "raw_snapshot": "Cursor June 16, 2026: 未发现自 June 15 baseline 以来的新版本或功能更新。最新版本仍为 v3.7（June 4）：Canvas Design Mode（canvas 内 UI 元素标注/选择引导 Cursor 编辑）、Context Usage Report（canvas 内 token 分布交互式报告）、BugBot 自学习规则（44,000+ 规则，90 秒平均审查时间—June 10 优化）。Auto-review（v3.6, May 29）：Shell/MCP/Fetch 调用由分类器子 agent 评估，允许/换方案/请求人工确认——此功能早于 baseline，baseline 遗漏，与 meee2 无结构性重叠。/review 命令（June 10）：一键运行 BugBot + Security Review。Teams 套餐用量池拆分（第一方 Cursor 模型 + 第三方 API 各独立）。Enterprise 多 team 组织管理（June 3）已在 baseline 覆盖。未发现 June 15 后新条目。（来源：WebSearch，非官方原文）",
+      "content_hash": "Cursor June 16, 2026: 未发现自 June 15 baseline 以来的新版本或功能更新。最新版本仍为 v3.7（June 4）：Canvas Design Mode（canvas 内 UI 元素标注/选择引导 Cursor 编辑",
+      "last_seen_at": "2026-06-16T16:15:00Z",
+      "changes": [],
+      "key_findings": [],
+      "no_change_reason": "本次抓取未发现 Cursor 自 2026-06-15 以来有新版本或功能更新；最新版本 v3.7（June 4）全部特性已在 baseline 中覆盖；Auto-review（v3.6, May 29）和 /review 命令（June 10）早于 baseline 且与 meee2 无结构性重叠"
+    },
+    {
+      "id": "openai",
+      "name": "OpenAI / ChatGPT",
+      "category": "orchestrator",
+      "threat": "crit",
+      "threat_changed": false,
+      "has_changes": true,
+      "fetch_status": "ok",
+      "fetched_urls": [
+        "WebSearch:OpenAI ChatGPT new features release announcement June 16 2026",
+        "WebSearch:GPT-5.6 OpenAI June 16 2026 announcement release date capabilities",
+        "WebSearch:OpenAI ChatGPT Library Enterprise rollout June 15 OR June 16 2026"
+      ],
+      "raw_snapshot": "OpenAI June 16, 2026: 【GPT-5.6 即将发布预告（今日）】OpenAI 首席科学家公开表示 GPT-5.6 是「meaningful leap」，重点提升 advanced reasoning、agentic workflows、token efficiency；市场预期 6 月下旬发布（尚未官方确认发布日期或 system card）。【Library for Enterprise/Edu/Healthcare】正在向企业/教育/医疗 workspace 推送——成员获专属位置查找和复用上传/创建的文件，workspace owner 可控制 ChatGPT 是否自动引用 Library 文件；文件遵循 workspace 保留策略。【Memory summary 控制更新】ChatGPT 新增 memory summary 编辑界面（Dreaming V3 配套）：可删除 memory、在底部文本框直接输入修改、高亮选取 summary 文本修正；Temporary Chat 不计入 memory；Enterprise workspace owner 可为全组织开/关 memory。【BASELINE 遗漏】GPT-5.2（Instant/Thinking/Pro）June 12 退役，现有对话自动切换至 GPT-5.5 对应版本。（来源：WebSearch，非官方原文）",
+      "content_hash": "OpenAI June 16, 2026: 【GPT-5.6 即将发布预告（今日）】OpenAI 首席科学家公开表示 GPT-5.6 是「meaningful leap」，重点提升 advanced reasoning、agentic workflows、t",
+      "last_seen_at": "2026-06-16T16:15:00Z",
+      "changes": [
+        {
+          "type": "new_feature",
+          "description": "GPT-5.6 即将发布：OpenAI 首席科学家今日（June 16）公开确认 GPT-5.6 为「meaningful leap」，预计 6 月下旬发布，重点提升 advanced reasoning、agentic workflows、token efficiency",
+          "evidence": "「GPT-5.6: OpenAI Chief Scientist Calls It a Meaningful Leap, June Launch Nears」",
+          "source_url": "https://www.techtimes.com/articles/318492/20260616/gpt-56-openai-chief-scientist-calls-it-meaningful-leap-june-launch-nears.htm",
+          "meee2_relevance": "锚点 #1：agentic workflows 能力提升 → GPT-5.6 将进一步压低 ChatGPT 作为 agent 工作台的能力门槛；推断：模型代际加速是 ChatGPT workspace agents 竞争力的持续放大器，meee2 的差异化需在模型能力之外的协议层/canvas层建立",
+          "threat_signal": false
+        },
+        {
+          "type": "new_feature",
+          "description": "Library for Enterprise/Edu/Healthcare 开始推送：workspace 成员获专属文件库，可查找和复用跨 session 上传/创建的文件；管理员可控制自动引用行为",
+          "evidence": "「Library is rolling out to Enterprise, Edu, and Healthcare workspaces, giving members a dedicated place to find and reuse files they upload to or create in ChatGPT. Workspace owners can control whether ChatGPT automatically references Library files when responding」",
+          "source_url": "https://help.openai.com/en/articles/10128477-chatgpt-enterprise-edu-release-notes",
+          "meee2_relevance": "锚点 #4：Library 是跨 session 文件复用（artifact pull）的基础 UX 层——Enterprise 用户可在 ChatGPT 内累积跨 session 可复用的 artifact 库，向 meee2 的 artifact pull（F9）功能靠拢；推断：这是 ChatGPT 向「持久化 artifact 工作台」方向的又一步",
+          "threat_signal": false
+        },
+        {
+          "type": "new_feature",
+          "description": "Memory summary 新 UX（Dreaming V3 配套）：ChatGPT 新增直接编辑 memory summary 的能力——输入框输入修改/高亮文本修正/删除整段 memory；Temporary Chat 不计入 memory",
+          "evidence": "「Users can now delete the memories shown on their memory summary page and turn memory off by selecting 'Delete and turn off memory'. Users can type what they want changed into the text box at the bottom of the memory summary and it will update accordingly, or highlight any text in the memory summary to make a specific correction」",
+          "source_url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes",
+          "meee2_relevance": null,
+          "threat_signal": false
+        },
+        {
+          "type": "other",
+          "description": "【BASELINE 遗漏】GPT-5.2（Instant/Thinking/Pro）June 12 退役，现有对话自动切换至 GPT-5.5 对应版本",
+          "evidence": "「ChatGPT has retired GPT-5.2 models as of June 12, 2026, which applies to GPT-5.2 Instant, GPT-5.2 Thinking, and GPT-5.2 Pro. Existing conversations that used GPT-5.2 will automatically continue on the corresponding GPT-5.5 model」",
+          "source_url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes",
+          "meee2_relevance": null,
+          "threat_signal": false
+        }
+      ],
+      "key_findings": [
+        "GPT-5.6 首席科学家今日（June 16）公开确认为「meaningful leap」，预期 6 月下旬发布：重点在 advanced reasoning 和 agentic workflows——ChatGPT 作为 agent 工作台的能力基线将再次抬升",
+        "Library for Enterprise 开始推送：跨 session 文件复用（artifact 库）进入企业 ChatGPT，向 meee2 F9 artifact pull 方向靠拢；GPT-5.2 June 12 退役（BASELINE 遗漏），切换至 GPT-5.5"
+      ],
+      "no_change_reason": null
+    },
+    {
+      "id": "windsurf",
+      "name": "Windsurf / Devin Desktop",
+      "category": "orchestrator",
+      "threat": "crit",
+      "threat_changed": false,
+      "has_changes": false,
+      "fetch_status": "ok",
+      "fetched_urls": [
+        "WebSearch:Windsurf Codeium Devin Desktop new features update June 16 2026"
+      ],
+      "raw_snapshot": "Devin Desktop June 16, 2026: 未发现自 June 15 baseline 以来的新功能。内容与 baseline 完全一致：Agent Command Center（Kanban 管理本地+云端 agent）、Spaces（跨 agent session 共享 context）、ACP 生态（JetBrains/Google/GitHub 等 25+ 支持）、Devin Local（Rust 重写，subagents 支持）、Devin Review 集成。Cascade EOL July 1（约 15 天后）时间线不变。（来源：WebSearch，非官方原文）",
+      "content_hash": "Devin Desktop June 16, 2026: 未发现自 June 15 baseline 以来的新功能。内容与 baseline 完全一致：Agent Command Center（Kanban 管理本地+云端 agent）、Spaces（跨 agent s",
+      "last_seen_at": "2026-06-16T16:15:00Z",
+      "changes": [],
+      "key_findings": [],
+      "no_change_reason": "本次抓取未发现 Devin Desktop 自 2026-06-15 以来有新功能；Spaces、ACP 生态、Devin Local 均已在 baseline 中覆盖；Cascade EOL（July 1）时间线不变（15 天后）"
+    },
+    {
+      "id": "claude-ai",
+      "name": "Claude.ai / Anthropic",
+      "category": "orchestrator",
+      "threat": "crit",
+      "threat_changed": false,
+      "has_changes": true,
+      "fetch_status": "ok",
+      "fetched_urls": [
+        "WebSearch:Anthropic Claude new features release announcement June 16 2026",
+        "WebSearch:Claude Code v2.1.178 v2.1.177 release date June 2026 changelog permission rules",
+        "WebSearch:Claude Fable 5 suspended US government directive temporary all users June 2026"
+      ],
+      "raw_snapshot": "Anthropic June 16, 2026: 【BASELINE 遗漏 - 紧急】Claude Fable 5 和 Mythos 5 由于美国政府指令，对所有用户（包括美国境内用户）全面暂停访问（June 12，5:21pm ET）——政府以「国家安全」出口管制权限发出指令，称发现 Fable 5 jailbreak 方法；Anthropic 在不认同的情况下选择合规配合；所有产品新 session 自动切换至 Opus 4.8 或用户设置的默认模型；Claude Code 切换至 Sonnet 4.6/Opus 4.8；暂停时长未定（Polymarket 预测 June 13 前解禁已 settle 为 NO）。——Claude Code v2.1.178（约 June 15 发布，搜索时标注为「19 hours ago」）：Tool(param:value) 参数匹配语法用于权限规则（支持 * 通配符，例如 Agent(model:opus) 可阻止 Opus subagent 调用）；嵌套 .claude/ 目录就近原则（skill/workflow/output-style 最近 .claude/ 目录胜出，name clash 时加路径前缀）；safer auto mode（subagent spawn 在启动前由分类器评估，堵住之前 subagent 可发起被阻止操作的漏洞）；多项 bug 修复（background session、Remote Control 稳定性、Vim undo、VS Code IME）。（来源：WebSearch，非官方原文）",
+      "content_hash": "Anthropic June 16, 2026: 【BASELINE 遗漏 - 紧急】Claude Fable 5 和 Mythos 5 由于美国政府指令，对所有用户（包括美国境内用户）全面暂停访问（June 12，5:21pm ET）——政府",
+      "last_seen_at": "2026-06-16T16:15:00Z",
+      "changes": [
+        {
+          "type": "other",
+          "description": "【BASELINE 遗漏 - 紧急运营影响】Claude Fable 5 + Mythos 5 对所有用户全面暂停（June 12）：美国政府出口管制指令，以「国家安全」为由暂停所有用户访问，称发现 jailbreak 方法；Anthropic 合规停用，改 Opus 4.8 兜底；暂停时长未定",
+          "evidence": "「The US government issued an export control directive to suspend all access to Fable 5 and Mythos 5 by any foreign national. The net effect of this order is that Anthropic must abruptly disable Fable 5 and Mythos 5 for all its customers to ensure compliance. Anthropic's understanding is that the government believes it has become aware of a method of bypassing, or 'jailbreaking' Fable 5」",
+          "source_url": "https://www.anthropic.com/news/fable-mythos-access",
+          "meee2_relevance": "meee2 运营直接影响：若 meee2 在 Agent SDK 流程中已切换至 Fable 5（June 9 GA 后可能已采用），需立即确认当前 model 配置是否受影响；Opus 4.8 兜底意味着 API 调用成本上升（Fable 5 定价 $10/M input，Opus 4.8 更高）；Claude Code 同步切换意味着 meee2 工程团队的 dev 效率可能受影响",
+          "threat_signal": false
+        },
+        {
+          "type": "new_feature",
+          "description": "Claude Code v2.1.178（约 June 15 发布）：Tool(param:value) 细粒度权限规则、嵌套 .claude/ 目录就近原则、safer auto mode（subagent 启动前分类器评估）、多项 bug 修复",
+          "evidence": "「v2.1.178 added Tool(param:value) syntax for permission rules to match a tool's input parameters (with * wildcard), for example Agent(model:opus) to block Opus subagents. Subagent spawns are now evaluated by the classifier before launch, closing a gap where a subagent could request a blocked action」",
+          "source_url": "https://releasebot.io/updates/anthropic/claude-code",
+          "meee2_relevance": "锚点 #1：subagent 启动前分类器评估 = Claude Code 的 multi-agent 控制粒度进一步细化；Tool(param:value) 语法让 meee2 可实现「仅允许特定参数的 tool 调用」精确权限管理——meee2 若基于 Claude Code 构建 agent 图可直接利用此特性",
+          "threat_signal": false
+        }
+      ],
+      "key_findings": [
+        "【紧急运营影响 - BASELINE 遗漏】Claude Fable 5 + Mythos 5 已暂停（June 12）：美国政府出口管制指令，所有用户受影响，改用 Opus 4.8；暂停时长未定——meee2 需立即检查 Agent SDK 流程中的 model 配置，并评估 Opus 4.8 兜底的成本影响",
+        "Claude Code v2.1.178（~June 15）：Tool(param:value) 权限语法 + safer auto mode 让 meee2 对 agent 图的权限管控更精细；若 meee2 使用 Claude Code 作为 dev 工具，此版本的 bug 修复提升稳定性"
+      ],
+      "no_change_reason": null
+    },
+    {
+      "id": "github-copilot",
+      "name": "GitHub Copilot",
+      "category": "orchestrator",
+      "threat": "hi",
+      "threat_changed": false,
+      "has_changes": true,
+      "fetch_status": "ok",
+      "fetched_urls": [
+        "WebSearch:GitHub Copilot new features update June 16 2026 agent workspace",
+        "WebSearch:GitHub Agentic Workflows public preview date June 2026",
+        "WebSearch:GitHub Copilot App My Work desktop launch date June 2026"
+      ],
+      "raw_snapshot": "GitHub Copilot June 16, 2026: 【BASELINE 遗漏 #1】GitHub Agentic Workflows 进入 Public Preview（June 11）——在 GitHub Actions 中用自然语言 Markdown 文件定义 reasoning-based 自动化任务（issue triage、CI failure analysis、documentation updates），框架自动编译为标准 Actions YAML；支持 GitHub Actions 内置 GITHUB_TOKEN；此前 February 2026 为 technical preview，June 11 升级为 public preview。【BASELINE 遗漏 #2】GitHub Copilot App（June 5 expanded technical preview，所有 Pro/Pro+/Business/Enterprise 用户）：桌面 app，「My Work」视图跨仓库显示 active sessions、open issues、PRs、background automations；Windows 11 / Mac / Linux 均可用。今日（June 16）未发现新增功能。（来源：WebSearch，非官方原文）",
+      "content_hash": "GitHub Copilot June 16, 2026: 【BASELINE 遗漏 #1】GitHub Agentic Workflows 进入 Public Preview（June 11）——在 GitHub Actions 中用自然语言 Markdown 文件定义 reasoning-ba",
+      "last_seen_at": "2026-06-16T16:15:00Z",
+      "changes": [
+        {
+          "type": "new_feature",
+          "description": "【BASELINE 遗漏】GitHub Agentic Workflows 进入 Public Preview（June 11）：在 GitHub Actions 内用自然语言 Markdown 定义 reasoning-based agent 自动化（issue triage、CI failure analysis、doc updates），框架自动编译为 Actions YAML；支持内置 GITHUB_TOKEN",
+          "evidence": "「GitHub Agentic Workflows is now in public preview, allowing you to automate reasoning-based tasks like issue triage, CI failure analysis, and documentation updates by leveraging coding agents. You define your automation in natural language Markdown files, and GitHub Agentic Workflows compiles them into standard Actions YAML」",
+          "source_url": "https://github.blog/changelog/2026-06-11-github-agentic-workflows-is-now-in-public-preview/",
+          "meee2_relevance": "锚点 #3：自然语言定义 agent 工作流（Markdown 描述任务 → agent 执行）= descriptive-first 在 CI/CD 层的落地；锚点 #1：开发者（慢 session）用自然语言描述，agent（快 session）在 GitHub Actions 中执行；推断：GitHub 正在将 meee2「人描述意图，agent 执行」的核心范式嵌入开发者已有工作流，降低 meee2 提案的差异化稀有性",
+          "threat_signal": true
+        },
+        {
+          "type": "new_feature",
+          "description": "【BASELINE 遗漏】GitHub Copilot App（June 5 expanded technical preview）：桌面 app，「My Work」视图跨仓库统一展示 active sessions、open issues、PRs、background automations；Windows/Mac/Linux",
+          "evidence": "「The Copilot app provides a single 'My Work' view showing active sessions, open issues, pull requests, and background automations across connected repositories. Available in technical preview for Windows 11, Windows 11 on Arm, Mac, and Linux」",
+          "source_url": "https://github.blog/news-insights/product-news/github-copilot-app-the-agent-native-desktop-experience/",
+          "meee2_relevance": "锚点 #5：Copilot App「My Work」视图 = 跨仓库 session + background automations 的统一 peripheral 桌面视图；推断：这是 GitHub 在 meee2「菜单栏不切焦点、统一 session 视图」Peripheral 层的直接对标实现",
+          "threat_signal": true
+        }
+      ],
+      "key_findings": [
+        "【BASELINE 双重遗漏】GitHub Agentic Workflows 进入 Public Preview（June 11）：自然语言 Markdown → Actions YAML 的 reasoning-based agent 自动化，直接触碰 meee2 descriptive-first + human-in-session 核心锚点",
+        "【BASELINE 遗漏】GitHub Copilot App（June 5）：桌面「My Work」视图统一展示 active sessions + background automations——与 meee2 Peripheral 层（跨工具统一 session 视图）有结构性重叠，是 GitHub 对 meee2 定位的直接延伸"
+      ],
+      "no_change_reason": null
+    },
+    {
+      "id": "gemini",
+      "name": "Google Gemini / Antigravity",
+      "category": "orchestrator",
+      "threat": "hi",
+      "threat_changed": false,
+      "has_changes": false,
+      "fetch_status": "ok",
+      "fetched_urls": [
+        "WebSearch:Google Gemini Antigravity CLI new features update June 16 2026 EOL"
+      ],
+      "raw_snapshot": "Google Gemini / Antigravity June 16, 2026: Gemini CLI EOL 倒计时——June 18（2天后）。内容与 June 15 baseline 基本一致：Gemini CLI 和 Code Assist IDE extensions 将于 June 18 停服 AI Pro/Ultra 及个人免费用户；Antigravity 2.0（May 19, Google I/O 发布）：CLI（Go 重写）+ Desktop App + SDK + Managed Agents + Enterprise + 动态 subagents 并行化 + 定时后台任务 + AI Studio/Android/Firebase 生态集成；$100/月 AI Ultra 套餐；一键迁移至 Antigravity CLI。未发现 Antigravity 新功能。（来源：WebSearch，非官方原文）",
+      "content_hash": "Google Gemini / Antigravity June 16, 2026: Gemini CLI EOL 倒计时——June 18（2天后）。内容与 June 15 baseline 基本一致：Gemini CLI 和 Code Assist IDE extensions 将于 Ju",
+      "last_seen_at": "2026-06-16T16:15:00Z",
+      "changes": [],
+      "key_findings": [],
+      "no_change_reason": "本次抓取未发现 Gemini/Antigravity 新功能；Gemini CLI EOL（June 18）倒计时从 3 天变为 2 天，无实质性产品变化；Antigravity 2.0 所有功能已在 baseline 中覆盖"
+    },
+    {
+      "id": "linear",
+      "name": "Linear",
+      "category": "workspace",
+      "threat": "hi",
+      "threat_changed": false,
+      "has_changes": false,
+      "fetch_status": "ok",
+      "fetched_urls": [
+        "WebSearch:Linear app changelog new AI features June 16 2026"
+      ],
+      "raw_snapshot": "Linear June 16, 2026: 最新 changelog 仍为 June 11 Coding Sessions（Linear Agent 通过 Claude Code/Codex 写代码，cloud 运行，有 workspace 上下文；可通过 issue 分配、chat/comment/Slack 启动）。Team Skills Sharing（June 4）和 Team Documents（June 4）早于 baseline，baseline 遗漏，但与 meee2 无结构性重叠（meee2 watch_keywords：AI、agent、automation、session、ambient、background、cycles、triage、git、inbox、breaker、autopilot）。未发现 June 15 后新条目。（来源：WebSearch，非官方原文）",
+      "content_hash": "Linear June 16, 2026: 最新 changelog 仍为 June 11 Coding Sessions（Linear Agent 通过 Claude Code/Codex 写代码，cloud 运行，有 workspace 上下文；可通过 issue 分配、chat",
+      "last_seen_at": "2026-06-16T16:15:00Z",
+      "changes": [],
+      "key_findings": [],
+      "no_change_reason": "本次抓取未发现 Linear 自 2026-06-15 以来有新 changelog；June 11 Coding Sessions 仍为最新条目，已在 baseline 中覆盖"
+    },
+    {
+      "id": "notion-ai",
+      "name": "Notion AI",
+      "category": "workspace",
+      "threat": "md",
+      "threat_changed": false,
+      "has_changes": false,
+      "fetch_status": "ok",
+      "fetched_urls": [
+        "WebSearch:Notion AI new features update June 15 16 2026",
+        "WebSearch:Notion AI Custom Agent Controls Credits Dashboard release date June 2026"
+      ],
+      "raw_snapshot": "Notion AI June 16, 2026: 未发现 June 15 后新功能。Custom Agent Controls（May 5）和 Credits Dashboard 为 May 5 发布，早于 baseline。June 2026 通用更新（merged table cells、smarter database colours、relation filters、better AI agents、meeting notes upgrades）无具体日期，无法确认是否晚于 June 15。DeepSeek V4 Pro 已加入 Notion AI 可选模型列表（日期不明）。Workers pricing（August 11 起）时间线不变。（来源：WebSearch，非官方原文）",
+      "content_hash": "Notion AI June 16, 2026: 未发现 June 15 后新功能。Custom Agent Controls（May 5）和 Credits Dashboard 为 May 5 发布，早于 baseline。June 2026 通用更新（merged table c",
+      "last_seen_at": "2026-06-16T16:15:00Z",
+      "changes": [],
+      "key_findings": [],
+      "no_change_reason": "本次抓取未发现 Notion AI 在 June 15 后有确认的新功能发布；Custom Agent Controls（May 5）早于 baseline；June 2026 通用更新无法确认具体日期是否晚于 June 15"
+    },
+    {
+      "id": "slack",
+      "name": "Slack",
+      "category": "comms",
+      "threat": "md",
+      "threat_changed": false,
+      "has_changes": false,
+      "fetch_status": "ok",
+      "fetched_urls": [
+        "WebSearch:Slack AI new features update June 16 2026"
+      ],
+      "raw_snapshot": "Slack June 16, 2026: 未发现 June 15 后新功能。Slackbot analytics dashboard（Enterprise）、recurring Slackbot tasks、批准控制（消息/sidebar/状态/频道操作）、「Add to Slack」agents（waitlist）等更新已在 baseline 覆盖范围内（June 2026 更新，日期无法精确确认是否晚于 June 15）。无新的 canvas/agent/session 结构性变化。（来源：WebSearch，非官方原文）",
+      "content_hash": "Slack June 16, 2026: 未发现 June 15 后新功能。Slackbot analytics dashboard（Enterprise）、recurring Slackbot tasks、批准控制（消息/sidebar/状态/频道操作）、「Add to Sl",
+      "last_seen_at": "2026-06-16T16:15:00Z",
+      "changes": [],
+      "key_findings": [],
+      "no_change_reason": "本次抓取未发现 Slack 在 June 15 后有新功能；已知 June 2026 更新均无法确认晚于 June 15 且与 meee2 无结构性重叠"
+    },
+    {
+      "id": "reflect",
+      "name": "Reflect",
+      "category": "workspace",
+      "threat": "md",
+      "threat_changed": false,
+      "has_changes": false,
+      "fetch_status": "ok",
+      "fetched_urls": [
+        "WebSearch:Reflect notes app update changelog June 16 2026"
+      ],
+      "raw_snapshot": "Reflect June 16, 2026: 未发现 June 15 后新功能。最新 changelog 仍为 April 28（Edit notes with coding agents，扩展 MCP 功能）。MCP server（March 2026）、Claude Sonnet 3.7 支持均已在 baseline 覆盖。无新的 agent/session/menu bar 结构性变化。（来源：WebSearch，非官方原文）",
+      "content_hash": "Reflect June 16, 2026: 未发现 June 15 后新功能。最新 changelog 仍为 April 28（Edit notes with coding agents，扩展 MCP 功能）。MCP server（March 2026）、Claude Sonnet 3.",
+      "last_seen_at": "2026-06-16T16:15:00Z",
+      "changes": [],
+      "key_findings": [],
+      "no_change_reason": "本次抓取未发现 Reflect 在 June 15 后有新功能；最新 changelog April 28 已在 baseline 中覆盖"
+    },
+    {
+      "id": "raycast",
+      "name": "Raycast",
+      "category": "peripheral",
+      "threat": "md",
+      "threat_changed": false,
+      "has_changes": false,
+      "fetch_status": "ok",
+      "fetched_urls": [
+        "WebSearch:Raycast macOS new update changelog June 16 2026"
+      ],
+      "raw_snapshot": "Raycast June 16, 2026: 最新 macOS 版本仍为 v0.64（June 12），带回 Raycast Focus（专注 session，屏蔽分心 apps/网站，包含 Begin/Edit/Pause/Resume/Complete Focus Session 等命令）。v0.63（June 4）：AI Agents/Commands/Dictation Styles 团队共享。未发现 June 15 后新更新。（来源：WebSearch，非官方原文）",
+      "content_hash": "Raycast June 16, 2026: 最新 macOS 版本仍为 v0.64（June 12），带回 Raycast Focus（专注 session，屏蔽分心 apps/网站，包含 Begin/Edit/Pause/Resume/Complete Focus Session",
+      "last_seen_at": "2026-06-16T16:15:00Z",
+      "changes": [],
+      "key_findings": [],
+      "no_change_reason": "本次抓取未发现 Raycast 在 June 15 后有新更新；v0.64（June 12）已在 baseline 中覆盖"
+    },
+    {
+      "id": "replit",
+      "name": "Replit",
+      "category": "orchestrator",
+      "threat": "md",
+      "threat_changed": false,
+      "has_changes": false,
+      "fetch_status": "ok",
+      "fetched_urls": [
+        "WebSearch:Replit AI agent new features June 16 2026"
+      ],
+      "raw_snapshot": "Replit June 16, 2026: 未发现 June 15 后新功能。最新已知更新为 June 6 批量发布（Shopify stores for physical products、Microsoft Fabric data apps、SEO Agent、一键 DNS via Entri、Stripe 在协作 workspace 中可用、Agent preferences 按用户粘性存储），早于 baseline。未发现 June 14 后新条目。（来源：WebSearch，非官方原文）",
+      "content_hash": "Replit June 16, 2026: 未发现 June 15 后新功能。最新已知更新为 June 6 批量发布（Shopify stores for physical products、Microsoft Fabric data apps、SEO Agent、一键 DNS v",
+      "last_seen_at": "2026-06-16T16:15:00Z",
+      "changes": [],
+      "key_findings": [],
+      "no_change_reason": "本次抓取未发现 Replit 在 June 15 后有新功能；June 6 批量更新早于 baseline 且与 meee2 核心锚点无结构性重叠"
+    },
+    {
+      "id": "superwhisper",
+      "name": "Superwhisper",
+      "category": "peripheral",
+      "threat": "lo",
+      "threat_changed": false,
+      "has_changes": false,
+      "fetch_status": "ok",
+      "fetched_urls": [
+        "WebSearch:Superwhisper new update feature June 16 2026"
+      ],
+      "raw_snapshot": "Superwhisper June 16, 2026: 最新更新为 June 9（v2.16.0：theme control、新 sound effects、S1-Mini local model experimental、大词汇表处理增强、stat share card）和 June 10（realtime streaming UI、faster Parakeet、British English spelling、input device auto-select、language model search）——均早于 baseline 且已覆盖。未发现 June 15 后新版本。（来源：WebSearch，非官方原文）",
+      "content_hash": "Superwhisper June 16, 2026: 最新更新为 June 9（v2.16.0：theme control、新 sound effects、S1-Mini local model experimental、大词汇表处理增强、stat share card）和 June",
+      "last_seen_at": "2026-06-16T16:15:00Z",
+      "changes": [],
+      "key_findings": [],
+      "no_change_reason": "本次抓取未发现 Superwhisper 在 June 15 后有新版本；June 9-10 更新已在 baseline 中覆盖"
+    },
+    {
+      "id": "producthunt-ai",
+      "name": "Product Hunt AI 新品雷达",
+      "category": "new_entrant_watch",
+      "threat": "md",
+      "threat_changed": false,
+      "has_changes": true,
+      "fetch_status": "ok",
+      "fetched_urls": [
+        "WebSearch:Product Hunt AI new products launch June 16 2026 agent workspace canvas session",
+        "WebSearch:Product Hunt top AI launches today June 16 2026 menu bar workspace agent"
+      ],
+      "raw_snapshot": "Product Hunt AI 新品 June 16, 2026: 今日上新（搜索结果）：Wandesk（Build Your Own AI Desktop）——「describe an app and AI builds it on your machine; apps live alongside chat, files, tasks, and memory; AI remembers context across all of them」（桌面 AI 工具）；Wonder（「The AI design agent that works on your canvas」——canvas 内 AI 设计 agent，大概率为设计/Figma 类工具）；VEXI（Open-source AI coding agent for terminal，「4 hours ago」——CLI 编码 agent）；Keen Code（context-efficient CLI coding agent）；MartinLoop（「Control AI coding agents with limits, proof, + run receipts」，launched 13 days ago ≈ June 3，早于 baseline）。Slashspace AI（June 15 baseline 已标注为 hi 级新品，今日无新动态）。（来源：WebSearch，非官方原文）",
+      "content_hash": "Product Hunt AI 新品 June 16, 2026: 今日上新（搜索结果）：Wandesk（Build Your Own AI Desktop）——「describe an app and AI builds it on your machine; apps live alongside ch",
+      "last_seen_at": "2026-06-16T16:15:00Z",
+      "changes": [
+        {
+          "type": "new_entrant",
+          "description": "Wandesk（PH 近日）：「Build Your Own AI Desktop」——用户描述需求，AI 在本机构建 app；apps 与 chat/files/tasks/memory 共存；AI 跨 app 记忆 context。watch_keywords 命中：agent（AI builds）+ workspace（AI desktop）= 2 个。建议观察是否实现真正的跨 session 持久 context",
+          "evidence": "「Wandesk: AI desktop where you describe an app and AI builds it on your machine, with apps living alongside chat, files, tasks, and memory, where AI remembers context across all of them」",
+          "source_url": "https://www.producthunt.com/products/wandesk-ai",
+          "meee2_relevance": "锚点 #4 雏形：「AI remembers context across all apps」= 跨 app artifact 感知基础；但当前描述偏向「AI 生成 app」而非「人 + AI 在同一协议协同」——与 meee2 核心差异化仍有距离；推断：需进一步核查是否有 session/live link 机制",
+          "threat_signal": false
+        },
+        {
+          "type": "new_entrant",
+          "description": "Wonder（PH）：「The AI design agent that works on your canvas」——canvas 内 AI 设计 agent。watch_keywords 命中：canvas + agent = 2 个。推断为 Figma 类设计工具，非 AI 工作 workspace 产品",
+          "evidence": "「Wonder - The AI design agent that works on your canvas」",
+          "source_url": "https://www.producthunt.com/products/wonder-public-alpha",
+          "meee2_relevance": "锚点 #3 字面重合（canvas 内 agent），但定位为 design canvas 而非协作工作 canvas——与 meee2 结构性重叠有限；推断：设计工具领域的 canvas+agent 范式正在成为标配，尚不构成 meee2 定位威胁",
+          "threat_signal": false
+        }
+      ],
+      "key_findings": [
+        "今日 PH 上新：Wandesk（AI 桌面，跨 app 记忆 context）和 Wonder（canvas 内设计 agent）各命中 2 个 watch_keywords，均未达到 Slashspace 级别（5 个 keywords + 多锚点重叠）——Wandesk 值得下次进一步核查跨 session 持久 context 实现",
+        "CLI 编码 agent 类（VEXI、Keen Code）无 meee2 相关性；Slashspace AI（June 15 baseline 已标注为 hi 级建议追踪）今日无新动态"
+      ],
+      "no_change_reason": null
+    }
+  ],
+  "alerts": [
+    {
+      "competitor_id": "github-copilot",
+      "competitor_name": "GitHub Copilot",
+      "severity": "hi",
+      "headline": "GitHub Agentic Workflows Public Preview（June 11，BASELINE 遗漏）+ Copilot App「My Work」桌面视图（June 5）：自然语言定义 agent 工作流 + 跨仓库 session/automation 统一视图，双双触碰 meee2 descriptive-first 和 Peripheral 层核心锚点",
+      "evidence": "「GitHub Agentic Workflows: you define your automation in natural language Markdown files, and GitHub Agentic Workflows compiles them into standard Actions YAML」 + 「Copilot app provides a single 'My Work' view showing active sessions, open issues, pull requests, and background automations across connected repositories」",
+      "action_suggestion": "GitHub 正在两个维度同步向 meee2 定位延伸：(1) Agentic Workflows = descriptive-first agent 编排（人用自然语言描述，agent 在 CI/CD 中执行）——需明确 meee2 相对于「CI/CD 内 agent 自动化」的优势叙事（跨工具 live link、canvas 的涌现 vs. YAML 的预定义、人在图内的双向性 vs. 单向触发）；(2) Copilot App「My Work」= peripheral 层统一 session 视图，与 meee2「菜单栏不切焦点、5字戳任何 session」直接竞争——建议调研 Copilot App 的实际体验（是否支持非 GitHub 工具的 session？是否有 live artifact link？），找到差异化叙事；(3) 将 GitHub Agentic Workflows 加入常规追踪并关注其是否扩展到 CI/CD 之外的通用工作流场景"
+    }
+  ]
+}
