@@ -1,0 +1,640 @@
+{
+  "report_date": "2026-06-18",
+  "generated_at": "2026-06-18T16:15:00Z",
+  "summary": {
+    "total_tracked": 14,
+    "fetched_ok": 14,
+    "fetch_error": 0,
+    "has_changes": 10,
+    "new_alerts": 6
+  },
+  "competitors": [
+    {
+      "id": "cursor",
+      "name": "Cursor",
+      "category": "orchestrator",
+      "threat": "crit",
+      "threat_changed": false,
+      "has_changes": true,
+      "fetch_status": "ok",
+      "fetched_urls": [
+        "WebSearch:Cursor IDE new features changelog 2026 site:cursor.com OR site:x.com/cursor_ai",
+        "WebSearch:Cursor 3.7 June 17 2026 changelog cloud agent canvas debug",
+        "WebSearch:cursor.com/changelog \"June 17\" OR \"Jun 17\" 2026"
+      ],
+      "raw_snapshot": "HN Algolia API（Tier1/Tier2）均返回403被拒，降级至WebSearch（Tier3）。多次独立搜索一致指向：Cursor于2026年6月17日发布新changelog条目，聚焦云端agent能力——可在云端10分钟内搭建dev环境，过程通过共享终端会话可观察，环境被捕获为可复用snapshot供后续云agent更快启动；新增/in-cloud命令可在独立VM中拉起云端subagent处理下一个任务，使本地workspace保持干净不被占用，适合CI修复、问题排查等长耗时并行任务。直连cursor.com/changelog两次均403，未能核实官方原文确切版本号与日期。BugBot /review系列命令与90秒审查时间为6月10日已知信息，与baseline重复，未计入新变化。",
+      "content_hash": "HN Algolia API（Tier1/Tier2）均返回403被拒，降级至WebSearch（Tier3）。多次独立搜索一致指向：Cursor于2026年6月17日发布新changelog条目，聚焦云端agent能力——可在云端10分钟内搭建dev环境，过程通过共享终端会话可观察，环境被捕获为可复用snapsh",
+      "last_seen_at": "2026-06-18T16:15:00Z",
+      "changes": [
+        {
+          "type": "new_feature",
+          "description": "Cursor新增云端开发环境搭建能力：在Agents Window中可于10分钟内于云端配置dev环境，过程可在共享终端会话中实时观察agent操作，环境被保存为可复用snapshot以加速后续云agent启动。",
+          "evidence": "「Cursor can now help you set up your dev environment in the cloud in less than 10 minutes」",
+          "source_url": "WebSearch result citing cursor.com/changelog (June 17, 2026 entry)",
+          "meee2_relevance": "锚点4：云端环境snapshot可被后续agent复用，初步具备跨session artifact pull的雏形",
+          "threat_signal": true
+        },
+        {
+          "type": "new_feature",
+          "description": "新增/in-cloud命令，可在独立VM和独立branch中拉起云端subagent处理下一个任务，使本地workspace保持干净、不被长耗时任务占用，本地仍可继续工作。",
+          "evidence": "「Use /in-cloud to spin up a cloud subagent in its own VM」",
+          "source_url": "WebSearch result citing cursor.com/changelog (June 17, 2026 entry)",
+          "meee2_relevance": "锚点1：人继续本地（慢session）工作的同时云端subagent（快session）并行运行，与meee2人机同协议协同有结构性贴近",
+          "threat_signal": true
+        }
+      ],
+      "key_findings": [
+        "HN Algolia API两层均403，本次完全依赖WebSearch转述，证据可信度低于官方原文直引，建议下次直连cursor.com/changelog核实版本号",
+        "核心新信号：云端subagent通过/in-cloud在独立VM/branch运行，同时不打断本地session——与meee2「人=慢session、AI=快session、人在agent图内同协议协同」有结构性贴近"
+      ],
+      "no_change_reason": null
+    },
+    {
+      "id": "openai",
+      "name": "OpenAI / ChatGPT",
+      "category": "orchestrator",
+      "threat": "crit",
+      "threat_changed": false,
+      "has_changes": true,
+      "fetch_status": "ok",
+      "fetched_urls": [
+        "WebSearch:OpenAI ChatGPT Canvas Projects new features agent tasks 2026",
+        "WebSearch:OpenAI ChatGPT update June 17 2026",
+        "WebSearch:GPT-5.6 release OpenAI June 2026"
+      ],
+      "raw_snapshot": "Tier1 (RSS/HN Algolia) 全部 403 失败，本次基于 WebSearch（非官方原文）。最大变化：ChatGPT 于 6月17日上线 Scheduled Tasks 新功能，新增侧栏 Scheduled 页面统一管理提醒/周期任务/监控任务，monitoring tasks 可联网+检查已连接 app 变化并仅在有价值时通知，面向 Go/Plus/Pro/Business/Enterprise web+mobile。另发现两条早于baseline但此前未追踪的背景动态：Canvas 已于5月30日随 GPT-5.5 更新被移除，写作/代码能力改为内嵌聊天的 writing/code blocks；4月22日发布 Workspace Agents（GPTs 演进版，由 Codex 驱动），可团队共享、定时运行、部署进 Slack，云端持续运行不依赖用户在线。GPT-5.6 仍未正式发布，预测市场83%概率压在6月22-28日窗口。",
+      "content_hash": "Tier1 (RSS/HN Algolia) 全部 403 失败，本次基于 WebSearch（非官方原文）。最大变化：ChatGPT 于 6月17日上线 Scheduled Tasks 新功能，新增侧栏 Scheduled 页面统一管理提醒/周期任",
+      "last_seen_at": "2026-06-18T16:15:00Z",
+      "changes": [
+        {
+          "type": "new_feature",
+          "description": "ChatGPT 上线 Scheduled Tasks：侧栏新增 Scheduled 页面，可创建/查看/暂停/恢复/编辑/删除提醒、周期性工作和监控任务；监控任务可联网及检查已连接应用变化，仅在有价值时通知。",
+          "evidence": "「A new Scheduled page... gives users one place to view active tasks」",
+          "source_url": "https://9to5mac.com/2026/06/17/openai-launches-scheduled-tasks-in-chatgpt-details-here/",
+          "meee2_relevance": "锚点4：监控任务+变化检测+按需通知，与跨session/跨工具artifact pull有结构相关性，但是被动通知而非主动pull",
+          "threat_signal": true
+        },
+        {
+          "type": "other",
+          "description": "Canvas（持久编辑面板）已于5月30日随 GPT-5.5 更新被移除，写作与代码功能改为聊天内嵌的 writing blocks / code blocks。",
+          "evidence": "「You edit the block, ChatGPT updates the block, the conversation flows around it」",
+          "source_url": "https://www.krasa.ai/news/openai-gpt-5-5-instant-writing-coding-blocks-canvas-removed-may-2026",
+          "meee2_relevance": null,
+          "threat_signal": false
+        },
+        {
+          "type": "new_feature",
+          "description": "4月22日发布 Workspace Agents：GPTs 的企业级演进版，由 Codex 驱动，可团队共享、定时运行、部署进 Slack，云端持续运行（用户离线也继续工作），面向 Business/Enterprise/Edu/Teachers research preview。",
+          "evidence": "「They run in the cloud, so they can keep working even when you're not.」",
+          "source_url": "https://openai.com/index/introducing-workspace-agents-in-chatgpt/",
+          "meee2_relevance": "锚点1：团队共享+云端常驻agent，触及人机协同结构，但仍是单一封闭工具内的agent",
+          "threat_signal": true
+        },
+        {
+          "type": "other",
+          "description": "GPT-5.6 仍未正式发布，与 baseline 描述一致（无新进展），预测市场认为6月22-28日窗口发布概率83%。",
+          "evidence": "「no official ChatGPT 5.6 release date announced by OpenAI」",
+          "source_url": "https://www.techtimes.com/articles/318492/20260616/gpt-56-openai-chief-scientist-calls-it-meaningful-leap-june-launch-nears.htm",
+          "meee2_relevance": null,
+          "threat_signal": false
+        }
+      ],
+      "key_findings": [
+        "Tier1（OpenAI RSS + HN Algolia）两个 URL 均返回 403，最终基于 WebSearch 结果完成本报告，置信度低于直接抓取",
+        "Scheduled Tasks（6/17）与 Workspace Agents（4/22，此前未记录）共同显示 OpenAI 持续向「云端常驻、主动监控/触发」方向扩展，但路径仍是单工具内自动化而非跨工具live link"
+      ],
+      "no_change_reason": null
+    },
+    {
+      "id": "windsurf",
+      "name": "Windsurf / Devin Desktop",
+      "category": "orchestrator",
+      "threat": "crit",
+      "threat_changed": false,
+      "has_changes": true,
+      "fetch_status": "ok",
+      "fetched_urls": [
+        "https://devin.ai/blog/windsurf-is-now-devin-desktop/",
+        "https://devin.ai/blog/windsurf-wave-13",
+        "https://docs.devin.ai/desktop/acp",
+        "https://www.testingcatalog.com/windsurf-wave-13-brings-free-swe-1-5-and-new-upgrades/",
+        "https://ascii.co.uk/news/article/news-20251226-ae3c8d8c/windsurf-wave-13-enables-parallel-multi-agent-coding-with-gi"
+      ],
+      "raw_snapshot": "本次WebFetch直连windsurf.com/devin.ai均返回403，改用WebSearch。核心确认：baseline所述Devin Desktop改名、Agent Command Center、Spaces、ACP（Codex/Claude Agent/OpenCode为launch支持对象）、Devin Local、Cascade EOL均一致无偏离。新发现：Wave 13（代号Merry Shipmas）引入并行多agent session支持——最多5个Cascade agent同时运行，各自独立Git worktree，side-by-side多pane界面监控对比。另有GPT-5.2-Codex（4档reasoning effort）、Gemini 3 Flash/Pro接入。",
+      "content_hash": "本次WebFetch直连windsurf.com/devin.ai均返回403，改用WebSearch（非官方原文）。核心确认：baseline所述Devin Desktop改名、Agent Command Center、Spaces、ACP（明确列出Codex/Claude Agent/OpenC",
+      "last_seen_at": "2026-06-18T16:15:00Z",
+      "changes": [
+        {
+          "type": "new_feature",
+          "description": "Wave 13引入并行多agent session支持：最多5个Cascade agent同时运行，各自独立Git worktree，side-by-side多pane界面监控对比。",
+          "evidence": "「Wave 13 brings first-class support for parallel, multi-agent sessions in Windsurf, along with Git worktrees, side-by-side Cascade panes」",
+          "source_url": "https://www.testingcatalog.com/windsurf-wave-13-brings-free-swe-1-5-and-new-upgrades/",
+          "meee2_relevance": "锚点4：多agent并行+人横向监控对比，是Windsurf自己的「多session协同」尝试",
+          "threat_signal": true
+        },
+        {
+          "type": "new_feature",
+          "description": "并行agent功能细节：可同时跑5个Cascade agent处理5个不同bug，各自隔离的git worktree中，多pane界面side-by-side监控。",
+          "evidence": "「run up to five Cascade agents simultaneously, each in its own isolated Git worktree」",
+          "source_url": "https://ascii.co.uk/news/article/news-20251226-ae3c8d8c/windsurf-wave-13-enables-parallel-multi-agent-coding-with-gi",
+          "meee2_relevance": "锚点4：同上",
+          "threat_signal": true
+        },
+        {
+          "type": "other",
+          "description": "ACP launch阶段明确支持的agent列表比baseline的'25+'更具体：Codex、Claude Agent、OpenCode等。",
+          "evidence": "「Devin Desktop supports Codex, Claude Agent, OpenCode, and any other ACP-compatible agents」",
+          "source_url": "https://devin.ai/desktop/",
+          "meee2_relevance": null,
+          "threat_signal": false
+        },
+        {
+          "type": "other",
+          "description": "新模型接入：GPT-5.2-Codex（4档reasoning effort）及Gemini 3 Flash/Pro。",
+          "evidence": "「Windsurf added support for GPT-5.2-Codex with four reasoning efforts」",
+          "source_url": "https://devin.ai/blog/gpt-5-2/",
+          "meee2_relevance": null,
+          "threat_signal": false
+        }
+      ],
+      "key_findings": [
+        "WebFetch直连windsurf.com与devin.ai官方域名均被403拒绝，本次结论完全基于WebSearch非官方转述，证据强度低于直接原文抓取",
+        "新增信号：Wave 13的并行多agent+Git worktree+side-by-side pane功能，与meee2锚点4及人在agent图内的协同设计有结构性临近，值得持续观察"
+      ],
+      "no_change_reason": null
+    },
+    {
+      "id": "claude-ai",
+      "name": "Claude.ai / Anthropic",
+      "category": "orchestrator",
+      "threat": "crit",
+      "threat_changed": false,
+      "has_changes": true,
+      "fetch_status": "ok",
+      "fetched_urls": [
+        "https://claude.com/blog/introducing-routines-in-claude-code",
+        "https://claude.com/blog/introducing-dynamic-workflows-in-claude-code",
+        "https://claude.com/blog/whats-new-in-claude-managed-agents",
+        "https://isfableback.org/"
+      ],
+      "raw_snapshot": "HN API 两层均403失败，转WebSearch。三项关键发现：1) Claude Code于4月14日推出routines研究预览版：配置一次prompt+repo+连接器，可按schedule/API调用/GitHub事件重复触发，运行在云端基础设施。2) 5月28日推出dynamic workflows：Claude在运行时动态构建任务专属编排脚本，单session内协调数十至上百个并行subagent并互相验证结果；案例：Bun从Zig迁移到Rust约75万行代码，11天完成。3) 6月9日Claude Managed Agents新增cron定时调度部署 + vault环境变量。Fable 5/Mythos 5暂停状态截至本次抓取仍未恢复，无官方ETA。",
+      "content_hash": "HN API 两层均403失败，转WebSearch。三项关键发现（来源：WebSearch结果，非官方原文）：1) Claude Code于4月14日推出routines研究预览版：用户配置一次prompt+repo+连接器，可按schedule/AP",
+      "last_seen_at": "2026-06-18T16:15:00Z",
+      "changes": [
+        {
+          "type": "new_feature",
+          "description": "Claude Code routines：配置一次性自动化（prompt+repo+connector），支持schedule/API/GitHub事件三种触发方式，在云端运行不依赖本地设备。按订阅分级限额。",
+          "evidence": "「A routine is a Claude Code automation you configure once — including a prompt, repo, and connectors — and then run on a schedule, from an API call, or in response to an event.」",
+          "source_url": "https://claude.com/blog/introducing-routines-in-claude-code",
+          "meee2_relevance": "锚点5：配置一次后台常驻运行，与peripheral层「不需要时刻介入」方向一致，但路径是人退出循环而非常驻agent图内",
+          "threat_signal": true
+        },
+        {
+          "type": "new_feature",
+          "description": "Dynamic workflows：Claude在运行时动态生成编排脚本，协调数十至上百subagent并行工作并互相验证，号称完成75万行代码迁移。",
+          "evidence": "「Claude can plan the work and then run hundreds of parallel subagents in a single session and then verifies its outputs before reporting back to the user.」",
+          "source_url": "https://claude.com/blog/introducing-dynamic-workflows-in-claude-code",
+          "meee2_relevance": "锚点1：大规模自主编排，但不涉及人作为常驻节点同协议协同",
+          "threat_signal": true
+        },
+        {
+          "type": "new_feature",
+          "description": "Claude Managed Agents新增定时调度部署（cron）与vault环境变量（密钥不暴露给agent）。",
+          "evidence": "「Agents can now run on a schedule, completing routine work automatically.」",
+          "source_url": "https://claude.com/blog/whats-new-in-claude-managed-agents",
+          "meee2_relevance": null,
+          "threat_signal": false
+        },
+        {
+          "type": "other",
+          "description": "Fable 5/Mythos 5暂停状态持续，未恢复，无官方ETA。",
+          "evidence": "「Claude Fable 5 and Mythos 5 were suspended worldwide on June 12, 2026 ... and have not been restored.」",
+          "source_url": "https://isfableback.org/",
+          "meee2_relevance": null,
+          "threat_signal": false
+        }
+      ],
+      "key_findings": [
+        "HN Algolia API两层均403，本轮完全依赖WebSearch非官方转述",
+        "Routines（4/14）+ Dynamic workflows（5/28）+ Managed Agents调度/vault（6/9）三项叠加，显示Anthropic正系统性推进「配置一次、AI自主长期运行」路径，这是「人退出循环」而非meee2「人在agent图内常驻协同」，但仍构成认知重叠风险",
+        "Fable 5暂停状态本次抓取仍未变化"
+      ],
+      "no_change_reason": null
+    },
+    {
+      "id": "github-copilot",
+      "name": "GitHub Copilot",
+      "category": "orchestrator",
+      "threat": "hi",
+      "threat_changed": false,
+      "has_changes": true,
+      "fetch_status": "ok",
+      "fetched_urls": [
+        "https://hn.algolia.com/api/v1/search?query=GitHub+Copilot+agent+workspace+update&tags=story&hitsPerPage=8",
+        "WebSearch:GitHub Copilot app generally available 2026",
+        "https://www.startuphub.ai/ai-news/technology/2026/github-copilot-app-launches-for-agents",
+        "https://www.digitalapplied.com/blog/github-copilot-app-agent-native-desktop-orchestration-2026"
+      ],
+      "raw_snapshot": "GitHub blog 官方 RSS/changelog 与 HN Algolia API 本次抓取均返回 403，转WebSearch。GitHub Copilot app 于 2026-06-17 正式 GA（baseline 为 6/5 扩大技术预览）。核心新概念「Canvas」：人与 agent 共享的双向工作面——agent 实时更新 canvas（计划、PR、浏览器 session、终端、部署、dashboard、workflow 状态），人可在同一界面编辑/重排/批准/重定向。My Work 视图整合 CLI 与 App 两个界面的 session：「两个界面共享同一份真相来源」。并行 agent session 各自跑在独立 git worktree 中隔离。新增 Agent Merge：自主跟踪 PR 全流程，人可设定权限边界。",
+      "content_hash": "GitHub blog 官方 RSS/changelog 与 HN Algolia API 本次抓取均返回 403，转WebSearch。GitHub Copilot app 于 2026-06-17 正式 GA（此前 baseline 为 6/5 扩大技术预览）",
+      "last_seen_at": "2026-06-18T16:15:00Z",
+      "changes": [
+        {
+          "type": "new_feature",
+          "description": "GitHub Copilot app 从扩大技术预览升级为正式 GA（2026-06-17）。",
+          "evidence": "「GitHub Copilot app generally available」",
+          "source_url": "https://github.blog/changelog/2026-06-17-github-copilot-app-generally-available/",
+          "meee2_relevance": null,
+          "threat_signal": true
+        },
+        {
+          "type": "new_feature",
+          "description": "新增 Canvas 概念：人与 agent 共享的双向工作面，agent 实时更新，人可在同一界面编辑/批准/重定向。",
+          "evidence": "「Canvases are bidirectional work surfaces for humans and agents...you can edit, reorder, approve, or redirect work directly on that same surface」",
+          "source_url": "https://www.startuphub.ai/ai-news/technology/2026/github-copilot-app-launches-for-agents",
+          "meee2_relevance": "锚点2+3：双向、实时更新、人可直接编辑重定向agent工作——与meee2 live link + descriptive-first 高度结构重叠",
+          "threat_signal": true
+        },
+        {
+          "type": "new_feature",
+          "description": "CLI 与 App 两个界面的 agent session 状态打通，共享同一份事实来源。",
+          "evidence": "「Sessions started in Copilot CLI now appear in your My work view, so both surfaces share one source of truth」",
+          "source_url": "https://www.startuphub.ai/ai-news/technology/2026/github-copilot-app-launches-for-agents",
+          "meee2_relevance": "锚点4：跨界面session统一，但目前仅限GitHub自家CLI/App两个界面，未见跨第三方工具或跨owner的pull能力",
+          "threat_signal": true
+        },
+        {
+          "type": "new_feature",
+          "description": "Agent Merge：自主管理 PR 从 review 到合并的全流程，含 CI 修复与 reviewer 反馈处理，权限边界由人设定。",
+          "evidence": "「Developers decide which steps Copilot is allowed to perform, including driving CI back to green」",
+          "source_url": "https://www.digitalapplied.com/blog/github-copilot-app-agent-native-desktop-orchestration-2026",
+          "meee2_relevance": null,
+          "threat_signal": false
+        }
+      ],
+      "key_findings": [
+        "GitHub blog 官方 RSS feed 与 HN Algolia API 本次全部返回 403，仅能依赖 WebSearch 二次转述，未获官方原文逐句引用",
+        "新增「Canvas」概念是迄今观察到与meee2 live link/descriptive-first锚点最直接对标的实现：双向、实时更新、人可在同一界面直接编辑重定向agent工作",
+        "未发现 GitHub Copilot 涉及 meee2 锚点1（人=慢session/AI=快session 同一协议）或锚点5（菜单栏 peripheral、5字戳）的信号——Copilot app 是独立全屏桌面应用"
+      ],
+      "no_change_reason": null
+    },
+    {
+      "id": "gemini",
+      "name": "Google Gemini / Antigravity",
+      "category": "orchestrator",
+      "threat": "hi",
+      "threat_changed": false,
+      "has_changes": true,
+      "fetch_status": "ok",
+      "fetched_urls": [
+        "https://cloud.google.com/blog/products/ai-machine-learning/the-new-gemini-enterprise-one-platform-for-agent-development",
+        "WebSearch:Google Gemini AI Studio Workspace new features agent canvas 2026",
+        "WebSearch:Gemini CLI end of life June 18 2026 shutdown status"
+      ],
+      "raw_snapshot": "Gemini CLI EOL 已于本周确认执行：9to5google (06/17) 报道 Gemini CLI 与 Code Assist IDE extensions 本周对消费者关停，聚焦 Antigravity；企业版许可与付费 API key 用户不受影响。Google Cloud Next + I/O 2026 期间推出 Gemini Enterprise 新平台：Agent Designer（自然语言创建多系统自动化 agent）、Canvas（在 Docs/Slides 内协作编辑，支持导出为 Microsoft Office 格式）、Inbox（管理大规模 agent，含长时运行 agent 监控/实时状态提醒）、增强版 ADK（图结构多 agent 编排，支持 MCP）、Memory Bank（跨 session 长期上下文记忆）。AI Studio 新增 Kotlin 原生支持，一键部署 Cloud Run。",
+      "content_hash": "Gemini CLI EOL 已于本周确认执行：9to5google (06/17) 报道 Gemini CLI 与 Code Assist IDE extensions 本周对消费者关停，聚焦 Antigravity。企业版 Gemini Code Assist Standard/Enterprise 许可不受影响",
+      "last_seen_at": "2026-06-18T16:15:00Z",
+      "changes": [
+        {
+          "type": "other",
+          "description": "Gemini CLI EOL 已从倒计时变为本周实际执行；消费者/免费/Pro/Ultra 用户关停已确认发生。",
+          "evidence": "「Gemini CLI and Code Assist shut down for consumers this week amid Antigravity focus」",
+          "source_url": "https://9to5google.com/2026/06/17/gemini-cli-code-assist-shutting-down/",
+          "meee2_relevance": null,
+          "threat_signal": false
+        },
+        {
+          "type": "new_feature",
+          "description": "Gemini Enterprise 新平台 Canvas 功能：支持在 Docs/Slides 内协作编辑且可导出为 Microsoft Office 格式。",
+          "evidence": "「Canvas provides teams with an interactive editor to co-create and edit in Google Docs and Slides」",
+          "source_url": "https://cloud.google.com/blog/products/ai-machine-learning/the-new-gemini-enterprise-one-platform-for-agent-development",
+          "meee2_relevance": "锚点2：跨应用编辑+导出，但偏向格式转换而非实时双向live link",
+          "threat_signal": true
+        },
+        {
+          "type": "new_feature",
+          "description": "Inbox 功能提供统一面板管理大规模运行中的 agent，含长时任务的实时状态提醒（email/chat）。",
+          "evidence": "「Inbox in Gemini Enterprise provides a unified hub for managing agents at scale...real-time status alerts directly through email and chat」",
+          "source_url": "https://cloud.google.com/blog/products/ai-machine-learning/the-new-gemini-enterprise-one-platform-for-agent-development",
+          "meee2_relevance": "锚点5：agent活动的peripheral监控层，但仍是独立app内通知中心，非菜单栏式跨session戳入",
+          "threat_signal": true
+        },
+        {
+          "type": "new_feature",
+          "description": "ADK 增强为图结构多 agent 编排框架，支持 MCP 生态集成。",
+          "evidence": "「organizing agents in a network of sub-agents...graph-based framework...orchestrate complex processes」",
+          "source_url": "https://cloud.google.com/blog/products/ai-machine-learning/the-new-gemini-enterprise-one-platform-for-agent-development",
+          "meee2_relevance": "锚点1：多agent协作网络，但未见人作为slow session节点嵌入该图",
+          "threat_signal": true
+        },
+        {
+          "type": "other",
+          "description": "Memory Bank + Memory Profiles 实现 agent 跨 session 的长期上下文记忆。",
+          "evidence": "「allowing them to recall user preferences and past history across different sessions」",
+          "source_url": "https://cloud.google.com/blog/products/ai-machine-learning/the-new-gemini-enterprise-one-platform-for-agent-development",
+          "meee2_relevance": null,
+          "threat_signal": false
+        }
+      ],
+      "key_findings": [
+        "Tier1（官方 RSS + HN API）全部返回 403，本次依赖 Tier3 WebSearch + 一次成功的 Google Cloud Blog 直接抓取",
+        "Gemini Enterprise 平台是本次最大新增信号：Agent Designer/Canvas/Inbox/增强 ADK/Memory Bank 构成相对完整的企业级多agent编排栈，但均为「贴近但未完全重合」meee2核心锚点",
+        "未发现任何抓取内容明确提及人类=慢session嵌入agent图或5字戳菜单栏式peripheral设计"
+      ],
+      "no_change_reason": null
+    },
+    {
+      "id": "linear",
+      "name": "Linear",
+      "category": "workspace",
+      "threat": "hi",
+      "threat_changed": false,
+      "has_changes": false,
+      "fetch_status": "ok",
+      "fetched_urls": [
+        "WebSearch:Linear app changelog new AI features June 16 2026",
+        "https://linear.app/changelog/2026-06-11-coding-sessions"
+      ],
+      "raw_snapshot": "HN Algolia API 两次均403。WebSearch 检索 Linear 官方 changelog，最新条目仍为 2026-06-11 'Coding Sessions in Linear'：Linear Agent 可通过 Claude Code/Codex 写代码，云端运行，session 锚定 workspace 上下文。次新为 2026-06-04 'Team Documents' 与 Skills 团队共享。未检索到 2026-06-11 之后发布的新 changelog 条目，与 baseline 相比无变化。",
+      "content_hash": "来源：WebSearch 结果，非官方原文。HN Algolia API 两次请求均返回 403，未能抓取社区讨论。WebSearch 检索 Linear 官方 changelog 页面，最新条目仍为 2026-06-11 'Coding Sessions in Lin",
+      "last_seen_at": "2026-06-18T16:15:00Z",
+      "changes": [],
+      "key_findings": [
+        "Linear 官方 changelog 最新条目仍为 2026-06-11 Coding Sessions，与 baseline 一致，无新发布",
+        "HN Algolia API 两次请求均返回 403，本次依赖 WebSearch 三级 fallback"
+      ],
+      "no_change_reason": "Tier1/Tier2（HN Algolia）均403。Tier3 WebSearch 检索到的最新官方 changelog 条目仍是 baseline 中已记录的 2026-06-11 Coding Sessions 与 2026-06-04 Team Documents/Skills Sharing，未发现晚于 baseline（2026-06-16）的新条目。"
+    },
+    {
+      "id": "notion-ai",
+      "name": "Notion AI",
+      "category": "workspace",
+      "threat": "md",
+      "threat_changed": false,
+      "has_changes": true,
+      "fetch_status": "ok",
+      "fetched_urls": [
+        "WebSearch:Notion AI new features agent automation connector 2026 site:notion.so",
+        "WebSearch:Notion \"External Agents API\" Claude Codex Decagon",
+        "https://www.notion.com/releases/2026-05-13"
+      ],
+      "raw_snapshot": "Tier1/Tier2（RSS、App Store lookup、HN Algolia API）本次全部返回 403，改用 WebSearch。未发现 June 15 后的新发布。补充确认了 5月13日 Notion Developer Platform 3.5 的细节：External Agents API 让 Claude Code、Cursor、Codex、Decagon 作为官方合作 agent 直接在 Notion workspace 内工作，可被分配数据库任务、写回 Notion 内容，由 Notion 充当协调层。该功能目前为私测/waitlist。Workers 定价 8月11日起按 credits 收取（与 baseline 一致）。",
+      "content_hash": "Tier1/Tier2 (RSS、App Store lookup、HN Algolia API) 本次全部返回 403，改用 WebSearch。未发现 June 15 后的新发布。但补充确认了 5月13日 Notion Developer Platform 3.5 的细节：External Agents API 让 Claude Code",
+      "last_seen_at": "2026-06-18T16:15:00Z",
+      "changes": [
+        {
+          "type": "positioning",
+          "description": "Notion External Agents API（5月13日发布，此前监控遗漏细节）把第三方 coding/customer-service agent（Claude Code、Cursor、Codex、Decagon）变成 workspace 内可被分配任务、可写回内容的原生参与者，Notion 自身充当跨 agent 协调层。",
+          "evidence": "「Claude Code itself can chat in Notion pages, get assigned work from Notion databases, route handoffs to Codex or Decagon, and write results back as Notion content — all orchestrated by Notion as the coordination layer.」",
+          "source_url": "https://www.notion.com/releases/2026-05-13",
+          "meee2_relevance": "锚点1+4：第三方agent作为workspace原生参与者+跨agent协调写回，与meee2人机同协议+跨工具artifact pull有结构相关性",
+          "threat_signal": true
+        }
+      ],
+      "key_findings": [
+        "本次 Tier1（RSS/App Store/HN）全部 403，证据来源降级为 WebSearch",
+        "唯一具体「新」信息（External Agents API 细节）发生在 5月13日，早于 baseline 截止的 June 15，是对已知发布的补充细节而非本次新变化，但因结构重要性记录在案",
+        "未发现 June 15 之后的任何具体新功能或日期明确的发布"
+      ],
+      "no_change_reason": null
+    },
+    {
+      "id": "slack",
+      "name": "Slack",
+      "category": "comms",
+      "threat": "md",
+      "threat_changed": false,
+      "has_changes": false,
+      "fetch_status": "ok",
+      "fetched_urls": [
+        "WebSearch:Slack new AI features agent canvas automation 2026 site:slack.com",
+        "WebSearch:Slack \"June 2026\" feature drop announcement"
+      ],
+      "raw_snapshot": "Tier1（App Store lookup、HN Algolia API）全部 403，改用 WebSearch。未发现 June 15 后的具体新功能。搜到的内容（Slackbot 读取 Salesforce 报告链接、Stockholm 数据驻留、Slackbot analytics dashboard、workflow 管理员可编辑/删除消息、Slackbot 读写 lists）均与 baseline 描述的功能集高度重合，未见明确标注 June 15 之后的新日期。",
+      "content_hash": "Tier1（App Store lookup、HN Algolia API）全部 403，改用 WebSearch。未发现 June 15 后的具体新功能。搜到的内容（Slackbot 读取 Salesforce 报告链接、Stockholm 数据驻留、Slackbot analy",
+      "last_seen_at": "2026-06-18T16:15:00Z",
+      "changes": [],
+      "key_findings": [
+        "本次 Tier1 全部 403，证据来源降级为 WebSearch",
+        "WebSearch 结果列出的 Slackbot 功能与 baseline 已记录内容重叠，未见可确认在 June 15 后新增的具体功能或日期标注"
+      ],
+      "no_change_reason": "本次抓取未发现与 baseline 相比的新增功能；搜索结果中的功能描述均与已记录的 baseline 功能集重叠，无法确认为 June 15 后的新变化。"
+    },
+    {
+      "id": "reflect",
+      "name": "Reflect",
+      "category": "workspace",
+      "threat": "md",
+      "threat_changed": false,
+      "has_changes": false,
+      "fetch_status": "ok",
+      "fetched_urls": [
+        "WebSearch:Reflect notes app new features AI sync 2026 site:reflect.app OR site:x.com",
+        "WebSearch:Reflect notes app changelog April May June 2026"
+      ],
+      "raw_snapshot": "Tier1/Tier2（HN Algolia API）全部 403，改用 WebSearch，未能直接访问 reflect.app/changelog 页面内容。搜索结果提到的功能（OCR 提取图片/PDF文字、链接自动 AI 摘要、SQLite 重写前端、内嵌语音转录、Gemini 2M token 上下文驱动 AI chat、附件端到端加密）均未带具体发布日期，无法判断是否在 June 15 之后发布。",
+      "content_hash": "Tier1/Tier2（HN Algolia API）全部 403，改用 WebSearch，未能直接访问 reflect.app/changelog 页面内容。搜索结果提到的功能（OCR 提取图片/PDF文字、链接自动 AI 摘要、SQLite 重写前端、内嵌语音转录、Gemini 2M ",
+      "last_seen_at": "2026-06-18T16:15:00Z",
+      "changes": [],
+      "key_findings": [
+        "本次未能直接抓取 reflect.app/changelog，HN Algolia API 全部 403，证据来源仅为 WebSearch 摘要片段，且均无具体日期标注",
+        "搜索结果中 Gemini 2M token context 驱动 AI chat 是较新信息，但缺乏发布日期，无法确认是否晚于 baseline 的 April 28 changelog，未计入 changes"
+      ],
+      "no_change_reason": "本次抓取未获得带日期的 changelog 原文，无法确认是否有 June 15 后的新变化；搜索片段信息不足以支撑可信的 diff 判断。"
+    },
+    {
+      "id": "raycast",
+      "name": "Raycast",
+      "category": "peripheral",
+      "threat": "md",
+      "threat_changed": false,
+      "has_changes": true,
+      "fetch_status": "ok",
+      "fetched_urls": [
+        "WebSearch:Raycast new features AI agent changelog 2026 site:raycast.com",
+        "WebSearch:Raycast v0.65 OR v0.66 changelog June 2026",
+        "https://www.raycast.com/changelog/macos-beta"
+      ],
+      "raw_snapshot": "RSS feed 403，改用 WebSearch。确认 Raycast v0.65 已于 June 18 2026 发布（晚于 baseline 记录的 v0.64 June 12）。新增 Inline Replace output 行为（自定义命令/翻译命令可选择直接替换选中文字而非打开 Raycast）、新增 \"Ask Manual\" AI Extension、新增 \"@raycast-focus\" AI Extension（用自然语言管理 Focus session：开始/暂停/恢复/编辑/查看历史）。修复流式输出解析闪烁问题。",
+      "content_hash": "RSS feed 403，改用 WebSearch。确认 Raycast v0.65 已于 June 18 2026 发布（晚于 baseline 记录的 v0.64 June 12）。新增 Inline Replace output 行为（自定义命令/翻译命令可选择直接替换选中文字而非打开",
+      "last_seen_at": "2026-06-18T16:15:00Z",
+      "changes": [
+        {
+          "type": "new_feature",
+          "description": "v0.65 新增 @raycast-focus AI Extension，可用自然语言在聊天中直接管理 Focus session（开始/暂停/恢复/编辑/查看历史），把「专注 session」管理收纳进 AI 对话层。",
+          "evidence": "「new @raycast-focus AI Extension to manage focus sessions」",
+          "source_url": "https://www.raycast.com/changelog/macos-beta",
+          "meee2_relevance": "锚点5：focus session可被自然语言AI对话直接操控，触及peripheral层/不切焦点锚点，但仍是单一工具内会话管理",
+          "threat_signal": true
+        },
+        {
+          "type": "new_feature",
+          "description": "v0.65 新增 Inline Replace 输出行为，自定义/翻译命令可选择直接替换选中文字而非打开 Raycast 窗口。",
+          "evidence": "「Introducing Inline Replace output behavior for custom commands in Raycast...automatically replace selected text with the output」",
+          "source_url": "https://www.raycast.com/changelog/macos-beta",
+          "meee2_relevance": "锚点5：强化「不打断当前焦点」的peripheral交互模式",
+          "threat_signal": false
+        }
+      ],
+      "key_findings": [
+        "v0.65（June 18）是 baseline v0.64（June 12）之后的新版本，有迭代但未发现颠覆性功能",
+        "@raycast-focus 让「focus session」可被自然语言AI对话直接操控，触及meee2的peripheral层/不切焦点锚点，但未见跨工具live link或人机同构协议信号"
+      ],
+      "no_change_reason": null
+    },
+    {
+      "id": "replit",
+      "name": "Replit",
+      "category": "orchestrator",
+      "threat": "md",
+      "threat_changed": false,
+      "has_changes": true,
+      "fetch_status": "ok",
+      "fetched_urls": [
+        "WebSearch:Replit AI agent multi-agent workspace new features 2026 site:replit.com OR site:blog.replit.com",
+        "WebSearch:Replit \"Effort-Based Pricing\" June 18 2026",
+        "https://blog.replit.com/effort-based-pricing"
+      ],
+      "raw_snapshot": "Blog RSS 403，改用 WebSearch。确认 June 18 2026 Replit 上线 Effort-Based Pricing（面向新注册用户先行），取代原先 $0.25/checkpoint 的固定计价，改为按 Agent 实际耗费的时间与计算量计价；上线体验未达标准，向已使用新计价的用户发放 $10 免费 credit 作为补偿。同期新增 connector 目录两项服务（Quiver AI 矢量图生成、Browserbase 托管无头浏览器/session 自动化）及 Twilio MCP server，发布日期未明确标注是否晚于 June 6。",
+      "content_hash": "Blog RSS 403，改用 WebSearch。确认 June 18 2026 Replit 上线 Effort-Based Pricing（面向新注册用户先行），取代原先 $0.25/checkpoint 的固定计价，改为按 Agent 实际耗费的时间与计算量计价；简单改动",
+      "last_seen_at": "2026-06-18T16:15:00Z",
+      "changes": [
+        {
+          "type": "pricing",
+          "description": "Replit 于 June 18 推出 Effort-Based Pricing，取代固定 $0.25/checkpoint 模式，改为按 Agent 实际耗费时间与算力计价；上线体验未达标准，已向使用新计价的用户发放 $10 补偿 credit。",
+          "evidence": "「On June 18th, Replit enabled a new pricing feature called Effort-Based Pricing for all newly signed up Replit users.」",
+          "source_url": "https://blog.replit.com/effort-based-pricing",
+          "meee2_relevance": null,
+          "threat_signal": false
+        },
+        {
+          "type": "other",
+          "description": "Connector 目录新增 Browserbase（托管无头浏览器，支持 Agent 进行完整 session 自动化）及 Quiver AI 矢量图生成，并新增 Twilio MCP server。",
+          "evidence": "「Browserbase (which runs managed headless browsers for fetch, search, and full session automation...)」",
+          "source_url": "https://releasebot.io/updates/replit",
+          "meee2_relevance": "锚点2：扩展agent可触达的外部session/工具范围，但仍是Replit内部Agent调用外部服务",
+          "threat_signal": false
+        }
+      ],
+      "key_findings": [
+        "本次最确定的 diff 是 June 18 的 Effort-Based Pricing 调整，属于商业模式变化，非结构性威胁信号",
+        "blog.replit.com RSS 被 403，证据来自 WebSearch 摘要及二级来源，可信度低于一手 changelog"
+      ],
+      "no_change_reason": null
+    },
+    {
+      "id": "superwhisper",
+      "name": "Superwhisper",
+      "category": "peripheral",
+      "threat": "lo",
+      "threat_changed": false,
+      "has_changes": false,
+      "fetch_status": "ok",
+      "fetched_urls": [
+        "WebSearch:Superwhisper app new features AI integration 2026 site:superwhisper.com",
+        "WebSearch:Superwhisper changelog June 2026"
+      ],
+      "raw_snapshot": "本次抓取（HN API两次403失败，转WebSearch）未发现2026-06-10之后的新动态。WebSearch结果反复确认的最新版本仍是v2.16.0（June 9：theme control、新sound effects、S1-Mini本地模型实验性支持）与v2.15.0（May 29）。未搜到June 10之后任何changelog条目。",
+      "content_hash": "本次抓取（HN API两次403失败，转WebSearch）未发现2026-06-10之后的新动态。WebSearch结果反复确认的最新版本仍是v2.16.0（June 9：theme control、新sound effects、S1-Mini本地模型实验性支持、大词汇表处理增强、stat",
+      "last_seen_at": "2026-06-18T16:15:00Z",
+      "changes": [],
+      "key_findings": [
+        "HN Algolia API两次请求均返回403，未获得HN社区讨论数据",
+        "WebSearch多次查询确认最新版本仍为baseline中的v2.16.0（June 9），无更新版本"
+      ],
+      "no_change_reason": "三层抓取中HN两层均403失败，WebSearch（Tier 3）多次查询交叉确认：未发现晚于baseline（June 9/10, v2.16.0）的任何新版本、定价、定位或招聘信号，与meee2五个锚点均无新增重叠信号。"
+    },
+    {
+      "id": "producthunt-ai",
+      "name": "Product Hunt AI 新品雷达",
+      "category": "new_entrant_watch",
+      "threat": "md",
+      "threat_changed": false,
+      "has_changes": true,
+      "fetch_status": "ok",
+      "fetched_urls": [
+        "WebSearch:new AI workspace productivity tool launch 2026 site:producthunt.com",
+        "WebSearch:Kanwas Product Hunt open-source brain for your team agents context",
+        "WebSearch:NotchSpace Product Hunt Mac notch intelligent active workspace"
+      ],
+      "raw_snapshot": "PH/HN 直连均 403，改用 WebSearch 兜底。本次发现两个值得记录的新品：1) Kanwas——开源「团队共享大脑」，real-time collaborative workspace，团队与 AI agent「share the same documents, evidence, and decisions」，agent 工具调用「streaming into the same timeline everyone sees」，维护 shared context graph。2) NotchSpace——把 Mac notch 变成 workspace 层，「a small, always-available workspace right where eyes already are」，纯 UI 工具，不含 AI/agent 概念。整体看今日抓取到的 AI 新品中无 90%+ 结构重叠者，Kanwas 在「人机共享同一时间线/图」上最值得持续观察。",
+      "content_hash": "PH/HN 直连均 403，改用 WebSearch 兜底（Tier 3）。本次发现两个值得记录的新品：1) Kanwas——开源「团队共享大脑」，定位为 real-time collaborative workspace，原文称团队与 AI agent「share the same documents, evidence",
+      "last_seen_at": "2026-06-18T16:15:00Z",
+      "changes": [
+        {
+          "type": "new_entrant",
+          "description": "Kanwas：开源「团队共享大脑」，团队成员与 AI agent 共享同一文档/时间线/上下文图，agent 的工具调用实时流入所有人可见的同一时间线。建议加入 sources.json 持续追踪。",
+          "evidence": "「Teams and an AI agent share the same documents, evidence, and decisions, with the agent's tool calls streaming into the same timeline everyone sees」",
+          "source_url": "https://www.producthunt.com/products/kanwas",
+          "meee2_relevance": "锚点1：人机共享同一时间线/图，与meee2协议同构锚点直接相关，但无跨工具live link或菜单栏peripheral层",
+          "threat_signal": true
+        },
+        {
+          "type": "new_entrant",
+          "description": "NotchSpace：把 Mac notch 变成常驻、不抢焦点的轻量 workspace 层，用于在 app 间拖拽中转文件/文本/链接，但不含任何 AI/agent 能力。",
+          "evidence": "「a small, always-available workspace right where eyes already are — the Mac notch」",
+          "source_url": "https://www.producthunt.com/products/notchspace-2",
+          "meee2_relevance": "锚点5字面贴近（peripheral不抢焦点），但无AI成分，不构成AI workspace竞品",
+          "threat_signal": false
+        }
+      ],
+      "key_findings": [
+        "PH 官方 feed 与 HN Algolia API 本次均返回 403，最终通过 WebSearch 获取信息，证据链比直连弱",
+        "Kanwas（agent+workspace+collaboration+human-AI，4/10 关键词命中）建议加入 sources.json 持续追踪",
+        "NotchSpace 仅命中 workspace 1 个关键词，且无 AI 成分，仅作为 peripheral-UI 范式参考一笔提及"
+      ],
+      "no_change_reason": null
+    }
+  ],
+  "alerts": [
+    {
+      "competitor_id": "cursor",
+      "competitor_name": "Cursor",
+      "severity": "crit",
+      "headline": "Cursor 新增云端 subagent 能力（/in-cloud 命令 + 云端 dev 环境 snapshot），本地 session 不被长任务占用，云端 subagent 并行处理",
+      "evidence": "「Cursor can now help you set up your dev environment in the cloud in less than 10 minutes」+「Use /in-cloud to spin up a cloud subagent in its own VM」（来源：WebSearch转述，官方changelog直连两次403未能核实原文）",
+      "action_suggestion": "评估meee2「人在agent图内同协议协同」叙事相对于Cursor「本地继续工作+云端subagent并行」模式的差异化是否依然清晰；建议下次报告优先直连cursor.com/changelog核实版本号与确切日期"
+    },
+    {
+      "competitor_id": "openai",
+      "competitor_name": "OpenAI / ChatGPT",
+      "severity": "crit",
+      "headline": "ChatGPT 上线 Scheduled Tasks（统一定时/监控任务面板）+ Workspace Agents 推广（团队共享、云端常驻agent）",
+      "evidence": "「A new Scheduled page... gives users one place to view active tasks」+「They run in the cloud, so they can keep working even when you're not」",
+      "action_suggestion": "Workspace Agents的「团队共享+云端常驻」与meee2协同范式有相似常驻特性但仍是封闭工具内agent；建议关注其是否扩展跨工具能力，并跟踪Scheduled Tasks监控/通知模式是否升级为主动pull"
+    },
+    {
+      "competitor_id": "windsurf",
+      "competitor_name": "Windsurf / Devin Desktop",
+      "severity": "crit",
+      "headline": "Windsurf Wave 13 引入最多5个并行Cascade agent + 独立Git worktree + side-by-side多pane监控",
+      "evidence": "「Wave 13 brings first-class support for parallel, multi-agent sessions in Windsurf, along with Git worktrees, side-by-side Cascade panes」（来源：WebSearch转述，官方域名直连403）",
+      "action_suggestion": "多agent并行+人横向监控对比的范式正在成为编辑器标配；评估meee2「人在协议内」叙事相对于这种「多窗口横向看板」模式的差异化是否依然清晰，建议下次直连核实版本号/日期"
+    },
+    {
+      "competitor_id": "claude-ai",
+      "competitor_name": "Claude.ai / Anthropic",
+      "severity": "crit",
+      "headline": "Claude Code 新增 Routines（定时/事件触发自动化）+ Dynamic Workflows（单session内数十至上百并行subagent自编排）",
+      "evidence": "「A routine is a Claude Code automation you configure once...and then run on a schedule, from an API call, or in response to an event.」+「Claude can plan the work and then run hundreds of parallel subagents in a single session」",
+      "action_suggestion": "Anthropic正系统性推进「配置一次、AI自主长期运行」路径，与meee2「人常驻agent图内同协议」方向不同（人退出循环 vs 人在场），但仍构成认知重叠——建议明确meee2「人在场」相对于这种自动化路径的差异化卖点"
+    },
+    {
+      "competitor_id": "github-copilot",
+      "competitor_name": "GitHub Copilot",
+      "severity": "hi",
+      "headline": "GitHub Copilot App 正式GA，新增Canvas（人机双向实时工作面）+ CLI/App session统一视图——迄今对meee2 live link/descriptive-first锚点最直接的对标",
+      "evidence": "「Canvases are bidirectional work surfaces for humans and agents...you can edit, reorder, approve, or redirect work directly on that same surface」+「Sessions started in Copilot CLI now appear in your My work view, so both surfaces share one source of truth」",
+      "action_suggestion": "立即评估Copilot App实际体验（是否支持非GitHub工具的session？是否有跨owner pull?），并强化meee2「跨工具」叙事，因GitHub目前仅打通自家CLI+App两个界面，尚未触及跨第三方工具能力"
+    },
+    {
+      "competitor_id": "gemini",
+      "competitor_name": "Google Gemini / Antigravity",
+      "severity": "hi",
+      "headline": "Gemini Enterprise新平台上线：Canvas（Docs/Slides协作+导出MS Office）+ Inbox（agent监控通知中心）+ 增强ADK（图结构多agent编排）",
+      "evidence": "「Canvas provides teams with an interactive editor to co-create and edit in Google Docs and Slides」+「Inbox in Gemini Enterprise provides a unified hub for managing agents at scale...real-time status alerts directly through email and chat」",
+      "action_suggestion": "三项功能分别贴近锚点2（跨工具但偏导出而非live link）、5（peripheral监控但非菜单栏戳入）、1（图结构多agent但未见人作为节点嵌入）——均为「贴近但未完全重合」，建议持续观察后续是否补齐live link或人机同构协议部分"
+    }
+  ]
+}

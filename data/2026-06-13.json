@@ -1,0 +1,534 @@
+{
+  "report_date": "2026-06-13",
+  "generated_at": "2026-06-13T08:30:00Z",
+  "summary": {
+    "total_tracked": 14,
+    "fetched_ok": 14,
+    "fetch_error": 0,
+    "has_changes": 12,
+    "new_alerts": 4
+  },
+  "competitors": [
+    {
+      "id": "cursor",
+      "name": "Cursor",
+      "category": "orchestrator",
+      "threat": "crit",
+      "threat_changed": false,
+      "has_changes": true,
+      "fetch_status": "ok",
+      "fetched_urls": [
+        "WebSearch:Cursor IDE new features changelog June 2026",
+        "WebSearch:Cursor BugBot 90 seconds June 2026 canvas agent new features",
+        "WebSearch:Cursor BugBot self-improves learned rules June 13 2026"
+      ],
+      "raw_snapshot": "Cursor June 2026: BugBot self-improves with learned rules—feedback from live code reviews becomes custom instructions (44,000+ learned rules across 110,000+ repos); resolution rate now nearing 80% (vs ~52% at launch), 15 percentage points above next-closest AI review product. June 10 update: Bugbot avg review time cut to 90 seconds (from ~5 min), 10% more bugs/run, 22% lower cost, powered by Composer 2.5. Canvas agents: embed interactive buttons in canvases that run specific prompts, shared canvases openable full-screen in browser, Design Mode now available in canvases (select/annotate UI elements). Enterprise org-level controls GA: manage multiple teams with separate security/budget/feature controls, Groups for flexible permissions. Teams usage limits increased, Premium seat for heavy agent users added. (来源：WebSearch 结果，非官方原文)",
+      "content_hash": "Cursor June 2026: BugBot self-improves with learned rules—feedback from live code reviews becomes custom instructions (44,000+ learned rules across 110,000+ repos); re",
+      "last_seen_at": "2026-06-13T08:30:00Z",
+      "changes": [
+        {
+          "type": "new_feature",
+          "description": "BugBot 自学习规则正式落地：从 live code review 反馈自动生成规则，44,000+ 规则落地于 110,000+ 仓库，bug 解决率从 52% 升至接近 80%",
+          "evidence": "「Cursor has enabled Bugbot to learn from past runs, transforming feedback from the live code review process into learned rules... more than 110,000 repos have enabled learning, generating more than 44,000 learned rules; the resolution rate is nearing 80%, 15 percentage points higher than the next-closest AI code review product」",
+          "source_url": "https://cursor.com/blog/bugbot-learning",
+          "meee2_relevance": null,
+          "threat_signal": false
+        },
+        {
+          "type": "new_feature",
+          "description": "Canvas 升级：agent 可在 canvas 中嵌入交互按钮（运行特定 prompt）；Design Mode 进入 canvas（点击/标注 UI 元素引导编辑）；shared canvas 支持浏览器全屏",
+          "evidence": "「Design Mode is now available in canvases, allowing you to select and annotate UI elements directly in a canvas to guide Cursor's edits; agents can embed buttons in canvases that run specific prompts when clicked」",
+          "source_url": "https://cursor.com/changelog",
+          "meee2_relevance": "锚点 #2+#3：canvas 内嵌 agent 按钮 = descriptive-first artifact 上的主动 AI 触发，canvas 与 agent action 双向绑定进一步加深",
+          "threat_signal": false
+        }
+      ],
+      "key_findings": [
+        "BugBot 自学习规则正式落地：通过 live review 反馈持续自改进，110,000 仓库参与，bug 解决率近 80%——Cursor 建立了持续学习 flywheel，与竞品拉开质量差距",
+        "Canvas 内嵌交互按钮：agent action 与 artifact surface 双向绑定；Design Mode 进 canvas——descriptive canvas 的交互层持续深化"
+      ],
+      "no_change_reason": null
+    },
+    {
+      "id": "openai",
+      "name": "OpenAI / ChatGPT",
+      "category": "orchestrator",
+      "threat": "crit",
+      "threat_changed": false,
+      "has_changes": true,
+      "fetch_status": "ok",
+      "fetched_urls": [
+        "WebSearch:OpenAI ChatGPT superapp redesign June 2026 Codex Appshots canvas",
+        "WebSearch:OpenAI ChatGPT Codex Appshots Goal mode June 2026 release notes"
+      ],
+      "raw_snapshot": "OpenAI June 2026: Superapp redesign ('Aria')—ChatGPT + Codex + agents + third-party app integrations in one unified interface (900M weekly users); launch partners include Canva, Booking.com, Figma, Spotify, Coursera, Zillow; expected within weeks. Codex Appshots (macOS): hotkey attaches active app window (screenshot + available text) to Codex thread for richer context without manual setup prompt. Goal mode GA across Codex app/IDE extension/CLI: define outcome + success criteria, Codex works autonomously over hours/days. Remote computer use: Codex drives desktop apps after Mac locks, accessible remotely via Codex Mobile (short-lived auth, covered display, relock on local input). In-app browser annotations for styling feedback. Canvas: writing/coding moved to inline chat blocks in GPT-5.5; Canvas continues for document creation. (来源：WebSearch 结果，非官方原文)",
+      "content_hash": "OpenAI June 2026: Superapp redesign ('Aria')—ChatGPT + Codex + agents + third-party app integrations in one unified interface (900M weekly users); launch partners incl",
+      "last_seen_at": "2026-06-13T08:30:00Z",
+      "changes": [
+        {
+          "type": "positioning",
+          "description": "ChatGPT 超级应用重组（'Aria'）：ChatGPT + Codex + agents + 第三方 app 集成统一到单一界面，launch partners 含 Canva/Figma/Spotify/Booking.com/Zillow 等",
+          "evidence": "「OpenAI is embedding AI agents, a coding tool called Codex, image generation, and a growing list of third-party app integrations directly into the main ChatGPT interface. Launch partners confirmed so far include Canva and Booking.com, with Expedia, Figma, Spotify, Coursera, and Zillow also taking part」",
+          "source_url": "https://perplexityaimagazine.com/ai-news/openai-chatgpt-superapp-codex-ipo-2026/",
+          "meee2_relevance": "锚点 #1+#4：AI 快 session（Codex）+ 人交互（ChatGPT chat）+ 跨工具 artifact（Canva/Figma 集成）在同一统一界面 = ChatGPT 正在向「人慢 session + AI 快 session + 跨工具 live link」方向整合，规模是 meee2 的数量级压制",
+          "threat_signal": true
+        },
+        {
+          "type": "new_feature",
+          "description": "Codex Appshots（macOS）：热键将当前 app 窗口（截图+可选文字）附加到 Codex thread，提供视觉上下文，无需手动描述",
+          "evidence": "「Appshots in the macOS app let users attach an app window to a Codex thread with a hotkey, including a screenshot and available text; Codex can understand what you are looking at without a long setup prompt」",
+          "source_url": "https://www.digit.in/news/general/openai-upgrades-codex-with-appshots-goal-mode-and-more-developer-focused-tools.html",
+          "meee2_relevance": "锚点 #3+#5：截图 + 窗口上下文 = descriptive-first 的视觉输入层；热键触发 = peripheral 不切焦点的 AI session 激活",
+          "threat_signal": false
+        },
+        {
+          "type": "new_feature",
+          "description": "Goal mode GA：定义目标 + 成功标准，Codex 自主执行数小时/天，处理子任务、写代码、迭代，无需用户干预",
+          "evidence": "「Goal mode is generally available... you can define an outcome and success criteria and let Codex keep working toward it; it lets Codex pursue a defined outcome autonomously over hours or days, handling subtasks, writing code, and iterating without further prompting」",
+          "source_url": "https://aiweekly.co/alerts/openai-codex-launches-appshots-and-stable-goal-mode",
+          "meee2_relevance": "锚点 #1：自主执行数小时/天的 AI 快 session，接近 meee2 的长时序 session 场景",
+          "threat_signal": false
+        }
+      ],
+      "key_findings": [
+        "【高威胁】ChatGPT Aria 超级应用（即将推出）：ChatGPT + Codex agent + 跨工具集成（Canva/Figma/Spotify 等）统一界面，这是 OpenAI 最接近 meee2「人慢 session + AI 快 session + 跨工具 live link」完整图景的产品级布局——900M 用户规模与 meee2 的差距值得特别关注",
+        "Codex Goal mode GA + Appshots：长时序自主 AI session（数天）+ 视觉上下文输入热键，OpenAI 在自主性和 descriptive 输入层持续夯实"
+      ],
+      "no_change_reason": null
+    },
+    {
+      "id": "windsurf",
+      "name": "Windsurf / Devin Desktop",
+      "category": "orchestrator",
+      "threat": "crit",
+      "threat_changed": false,
+      "has_changes": true,
+      "fetch_status": "ok",
+      "fetched_urls": [
+        "WebSearch:Windsurf Devin Desktop ACP new features June 2026 agent update",
+        "WebSearch:Devin Desktop Spaces shared context agents sessions PRs June 2026"
+      ],
+      "raw_snapshot": "Devin Desktop June 2026 (post-June 2 rebrand): Spaces—new feature groups related agent sessions, PRs, files, and context objects; multi-agent workflows share state without each agent rebuilding context from scratch; a Space for a feature branch holds files, current PR, test results, agent sessions accessible to all agents in Space; 'early feature, intentionally simple, will evolve through Q3 2026.' ACP adoption expanded: JetBrains, Google, GitHub, and 25+ agents now support ACP (at launch: Codex, Claude Agent, OpenCode)—becoming industry standard for agent-editor integration. Cascade deprecated July 1 (confirmed deadline). Devin Local (Rust): subagents support, 30% token-efficient. Agent Command Center default screen. (来源：WebSearch 结果，非官方原文)",
+      "content_hash": "Devin Desktop June 2026 (post-June 2 rebrand): Spaces—new feature groups related agent sessions, PRs, files, and context objects; multi-agent workflows share state with",
+      "last_seen_at": "2026-06-13T08:30:00Z",
+      "changes": [
+        {
+          "type": "new_feature",
+          "description": "Spaces：跨 agent session 的共享上下文层——grouping sessions/PRs/files/context，agent 无需重建上下文即可接手前一 agent 的工作",
+          "evidence": "「A Space groups related agent sessions, PRs, files, and context objects together, giving multi-agent workflows shared state without requiring each agent to rebuild context from scratch... Instead of re-explaining the codebase to every new session, you point agents at a Space and they pick up the project's context automatically」",
+          "source_url": "https://chatforest.com/builders-log/windsurf-devin-desktop-rebrand-devin-local-acp-builder-guide/",
+          "meee2_relevance": "锚点 #1+#4：Spaces = 跨 agent session 共享 context 层，实现了跨 session artifact pull 的核心概念；agent 接手另一 agent 的工作不需 re-setup = meee2「跨 session/跨工具 artifact pull（F9）」在多 agent 维度的直接实现",
+          "threat_signal": true
+        },
+        {
+          "type": "positioning",
+          "description": "ACP 生态扩张：JetBrains、Google、GitHub 加入，共 25+ agent/editor 支持 ACP，正演变为 agent-editor 接入行业标准",
+          "evidence": "「ACP launches with support for Codex, Claude Agent, OpenCode, and any other ACP-compatible agents... [now adopted by] JetBrains, Google, GitHub, and 25+ agents」",
+          "source_url": "https://aicoderscope.com/blog/windsurf-devin-desktop-rebrand-acp-2026/",
+          "meee2_relevance": "锚点 #1+#4：ACP 已获主流工具采用，跨工具 agent session 接入协议的行业标准化进程加速——meee2 跨工具 session 协议的先发窗口进一步收窄",
+          "threat_signal": true
+        }
+      ],
+      "key_findings": [
+        "【最高威胁】Spaces：Devin Desktop 引入跨 agent session 共享 context 层——agent 可直接接手另一 agent 的工作，无需 re-setup。这与 meee2「F9 cross-session artifact pull」的核心概念直接重叠，是 windsurf 迄今最接近 meee2 架构的功能",
+        "ACP 生态扩张: JetBrains/Google/GitHub 加入，25+ 工具支持——跨工具 agent 接入协议已形成行业共识，meee2 的协议差异化窗口进一步收窄"
+      ],
+      "no_change_reason": null
+    },
+    {
+      "id": "claude-ai",
+      "name": "Claude.ai / Anthropic",
+      "category": "orchestrator",
+      "threat": "crit",
+      "threat_changed": false,
+      "has_changes": true,
+      "fetch_status": "ok",
+      "fetched_urls": [
+        "WebSearch:Anthropic Claude new features June 13 2026 agent routines memory",
+        "WebSearch:Claude Apple Foundation Models framework iOS 27 macOS 27 June 2026"
+      ],
+      "raw_snapshot": "Anthropic June 2026: Dreaming (research preview, requires request access)—scheduled process reviews past agent sessions, extracts patterns, curates memories so agents self-improve between runs. Announced at Code with Claude 2026 (May 6). Outcomes (public beta): rubric-based evaluator iterates agent output without prompting tweaks. Claude Fable 5 released June 9 (most capable GA model). Claude Code: Opus 4.8 as new default, dynamic workflows, security-guidance plugin, faster fast mode, background jobs, browser selection improvements. Claude for Apple Foundation Models (available June 13): Swift package conforming to Apple LanguageModelSession protocol; works on iOS 27/iPadOS 27/macOS 27/watchOS 27/visionOS 27; developers call Claude through same API as Apple on-device models. 20+ new legal MCP connectors and 12 practice-area plugins. (来源：WebSearch 结果，非官方原文)",
+      "content_hash": "Anthropic June 2026: Dreaming (research preview, requires request access)—scheduled process reviews past agent sessions, extracts patterns, curates memories so agents sel",
+      "last_seen_at": "2026-06-13T08:30:00Z",
+      "changes": [
+        {
+          "type": "new_feature",
+          "description": "Dreaming（研究预览，baseline 遗漏）：定期扫描历史 agent sessions、抽取模式、自动整理 memory，让 agent 在两次运行之间持续自我改进",
+          "evidence": "「Dreaming is a scheduled process that reviews your agent sessions and memory stores, extracts patterns, and curates memories so your agents improve over time」",
+          "source_url": "https://claude.com/blog/new-in-claude-managed-agents",
+          "meee2_relevance": "锚点 #4：跨 session 的 memory curation = 跨 session artifact 自动 pull 并转化为持久 context——当前为 research preview，影响范围有限",
+          "threat_signal": false
+        },
+        {
+          "type": "new_feature",
+          "description": "Claude for Apple Foundation Models（今日 June 13 上线）：Swift package，通过 LanguageModelSession API 在 iOS 27/macOS 27 等 Apple 平台任意 app 中调用 Claude",
+          "evidence": "「Claude for Foundation Models is a Swift package that makes Claude available as a server-side language model in Apple's Foundation Models framework, conforming to the framework's LanguageModel protocol so you can drive it with the same LanguageModelSession API you use for Apple's on-device model」",
+          "source_url": "https://claude.com/blog/claude-for-foundation-models",
+          "meee2_relevance": "锚点 #5：Claude 通过 Apple Foundation Models 协议嵌入 macOS 生态任意 app，macOS peripheral 层的 AI 调用路径标准化——meee2 的 macOS 菜单栏层需考量这一新基础设施",
+          "threat_signal": false
+        }
+      ],
+      "key_findings": [
+        "Dreaming（研究预览，baseline 遗漏补录）：Anthropic 引入跨 session memory 自动 curation——agent 两次运行之间自我改进；当前为邀请制，尚不影响大多数用户",
+        "Claude for Apple Foundation Models（今日上线）：Claude 通过标准 Apple API 嵌入 iOS/macOS 生态，peripheral macOS 层 AI 接入路径进一步标准化"
+      ],
+      "no_change_reason": null
+    },
+    {
+      "id": "github-copilot",
+      "name": "GitHub Copilot",
+      "category": "orchestrator",
+      "threat": "hi",
+      "threat_changed": false,
+      "has_changes": true,
+      "fetch_status": "ok",
+      "fetched_urls": [
+        "WebSearch:GitHub Copilot new features June 12 13 2026 agent workspace background tasks",
+        "WebSearch:GitHub Copilot session logs past agent sessions chat June 2026"
+      ],
+      "raw_snapshot": "GitHub Copilot June 2026: Chat now sees agent sessions (June 10)—Session search tool: find/summarize past sessions by topic/title/recency; Get agent logs tool: pulls session logs from cloud agent's PR work (what changed, validated, why); session data synced to GitHub account across all Copilot surfaces (CLI, cloud agent, code review, VS Code, JetBrains, Copilot app). Chat reflects real-time status of in-progress agent sessions; after completion, ask follow-up questions or kick off another session from chat. /chronicle (June 2): natural language query across all session history. Code review new configs (June 12): org runner controls, content exclusion support, unlimited custom instructions. /security-review CLI command (experimental). (来源：WebSearch 结果，非官方原文)",
+      "content_hash": "GitHub Copilot June 2026: Chat now sees agent sessions (June 10)—Session search tool: find/summarize past sessions by topic/title/recency; Get agent logs tool: pulls sess",
+      "last_seen_at": "2026-06-13T08:30:00Z",
+      "changes": [
+        {
+          "type": "new_feature",
+          "description": "跨 session artifact pull GA（June 10）：Session Search 工具按主题/标题/时间查询历史 sessions；Get agent logs 工具跨 PR 拉取 agent 执行日志；session 数据跨所有 Copilot 平台同步",
+          "evidence": "「A new 'Get agent logs' tool pulls in session logs from a Copilot cloud agent's work on a pull request so you can ask about what changed, what was validated, and why. A 'Session search' tool lets you find and summarize past agent sessions by topic, title, or recency, making it easy to pick up where previous work left off」",
+          "source_url": "https://github.blog/changelog/2026-06-10-copilot-chat-now-sees-your-agent-sessions/",
+          "meee2_relevance": "锚点 #4：Session Search + Get agent logs = 跨 session 和跨工具（VS Code/JetBrains/CLI/cloud agent）的 artifact pull，且明确标注「pick up where previous work left off」——这是 meee2 F9 cross-session pull 的直接竞品实现",
+          "threat_signal": true
+        },
+        {
+          "type": "new_feature",
+          "description": "Code review 新配置（June 12）：org runner 控制、内容排除支持、custom instructions 无字符限制",
+          "evidence": "「With new organization runner controls, Copilot content exclusion support, and the removal of the character limit on repository custom instructions, Copilot code review is now easier to tailor to your needs」",
+          "source_url": "https://github.blog/changelog/2026-06-12-copilot-code-review-new-configurations-and-controls/",
+          "meee2_relevance": null,
+          "threat_signal": false
+        }
+      ],
+      "key_findings": [
+        "【关键新威胁】Session Search + Get agent logs：Copilot Chat 现可跨所有平台（VS Code/JetBrains/CLI/cloud）查询历史 agent sessions、拉取执行日志——「pick up where previous work left off」是 meee2 F9 跨 session pull 最直接的竞品描述",
+        "/chronicle + session data 全平台同步：agent session 数据成为 Copilot 生态第一等公民，跨工具 session 历史查询已形成完整闭环"
+      ],
+      "no_change_reason": null
+    },
+    {
+      "id": "gemini",
+      "name": "Google Gemini / Antigravity",
+      "category": "orchestrator",
+      "threat": "hi",
+      "threat_changed": false,
+      "has_changes": true,
+      "fetch_status": "ok",
+      "fetched_urls": [
+        "WebSearch:Google Gemini Antigravity new features June 12 13 2026 agent workspace update",
+        "WebSearch:Google Gemini Code Assist Antigravity CLI transition June 18 2026 update"
+      ],
+      "raw_snapshot": "Google Gemini / Antigravity June 2026: Gemini CLI 弃用倒计时——June 18, 2026（5天后）Gemini CLI 和 Gemini Code Assist IDE extensions 停止服务 Google AI Pro/Ultra 及个人免费用户；Antigravity CLI（Go 重写，异步后台处理，multi-agent 原生支持，Agent Skills/Hooks/Subagents 作为 Antigravity plugins）全面接替。企业（Standard/Enterprise）Gemini CLI 继续受支持。AI Studio → Antigravity 一键迁移：一键导入所有 context 至本地开发环境并推送生产。Workspace 原生 API 调用：agents 直接调用 Google Docs/Sheets/Calendar。核心 Antigravity 2.0 功能（I/O May 2026）无新变化。(来源：WebSearch 结果，非官方原文)",
+      "content_hash": "Google Gemini / Antigravity June 2026: Gemini CLI 弃用倒计时——June 18, 2026（5天后）Gemini CLI 和 Gemini Code Assist IDE extensions 停止服务 Google AI Pro/Ultra 及个人免",
+      "last_seen_at": "2026-06-13T08:30:00Z",
+      "changes": [
+        {
+          "type": "positioning",
+          "description": "Gemini CLI 正式 EOL June 18（5天后）：Antigravity CLI（Go 重写，异步后台处理，multi-agent 原生支持）全面接替，消费者和个人开发者须迁移",
+          "evidence": "「On June 18, 2026, Gemini CLI and Gemini Code Assist IDE extensions will stop serving requests for Google AI Pro and Ultra, as well as those using it free of charge; Antigravity CLI is available to everyone starting now」",
+          "source_url": "https://developers.googleblog.com/an-important-update-transitioning-gemini-cli-to-antigravity-cli/",
+          "meee2_relevance": "推断：Antigravity CLI 以异步后台处理为核心重新设计，Google agent 平台整合进入执行阶段；Antigravity CLI 的 background 模式与 meee2 peripheral 后台 session 有功能交集",
+          "threat_signal": false
+        }
+      ],
+      "key_findings": [
+        "Gemini CLI EOL 倒计时（June 18，5天后）：消费者须迁移到 Antigravity CLI；企业用户继续支持——Google agent 平台整合关键一步",
+        "无新结构性功能：Antigravity 2.0 核心（I/O May 2026）本次抓取无变化，威胁等级维持 hi"
+      ],
+      "no_change_reason": null
+    },
+    {
+      "id": "linear",
+      "name": "Linear",
+      "category": "workspace",
+      "threat": "hi",
+      "threat_changed": false,
+      "has_changes": true,
+      "fetch_status": "ok",
+      "fetched_urls": [
+        "WebSearch:Linear app new features June 12 13 2026 changelog AI agent update"
+      ],
+      "raw_snapshot": "Linear June 2026: 最新 changelog 为 June 11 Coding Sessions（已在 baseline 中覆盖）。补充 June 4 baseline 遗漏：Team Documents + Agent Skills sharing——每个团队有专属 documents 页面；用户可将个人 agent skills 共享为团队标准工作流（writing specs、weekly planning、drafting updates 等）。Linear Agent changelog 无 June 12-13 新增。(来源：WebSearch 结果，非官方原文)",
+      "content_hash": "Linear June 2026: 最新 changelog 为 June 11 Coding Sessions（已在 baseline 中覆盖）。补充 June 4 baseline 遗漏：Team Documents + Agent Skills sharing——每个团队有专属",
+      "last_seen_at": "2026-06-13T08:30:00Z",
+      "changes": [
+        {
+          "type": "new_feature",
+          "description": "Agent Skills 团队共享（June 4，baseline 遗漏）：个人 agent 工作流升级为团队标准流程——writing specs、weekly planning、drafting updates 等可共享全团队",
+          "evidence": "「Linear now supports sharing skills with your team so great personal workflows can become shared team process, helping your team standardize recurring workflows like writing specs, running weekly planning, or drafting updates」",
+          "source_url": "https://linear.app/changelog/2026-06-04-team-documents",
+          "meee2_relevance": "锚点 #3：个人 agent skill → 团队标准化工作流 = descriptive-first flow 在团队层的 emerge，但粒度仍为 issue/task 驱动，非 canvas 层",
+          "threat_signal": false
+        }
+      ],
+      "key_findings": [
+        "June 13 无新 Linear 更新；补充 June 4 baseline 遗漏：Agent Skills 团队共享——个人 agent 工作流标准化为团队共识，descriptive 团队协同的增量演进",
+        "Coding Sessions（June 11）威胁等级评估维持 hi；无新触发 crit 的信号"
+      ],
+      "no_change_reason": null
+    },
+    {
+      "id": "notion-ai",
+      "name": "Notion AI",
+      "category": "workspace",
+      "threat": "md",
+      "threat_changed": false,
+      "has_changes": false,
+      "fetch_status": "ok",
+      "fetched_urls": [
+        "WebSearch:Notion AI new features June 13 2026 agent automation connector release"
+      ],
+      "raw_snapshot": "Notion AI June 2026: 本次搜索未发现 June 12-13 新功能发布。Developer Platform（CLI/Workers/Custom Agents/Agent Directory，May 13）、Workers pricing（August 11）、External Agents API（Claude/Codex/Decagon 集成）均已在 baseline 中覆盖。Custom Agents 自 April 2026 起降价 35-50%，可访问私有 Slack 频道、Salesforce/Box connector，在 baseline 中已记录。无新结构性变化。(来源：WebSearch 结果，非官方原文)",
+      "content_hash": "Notion AI June 2026: 本次搜索未发现 June 12-13 新功能发布。Developer Platform（CLI/Workers/Custom Agents/Agent Directory，May 13）、Workers pricing（August 11）、External",
+      "last_seen_at": "2026-06-13T08:30:00Z",
+      "changes": [],
+      "key_findings": [],
+      "no_change_reason": "本次抓取未发现 Notion AI 在 2026-06-13 有新功能发布；Developer Platform 等均已在 baseline 中覆盖，无结构性新变化"
+    },
+    {
+      "id": "slack",
+      "name": "Slack",
+      "category": "comms",
+      "threat": "md",
+      "threat_changed": false,
+      "has_changes": true,
+      "fetch_status": "ok",
+      "fetched_urls": [
+        "WebSearch:Slack new AI features June 2026 agent canvas automation update",
+        "WebSearch:Slack recurring Slackbot tasks generative AI workflow native step June 2026"
+      ],
+      "raw_snapshot": "Slack June 2026: 生成式 AI 成为所有 Slack workflow 原生步骤（Generate AI Response step）——写 prompt、选知识源（channels/canvases/lists），LLM 生成响应作为 workflow 一部分。定时 Slackbot 任务：可要求 Slackbot 按循环计划执行任务（如每周生成会议 agenda canvas）。Slackbot 可读取/创建/编辑 lists。AI agent 固定置顶（最常用 agent 置于 desktop 顶部）。Slackbot MCP：30+ 功能，趋向自主工作 agent。开发者平台：单命令 `slack create agent` + enhanced Bolt + BYOLLM。(来源：WebSearch 结果，非官方原文)",
+      "content_hash": "Slack June 2026: 生成式 AI 成为所有 Slack workflow 原生步骤（Generate AI Response step）——写 prompt、选知识源（channels/canvases/lists），LLM 生成响应作为 workflow 一",
+      "last_seen_at": "2026-06-13T08:30:00Z",
+      "changes": [
+        {
+          "type": "new_feature",
+          "description": "生成式 AI 成为所有 Slack workflow 的原生步骤：任意 workflow 可插入 AI prompt 节点，指定知识源（channels/canvases/lists）",
+          "evidence": "「Generative AI just became a native step in every Slack workflow, allowing users to write a prompt, select knowledge sources (channels, canvases, lists), and have an LLM generate a response as part of a workflow」",
+          "source_url": "https://slack.com/whats-new",
+          "meee2_relevance": "锚点 #1：AI 作为 workflow 内嵌步骤，与 meee2 的 session-in-pipeline 相关，但粒度不同——Slack 是 workflow step，meee2 是独立 session 协议",
+          "threat_signal": false
+        },
+        {
+          "type": "new_feature",
+          "description": "定时 Slackbot 任务：按循环计划自动执行（如每周会议 agenda canvas 生成），无需手动触发",
+          "evidence": "「You can now schedule recurring tasks and automations directly through Slackbot, with no manual triggers required—from weekly digests to recurring check-ins, Slackbot runs them on your schedule」",
+          "source_url": "https://slack.com/whats-new",
+          "meee2_relevance": "锚点 #1：定期触发的 AI 任务执行，但限于 Slack 通讯上下文，威胁等级维持 md",
+          "threat_signal": false
+        }
+      ],
+      "key_findings": [
+        "AI 成为 Slack workflow 原生步骤：任意 workflow 可内嵌 AI prompt 节点 + 知识源选择——Slack automation 层已具备轻量 AI session 能力",
+        "定时 Slackbot 任务：循环自动执行，Slackbot 向自主 agent 方向演进，但仍限于 Slack 上下文"
+      ],
+      "no_change_reason": null
+    },
+    {
+      "id": "reflect",
+      "name": "Reflect",
+      "category": "workspace",
+      "threat": "md",
+      "threat_changed": false,
+      "has_changes": false,
+      "fetch_status": "ok",
+      "fetched_urls": [
+        "WebSearch:Reflect notes app new features June 2026 AI sync update"
+      ],
+      "raw_snapshot": "Reflect June 2026: 未发现 June 12-13 新功能。MCP server（April 2026）、Claude Sonnet 3.7 支持、PDF inline preview、Prompt Templates 自定义均在 baseline 周期前已发布。无新的 agent/session/menu bar 结构性变化。(来源：WebSearch 结果，非官方原文)",
+      "content_hash": "Reflect June 2026: 未发现 June 12-13 新功能。MCP server（April 2026）、Claude Sonnet 3.7 支持、PDF inline preview、Prompt Templates 自定义均在 baseline 周期前已发布。无新",
+      "last_seen_at": "2026-06-13T08:30:00Z",
+      "changes": [],
+      "key_findings": [],
+      "no_change_reason": "本次抓取未发现 Reflect 在 2026-06-13 有新功能发布；MCP 集成、AI 功能均已在 baseline 中覆盖"
+    },
+    {
+      "id": "raycast",
+      "name": "Raycast",
+      "category": "peripheral",
+      "threat": "md",
+      "threat_changed": false,
+      "has_changes": true,
+      "fetch_status": "ok",
+      "fetched_urls": [
+        "WebSearch:Raycast new features AI agent June 2026 changelog update",
+        "WebSearch:Raycast team sharing AI agents version changelog June 2026"
+      ],
+      "raw_snapshot": "Raycast version 0.63 (early June 2026): Teams can share AI Agents, AI Commands, and Dictation Styles across the organization—unified workflows and consistent setups for everyone. MCP servers now installable and usable in Quick AI and AI Chat. AI Skills auto-load depending on request (reads ~/.config/agents/skills, ~/.agents/skills, ~/.claude/skills, etc.). Quick AI design refresh: composer at bottom, multiline, attachments. BYOK for iOS (Anthropic/Google/OpenAI/OpenRouter). Windows Dictation. Clipboard History: plain text paste, QR code image extraction. (来源：WebSearch 结果，非官方原文)",
+      "content_hash": "Raycast version 0.63 (early June 2026): Teams can share AI Agents, AI Commands, and Dictation Styles across the organization—unified workflows and consistent setups for",
+      "last_seen_at": "2026-06-13T08:30:00Z",
+      "changes": [
+        {
+          "type": "new_feature",
+          "description": "Team AI Agent 共享（v0.63）：团队可共享 AI Agents、AI Commands 和 Dictation Styles，统一团队工作流配置（baseline 标注「无 team/agent 结构性变化」，今日更新推翻该结论）",
+          "evidence": "「Raycast version 0.63 introduces the ability for teams to share AI Agents, AI Commands, and Dictation Styles across their organization, supporting unified workflows」",
+          "source_url": "https://alternativeto.net/news/2026/6/raycast-update-enables-team-sharing-of-ai-tools-and-adds-windows-dictation/",
+          "meee2_relevance": "锚点 #5：peripheral 层（菜单栏）获得团队协同能力——shared AI Agents in Raycast 使 peripheral tool 具备团队 workflow 标准化功能，但仍限于 Raycast 生态",
+          "threat_signal": false
+        },
+        {
+          "type": "new_feature",
+          "description": "MCP servers 可在 Quick AI 和 AI Chat 中直接安装使用；AI Skills 根据请求自动加载（读取 .claude/skills 等标准目录）",
+          "evidence": "「MCP servers can now be installed and used in Quick AI and AI Chat; AI Skills can be loaded automatically depending on the request」",
+          "source_url": "https://www.raycast.com/changelog",
+          "meee2_relevance": null,
+          "threat_signal": false
+        }
+      ],
+      "key_findings": [
+        "Raycast v0.63：团队 AI Agent 共享上线——peripheral 层首次具备团队协同 agent 标准化能力",
+        "MCP 进 Quick AI + Skills 自动加载：Raycast 快速成为跨工具 agent 触达的 peripheral 入口，与 meee2 菜单栏定位的功能重叠在加深"
+      ],
+      "no_change_reason": null
+    },
+    {
+      "id": "replit",
+      "name": "Replit",
+      "category": "orchestrator",
+      "threat": "md",
+      "threat_changed": false,
+      "has_changes": true,
+      "fetch_status": "ok",
+      "fetched_urls": [
+        "WebSearch:Replit AI agent multi-agent workspace June 2026 new features update",
+        "WebSearch:Replit Agent 4 parallel agents multi-agent workspace June 2026 launch"
+      ],
+      "raw_snapshot": "Replit June 2026: Browserbase connector—managed headless browsers for fetch, search, and full session automation. SEO Agent—reviews published app for search engine/AI discoverability, one-click fixes per issue. Collaborative Stripe Integration (teams build/test/monetize in same workspace with shared Stripe account). Replit Agent 4 (March 2026, baseline 未覆盖)—parallel agents break request into concurrent sub-jobs, shared project understanding, auto-resolve merge conflicts 90% success rate, canvas-like collaborative workflow for apps/sites/slides/3D/video. Enterprise self-serve upgrade (no sales call). (来源：WebSearch 结果，非官方原文)",
+      "content_hash": "Replit June 2026: Browserbase connector—managed headless browsers for fetch, search, and full session automation. SEO Agent—reviews published app for search engine/AI disc",
+      "last_seen_at": "2026-06-13T08:30:00Z",
+      "changes": [
+        {
+          "type": "new_feature",
+          "description": "Browserbase connector：托管 headless 浏览器用于 fetch/搜索/完整 session 自动化，team 无需管理浏览器基础设施",
+          "evidence": "「Browserbase runs managed headless browsers for fetch, search, and full session automation」",
+          "source_url": "https://docs.replit.com/updates",
+          "meee2_relevance": "锚点 #1：AI 快 session 通过 headless browser 自动化访问外部工具/数据，扩展了 agent session 的行动空间",
+          "threat_signal": false
+        },
+        {
+          "type": "new_feature",
+          "description": "Replit Agent 4（baseline 遗漏，March 2026）：并行多 agent 拆解子任务、共享 project 理解、自动 merge conflict 解决（90%）、canvas 式协同工作流",
+          "evidence": "「Agent 4 can break a request into smaller jobs and run them concurrently while maintaining a shared understanding of the project; a more collaborative, canvas-like workflow with parallel agents for apps, sites, and slides」",
+          "source_url": "https://blog.replit.com/introducing-agent-4-built-for-creativity",
+          "meee2_relevance": "锚点 #1+#3：并行 agent 子任务 + canvas 式协同 = 多 agent session 并发执行和 descriptive canvas，但定位为 vibe coding，非 session 协议",
+          "threat_signal": false
+        }
+      ],
+      "key_findings": [
+        "Browserbase + Agent 4 补录：Replit 的 agent 能力（并行 multi-agent、headless browser）被 baseline 遗漏；Agent 4 已发展出 canvas 式协同工作流，核心定位仍为 vibe coding",
+        "SEO Agent 等垂直 agent 快速增长：Replit 以垂直场景 agent 填满生态，与 meee2 的横向 session 协议定位路径不同"
+      ],
+      "no_change_reason": null
+    },
+    {
+      "id": "superwhisper",
+      "name": "Superwhisper",
+      "category": "peripheral",
+      "threat": "lo",
+      "threat_changed": false,
+      "has_changes": true,
+      "fetch_status": "ok",
+      "fetched_urls": [
+        "WebSearch:Superwhisper new features June 2026 AI integration update"
+      ],
+      "raw_snapshot": "Superwhisper June 2026: 新增 Amp 集成（AI coding agent）和 Codex hooks 支持（May 2026）。官方集成列表：Claude Code、OpenCode、Amp、Codex（hooks）。核心功能不变：浮动窗口语音控制、离线转写、100+ 语言，读取屏幕上下文适配 IDE 输出格式，~2 秒交互延迟。ElevenLabs Scribe v2 已覆盖所有用户。Modes 设计更新（专属设置视图）。(来源：WebSearch 结果，非官方原文)",
+      "content_hash": "Superwhisper June 2026: 新增 Amp 集成（AI coding agent）和 Codex hooks 支持（May 2026）。官方集成列表：Claude Code、OpenCode、Amp、Codex（hooks）。核心功能不变：浮",
+      "last_seen_at": "2026-06-13T08:30:00Z",
+      "changes": [
+        {
+          "type": "new_feature",
+          "description": "Amp 集成（新增 AI coding agent 支持）+ Codex hooks 支持（May 2026），peripheral 语音接入的 agent 覆盖面继续扩大",
+          "evidence": "「As of 2026 it has official integrations for Claude Code, OpenCode, and Amp, plus Codex hook support added in May 2026」",
+          "source_url": "https://superwhisper.com/changelog",
+          "meee2_relevance": "锚点 #5：peripheral 语音层覆盖更多 AI agent（Amp/Codex），浮动窗口成为 multi-agent 的语音 hub，威胁等级维持 lo",
+          "threat_signal": false
+        }
+      ],
+      "key_findings": [
+        "Superwhisper 集成扩至 Amp + Codex hooks：peripheral 语音 hub 持续接入更多 AI coding agents，功能仍限于语音输入层，威胁等级维持 lo"
+      ],
+      "no_change_reason": null
+    },
+    {
+      "id": "producthunt-ai",
+      "name": "Product Hunt AI 新品雷达",
+      "category": "new_entrant_watch",
+      "threat": "md",
+      "threat_changed": false,
+      "has_changes": true,
+      "fetch_status": "ok",
+      "fetched_urls": [
+        "WebSearch:Product Hunt AI launches today June 13 2026 workspace agent session canvas",
+        "WebSearch:Kollab shared workspace AI agents teams June 2026 ProductHunt",
+        "WebSearch:Agentspan open-source runtime durable AI agents Product Hunt 2026"
+      ],
+      "raw_snapshot": "Product Hunt AI 新品 June 2026: Kollab——「Shared workspace where teams work with agents together」，agent 与 teammates 共享同一 project surface（tasks/documents/chat），agents 执行 multi-step Skills，通过 Slack/Discord/Feishu/Telegram bot 触发 + 结果同步回 Kollab workspace，Memory 跨 project 持久化，Notion/Linear/Figma/GitHub/Gmail/Canva + MCP 集成，traceable citations。Agentspan（开源，MIT）——durable AI agent runtime，crash-safe，human-in-the-loop approvals，agents pause for human approval for days，Conductor 驱动（Netflix/Tesla/LinkedIn 级别）。PH AI 趋势：AI 嵌入用户已有工具表面（peripheral 化），founder tools 主导。(来源：WebSearch 结果，非官方原文)",
+      "content_hash": "Product Hunt AI 新品 June 2026: Kollab——「Shared workspace where teams work with agents together」，agent 与 teammates 共享同一 project surface（tasks/documents/chat），agents 执行",
+      "last_seen_at": "2026-06-13T08:30:00Z",
+      "changes": [
+        {
+          "type": "new_entrant",
+          "description": "Kollab：「teams and AI agents share the same project surface」——team + agent 同一工作面，multi-step Skills，Memory 跨 project，MCP + Notion/Linear/Figma/GitHub 集成，Slack bot 触发不切换 app",
+          "evidence": "「Bots bring agents inside your IM like Slack without switching apps, Skills let anyone reuse your best workflows, Connectors link the tools you already use, and Memory keeps context alive across every project」",
+          "source_url": "https://www.producthunt.com/products/kollab-2",
+          "meee2_relevance": "锚点 #1+#4+#5：team + AI agent 共享 surface（锚点 #1）；Memory 跨 project 持久化（锚点 #4）；Slack bot 不切焦点触发（锚点 #5）。命中 watch_keywords：agent/workspace/collaboration/live/artifact/session/async = 7 个。建议下次加入 sources.json 持续追踪",
+          "threat_signal": false
+        },
+        {
+          "type": "new_entrant",
+          "description": "Agentspan（开源 MIT）：durable AI agent 运行时——crash-safe，human-in-the-loop approvals，agent 可为人工审批暂停数天，基于 Conductor 构建",
+          "evidence": "「Agentspan adds crash recovery, human-in-the-loop approvals, guardrails, tool history, and observability... agents survive crashes, scale across machines, and pause for human approval for days — not minutes」",
+          "source_url": "https://www.producthunt.com/products/agentspan",
+          "meee2_relevance": "锚点 #1：人在 agent 图内（human-in-the-loop approvals）；agent 为人工审批暂停数天 = 「人是慢 session」的基础设施级实现。命中 watch_keywords：agent/session/human-AI/async = 4 个。建议加入 sources.json 追踪",
+          "threat_signal": false
+        }
+      ],
+      "key_findings": [
+        "Kollab（7个 watch_keywords）：迄今 PH 上与 meee2 整体锚点重叠度最高的新产品之一——team + AI 共享 surface + cross-project Memory + peripheral Slack bot 触发，建议立即加入 sources.json",
+        "Agentspan（开源，4个 watch_keywords）：human-in-the-loop + crash-safe durable agent runtime，「人是慢 session」的基础设施级实现，建议加入 sources.json"
+      ],
+      "no_change_reason": null
+    }
+  ],
+  "alerts": [
+    {
+      "competitor_id": "openai",
+      "competitor_name": "OpenAI / ChatGPT",
+      "severity": "crit",
+      "headline": "ChatGPT Aria 超级应用（即将推出）：ChatGPT + Codex agents + 跨工具集成（Canva/Figma/Spotify 等）统一界面，OpenAI 向「人慢 session + AI 快 session + 跨工具集成」完整图景整合",
+      "evidence": "「OpenAI is embedding AI agents, a coding tool called Codex, image generation, and a growing list of third-party app integrations directly into the main ChatGPT interface. Launch partners confirmed so far include Canva and Booking.com, with Expedia, Figma, Spotify, Coursera, and Zillow also taking part」",
+      "action_suggestion": "Aria 超级应用是 OpenAI 迄今最接近 meee2 完整图景的布局：900M 用户基础上统一 AI coding session + 人交互界面 + 第三方工具集成。建议团队优先确认 meee2 在 Aria 覆盖范围之外的不可替代场景——特别是跨工具 live link（非 snapshot）和 descriptive canvas（行为涌现结构）是否能对抗 OpenAI 的规模整合"
+    },
+    {
+      "competitor_id": "windsurf",
+      "competitor_name": "Windsurf / Devin Desktop",
+      "severity": "crit",
+      "headline": "Spaces：跨 agent session 共享 context 层——「point agents at a Space and they pick up the project's context automatically」，F9 cross-session pull 的直接竞品实现",
+      "evidence": "「A Space groups related agent sessions, PRs, files, and context objects together, giving multi-agent workflows shared state without requiring each agent to rebuild context from scratch; Instead of re-explaining the codebase to every new session, you point agents at a Space and they pick up the project's context automatically」",
+      "action_suggestion": "Spaces 是 Devin Desktop 对「跨 session/跨工具 artifact pull」概念的工程实现——agent 无需 re-setup 即可接手另一 agent 的工作，与 meee2 F9 概念高度重叠。关键问题：Spaces 是否通过 ACP 支持跨工具（非仅 Devin ecosystem）的 artifact pull？若是，则直接威胁 meee2 核心差异化。建议深入研究 Spaces + ACP 协同设计"
+    },
+    {
+      "competitor_id": "windsurf",
+      "competitor_name": "Windsurf / Devin Desktop",
+      "severity": "crit",
+      "headline": "ACP 生态扩张至 JetBrains/Google/GitHub，25+ agent/editor 支持——跨工具 agent session 接入协议的行业标准化进程加速",
+      "evidence": "「ACP launches with support for Codex, Claude Agent, OpenCode... [now adopted by] JetBrains, Google, GitHub, and 25+ agents」",
+      "action_suggestion": "ACP 已从「Devin 自己的协议」升级为行业共识协议，JetBrains/Google/GitHub 的加入意味着主流开发工具将形成互联互通的 agent ecosystem。若 meee2 不加入或建立差异化协议层，跨工具 session 协议这一核心价值主张将面临被标准化稀释的风险。建议评估：是否参与 ACP 开源贡献或建立兼容层"
+    },
+    {
+      "competitor_id": "github-copilot",
+      "competitor_name": "GitHub Copilot",
+      "severity": "hi",
+      "headline": "Session Search + Get agent logs：Copilot Chat 实现跨平台 agent session 历史查询——「pick up where previous work left off」",
+      "evidence": "「A 'Session search' tool lets you find and summarize past agent sessions by topic, title, or recency, making it easy to pick up where previous work left off; a 'Get agent logs' tool pulls in session logs from a Copilot cloud agent's work on a pull request so you can ask about what changed, what was validated, and why」",
+      "action_suggestion": "Copilot Session Search 用自然语言描述查询历史 session，是 meee2 F9「5字戳任何 session」的直接竞品。差异：Copilot session 跨度限于 Copilot 生态（VS Code/JetBrains/CLI/cloud）；meee2 的跨 session pull 是跨工具+跨 owner 的。建议明确 meee2 在 cross-owner 和 non-Copilot 工具链场景的差异化叙事"
+    }
+  ]
+}

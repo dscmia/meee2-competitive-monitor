@@ -1,0 +1,333 @@
+{
+  "report_date": "2026-06-14",
+  "generated_at": "2026-06-14T08:30:00Z",
+  "summary": {
+    "total_tracked": 14,
+    "fetched_ok": 14,
+    "fetch_error": 0,
+    "has_changes": 3,
+    "new_alerts": 1
+  },
+  "competitors": [
+    {
+      "id": "cursor",
+      "name": "Cursor",
+      "category": "orchestrator",
+      "threat": "crit",
+      "threat_changed": false,
+      "has_changes": false,
+      "fetch_status": "ok",
+      "fetched_urls": [
+        "WebSearch:Cursor IDE new features changelog June 14 2026",
+        "WebSearch:Cursor AI update release June 14 2026 new feature agent canvas"
+      ],
+      "raw_snapshot": "Cursor June 14, 2026: 未发现自 v3.7（June 4）以来新版本或功能更新。WebSearch 返回最新内容仍为 v3.7：Canvas Design Mode（canvas 内 UI 标注/选择引导 Cursor 编辑）、Context Usage Report（canvas 内 token 分布交互式报告）、BugBot 自学习规则（44,000+ 规则 / 110,000+ 仓库，解决率近 80%）、BugBot 平均 90 秒 review。未发现 June 14 新条目。（来源：WebSearch，非官方原文）",
+      "content_hash": "Cursor June 14, 2026: 未发现自 v3.7（June 4）以来新版本或功能更新。WebSearch 返回最新内容仍为 v3.7：Canvas Design Mode（canvas 内 UI 标注",
+      "last_seen_at": "2026-06-14T08:30:00Z",
+      "changes": [],
+      "key_findings": [],
+      "no_change_reason": "本次抓取未发现 Cursor 自 2026-06-13 以来有新版本或功能更新；最新版本 v3.7（June 4）的全部特性已在 baseline 中覆盖"
+    },
+    {
+      "id": "openai",
+      "name": "OpenAI / ChatGPT",
+      "category": "orchestrator",
+      "threat": "crit",
+      "threat_changed": false,
+      "has_changes": true,
+      "fetch_status": "ok",
+      "fetched_urls": [
+        "WebSearch:OpenAI ChatGPT new features release June 14 2026 update announcement",
+        "WebSearch:OpenAI ChatGPT Aria superapp launch date June 2026 status"
+      ],
+      "raw_snapshot": "OpenAI June 14, 2026: GPT-5.2 模型系列（GPT-5.2 Instant、GPT-5.2 Thinking、GPT-5.2 Pro）已于 June 12 退役，存量对话自动迁移至对应 GPT-5.5 模型。GPT-5.3 Instant 小更新：改善跟进对话语气，减少 teaser 式回答风格。ChatGPT Memory 增强：自动更新机制、更实用的个性化，Plus/Pro 用户存储容量翻倍，从美国开始逐步推出。Aria 超级应用（ChatGPT + Codex + agents + Canva/Figma/Spotify 等集成）：仍处于「数周内上线」预告阶段，未正式发布。Active sessions 安全功能：Settings > Security 可查看/退出未识别 session。（来源：WebSearch，非官方原文）",
+      "content_hash": "OpenAI June 14, 2026: GPT-5.2 模型系列（GPT-5.2 Instant、GPT-5.2 Thinking、GPT-5.2 Pro）已于 June 12 退役，存量对话自动迁移至对应 GPT-5.5 模型。GPT-5.3 Instan",
+      "last_seen_at": "2026-06-14T08:30:00Z",
+      "changes": [
+        {
+          "type": "other",
+          "description": "GPT-5.2 系列全面退役（June 12，baseline 遗漏）：GPT-5.2 Instant/Thinking/Pro 下线，现有对话自动迁移至 GPT-5.5 对应版本",
+          "evidence": "「As of June 12, 2026, GPT-5.2 models are no longer available in ChatGPT, including GPT-5.2 Instant, GPT-5.2 Thinking, and GPT-5.2 Pro; existing conversations will automatically continue on the corresponding GPT-5.5 model」",
+          "source_url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes",
+          "meee2_relevance": null,
+          "threat_signal": false
+        },
+        {
+          "type": "new_feature",
+          "description": "ChatGPT Memory 容量翻倍（Plus/Pro）：自动更新机制、存储容量提升 2x，个性化更实用，从美国开始逐步推出",
+          "evidence": "「ChatGPT upgrades memory to keep context fresher and responses more relevant, with automatic updates, more useful personalization, and twice the memory capacity for Plus and Pro users, with the rollout starting in the US」",
+          "source_url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes",
+          "meee2_relevance": "锚点 #4：跨 session 记忆容量增加，强化持久化 context 层——但仍为 snapshot 式 memory，非 live artifact pull",
+          "threat_signal": false
+        }
+      ],
+      "key_findings": [
+        "GPT-5.2 系列退役（June 12）：全面迁移到 GPT-5.5，OpenAI 模型代际更迭加速，能力基线持续提升",
+        "Memory 容量翻倍（Plus/Pro）：跨 session 个性化记忆增强；Aria 超级应用仍未发布，仍处于预告阶段"
+      ],
+      "no_change_reason": null
+    },
+    {
+      "id": "windsurf",
+      "name": "Windsurf / Devin Desktop",
+      "category": "orchestrator",
+      "threat": "crit",
+      "threat_changed": false,
+      "has_changes": false,
+      "fetch_status": "ok",
+      "fetched_urls": [
+        "WebSearch:Windsurf Codeium Devin Desktop new features update June 14 2026"
+      ],
+      "raw_snapshot": "Devin Desktop June 14, 2026: 未发现自 2026-06-13 baseline 以来的新功能。本次抓取内容与 baseline 一致：Spaces（跨 agent session 共享 context 层）、ACP 生态（JetBrains/Google/GitHub 等 25+ agent/editor 支持）、Devin Local（Rust 重写，subagents 支持，30% token 效率提升）。Cascade EOL July 1 时间线不变。（来源：WebSearch，非官方原文）",
+      "content_hash": "Devin Desktop June 14, 2026: 未发现自 2026-06-13 baseline 以来的新功能。本次抓取内容与 baseline 一致：Spaces（跨 agent session 共享 context 层）、ACP 生态（JetBrains",
+      "last_seen_at": "2026-06-14T08:30:00Z",
+      "changes": [],
+      "key_findings": [],
+      "no_change_reason": "本次抓取未发现 Devin Desktop 自 2026-06-13 以来有新功能；Spaces、ACP 生态扩张均已在 baseline 中覆盖；Cascade EOL（July 1）时间线无变化"
+    },
+    {
+      "id": "claude-ai",
+      "name": "Claude.ai / Anthropic",
+      "category": "orchestrator",
+      "threat": "crit",
+      "threat_changed": false,
+      "has_changes": true,
+      "fetch_status": "ok",
+      "fetched_urls": [
+        "WebSearch:Claude credit overhaul June 15 2026 pricing changes plans",
+        "WebSearch:Claude connector observability Claude Code workflows subagents June 2026"
+      ],
+      "raw_snapshot": "Anthropic June 14, 2026: 【明日生效】Agent SDK 独立计费 Credit Pool（June 15 起）——Agent SDK、claude -p、GitHub Actions、第三方 Agent 应用（OpenClaw/Conductor/Zed/Jean 等）从订阅使用量 pool 独立到专属 Credit pool；按标准 API token 费率计费，月末不累积；Pro $20/month，Max 5x $100/month，Max 20x $200/month；交互式 Claude.ai chat 和 Claude Code terminal/IDE 不受影响。Connector Observability（June 8，public beta）：MCP connector dashboard 显示 active users、total tool calls、error rate/latency、per-tool 拆解、directory rank；connector owner 可在 Claude app 内直接提交 directory；已在 baseline 遗漏（June 8 发布）。（来源：WebSearch，非官方原文）",
+      "content_hash": "Anthropic June 14, 2026: 【明日生效】Agent SDK 独立计费 Credit Pool（June 15 起）——Agent SDK、claude -p、GitHub Actions、第三方 Agent 应用（OpenClaw/Conductor/Zed/Jean",
+      "last_seen_at": "2026-06-14T08:30:00Z",
+      "changes": [
+        {
+          "type": "pricing",
+          "description": "Agent SDK 独立计费 Credit Pool 明日（June 15）生效：所有 programmatic/autonomous 使用移出订阅 pool，按 API 费率独立计费；Pro $20/月，Max 5x $100/月，Max 20x $200/月，不累积",
+          "evidence": "「Starting June 15, 2026, Claude Code's programmatic usage will move to a dedicated credit pool billed at full API rates, ending the previous model where usage was bundled into your subscription tier... The Agent SDK, the claude -p command, Claude Code GitHub Actions, and all third-party Agent applications will be removed from the existing subscription usage pool and migrated to a brand-new, independently billed 'Agent SDK Credit pool'」",
+          "source_url": "https://www.techtimes.com/articles/317625/20260602/anthropic-ends-subscription-subsidy-agents-june-15-credit-pool-replaces-flat-rate-access.htm",
+          "meee2_relevance": "推断：若 meee2 使用 Claude Agent SDK 或 claude -p 构建 agent workflow，明日起运行成本结构将改变——Max 5x 计划 $100/月 credit 在密集 agent 使用下可能快速耗尽；需评估 meee2 agent 运营成本模型",
+          "threat_signal": false
+        },
+        {
+          "type": "new_feature",
+          "description": "Connector Observability public beta（June 8，baseline 遗漏）：MCP connector dashboard 显示跨 Claude 产品的 active users、tool calls、error rate/latency；connector owner 可在 Claude app 内直接提交 directory",
+          "evidence": "「Published connectors in the directory now have a dashboard showing how they're performing across Claude product surfaces. Connector owners can monitor active users, total tool calls, and directory rank over time, see health score, error rates, and latency at a glance with per-tool error breakdowns」",
+          "source_url": "https://claude.com/blog/observability-for-developers-building-connectors",
+          "meee2_relevance": null,
+          "threat_signal": false
+        }
+      ],
+      "key_findings": [
+        "【时效紧迫】Agent SDK Credit Pool 明日（June 15）生效：programmatic 使用移出订阅 pool，Pro $20/月、Max 5x $100/月、Max 20x $200/月——meee2 若使用 Claude Agent SDK 构建 agent 流程需立即评估成本影响",
+        "Connector Observability public beta（baseline 遗漏，June 8）：MCP connector 性能监控入 Claude app，Anthropic 构建 connector 生态基础设施"
+      ],
+      "no_change_reason": null
+    },
+    {
+      "id": "github-copilot",
+      "name": "GitHub Copilot",
+      "category": "orchestrator",
+      "threat": "hi",
+      "threat_changed": false,
+      "has_changes": true,
+      "fetch_status": "ok",
+      "fetched_urls": [
+        "WebSearch:GitHub Copilot new features June 14 2026 agent session update",
+        "WebSearch:GitHub Copilot Canvases agent work June 2026 new feature"
+      ],
+      "raw_snapshot": "GitHub Copilot June 14, 2026: Copilot App（June 8-9，baseline 遗漏，technical preview）——专用桌面应用，「agent-native desktop experience」；Canvases：「bidirectional work surfaces for humans and agents」，agent 持续更新 canvas，开发者在同一 surface 上编辑/重排/批准/重定向 agent 工作；canvas 可显示 plan、PR、browser session、terminal、deployment、dashboard、workflow 状态；已扩展至所有 Pro/Pro+/Business/Enterprise 用户（Windows/Mac/Linux）；My Work 仪表板统一追踪跨 repo 工作进度；可同时管理多个活跃 agent（修 bug 的/建功能的/处理 PR 的并行运行）。已在 Session Search（June 10）、/chronicle 之上构建完整 agent 工作台。（来源：WebSearch，非官方原文）",
+      "content_hash": "GitHub Copilot June 14, 2026: Copilot App（June 8-9，baseline 遗漏，technical preview）——专用桌面应用，「agent-native desktop experience」；Canvases：「bidirectional work",
+      "last_seen_at": "2026-06-14T08:30:00Z",
+      "changes": [
+        {
+          "type": "new_feature",
+          "description": "Copilot App + Canvases（June 8-9，baseline 遗漏）：专用桌面 agent 工作台，Canvases 为「人与 agent 的双向工作 surface」——agent 实时更新 canvas，开发者在同一 surface 检查/引导/批准 agent 工作",
+          "evidence": "「Canvases are bidirectional work surfaces for humans and agents. The agent updates the canvas as it works, and you can edit, reorder, approve, or redirect work directly on that same surface. A canvas can display a plan, pull request, browser session, terminal, deployment, dashboard, or workflow state」",
+          "source_url": "https://github.blog/news-insights/product-news/github-copilot-app-the-agent-native-desktop-experience/",
+          "meee2_relevance": "锚点 #2+#3：Canvases = agent 实时更新的 live work surface（非 snapshot），开发者与 agent 在同一 canvas 上协同 = descriptive canvas where flow emerges from real action。这是 GitHub 对「人机共享 canvas」的首个完整实现，直接触碰 meee2 核心差异化定义",
+          "threat_signal": true
+        }
+      ],
+      "key_findings": [
+        "【重大 baseline 遗漏】Copilot Canvases（June 8-9）：「人与 agent 的双向工作 surface」——agent 持续更新 canvas，开发者在同一 surface 上实时引导，canvas 显示 plan/PR/browser session/terminal/deployment——这是 GitHub Copilot 迄今最接近 meee2 descriptive canvas 概念的完整实现",
+        "Copilot App 建立完整 agent 工作台：Canvases + Session Search + /chronicle + agent logs + My Work 仪表板，agent session 工作台生态成型"
+      ],
+      "no_change_reason": null
+    },
+    {
+      "id": "gemini",
+      "name": "Google Gemini / Antigravity",
+      "category": "orchestrator",
+      "threat": "hi",
+      "threat_changed": false,
+      "has_changes": false,
+      "fetch_status": "ok",
+      "fetched_urls": [
+        "WebSearch:Google Gemini Antigravity CLI June 14 2026 update news"
+      ],
+      "raw_snapshot": "Google Gemini / Antigravity June 14, 2026: Gemini CLI EOL 倒计时——June 18（4天后，较 baseline「5天后」减少 1 天）。内容与 baseline 基本一致：Gemini CLI 和 Code Assist IDE extensions 将于 June 18 停服 AI Pro/Ultra 及个人免费用户；Antigravity CLI（Go 重写，异步后台，multi-agent 原生，Agent Skills/Hooks/Subagents 作为插件）全面接替；企业（Standard/Enterprise）继续受支持；AI Studio → Antigravity 一键迁移。未发现 Antigravity 新功能。（来源：WebSearch，非官方原文）",
+      "content_hash": "Google Gemini / Antigravity June 14, 2026: Gemini CLI EOL 倒计时——June 18（4天后，较 baseline「5天后」减少 1 天）。内容与 baseline 基本一致：Gemini CLI 和 Code Assis",
+      "last_seen_at": "2026-06-14T08:30:00Z",
+      "changes": [],
+      "key_findings": [],
+      "no_change_reason": "本次抓取未发现 Gemini/Antigravity 新功能；Gemini CLI EOL（June 18）倒计时从 5 天变为 4 天，无实质性产品变化"
+    },
+    {
+      "id": "linear",
+      "name": "Linear",
+      "category": "workspace",
+      "threat": "hi",
+      "threat_changed": false,
+      "has_changes": false,
+      "fetch_status": "ok",
+      "fetched_urls": [
+        "WebSearch:Linear app new features changelog June 14 2026 AI agent"
+      ],
+      "raw_snapshot": "Linear June 14, 2026: 最新 changelog 仍为 June 11 Coding Sessions（Linear Agent 通过 Claude Code/Codex 写代码，cloud 运行，有 workspace 上下文）。June 4 Team Documents + Agent Skills sharing 已在 baseline 中覆盖。未发现 June 14 新 changelog 条目。（来源：WebSearch，非官方原文）",
+      "content_hash": "Linear June 14, 2026: 最新 changelog 仍为 June 11 Coding Sessions（Linear Agent 通过 Claude Code/Codex 写代码，cloud 运行，有 workspace 上下文）。June 4 Team Documents +",
+      "last_seen_at": "2026-06-14T08:30:00Z",
+      "changes": [],
+      "key_findings": [],
+      "no_change_reason": "本次抓取未发现 Linear 自 2026-06-13 以来有新 changelog；June 11 Coding Sessions 仍为最新条目，已在 baseline 中覆盖"
+    },
+    {
+      "id": "notion-ai",
+      "name": "Notion AI",
+      "category": "workspace",
+      "threat": "md",
+      "threat_changed": false,
+      "has_changes": false,
+      "fetch_status": "ok",
+      "fetched_urls": [
+        "WebSearch:Notion AI new features June 14 2026 release update"
+      ],
+      "raw_snapshot": "Notion AI June 14, 2026: 本次搜索未发现 June 14 特定新发布。近期补充信息：Notion 新增 DeepSeek V4 Pro 为可用 AI 模型之一（具体日期未确认）；API 支持 bot 指定 people 属性和 user rich text mentions；Developer Platform/Workers/Custom Agents/External Agents API 均已在 baseline 中覆盖。Workers pricing（August 11 起）时间线不变。（来源：WebSearch，非官方原文）",
+      "content_hash": "Notion AI June 14, 2026: 本次搜索未发现 June 14 特定新发布。近期补充信息：Notion 新增 DeepSeek V4 Pro 为可用 AI 模型之一（具体日期未确认）；API 支持 bot 指定 people 属性",
+      "last_seen_at": "2026-06-14T08:30:00Z",
+      "changes": [],
+      "key_findings": [],
+      "no_change_reason": "本次抓取未发现 Notion AI 在 2026-06-14 有新功能发布；Developer Platform 等核心功能均已在 baseline 中覆盖"
+    },
+    {
+      "id": "slack",
+      "name": "Slack",
+      "category": "comms",
+      "threat": "md",
+      "threat_changed": false,
+      "has_changes": false,
+      "fetch_status": "ok",
+      "fetched_urls": [
+        "WebSearch:Slack new AI features June 14 2026 update announcement",
+        "WebSearch:Slack Slackbot meeting intelligence AI-Skills June 2026 announcement date"
+      ],
+      "raw_snapshot": "Slack June 14, 2026: 未发现 June 14 新功能。30+ Slackbot 功能更新（Meeting Intelligence、AI-Skills 等）于 March 31, 2026 宣布，早于 baseline；基础功能（生成式 AI 为 workflow 步骤、定时 Slackbot 任务）已在 baseline 中覆盖。本次搜索无 June 14 新条目。（来源：WebSearch，非官方原文）",
+      "content_hash": "Slack June 14, 2026: 未发现 June 14 新功能。30+ Slackbot 功能更新（Meeting Intelligence、AI-Skills 等）于 March 31, 2026 宣布，早于 baseline；基础功能（生成式 AI 为 workflow",
+      "last_seen_at": "2026-06-14T08:30:00Z",
+      "changes": [],
+      "key_findings": [],
+      "no_change_reason": "本次抓取未发现 Slack 在 2026-06-14 有新功能发布；30+ Slackbot 功能（March 31 宣布）早于 baseline 且已在 baseline「30+ 功能」中概括覆盖"
+    },
+    {
+      "id": "reflect",
+      "name": "Reflect",
+      "category": "workspace",
+      "threat": "md",
+      "threat_changed": false,
+      "has_changes": false,
+      "fetch_status": "ok",
+      "fetched_urls": [
+        "WebSearch:Reflect notes app new features June 14 2026 update"
+      ],
+      "raw_snapshot": "Reflect June 14, 2026: 未发现 June 14 新功能。本次搜索返回内容与 baseline 一致：MCP server（April 2026）、Claude Sonnet 3.7 支持、Prompt Templates 自定义、PDF inline preview、End-to-end encryption for assets、Voice transcription inline。无新的 agent/session/menu bar 结构性变化。（来源：WebSearch，非官方原文）",
+      "content_hash": "Reflect June 14, 2026: 未发现 June 14 新功能。本次搜索返回内容与 baseline 一致：MCP server（April 2026）、Claude Sonnet 3.7 支持、Prompt Templates 自定义、PDF inline previe",
+      "last_seen_at": "2026-06-14T08:30:00Z",
+      "changes": [],
+      "key_findings": [],
+      "no_change_reason": "本次抓取未发现 Reflect 在 2026-06-14 有新功能发布；所有已知功能均在 baseline 中覆盖"
+    },
+    {
+      "id": "raycast",
+      "name": "Raycast",
+      "category": "peripheral",
+      "threat": "md",
+      "threat_changed": false,
+      "has_changes": false,
+      "fetch_status": "ok",
+      "fetched_urls": [
+        "WebSearch:Raycast new features update June 14 2026 changelog"
+      ],
+      "raw_snapshot": "Raycast June 14, 2026: 未发现 June 14 新功能。近期更新（均早于 baseline）：Windows Focus（June 12，定时专注 session，屏蔽分心应用/网站）；Windows Dictation（June 4）；iOS BYOK（v1.2.13 May 29）。主要 macOS 更新（v0.63，early June）已在 baseline 中覆盖：Team AI Agent 共享、MCP 进 Quick AI/AI Chat、AI Skills 自动加载。（来源：WebSearch，非官方原文）",
+      "content_hash": "Raycast June 14, 2026: 未发现 June 14 新功能。近期更新（均早于 baseline）：Windows Focus（June 12，定时专注 session，屏蔽分心应用/网站）；Windows Dictation（June 4）；iOS BY",
+      "last_seen_at": "2026-06-14T08:30:00Z",
+      "changes": [],
+      "key_findings": [],
+      "no_change_reason": "本次抓取未发现 Raycast 在 2026-06-14 有新功能；v0.63 Team AI Agent 共享等已在 baseline 中覆盖；Windows Focus（June 12）早于 baseline 且与 meee2 无结构性重叠"
+    },
+    {
+      "id": "replit",
+      "name": "Replit",
+      "category": "orchestrator",
+      "threat": "md",
+      "threat_changed": false,
+      "has_changes": false,
+      "fetch_status": "ok",
+      "fetched_urls": [
+        "WebSearch:Replit new features June 14 2026 agent update",
+        "WebSearch:Replit Package Firewall Socket launch date June 2026"
+      ],
+      "raw_snapshot": "Replit June 14, 2026: 未发现 June 14 新功能。Package Firewall（June 9，与 Socket 合作）和 Private Publishing 扩展均早于 baseline；Design Canvas（infinite board，取代 Design Mode）是 Agent 4（March 2026）的组成部分，已在 baseline「Agent 4 baseline 遗漏」中覆盖。Agent preferences 现在按用户而非项目粘性存储（具体日期未确认）。（来源：WebSearch，非官方原文）",
+      "content_hash": "Replit June 14, 2026: 未发现 June 14 新功能。Package Firewall（June 9，与 Socket 合作）和 Private Publishing 扩展均早于 baseline；Design Canvas（infinite board，取代 Design Mo",
+      "last_seen_at": "2026-06-14T08:30:00Z",
+      "changes": [],
+      "key_findings": [],
+      "no_change_reason": "本次抓取未发现 Replit 在 2026-06-14 有新功能；Package Firewall/Design Canvas 均早于 baseline 或已在 Agent 4 baseline 遗漏中覆盖"
+    },
+    {
+      "id": "superwhisper",
+      "name": "Superwhisper",
+      "category": "peripheral",
+      "threat": "lo",
+      "threat_changed": false,
+      "has_changes": false,
+      "fetch_status": "ok",
+      "fetched_urls": [
+        "WebSearch:Superwhisper new features June 14 2026 update"
+      ],
+      "raw_snapshot": "Superwhisper June 14, 2026: 本次搜索最新文档更新为 June 10（早于 baseline）：realtime streaming UI with live transcription、faster Parakeet model、British English spelling、input device auto-select、language model search。其他近期功能：anti-hallucination parameters、Theme controls、S1-Mini local model（experimental）。无 June 14 新功能。（来源：WebSearch，非官方原文）",
+      "content_hash": "Superwhisper June 14, 2026: 本次搜索最新文档更新为 June 10（早于 baseline）：realtime streaming UI with live transcription、faster Parakeet model、British English spelling",
+      "last_seen_at": "2026-06-14T08:30:00Z",
+      "changes": [],
+      "key_findings": [],
+      "no_change_reason": "本次抓取未发现 Superwhisper 在 2026-06-14 有新功能；最新更新（June 10，realtime streaming UI）早于 baseline 且与 meee2 无结构性重叠"
+    },
+    {
+      "id": "producthunt-ai",
+      "name": "Product Hunt AI 新品雷达",
+      "category": "new_entrant_watch",
+      "threat": "md",
+      "threat_changed": false,
+      "has_changes": false,
+      "fetch_status": "ok",
+      "fetched_urls": [
+        "WebSearch:Product Hunt AI new tools launch June 14 2026 workspace agent session"
+      ],
+      "raw_snapshot": "Product Hunt AI 新品 June 14, 2026: 今日 PH 上新以「嵌入已有工具表面」为主要模式（Dune Keypad 46 upvotes—Claude 集成 keypad 辅助工具；Mina Meeting Assistant 47 upvotes；folk CRM 51 upvotes）。AI 工具趋势：domain-specific operators 和 broad workflow copilots 两路分化。未发现与 meee2 核心锚点高度重叠（≥2 个）的新品。PH AI coding agents 类目：Lovable/bolt.new/Replit/Supabase 仍为主流榜单。（来源：WebSearch，非官方原文）",
+      "content_hash": "Product Hunt AI 新品 June 14, 2026: 今日 PH 上新以「嵌入已有工具表面」为主要模式（Dune Keypad 46 upvotes—Claude 集成 keypad 辅助工具；Mina Meeting Assistant 47 upv",
+      "last_seen_at": "2026-06-14T08:30:00Z",
+      "changes": [],
+      "key_findings": [],
+      "no_change_reason": "今日 PH AI 上新以 peripheral 嵌入为主（keypad/meeting assistant/CRM），无与 meee2 ≥2 个核心锚点高度重叠者"
+    }
+  ],
+  "alerts": [
+    {
+      "competitor_id": "github-copilot",
+      "competitor_name": "GitHub Copilot",
+      "severity": "hi",
+      "headline": "Copilot Canvases（baseline 遗漏，June 8-9）：「人与 agent 的双向工作 surface」——agent 实时更新 canvas，开发者在同一 surface 检查/引导/批准，直接触碰 meee2 descriptive canvas 锚点",
+      "evidence": "「Canvases are bidirectional work surfaces for humans and agents. The agent updates the canvas as it works, and you can edit, reorder, approve, or redirect work directly on that same surface. A canvas can display a plan, pull request, browser session, terminal, deployment, dashboard, or workflow state」",
+      "action_suggestion": "GitHub Copilot Canvases 是迄今最直接触碰 meee2「descriptive canvas + live artifact」差异化锚点的竞品实现：agent 持续更新 canvas（live，非 snapshot），人在同一 surface 上引导（descriptive-first）。当前差异：Copilot canvas 限于编码/PR 工作流（coding-centric），缺少跨工具/跨 owner 维度。建议明确 meee2 canvas 在「跨工具 live link」和「非 coding 场景」的差异化叙事，并加速可视化 demo 发布"
+    }
+  ]
+}
