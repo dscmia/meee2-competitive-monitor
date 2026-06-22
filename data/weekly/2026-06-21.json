@@ -1,0 +1,26 @@
+{
+  "week_start": "2026-06-15",
+  "week_end": "2026-06-21",
+  "generated_at": "2026-06-22T03:06:57Z",
+  "narrative": "本周最值得创始团队注意的是 6月18日 单日内 6 家竞品同时发布触碰 meee2 核心锚点的功能：GitHub Copilot App 正式 GA 并上线「Canvas」双向实时工作面，agent 实时更新、人可在同一界面直接编辑/重定向 agent 工作——日报记录这是「迄今对 meee2 live link + descriptive-first 锚点最直接的对标」。同一周，Cursor 先在 6月18日 上线云端 subagent（/in-cloud，人继续本地工作、云端 agent 并行），又在 6月20日 推出 Automations（always-on agent，由 Slack/Linear/GitHub/PagerDuty 等跨工具事件触发，人不必主动唤起）——两次更新合起来显示 Cursor 在系统性逼近「人在本地、agent 在后台/云端并行」的协同模式。Linear 同期上线的「Write with Agent」（6月18日）是对 meee2 锚点4（跨工具 artifact pull）最直接的现实案例：agent 跨 issues/documents/discussions/Slack 自动汇总变化生成更新草稿，供人编辑后发布。推断：本周密集发布说明头部 orchestrator 类竞品（GitHub、Cursor、OpenAI、Anthropic 自身、Google）正分别从不同角度逼近 meee2 的差异化锚点，但据日报记录，本周所有竞品的威胁等级均未发生变化（threat_changed 全部为 false）——这些功能目前仍是「贴近但未完全重合」，尚未触发重新分级。另需关注两个新入场者：Slashspace AI（6月15日，canvas-first 多 agent 桌面应用，建议 hi 级追踪）和 MeshPilot（6月20日，terminal+canvas+task board 一体化工作区，支持跨 session 持久记忆，本周匹配 watch_keywords 数量最高的新品）。",
+  "recommendations": [
+    {
+      "headline": "强化 meee2「跨工具 live link」差异化叙事，应对 GitHub Copilot Canvas 的直接对标",
+      "detail": "GitHub Copilot App 6月18日 GA 后上线的 Canvas 已实现人机双向实时工作面，但目前仅打通 GitHub 自家 CLI 与 App 两个界面，未触及第三方工具。建议立即调研 Copilot App 实际体验（是否支持非 GitHub 工具的 session、是否有跨 owner 的 artifact pull），并在 meee2 叙事中明确强调跨工具（而非单一生态内）live link 的差异化优势。",
+      "priority": "hi",
+      "basis": "依据：github-copilot 2026-06-18 alert，「Canvas」双向实时工作面 GA，日报标注为「迄今对 meee2 live link/descriptive-first 锚点最直接的对标」"
+    },
+    {
+      "headline": "明确 meee2「人常驻协议内」与 Cursor「人不必在场」两种范式的差异定位",
+      "detail": "Cursor 6月18日 上线 /in-cloud（人本地继续工作+云端 subagent 并行），6月20日 又上线 Automations（always-on agent，由跨工具事件触发，人不必主动唤起）。两者合起来逼近 peripheral 常驻方向，但本质仍是 Cursor 工具内自动化，未见人作为协同节点嵌入同一协议图。建议在下次产品叙事更新中明确区分 meee2「人=慢 session、AI=快 session、同一协议」与 Cursor「人退出循环、事件触发后台运行」之间的结构性差异。",
+      "priority": "md",
+      "basis": "依据：cursor 2026-06-18 alert（/in-cloud 云端 subagent）与 2026-06-20 alert（Automations always-on agent）"
+    },
+    {
+      "headline": "评估是否将 Slashspace AI 和 MeshPilot 正式纳入 sources.json 追踪名单",
+      "detail": "Slashspace AI（6月15日，canvas-first 多 agent 桌面应用，agent 作为 canvas 上互联节点、MCP 工具集成）与 MeshPilot（6月20日，terminal/canvas/task board 一体化工作区+跨 session 持久记忆）是本周 Product Hunt 雷达中结构重叠度最高的两个新品，日报均建议加入常规追踪。建议本周内决定是否正式立项，避免错过新兴直接竞品的早期信号。",
+      "priority": "md",
+      "basis": "依据：producthunt-ai 2026-06-15（Slashspace AI new_entrant，建议 threat: hi）与 2026-06-20（MeshPilot new_entrant，命中 4/11 watch_keywords，本轮最高）"
+    }
+  ]
+}
