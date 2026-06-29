@@ -1,0 +1,26 @@
+{
+  "week_start": "2026-06-22",
+  "week_end": "2026-06-28",
+  "generated_at": "2026-06-29T15:07:52Z",
+  "narrative": "本周最值得创始团队注意的是 Anthropic 自身：周内确认 Claude Design 的 /design-sync 是持续双向同步（而非一次性导入导出，\"run /design-sync to pull your design system into your repo or push what you've built back into Claude Design and keep editing it on the canvas\"，6/27），并新发现此前完全未被日报收录的 Claude Tag——一个常驻 Slack 频道、多人共享同一实例、具备持久记忆和 ambient 主动介入能力的 AI teammate（\"one Claude instance serves an entire Slack channel...Claude can autonomously pursue projects over hours or days\"，6/25/6/27）。推断：这两项合起来说明 Anthropic 正在向\"人机协同协议\"和\"跨工具live link\"两个 meee2 核心锚点方向同时延伸，尽管前者仍局限于其自有 Design↔Code 工具对，后者仍以 Slack 聊天频道为载体而非对称协议或菜单栏 peripheral 层。本周内 Notion（External Agents API + Notion Mail关停）与 Slack（Slackbot MCP Client GA）也短暂被上调至 hi 威胁，6/28 又因配置调整（非新证据）调回 md，提示威胁等级机制对配置变更较敏感，需要团队留意是否要把这两家的真实信号固化进主追踪。整体格局：OpenAI（Codex Remote手机审批、GPT-5.6多subagent ultra mode）和Google Gemini（Agent Designer显式flow builder转GA）的动作方向与meee2有限重叠或甚至相反（Agent Designer是预先设计flow，与meee2 descriptive-first相反），独立开发者市场则已自发出现Mac notch peripheral产品聚类，验证了锚点5方向但形态仍局限于只读监控。",
+  "recommendations": [
+    {
+      "headline": "评估Claude Tag是否需要升级为长期追踪重点",
+      "detail": "Claude Tag体现的\"多人共享同一AI实例+持久记忆+ambient主动介入\"与meee2\"人在agent图内\"的协同抽象有方向性重叠，建议在产品传播材料中提前准备好\"对称协议 vs 共享聊天机器人\"的差异化论述，并持续核实其载体是否会从Slack扩展到更通用的peripheral层。",
+      "priority": "hi",
+      "basis": "依据：claude-ai 6/25 + 6/27 关于 Claude Tag 的alert（crit severity）"
+    },
+    {
+      "headline": "跟踪/design-sync是否会向第三方工具开放",
+      "detail": "/design-sync确认为持续双向live同步，是本周对meee2锚点2（live link非snapshot）最直接的结构性触碰，但目前仅限Anthropic自有Design↔Code两个工具间。如果其扩展到任意第三方工具/跨owner场景，将直接进入meee2的核心差异化区间，需要密切关注后续公告。",
+      "priority": "hi",
+      "basis": "依据：claude-ai 6/24 + 6/27 关于 /design-sync 的alert（crit severity）"
+    },
+    {
+      "headline": "校准notion-ai/slack威胁等级的配置流程",
+      "detail": "本周notion-ai与slack均因证据（External Agents API/Notion Mail关停；Slackbot MCP Client GA）被上调至hi，但6/28的报告显示该调整被\"配置层面\"重新调回md，而非基于新证据的重新评估。建议确认sources.json的threat字段调整流程是否会覆盖掉日报中已确认的真实信号，避免威胁等级被配置操作而非证据驱动。",
+      "priority": "md",
+      "basis": "依据：notion-ai与slack 6/26（上调至hi）与6/28（\"配置变更提示...为监控配置层面的调整\"）的对比"
+    }
+  ]
+}
