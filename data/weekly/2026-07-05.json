@@ -1,0 +1,26 @@
+{
+  "week_start": "2026-06-29",
+  "week_end": "2026-07-05",
+  "generated_at": "2026-07-06T15:06:02Z",
+  "narrative": "本周最值得创始团队注意的是Anthropic自己——一周内三次独立更新分别单独触碰了meee2的三个不同核心锚点：Claude Code的Artifacts功能（7/1，跨session可更新的实时网页，触及锚点2）、后台agent通知机制（7/2，agent_needs_input/agent_completed，触及锚点5的peripheral戳提示）、以及首次捕获的Claude Tag（7/5，Slack内常驻AI teammate，多人共享同一session'接手上一位的进度'+ambient主动提示，触及锚点1和锚点5）。三者尚未合流成一个产品，但方向高度接近meee2的核心叙事。同时Cursor（SDK被Notion嵌入跨工具调用6/29、iOS App远程指挥+本地云端session handoff 6/30）与Windsurf/Devin Desktop（Agent Command Center统一本地/云端agent会话看板+开放ACP协议接纳第三方agent 7/4）都在往'多agent会话汇聚视图'方向演进。推断：这构成一种行业级收敛信号——头部orchestrator都在朝'跨session可见性+轻量通知+多agent协同'靠拢，但目前这些看板/协议里的节点全部是AI agent，尚未看到'人=一等公民节点'的证据，meee2的人机同协议差异化窗口仍然存在但正被逐步蚕食。本周另发现两款新入场者（Kollab、MeshPilot）方向上有弱共鸣，值得持续观察；所有竞品本周威胁等级均无变化。",
+  "recommendations": [
+    {
+      "headline": "把Anthropic本周三连发（Artifacts / 后台通知 / Claude Tag）当作一条线索追，而不是三条孤立线索",
+      "detail": "推断：Artifacts、background agent通知、Claude Tag分别独立命中meee2锚点2、5、1，若这三者在后续版本中被整合（例如Claude Tag式的共享session搭配Artifacts式的live网页，再加菜单栏级别的通知），将直接对标meee2的核心抽象。建议本周内安排人力绕过403直接一手核实anthropic.com/news/introducing-claude-tag的UI细节，并在下次日报中标记anthropic整体产品方向是否出现整合迹象。",
+      "priority": "hi",
+      "basis": "依据：Claude.ai/Anthropic 2026-07-01（Artifacts跨session实时网页）、2026-07-02（background agent通知agent_needs_input/agent_completed）、2026-07-05（Claude Tag共享session+ambient提示）三条alert"
+    },
+    {
+      "headline": "跟踪Cursor与Windsurf/Devin Desktop的'多agent会话看板'演进，判断是否会引入人作为一等公民节点",
+      "detail": "Cursor SDK让Notion跨工具调用其agent、iOS App做本地↔云端session handoff，Windsurf改名Devin Desktop后用Agent Command Center把本地/云端agent会话统一成Kanban看板，并通过开放ACP协议接纳Claude Agent等第三方agent。这些都是'多个AI agent会话汇聚'的方向，与meee2的session图有结构相似性，但目前节点都是AI而非人。建议持续观察这两家是否在看板/协议里加入'人类session'节点。",
+      "priority": "md",
+      "basis": "依据：Cursor 2026-06-29（SDK/Notion嵌入）、2026-06-30（iOS Remote Control+session handoff）；Windsurf 2026-07-04（Agent Command Center + ACP协议）"
+    },
+    {
+      "headline": "将本周新发现的Kollab、MeshPilot纳入sources.json持续观察",
+      "detail": "Kollab主打'agent活在Slack/Telegram里而非独立dashboard'，方向上呼应meee2锚点5（不切焦点）；MeshPilot把终端/canvas/任务看板统一并保留跨session persistent memory，命中4项watch keyword。两者目前均为弱方向性共鸣，尚不构成结构性威胁，纳入观察即可，本周无需额外行动。",
+      "priority": "lo",
+      "basis": "依据：Product Hunt AI 新品雷达 2026-06-30（Kollab）、2026-07-04（MeshPilot）"
+    }
+  ]
+}
