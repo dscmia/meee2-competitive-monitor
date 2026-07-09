@@ -15,6 +15,25 @@
     "watch_keywords": ["session", "agent", "workspace", "canvas", "collaboration", "live", "background", "menu bar", "artifact", "human-AI", "async"]
   },
   {
+    "id": "github-cc-ecosystem",
+    "name": "GitHub Claude Code 生态雷达",
+    "category": "new_entrant_watch",
+    "threat": "md",
+    "_note": "该源为多查询并集：STEP 2a 对本源须抓取 urls 中全部地址并合并 items[]，不在第一个成功后停止。查询刻意用窄的多词短语（相关性/星标排序），避免 sort=updated 在 50 万仓库里把目标淹没。",
+    "urls": [
+      "https://api.github.com/search/repositories?q=topic%3Aclaude-code&sort=stars&order=desc&per_page=25",
+      "https://api.github.com/search/repositories?q=claude+code+terminal+minimal+coding&sort=stars&order=desc&per_page=20",
+      "https://api.github.com/search/repositories?q=claude+code+cockpit+terminal&sort=stars&order=desc&per_page=25",
+      "https://api.github.com/search/repositories?q=claude+code+meta-harness+agent+swarm&sort=stars&order=desc&per_page=20"
+    ],
+    "fallback_urls": [
+      "https://api.github.com/search/repositories?q=AI+coding+terminal+sidebar+workspace&sort=stars&order=desc&per_page=15",
+      "https://hn.algolia.com/api/v1/search?query=Show+HN+Claude+Code+agent+terminal+tool&tags=story&hitsPerPage=8"
+    ],
+    "websearch_query": "new Claude Code open source tool terminal agent harness workspace 2026 site:github.com",
+    "watch_keywords": ["session", "agent", "multi-agent", "harness", "terminal", "workspace", "canvas", "live", "background", "menu bar", "artifact", "orchestrat", "swarm", "cockpit", "sidebar"]
+  },
+  {
     "id": "cursor",
     "name": "Cursor",
     "category": "orchestrator",

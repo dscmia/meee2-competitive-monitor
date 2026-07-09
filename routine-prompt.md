@@ -43,6 +43,7 @@ cat sources.json
 **各类数据源解析规则（按 URL 特征判断类型）：**
 
 - **HN Algolia API**（URL 含 `hn.algolia.com`）：返回 JSON，提取 `hits[]` 每条的 `title`、`url`、`story_text`（前 300 字符）、`created_at`。标注「来源：HN 社区讨论，非官方」
+- **GitHub Search API**（URL 含 `api.github.com/search`）：返回 JSON，提取 `items[]` 每条的 `full_name`、`description`、`html_url`、`stargazers_count`、`created_at`、`pushed_at`。标注「来源：GitHub 开源仓库，非官方」。判断成功：`items` 非空即可（无需 200 字符阈值）
 - **RSS/Atom feed**（URL 含 `feed.xml`、`rss.xml`、`/feed/`、`/rss/`，或 `producthunt.com/feed`）：返回 XML，提取 `<item>` 或 `<entry>` 的 `<title>`、`<link>`、`<description>/<summary>` 和 `<pubDate>/<updated>`。Product Hunt feed 为官方发布内容
 - **App Store Lookup API**（URL 含 `itunes.apple.com/lookup?bundleId`）：返回 JSON，提取 `results[0]` 的 `trackName`、`version`、`currentVersionReleaseDate`、`releaseNotes`（前 400 字符）。这是一手官方 release notes
 - **普通网页**：提取正文文本，去掉导航栏、页脚等噪音
@@ -50,6 +51,8 @@ cat sources.json
 判断抓取是否成功：内容长度 > 200 字符 且 不是错误页（含 "403 Forbidden"、"Access Denied"、"Just a moment..." 等）。
 
 只要有一个 URL 成功，即停止尝试，进入 2b。
+
+**例外 —— `github-cc-ecosystem`（多查询并集源）：** 不在第一个成功后停止。抓取 `urls` 中全部地址，把各次返回的 `items[]` 按 `full_name` 去重后合并成一个大列表再进入 2c。只有当全部 `urls` 都失败时才降级到 `fallback_urls`。
 
 **第二级 — Fallback URL（`fallback_urls` 字段，仅当第一级全部失败时）**
 
@@ -88,12 +91,17 @@ cat sources.json
 
 ### 2c. 深度分析
 
-**`new_entrant_watch` 类别（Product Hunt AI 新品雷达）：**
+**`new_entrant_watch` 类别（Product Hunt / GitHub 生态雷达）：**
 
-目标是检测今日上新的 AI 产品中是否有潜在新竞品。对每条 entry：
+目标是检测新出现的 AI 产品 / 开源工具中是否有潜在新竞品。对每条 entry：
 1. 用产品名称+描述与 meee2 差异化锚点（CLAUDE.md 规则 5）快速匹配
 2. 若有 ≥2 个 `watch_keywords` 命中 → 记录到 `changes`，type 为 `new_entrant`，建议下次加入 sources.json
-3. 无命中 → `has_changes: false`，`no_change_reason` 写「今日 PH AI 上新 X 款，无与 meee2 高度重叠者」
+3. 无命中 → `has_changes: false`，`no_change_reason` 写「今日上新 X 款，无与 meee2 高度重叠者」
+
+**`github-cc-ecosystem` 附加过滤规则**（Product Hunt 源不适用）：
+- 只保留近期活跃的仓库：`pushed_at` 在最近 30 天内，或 `created_at` 在最近 60 天内。老仓库仅轮换排序上来的，跳过（避免每天重复报告同一批老项目）。
+- 用 baseline `raw_snapshot` 里已出现过的 `full_name` 做去重：只报告 baseline 中未出现过的新仓库。已报告过的仓库除非有显著 star 跃升（翻倍或 +500），否则不重复报告。
+- `raw_snapshot` 存本次 `items[]` 的 `full_name` 列表（用于下次去重），而非正文全文。
 
 **其他竞品（仅 `has_changes: true` 时执行）：**
 
@@ -115,7 +123,7 @@ cat sources.json
   "report_date": "YYYY-MM-DD",
   "generated_at": "ISO8601",
   "summary": {
-    "total_tracked": 14,
+    "total_tracked": 15,
     "fetched_ok": 0,
     "fetch_error": 0,
     "has_changes": 0,
