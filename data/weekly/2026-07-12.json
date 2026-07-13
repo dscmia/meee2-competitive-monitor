@@ -1,0 +1,26 @@
+{
+  "week_start": "2026-07-06",
+  "week_end": "2026-07-12",
+  "generated_at": "2026-07-13T15:08:27Z",
+  "narrative": "本周威胁等级发生两次实质性上调：GitHub Copilot（7/6，hi→crit）与Notion AI（7/9，md→hi）。GitHub Copilot新桌面App的Canvas被官方原文描述为「Both the developer and the AI agent operate on the same surface, the same state, the same running system」，直接命中meee2锚点1与锚点3；7/9又追加Chronicle，将CLI/云端agent/code review/IDE/Copilot app的session数据统一同步至账号、跨机器可查询，进一步把session做成一等公民。同期Anthropic自身产品线给出本周结构信号最强的动态：Claude Cowork（7/8首次捕获、7/10落地web/mobile）实现session与文件跨设备同步、chat与Cowork共享统一artifact主页（projects/artifacts跨两者共享）、「合上笔记本任务仍持续」，是本周内部竞对中与meee2最接近的一条，值得比外部创业公司更优先关注。OpenAI于7/9直播发布、7/10正式推送的'ChatGPT Work'（Shared Projects branch协作+跨工具Connectors+Group Chats live共创）触碰meee2锚点2/4，但7/10同步收紧了独立Group Chats的创建入口——推断：多人live协作能力可能正被收编进Work这一统一workspace产品线，而非继续独立发展，暂无更多信号确认此判断。此外，github-cc-ecosystem新品雷达本周连续多天命中「菜单栏/cockpit式Claude Code session管理器」（mcoquet/cockpit、kooky、bankai、claude-mem、ruflo、teleia、claude-cockpit），单个项目量级都很小，但独立开发者反复收敛到同一形态（peripheral层管理多session）本身是一个值得记录的方向性信号。",
+  "recommendations": [
+    {
+      "headline": "尽快实测GitHub Copilot app的Canvas与Chronicle，核实跨owner live pull能力边界",
+      "detail": "GitHub Copilot本周威胁等级由hi上调至crit，官方原文已明确'同一surface/同一state/同一running system'与'session跨机器统一同步查询'。建议本周内实测其canvas UX与Chronicle的具体技术实现，重点核实是否具备跨owner的live artifact pull（锚点4），并加快meee2自身'human-AI同协议descriptive canvas'心智定位的对外披露节奏。",
+      "priority": "hi",
+      "basis": "依据：GitHub Copilot 2026-07-06 alert（Canvas'同一surface/state/system'，威胁hi→crit上调）+ 2026-07-09 change（Chronicle session统一同步跨机器查询）"
+    },
+    {
+      "headline": "把Claude Cowork列为最优先追踪对象，而非仅关注外部创业公司",
+      "detail": "本周两次alert都指出Claude Cowork是Anthropic自身产品线中与meee2结构最接近的动态：session/文件跨设备同步、chat与Cowork共享统一artifact主页、合上笔记本任务仍持续执行。这条产品线一旦canvas/live link能力进一步成熟，将是比任何外部竞品更直接的正面竞争对手，建议纳入下次日报重点验证项。",
+      "priority": "hi",
+      "basis": "依据：Claude.ai / Anthropic 2026-07-08 alert（Cowork扩展至web/mobile首次捕获）+ 2026-07-10 alert（'本轮结构信号最强的官方动态'）"
+    },
+    {
+      "headline": "将本周新发现的高重叠早期项目正式纳入sources.json持续追踪",
+      "detail": "本周新品雷达连续命中多个在表述上比大厂更接近meee2锚点的早期项目：SquidHub明确'The human stays the decider'（呼应锚点1'人在agent图内'），Subspace的workspace按project/worktree组织且memory跨session持续，github-cc-ecosystem中kooky（540★，'live workspace state'）体量在同批中最高。这类小玩家的范式定位比大厂功能更值得持续观察是否会演化为直接竞品。",
+      "priority": "md",
+      "basis": "依据：producthunt-ai 2026-07-09 alert（SquidHub'The human stays the decider'）+ 2026-07-07 change（Subspace，命中4项watch_keywords）+ github-cc-ecosystem 2026-07-09 change（kooky，540 star）"
+    }
+  ]
+}
