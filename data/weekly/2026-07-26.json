@@ -1,0 +1,26 @@
+{
+  "week_start": "2026-07-20",
+  "week_end": "2026-07-26",
+  "generated_at": "2026-07-27T15:19:30Z",
+  "narrative": "本周最值得关注的信号来自OpenAI：7/24 ChatGPT桌面端上线语音控制，可在不切换焦点的情况下远程steer/check后台运行的Work与Codex agent session，是OpenAI首次把'非侵入式后台session控制'做成桌面常驻能力，直接触碰meee2锚点5（peripheral、不切焦点）与锚点1（人在agent图内介入并行session）。推断：结合7/20 OpenAI已将Chat/Work/Codex合并进统一界面并跨设备云同步，OpenAI正在系统性地把'快速交互'与'后台长任务'整合到同一入口，值得持续观察其是否进一步演化为真正的跨工具session编排而非仅限自身产品内。第二条信号来自Linear：7/21上线Loops（可按schedule/event自主触发、跨connected codebases/MCP servers拉取上下文的自主循环任务），7/23进一步上线agent-assisted editing，让Linear Agent可直接编辑文档并用作者标识区分人类与Loop编辑。推断：Loops与作者归因编辑的组合，在'人机同协议、以标识而非身份区分'这一维度上与meee2锚点1有方向性呼应，是本周除OpenAI外最值得跟进的产品动作。除此之外，GitHub Claude Code生态雷达本周新增三个cockpit类仓库（areco、AgentDeck、agent-race-control），延续了此前已记录的远程/单窗口cockpit范式，未见新结构信号；本周内无竞品威胁等级发生变化，整体格局维持观察。",
+  "recommendations": [
+    {
+      "headline": "紧盯OpenAI语音后台session控制是否跨出Work/Codex边界",
+      "detail": "OpenAI 7/24上线的语音控制目前仅限于操控ChatGPT自家的Work/Codex session，但'不切焦点steer多个后台agent'的形态已直接命中meee2的peripheral层锚点。建议下周持续抓取OpenAI相关公告，重点确认该能力是否扩展到第三方工具或跨账号session，一旦出现即视为crit级别信号。",
+      "priority": "hi",
+      "basis": "依据：openai 2026-07-24 alert，「ChatGPT Voice is now in the desktop app. Control your computer and direct multiple agents running in ChatGPT Work or Codex, using just your voice」"
+    },
+    {
+      "headline": "跟进Linear Loops+作者归因编辑的组合信号",
+      "detail": "Linear本周先后上线Loops（自主循环agent，跨codebases/MCP servers拉取上下文）与agent-assisted editing（Agent直接编辑文档，用作者标识区分人类/Loop），两者组合已经在'同一文档内人机协作、以标识区分而非身份隔离'上形成方向性信号。建议评估Linear是否会把这一能力从项目管理场景扩展到更通用的工作台产品。",
+      "priority": "md",
+      "basis": "依据：linear 2026-07-21 alert（Loops）+ 2026-07-25 change（agent-assisted editing，「edit text with Linear Agent and use Loops to keep docs and project descriptions up-to-date, with author name indicators showing if text was written by a colleague or added by a loop」）"
+    },
+    {
+      "headline": "cockpit类独立开发者项目继续留在观察名单，暂不升级",
+      "detail": "本周GitHub Claude Code生态雷达新增areco、AgentDeck、agent-race-control三个远程/单窗口cockpit仓库，均属已记录的cockpit家族的又一实例，star数很低，暂无新范式。建议维持md/lo观察，无需本周投入分析资源。",
+      "priority": "lo",
+      "basis": "依据：github-cc-ecosystem 2026-07-23/07-24/07-25 changes（areco/AgentDeck/agent-race-control三个new_entrant，均命中cockpit/terminal watch_keywords但未见live link信号）"
+    }
+  ]
+}
