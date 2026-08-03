@@ -1,0 +1,26 @@
+{
+  "week_start": "2026-07-27",
+  "week_end": "2026-08-02",
+  "generated_at": "2026-08-03T00:00:00Z",
+  "narrative": "本周最值得创始团队注意的不是大厂，而是 Product Hunt 新品雷达连续捕获的两款独立小产品：7/27 的 Banquish（Mac app，「not screenshots, but the real, live pages, still scrollable and clickable」，把网页片段做成可交互的live canvas，agent处理琐事、人只做判断决策）与 7/31 的 Liminal（agent写本地markdown/HTML，平台实时渲染为UI并双向同步，「their edits land back on your disk instantly」，支持多agent同时读写同一workspace）。两者是本周 producthunt-ai 唯一两次触发 threat_signal 的条目，分别单独触碰了 meee2 锚点1（人判断/AI执行分工）、锚点2（live link非snapshot）和锚点3（descriptive-first）。相比之下，本周头部 orchestrator 的动作大多是非结构性调整：GitHub Copilot 的 Code Review Agent Skills/MCP GA 与 CLI /plugins 面板、Cursor 的印度本地化定价与 iPad 常驻侧栏多agent观察面板、OpenAI 的用量限额重置/GPT-Live水印/GPT-5.6降价、Gemini 的 Alpha→Beta 改名，均未触及 meee2 差异化锚点。本周被追踪的 15 家竞品威胁等级全部无变化（threat_changed 均为 false），也没有产生任何正式 alert。推断：本周结构性信号的重心不在大厂增量更新，而在 Product Hunt 雷达捕获的早期独立产品——Banquish 与 Liminal 的产品叙事已经比多数大厂功能描述更贴近 meee2 的核心抽象，值得优先评估。另外 8/1、8/2 两天日报未生成（routine 未运行），本综述基于本周实际可得的 5 份日报（7/27–7/31）。",
+  "recommendations": [
+    {
+      "headline": "评估将 Banquish 与 Liminal 正式加入 sources.json 独立追踪",
+      "detail": "两者是本周唯一触发 threat_signal 的新品，Banquish的live canvas剪辑网页+人机判断执行分工，Liminal的本地文件↔云端UI双向实时同步+多agent同读写，都比本周大厂更新更接近meee2核心抽象。建议本周内决定是否立项常规追踪，避免错过早期信号窗口。",
+      "priority": "hi",
+      "basis": "依据：producthunt-ai 2026-07-27（Banquish new_entrant，threat_signal: true）与 2026-07-31（Liminal new_entrant，threat_signal: true）"
+    },
+    {
+      "headline": "跟踪 Cursor iPad 常驻侧栏多agent观察面板是否会演化为真正peripheral层",
+      "detail": "Cursor 7/29发布的iPad app新增「watch several agents run at once」的常驻侧栏chat，与meee2锚点5（peripheral层不打断感知）有表层相似，但目前需打开专属app聚焦查看，非菜单栏级别不切焦点。建议持续观察其是否会脱离专属app、走向更轻量的常驻感知形态。",
+      "priority": "md",
+      "basis": "依据：cursor 2026-07-31 change（iPad app「Sidebar chats that stay pinned so you can watch several agents run at once」）"
+    },
+    {
+      "headline": "留意 Replit Agent 的 Slack 集成是否会从一次性动作升级为持续双向live sync",
+      "detail": "Replit Agent 7/24发布（7/30被记录）的Slack集成目前是搜索/读取/发消息/创建更新Canvas的一次性动作型集成，非持续双向同步。若后续升级为持续live link，将更直接触碰meee2锚点2，建议留意但本周无需额外行动。",
+      "priority": "lo",
+      "basis": "依据：replit 2026-07-30 change（Slack集成，搜索/读取/发消息/canvas读写，判定为弱命中）"
+    }
+  ]
+}
