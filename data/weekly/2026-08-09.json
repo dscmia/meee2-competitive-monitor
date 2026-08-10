@@ -1,0 +1,26 @@
+{
+  "week_start": "2026-08-03",
+  "week_end": "2026-08-09",
+  "generated_at": "2026-08-10T15:24:40Z",
+  "narrative": "本周(8/3~8/9)15家被追踪竞品的威胁等级全部无变化(threat_changed均为false)，但claude-ai(Claude Code自身)在8/6~8/8连续三天触发crit级alert：新增跨机器cross-session SendMessage与ListAgents发现机制、self-hosted-runner让web/mobile/desktop session运行在自持机器上、crossSessionInbound为发往bypassed-permission session的入站消息插入人工批准门，以及/teleport本地续接session能力——这些几乎逐条对应meee2锚点1(人=慢session/AI=快session、同一协议、人在agent图内)、锚点4(跨session/跨机器发现与触达)与锚点5(极短路径触达任意session)。推断：这是本周结构性重叠最深的信号，且来源正是meee2所依托的底层平台本身，意味着meee2的差异化窗口正被平台方原生能力持续压缩。同一周windsurf(Cognition)也触发crit alert，Devin Fusion双agent架构与收购Poke(IM内嵌个人agent)显示其正加速平台化扩张，但Fusion仍是AI-AI协作、未见人类节点入agent图，Poke走IM载体而非菜单栏，结构重叠弱于claude-ai。github-cc-ecosystem雷达本周7天中有6天命中新的cockpit类开源项目(kooky/handmux/fanbox/claude-dispatcher/两个同名cockpit/peemux/mkcrew/teleia/agora)，多个独立团队正各自收敛到'单屏管理多session/live状态展示'形态，但都还是需切换焦点的独立终端应用，尚未见真正peripheral层。producthunt-ai本周命中Murmell(云端canvas上人机与多agent协同同一仓库)与AgentSky(多入口可达的持久化agent平台)两个threat_signal真实新品，值得纳入观察名单。",
+  "recommendations": [
+    {
+      "headline": "深度评估Claude Code自身跨session基础设施对meee2差异化窗口的挤压速度",
+      "detail": "本周三天(8/6-8/8)claude-ai连续触发crit alert，跨机器session发现(SendMessage+ListAgents)、self-hosted-runner设备解耦、crossSessionInbound人工批准门、/teleport本地续接等能力已经在语言和机制层面逼近meee2锚点1/4/5。建议评估这些能力的实际开放范围(是否支持跨owner/跨工具，而不只是跨机器的同owner session)，并据此判断meee2需要优先释放哪些独占能力(如live link、descriptive canvas)以维持结构性差异。",
+      "priority": "hi",
+      "basis": "依据：claude-ai 2026-08-06(/teleport本地续接session能力曝光)、2026-08-07(cross-session SendMessage+ListAgents+self-hosted-runner+crossSessionInbound审批门，crit alert)、2026-08-08(跨session消息基础设施持续加固，crit alert)"
+    },
+    {
+      "headline": "评估将Murmell、AgentSky纳入sources.json独立追踪",
+      "detail": "两者是本周producthunt-ai命中的threat_signal真实新品：Murmell让团队与多个coding agent(Claude Code/Codex/Kimi/OpenCode)在同一云端仓库canvas上协同工作，agent写入前claim文件避免冲突，人离线后agent仍继续运行；AgentSky提供任意harness+任意模型的云端持久化agent，可从WhatsApp/iMessage/Telegram/Slack/web/CLI/API等多入口触达同一agent。建议评估两者是否值得转为常规追踪对象，避免错过早期信号窗口。",
+      "priority": "md",
+      "basis": "依据：producthunt-ai 2026-08-06(Murmell new_entrant, threat_signal: true)与2026-08-08(AgentSky new_entrant, threat_signal: true)"
+    },
+    {
+      "headline": "留意github-cc-ecosystem本周密集出现的cockpit类项目集群性收敛趋势",
+      "detail": "本周7天中有6天雷达命中Claude Code周边的新cockpit类项目(kooky/handmux/fanbox/claude-dispatcher/Surething-io cockpit/Hemang2904 cockpit/peemux/mkcrew/teleia/agora)，多个互不相关的独立团队正各自收敛到'单屏管理多session/实时状态展示'形态。目前均为需要切换焦点的独立终端应用而非peripheral层，单个项目威胁有限，但赛道收敛速度本身值得留意，暂不需要单独立项追踪。",
+      "priority": "lo",
+      "basis": "依据：github-cc-ecosystem 2026-08-03~2026-08-09多日new_entrant命中(如08-03 agora、08-04 kooky/handmux、08-06 fanbox/cockpit(Surething-io)、08-07 claude-dispatcher/peemux/mkcrew、08-08 cockpit(Hemang2904)、08-09 teleia)"
+    }
+  ]
+}
