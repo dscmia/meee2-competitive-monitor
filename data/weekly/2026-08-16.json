@@ -1,0 +1,26 @@
+{
+  "week_start": "2026-08-10",
+  "week_end": "2026-08-16",
+  "generated_at": "2026-08-17T15:11:51Z",
+  "narrative": "本周最值得创始团队注意的是08-14同一天出现的两条独立信号：GitHub Copilot CLI上线Agent Host Protocol，多终端可实时attach同一session并共同观看turn流式输出，是本周唯一发生威胁等级变动的竞品(hi→crit)，直接命中『同一协议下session同构』与『live而非snapshot』两条meee2核心锚点；同一天Anthropic自家Claude Code v2.1.232上线『@』跨session寻址(SendMessage)与inbound消息accept/hold/refuse配置，推断：这是Anthropic在自家生态内构建session间通信原语的信号，但目前仍是AI session对AI session，尚未把人纳入同一寻址协议。此外，08-12 Product Hunt雷达发现新品Murmell——人类团队与多个AI coding agent(Claude Code/Codex/Kimi/OpenCode)在同一浏览器canvas、同一代码仓库并行协作，『agents claim files before they write』——与08-13 GitHub生态雷达发现的极小规模项目zashiki(『可视化Claude Code sessions的编排cockpit』)共同指向：推断：『canvas+多agent+session可视化』范式正被多个独立团队同时收敛，包括同一雷达此前记录的AgentGrid等同类产品，形成品类级的间接验证压力。08-15 OpenAI两项更新(ChatGPT Library的Google Drive @mention跨工具拉取、ChatGPT for Mac的Computer History被动行为记忆)分别触及跨工具artifact引用与descriptive-first锚点，推断：OpenAI首次将『被动观察真实行为』产品化为AI上下文来源，方向上与meee2 descriptive canvas理念接近，值得持续观察其是否演进为真正的live link。整体而言，本周6份日报(08-16未运行)覆盖15个竞品全部抓取成功、无fetch error，除github-copilot外无其他威胁等级变动，但多条独立信号同时逼近锚点1/2/3；推断：meee2的差异化窗口本周同时面临大厂(GitHub、Anthropic自家、OpenAI)与新兴创业公司(Murmell)两个方向的收窄压力。",
+  "recommendations": [
+    {
+      "headline": "拆解Copilot CLI的Agent Host Protocol协议设计，评估meee2 live link窗口的压缩速度",
+      "detail": "AHP实现了多终端实时attach同一session、共同观看turn流式输出，是本周与meee2核心锚点(session同构+live link)结构重叠最高的单条发现，也是唯一触发威胁等级上调(hi→crit)的竞品。建议本周内研究其session状态模型与多方输入仲裁机制，明确meee2在『人机同协议』这一点上(而非单纯terminal-to-terminal)的差异化窗口还有多宽。",
+      "priority": "hi",
+      "basis": "依据：github-copilot 2026-08-14 的 crit alert（threat由hi上调为crit，「several terminals can attach to the same session and watch its turns stream live」）"
+    },
+    {
+      "headline": "将Murmell加入独立追踪清单，对比其『agent claim files』并发协调机制与meee2的具体差异",
+      "detail": "Murmell是本周Product Hunt雷达唯一标记为hi级的新入场者，其『人类团队与AI agent同canvas同repo并行协作、agent写前claim文件』的机制与meee2锚点1、3有结构性相似。建议加入sources.json持续追踪，并结合同日雷达记录的AgentGrid等同类产品在Product Hunt上的品类级涌现，评估是否需要在定位表述上进一步强化差异化。",
+      "priority": "md",
+      "basis": "依据：producthunt-ai 2026-08-12 的 hi alert（「Murmell is a shared cloud canvas where your team and AI agents work in the same room, on the same repo」「Agents claim files before they write」），及同日changes记录的AgentGrid等同类产品趋势"
+    },
+    {
+      "headline": "季度性复查Claude Code跨session寻址与OpenAI Computer History是否分别演进为『人在协议内』或『真实live link』",
+      "detail": "08-14 Claude Code的@提及跨session寻址目前仍是AI对AI，08-15 OpenAI Computer History目前仍是被动索引/记忆而非真实协同编辑；两者一旦分别把人纳入同一寻址协议、或把索引升级为可编辑的live link，将分别完全命中meee2锚点1和锚点2/3。本周无需立即行动，但建议提前准备对应的差异化叙事。",
+      "priority": "lo",
+      "basis": "依据：claude-ai 2026-08-14 的 crit alert（『@』提及SendMessage跨session寻址）与 openai 2026-08-15 的 crit alert（Computer History通过accessibility API捕捉真实行为、Google Drive @mention跨工具拉取）"
+    }
+  ]
+}
