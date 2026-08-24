@@ -1,0 +1,26 @@
+{
+  "week_start": "2026-08-17",
+  "week_end": "2026-08-23",
+  "generated_at": "2026-08-24T15:16:48Z",
+  "narrative": "本周是近期威胁面变动最密集的一周：4 份日报（08-17、08-20、08-21、08-22 运行，08-18/19/23 缺失）内共 3 个竞品威胁等级上调，全部由 md 升至 hi，且无一例下调。创始团队最该盯住的是 Slack —— 08-20 发布 Slack Code，原文「Humans and agents. Same channel. Same work.」，@ 一个 coding agent 即开出专属频道，人在频道内审阅 diff、拿到「live previews of HTML output」、留反馈由 agent 吸收；首发即接入 Claude Code、GitHub Copilot、Devin、Vercel Agent 四家且全套餐免费可用；08-21 Forbes 报道中 Slack 自我定位为企业 AI agent 的「operating layer」；08-22 开发者平台正式推出 Agent Sessions API，把 agent 对话在产品与 API 层面命名为 session 并给出 pin/archive/rename/live updates。推断：Slack 正在占据 meee2 想要的「不做 agent、只做承载多家 agent 的中立协议面」位置，且自带组织级分发与免费层，冷启动优势极大；其与 meee2 的结构差别目前只剩载体语义——频道是时间线，meee2 主张的是空间性 descriptive canvas，而不是 session 抽象本身。第二件事是 08-21 Product Hunt 雷达命中 mpai，原文「Make existing Codex and Claude Code sessions multiplayer」，人可从自己终端直接进入队友正在跑的 AI session 并以真实身份加一个 turn —— 推断：这是本周对锚点 1（人在 agent 图内、人机同协议）最直接的一次正面命中，虽因未见 canvas / live link / peripheral 证据未判为 crit，但它证明该抽象已不再只有 meee2 一家在做。相对地，本周也出现了一条对 meee2 有利的硬证据：08-21 与 08-22 OpenAI 两次扩围 Codex 线程分享，原文明确「snapshot is static」——推断：OpenAI 已识别到「把 agent 产物分享出去」的需求，但产品选择仍停在 snapshot，meee2 的 live link 差异化本周依然成立。整体格局上，08-20 Claude Code 的 notify_when_idle 与 08-21 的 SendMessage 失败显式反馈继续把 session 间寻址做成 CLI 内建原语，08-21 Raycast 2.0 GA 并首次登陆 Windows 把 peripheral 品类推向双平台（威胁 md→hi），08-22 OpenAI Computer History 把跨 app 真实行为自动沉淀为 memory 与 timeline —— 推断：锚点 1、3、5 本周同时被大厂从三个不同方向逼近，唯有锚点 2（真 live link）和锚点 4（跨 owner artifact pull）仍无竞品实现。",
+  "recommendations": [
+    {
+      "headline": "本周就把 Slack Code + Agent Sessions API 拆一遍，并把 meee2 定位从『session 抽象』改口到『空间 vs 时间线』",
+      "detail": "Slack 两天内先发产品再补 API，已经把『人与多家 agent 在同一容器内协作』和『session 作为一等实体』两件事同时做掉，这是本周唯一同时命中锚点 1、2、4 的竞品，也是三次威胁上调里分量最重的一次。建议本周内读完 Agent Sessions API 文档，确认它是否支持跨 agent、跨 owner 的 artifact 引用（目前日报显示 live preview 仅覆盖 code diff 与 HTML 两类），并据此把对外叙事的差异化重心从『我们有 session 协议』移到『我们是空间性 descriptive canvas，而非频道时间线』。",
+      "priority": "hi",
+      "basis": "依据：slack 2026-08-20 alert（Slack Code 发布，「Humans and agents. Same channel. Same work.」「live previews of HTML output」，威胁 md→hi）+ slack 2026-08-21 alert（Forbes 报道自称「operating layer for AI agents」）+ slack 2026-08-22 alert（Agent Sessions API 及 agents.sessions.setStatus/rename 替代 assistant.threads.*）"
+    },
+    {
+      "headline": "把 mpai 加入独立追踪清单，并抢在它之前把『人 = 慢 session』做成可演示的东西",
+      "detail": "mpai 的核心动作就是 meee2 锚点 1 的字面实现——人加入一个正在运行的 AI session 并成为其中一个 turn，是本周所有信号里与该锚点重叠度最高的。它目前缺 canvas、live link 与 peripheral 层，正是 meee2 的窗口所在；建议加入 sources.json 持续追踪其是否补齐这三块，同时优先把 meee2 的人机同构 demo 做到可对外演示，避免这个抽象先被别人定义。",
+      "priority": "hi",
+      "basis": "依据：producthunt-ai 2026-08-21 alert（mpai「Make existing Codex and Claude Code sessions multiplayer」，人从自己终端进入队友运行中的 AI session 加一个 turn；同批命中的还有 Murmell 共享云端 canvas，威胁 md→hi）"
+    },
+    {
+      "headline": "把 OpenAI『snapshot is static』写进对外材料，作为 live link 差异化的一手引证",
+      "detail": "OpenAI 在 08-21 推出只读线程快照分享后，08-22 又把它扩围到全部 Codex plan，两次都明确是静态快照而非活链接——这是竞品自己给出的、meee2 锚点 2 尚未被攻占的直接证据，同期无任何竞品实现跨 owner 的 artifact pull（锚点 4）。建议把这条原文引证纳入定位材料与融资叙事，并设置触发条件：一旦 Codex 分享链接升级为随原线程更新的活链接，立即重评威胁并调整路线优先级。",
+      "priority": "md",
+      "basis": "依据：openai 2026-08-21 alert（Codex 只读线程快照分享，「snapshot is static and does not include tool calls or shell input and output」）+ openai 2026-08-22 change（快照分享扩展至所有 Codex plan，仍为 static 范式）"
+    }
+  ]
+}
