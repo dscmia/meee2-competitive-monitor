@@ -1,0 +1,26 @@
+{
+  "week_start": "2026-08-24",
+  "week_end": "2026-08-30",
+  "generated_at": "2026-08-31T15:18:29Z",
+  "narrative": "本周仅有两份日报运行（08-27、08-29；08-24/25/26/28/30 缺失，信号覆盖有限），但两份日报里出现了近期最集中的一次'session 作为一等实体'信号聚集：08-27 Notion Agent APIs 公开beta 把威胁等级从 md 上调至 hi，原文「Sessions can be used to start a chat with a Custom Agent, stream its reply, submit an action, and page through a session's event history」——推断：Notion 正把 session 做成可跨 Slack bot / 内部工具 / mobile 复用的标准化 API 原语，是本周对锚点 1、2 最直接的正面命中。同一天 GitHub Copilot（crit）暴露 read_agent 编程接口并确认 subagent 拥有独立 session、其 hook 事件会 re-emit 给 parent session，原文「hooks inside a subagent are now recorded on that subagent's session and re-emitted on its parent」；两天后（08-29）Claude Code 自身也新增「live streaming of subagent tool calls to Remote Control clients」。推断：Notion、GitHub Copilot、Anthropic 自身三家本周分别从 API、CLI、Remote Control 三条不同路径把'另一个 session 正在做什么'结构化为可编程或可 live 订阅的对象，但目前均止步于各自产品内部，尚未出现跨 owner 的证据。此外 08-27 Product Hunt 雷达命中新入场者 Offloop（8/24 launch），原文「A workspace built for people and agents as first-class participants...they share Channels, can be @ mentioned, own work, review results, and hand off to the next owner」——推断：这是本周对锚点 1（人=慢 session、AI=快 session，同一协议）结构最接近的新竞品，但尚未见 live link 或跨 owner pull 证据。整体看，本周无新增 crit 竞品，但 Notion 的威胁等级上调，且三家不同类型玩家同步在'session 结构化/可编程化'方向发力，值得创始团队关注这是否正从单点信号变为行业共识方向。",
+  "recommendations": [
+    {
+      "headline": "核实 Notion Agent APIs 的 event history 是否会开放第三方 live 订阅，并据此校准 meee2 的差异化叙事",
+      "detail": "Notion 已把 session 做成含 event history 分页、可跨客户端复用的标准 API 原语，是本轮 15 个竞品中唯一发生威胁等级上调（md→hi）的信号。建议本周内核实其 event history 目前是分页快照还是可被第三方 live 订阅，以及 Custom Agent 身份模型中是否为人类 participant 预留了对等位置——这两点任一被证实，都需要重新评估 meee2 F9 式跨 owner pull 的差异化窗口是否在收窄。",
+      "priority": "hi",
+      "basis": "依据：notion-ai 2026-08-27 alert（Notion Agent APIs 公开beta，「Sessions can be used to start a chat with a Custom Agent, stream its reply, submit an action, and page through a session's event history」，威胁 md→hi）"
+    },
+    {
+      "headline": "把 Offloop 加入 sources.json 持续追踪，抢在其补齐 live link / 跨 owner pull 之前把 meee2 锚点 1 做成可演示的东西",
+      "detail": "Offloop 是本轮对'人=慢 session、AI=快 session、同一协议'结构最相似的新入场者，人与 agent 并列为对等 participant 而非从属管理关系，且强调 artifact 随 work 持久附着。目前尚未见其实现 live link（而非快照）或跨 owner/跨 workspace 的 F9 式 pull，正是 meee2 的窗口所在，建议优先跟踪并加速对外可演示的 demo。",
+      "priority": "hi",
+      "basis": "依据：producthunt-ai 2026-08-27 alert（Offloop，2026-08-24 launch，「A workspace built for people and agents as first-class participants...they share Channels, can be @ mentioned, own work, review results, and hand off to the next owner」）"
+    },
+    {
+      "headline": "持续跟踪 GitHub Copilot read_agent / subagent session 层级化，以及 Claude Code Remote Control 实时流式推送是否扩展出跨产品边界",
+      "detail": "本周两个 crit 级竞品（GitHub Copilot、Claude.ai/Anthropic 自身）都在各自产品内把'另一个 session 的状态或活动'做成可编程访问或可 live 订阅的对象，方向上分别呼应 meee2 锚点 1/4 与锚点 2/5，但目前都局限在单产品内部。建议将这两项列入下一轮重点复核项，一旦任一扩展到跨产品或跨 owner 场景，需立即重估对应竞品的威胁等级。",
+      "priority": "md",
+      "basis": "依据：github-copilot 2026-08-27 alert（read_agent 编程接口 + subagent session 层级化，「Repeated read_agent calls now consistently return the full turn history unless since_turn is provided」）+ claude-ai 2026-08-29 alert（「live streaming of subagent tool calls to Remote Control clients」）"
+    }
+  ]
+}
