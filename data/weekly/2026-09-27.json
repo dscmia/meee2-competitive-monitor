@@ -1,0 +1,26 @@
+{
+  "week_start": "2026-09-21",
+  "week_end": "2026-09-27",
+  "generated_at": "2026-09-28T15:16:17Z",
+  "narrative": "本周最值得创始团队注意的信号是Google Gemini：本周内连续4天(9/21、9/22、9/24、9/25)在'跨工具/跨应用artifact接入'方向上发布新进展——从MCP直连Asana/HubSpot/Salesforce等7个第三方工具，到Workspace Studio基于真实事件的实时触发器与第三方集成beta，再到Gemini Notebook成为Google Docs的@引用context source，最后是Connected Apps接入14款第三方应用可在对话内直接@提及——是本周15个追踪对象中唯一连续多日、单一方向持续加码的竞品。推断：这种高频递进的发布节奏表明Google正把'跨工具信息接入'系统性productize为Workspace的核心叙事，方向直指meee2锚点4(跨工具/跨owner artifact pull)；但四次证据均停留在'访问/引用信息'层面，尚无原文证据证实是否支持可编辑、双向live同步的artifact link，威胁等级本周维持hi未变。同时OpenAI(ChatGPT for Word持久化侧边栏，9/17上线，9/21日报纳入)与GitHub Copilot(Sentry canvas集成，延续上一轮Jira canvas模式)两条crit级别alert分别逼近meee2锚点2(跨工具live嵌入)与锚点3/4(descriptive canvas+外部artifact pull的可复用产品模式)，同样值得重视。Peripheral层面，Raycast v2.3把AI Chat重建为可自主拟定计划、调用extension、持续执行直到完成的agent，是peripheral入口向'快session'执行能力延伸最明确的一次观察；同期GitHub生态雷达也新发现两个直指菜单栏/系统托盘定位的新项目(agent-race-control、cc-cockpit)。本周内所有竞品威胁等级均未发生变化(无threat_changed=true记录)，整体格局是渐进式逼近而非跳变式颠覆。",
+  "recommendations": [
+    {
+      "headline": "追踪Gemini跨工具artifact接入是访问还是真正的双向live link",
+      "detail": "Gemini本周4次alert(MCP直连、Workspace Studio触发器、Notebook@引用、Connected Apps)方向高度一致，均逼近meee2锚点4，但目前证据只到'访问信息、无需切标签'层面。下一轮需核实这些接入是否支持可编辑、跨owner持续同步，而非单向只读查询，这决定meee2差异化优势的实际收窄程度。",
+      "priority": "hi",
+      "basis": "依据：gemini 2026-09-21 MCP直连7工具alert、2026-09-22 Workspace Studio Custom Starters alert、2026-09-24 Notebook作为Docs context source alert、2026-09-25 Connected Apps 14工具alert"
+    },
+    {
+      "headline": "核实OpenAI ChatGPT for Word与Copilot Sentry canvas的live同步机制",
+      "detail": "两者均为本周crit级别alert：ChatGPT for Word以持久化侧边栏嵌入Word原生编辑界面，Copilot Sentry canvas延续Jira canvas构成'外部artifact→canvas→PR'可复用模式。需确认是否具备多人协作可见性与真正双向live同步，而非单会话内常驻或一次性快照，作为meee2锚点2、3差异化沟通的依据。",
+      "priority": "hi",
+      "basis": "依据：openai 2026-09-21 ChatGPT for Word持久化侧边栏alert、github-copilot 2026-09-21 Sentry canvas集成alert"
+    },
+    {
+      "headline": "关注peripheral层新入场者对菜单栏定位的逼近",
+      "detail": "Raycast v2.3已把AI Chat重建为自主执行agent，内部具备'快session'能力；同期GitHub生态雷达新发现agent-race-control(taskbar图标+session管理)、cc-cockpit(GNOME tray indicator)两个新repo，结构上更接近meee2锚点5(菜单栏peripheral层)。建议纳入下轮重点观察名单，评估是否需要在peripheral层加快差异化动作。",
+      "priority": "md",
+      "basis": "依据：raycast 2026-09-21 AI Chat重建为自主agent alert、github-cc-ecosystem 2026-09-24 new_entrant(agent-race-control、cc-cockpit)"
+    }
+  ]
+}
