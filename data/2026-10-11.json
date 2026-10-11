@@ -1,0 +1,353 @@
+{
+ "report_date": "2026-10-11",
+ "generated_at": "2026-10-11T16:15:48Z",
+ "summary": {
+  "total_tracked": 15,
+  "fetched_ok": 4,
+  "fetch_error": 0,
+  "has_changes": 1,
+  "new_alerts": 0,
+  "skipped": [
+   "producthunt-ai",
+   "windsurf",
+   "github-copilot",
+   "gemini",
+   "linear",
+   "notion-ai",
+   "slack",
+   "reflect",
+   "raycast",
+   "replit",
+   "superwhisper"
+  ],
+  "note": "GitHub API 可达；HN Algolia 与 openai.com 等官方源 DNS 失败。仅对 GitHub 生态、Cursor、OpenAI、Anthropic 重新检索（后三者为 WebSearch 兜底），其余沿用 baseline（fetch_status=skipped）。"
+ },
+ "competitors": [
+  {
+   "id": "producthunt-ai",
+   "name": "Product Hunt AI 新品雷达",
+   "category": "new_entrant_watch",
+   "threat": "md",
+   "threat_changed": false,
+   "has_changes": false,
+   "fetch_status": "skipped",
+   "fetched_urls": [
+    "WebSearch兜底（HN Algolia/官方源 DNS 不可达）"
+   ],
+   "raw_snapshot": "来源：WebSearch 结果，非官方原文。官方源/HN Algolia 本轮 EGRESS_BLOCKED。PH feed 不可达；WebSearch 命中 Agentplace、AGNT.Hub、Svora AI、AgentForge、Sell.Systems AI Workspaces。",
+   "content_hash": "来源：WebSearch 结果，非官方原文。官方源/HN Algolia 本轮 EGRESS_BLOCKED。PH feed 不可达；WebSearch 命中 Agentplace、AGNT.Hub、Svora AI、AgentForge、Sell.Systems AI Workspaces。",
+   "last_seen_at": "2026-10-11T16:15:48Z",
+   "changes": [],
+   "key_findings": [],
+   "no_change_reason": "HN Algolia 与官方源本轮 DNS 不可达（ENOTFOUND）；本次未重新抓取，沿用 baseline，未做新 diff。"
+  },
+  {
+   "id": "github-cc-ecosystem",
+   "name": "GitHub Claude Code 生态雷达",
+   "category": "new_entrant_watch",
+   "threat": "md",
+   "threat_changed": false,
+   "has_changes": true,
+   "fetch_status": "ok",
+   "fetched_urls": [
+    "https://api.github.com/search/repositories?q=topic%3Aclaude-code&sort=stars&order=desc&per_page=25",
+    "https://api.github.com/search/repositories?q=claude+code+terminal+minimal+coding&sort=stars&order=desc&per_page=20",
+    "https://api.github.com/search/repositories?q=claude+code+cockpit+terminal&sort=stars&order=desc&per_page=25",
+    "https://api.github.com/search/repositories?q=claude+code+meta-harness+agent+swarm&sort=stars&order=desc&per_page=20"
+   ],
+   "raw_snapshot": "GitHub Search API 4/4 查询成功(拉取为截断页)。已报告(累计): handmux/handmux, Innovology/claude-dispatcher, alexjbarnes/cockpit, luojiahai/code-by-wire, cosmix/loom, iAmCorey/kooky, nashory/agent-cockpit, arcnid/peemux, stablyai/orca, trevormil/TerMinal, c4rl05/agent-race-control; wallacemartinss/cc-cockpit, emanuelrechsteiner/claude-rcode, alliecatowo/glassy；已报告(本轮新增): agentwire-dev, claude-code-chat-bridge, fanbox, cc-switch, claude-mem；baseline已知: dockterm, Surething-io/cockpit, OpenRig, Paseo, NovusEdge/glowup, wilsen0/moku, artengin/claude-starred",
+   "content_hash": "GitHub Search API 4/4 查询成功(拉取为截断页)。已报告(累计): handmux/handmux, Innovology/claude-dispatcher, alexjbarnes/cockpit, luojiahai/code-by-wire, cosmix/loom, iAmCorey/kooky, nashory/agent-cockpit, arcnid/peemu",
+   "last_seen_at": "2026-10-11T16:15:48Z",
+   "changes": [
+    {
+     "type": "other",
+     "description": "新增 dotdevdotdev/agentwire-dev（★22，created 2025-12-31，pushed 2026-10-11）：自托管、键盘驱动的多 Claude Code agent cockpit。推断：命中 agent/cockpit 关键词，但仅为人操控多 agent 的控制台，非人=慢 session 同构，无 live link；仅观察。",
+     "evidence": "「Self-hosted, keyboard-driven cockpit for running many Claude Code agents」",
+     "source_url": "https://api.github.com/search/repositories?q=claude+code+cockpit+terminal&sort=stars&order=desc&per_page=25",
+     "meee2_relevance": null,
+     "threat_signal": false,
+     "note": "来源：GitHub 开源仓库，非官方。"
+    },
+    {
+     "type": "other",
+     "description": "新增 startupfundraising/claude-code-chat-bridge（★2，pushed 2026-09-23）：在两个 Claude Code 终端间传递消息。推断：触及跨 session 通信的朴素形态，但体量极小、仅消息桥，无 artifact pull；仅观察。",
+     "evidence": "「Minimal bridge for passing messages between two Claude Code terminals」",
+     "source_url": "https://api.github.com/search/repositories?q=claude+code+terminal+minimal+coding&sort=stars&order=desc&per_page=20",
+     "meee2_relevance": null,
+     "threat_signal": false,
+     "note": "来源：GitHub 开源仓库，非官方。"
+    },
+    {
+     "type": "other",
+     "description": "新增 alchaincyf/fanbox（★1023，created 2026-06-10，最近 push 2026-09-03，>30 天）：vibe coding cockpit（文件浏览、agent 终端、变更查看）。推断：单人 IDE 式面板，与 meee2 无结构重叠；仅观察。",
+     "evidence": "「Cockpit for vibe coding: file browser, agent terminal, change viewer」",
+     "source_url": "https://api.github.com/search/repositories?q=claude+code+cockpit+terminal&sort=stars&order=desc&per_page=25",
+     "meee2_relevance": null,
+     "threat_signal": false,
+     "note": "来源：GitHub 开源仓库，非官方。"
+    },
+    {
+     "type": "other",
+     "description": "新增 farion1231/cc-switch（★142750，pushed 2026-10-11）：跨平台桌面应用，管理多个 AI 编码 agent。推断：配置/切换层工具，桌面常驻形态，但未见 session 协同或 live link 信号；仅观察。",
+     "evidence": "「Cross-platform desktop app for managing multiple AI coding agents」",
+     "source_url": "https://api.github.com/search/repositories?q=topic%3Aclaude-code&sort=stars&order=desc&per_page=25",
+     "meee2_relevance": null,
+     "threat_signal": false,
+     "note": "来源：GitHub 开源仓库，非官方。"
+    },
+    {
+     "type": "other",
+     "description": "新增 thedotmack/claude-mem（★99594，pushed 2026-10-11）：捕获、压缩并回注 agent session 上下文的持久记忆。推断：触及跨 session 上下文复用，但属单用户记忆层，非跨 owner artifact pull；仅观察。",
+     "evidence": "「Persistent memory that captures, compresses, and reinjects agent session context」",
+     "source_url": "https://api.github.com/search/repositories?q=topic%3Aclaude-code&sort=stars&order=desc&per_page=25",
+     "meee2_relevance": null,
+     "threat_signal": false,
+     "note": "来源：GitHub 开源仓库，非官方。"
+    }
+   ],
+   "key_findings": [
+    "本轮新增 5 个仓库观察项，均无 ≥2 个 watch_keywords 且同时触碰差异化锚点（session 同构 / live link / 跨 owner pull）者，不建议加入 sources.json",
+    "结果均为截断页（每查询仅读前 ~18 条），覆盖不完整",
+    "0★ ruflo/MetaAi 克隆（>30 天未 push）已过滤"
+   ],
+   "no_change_reason": null
+  },
+  {
+   "id": "cursor",
+   "name": "Cursor",
+   "category": "orchestrator",
+   "threat": "crit",
+   "threat_changed": false,
+   "has_changes": false,
+   "fetch_status": "ok",
+   "fetched_urls": [
+    "WebSearch兜底（HN Algolia/官方源 DNS 不可达）"
+   ],
+   "raw_snapshot": "来源：WebSearch 结果，非官方原文。官方源/HN Algolia 本轮 EGRESS_BLOCKED。检索到 Cursor 3.19.7(9/3)：Mac computer-use、multiplayer sessions、shared identity、Origin 代码托管 beta、Cursor Router。",
+   "content_hash": "来源：WebSearch 结果，非官方原文。官方源/HN Algolia 本轮 EGRESS_BLOCKED。检索到 Cursor 3.19.7(9/3)：Mac computer-use、multiplayer sessions、shared identity、Origin 代码托管 beta、Cursor Router。",
+   "last_seen_at": "2026-10-11T16:15:48Z",
+   "changes": [],
+   "key_findings": [],
+   "no_change_reason": "WebSearch 兜底（非官方原文）；最新条目仍为 3.19.7(9/3)，与 baseline 一致，未见 10 月新条目。"
+  },
+  {
+   "id": "openai",
+   "name": "OpenAI / ChatGPT",
+   "category": "orchestrator",
+   "threat": "crit",
+   "threat_changed": false,
+   "has_changes": false,
+   "fetch_status": "ok",
+   "fetched_urls": [
+    "WebSearch: OpenAI ChatGPT Canvas Projects new features agent tasks October 2026"
+   ],
+   "raw_snapshot": "来源：WebSearch 结果，非官方原文。GPT-6 + Intelligent UI(10/7)；virtual try-on(10/1)；Finances 向 Free/Go 美国用户推出。（沿用早先: ChatGPT Work(7/9)、Tasks、Projects）",
+   "content_hash": "来源：WebSearch 结果，非官方原文。GPT-6 + Intelligent UI(10/7)；virtual try-on(10/1)；Finances 向 Free/Go 美国用户推出。（沿用早先: ChatGPT Work(7/9)、Tasks、Projects）",
+   "last_seen_at": "2026-10-11T16:15:48Z",
+   "changes": [],
+   "key_findings": [
+    "来源：WebSearch 结果，非官方原文；无差异化锚点触碰"
+   ],
+   "no_change_reason": "WebSearch 兜底（非官方原文）；结果仅为旧 Canvas 发布报道，无 10 月新内容，沿用 baseline。"
+  },
+  {
+   "id": "windsurf",
+   "name": "Windsurf (Codeium)",
+   "category": "orchestrator",
+   "threat": "crit",
+   "threat_changed": false,
+   "has_changes": false,
+   "fetch_status": "skipped",
+   "fetched_urls": [
+    "WebSearch兜底（HN Algolia/官方源 DNS 不可达）"
+   ],
+   "raw_snapshot": "来源：WebSearch 结果，非官方原文。官方源/HN Algolia 本轮 EGRESS_BLOCKED。Devin Desktop(原Windsurf)9/29：Devin Local 的 Hooks tab、timeline navigator、Fast Context。",
+   "content_hash": "来源：WebSearch 结果，非官方原文。官方源/HN Algolia 本轮 EGRESS_BLOCKED。Devin Desktop(原Windsurf)9/29：Devin Local 的 Hooks tab、timeline navigator、Fast Context。",
+   "last_seen_at": "2026-10-11T16:15:48Z",
+   "changes": [],
+   "key_findings": [],
+   "no_change_reason": "HN Algolia 与官方源本轮 DNS 不可达（ENOTFOUND）；本次未重新抓取，沿用 baseline，未做新 diff。"
+  },
+  {
+   "id": "claude-ai",
+   "name": "Claude.ai / Anthropic",
+   "category": "orchestrator",
+   "threat": "crit",
+   "threat_changed": false,
+   "has_changes": false,
+   "fetch_status": "ok",
+   "fetched_urls": [
+    "WebSearch: Anthropic Claude new features projects artifacts routines agent October 2026"
+   ],
+   "raw_snapshot": "来源：WebSearch 结果，非官方原文。官方源/HN Algolia 本轮 EGRESS_BLOCKED。Opus 5.5(9/22)、Sonnet 5.5(9/28)、dynamic workflows、agent teams、Cowork 经 artifacts 统一。",
+   "content_hash": "来源：WebSearch 结果，非官方原文。官方源/HN Algolia 本轮 EGRESS_BLOCKED。Opus 5.5(9/22)、Sonnet 5.5(9/28)、dynamic workflows、agent teams、Cowork 经 artifacts 统一。",
+   "last_seen_at": "2026-10-11T16:15:48Z",
+   "changes": [],
+   "key_findings": [],
+   "no_change_reason": "WebSearch 兜底（非官方原文）；仅得低质量聚合页，无可验证的新功能，沿用 baseline。"
+  },
+  {
+   "id": "github-copilot",
+   "name": "GitHub Copilot",
+   "category": "orchestrator",
+   "threat": "hi",
+   "threat_changed": false,
+   "has_changes": false,
+   "fetch_status": "skipped",
+   "fetched_urls": [
+    "WebSearch兜底（HN Algolia/官方源 DNS 不可达）"
+   ],
+   "raw_snapshot": "来源：WebSearch 结果，非官方原文。官方源/HN Algolia 本轮 EGRESS_BLOCKED。检索到 cross-agent memory、coding agent 可在任意 open PR 工作、CLI GA、Gemini 3.8 Flash。",
+   "content_hash": "来源：WebSearch 结果，非官方原文。官方源/HN Algolia 本轮 EGRESS_BLOCKED。检索到 cross-agent memory、coding agent 可在任意 open PR 工作、CLI GA、Gemini 3.8 Flash。",
+   "last_seen_at": "2026-10-11T16:15:48Z",
+   "changes": [],
+   "key_findings": [],
+   "no_change_reason": "HN Algolia 与官方源本轮 DNS 不可达（ENOTFOUND）；本次未重新抓取，沿用 baseline，未做新 diff。"
+  },
+  {
+   "id": "gemini",
+   "name": "Google Gemini / AI Studio",
+   "category": "orchestrator",
+   "threat": "hi",
+   "threat_changed": false,
+   "has_changes": false,
+   "fetch_status": "skipped",
+   "fetched_urls": [
+    "WebSearch兜底（HN Algolia/官方源 DNS 不可达）"
+   ],
+   "raw_snapshot": "来源：WebSearch 结果，非官方原文。官方源/HN Algolia 本轮 EGRESS_BLOCKED。Cloud Next 2026：Workspace Studio、Agent Designer、A2A 等，早于 baseline。",
+   "content_hash": "来源：WebSearch 结果，非官方原文。官方源/HN Algolia 本轮 EGRESS_BLOCKED。Cloud Next 2026：Workspace Studio、Agent Designer、A2A 等，早于 baseline。",
+   "last_seen_at": "2026-10-11T16:15:48Z",
+   "changes": [],
+   "key_findings": [],
+   "no_change_reason": "HN Algolia 与官方源本轮 DNS 不可达（ENOTFOUND）；本次未重新抓取，沿用 baseline，未做新 diff。"
+  },
+  {
+   "id": "linear",
+   "name": "Linear",
+   "category": "workspace",
+   "threat": "hi",
+   "threat_changed": false,
+   "has_changes": false,
+   "fetch_status": "skipped",
+   "fetched_urls": [
+    "WebSearch兜底（HN Algolia/官方源 DNS 不可达）"
+   ],
+   "raw_snapshot": "来源：WebSearch 结果，非官方原文。官方源/HN Algolia 本轮 EGRESS_BLOCKED。检索到 coding sessions 自动路由模型、GLM 开放权重 session、Write with Agent 项目更新。",
+   "content_hash": "来源：WebSearch 结果，非官方原文。官方源/HN Algolia 本轮 EGRESS_BLOCKED。检索到 coding sessions 自动路由模型、GLM 开放权重 session、Write with Agent 项目更新。",
+   "last_seen_at": "2026-10-11T16:15:48Z",
+   "changes": [],
+   "key_findings": [],
+   "no_change_reason": "HN Algolia 与官方源本轮 DNS 不可达（ENOTFOUND）；本次未重新抓取，沿用 baseline，未做新 diff。"
+  },
+  {
+   "id": "notion-ai",
+   "name": "Notion AI",
+   "category": "workspace",
+   "threat": "md",
+   "threat_changed": false,
+   "has_changes": false,
+   "fetch_status": "skipped",
+   "fetched_urls": [
+    "WebSearch兜底（HN Algolia/官方源 DNS 不可达）"
+   ],
+   "raw_snapshot": "来源：WebSearch 结果，非官方原文。官方源/HN Algolia 本轮 EGRESS_BLOCKED。检索到 8月 agent suggested edits（逐行批准）、模型选择器改版、iOS Notion Agents app(7月)。",
+   "content_hash": "来源：WebSearch 结果，非官方原文。官方源/HN Algolia 本轮 EGRESS_BLOCKED。检索到 8月 agent suggested edits（逐行批准）、模型选择器改版、iOS Notion Agents app(7月)。",
+   "last_seen_at": "2026-10-11T16:15:48Z",
+   "changes": [],
+   "key_findings": [],
+   "no_change_reason": "HN Algolia 与官方源本轮 DNS 不可达（ENOTFOUND）；本次未重新抓取，沿用 baseline，未做新 diff。"
+  },
+  {
+   "id": "slack",
+   "name": "Slack",
+   "category": "comms",
+   "threat": "md",
+   "threat_changed": false,
+   "has_changes": false,
+   "fetch_status": "skipped",
+   "fetched_urls": [
+    "WebSearch兜底（HN Algolia/官方源 DNS 不可达）"
+   ],
+   "raw_snapshot": "来源：WebSearch 结果，非官方原文。官方源/HN Algolia 本轮 EGRESS_BLOCKED。检索到 Slackbot universal router、会议中实时推荐。",
+   "content_hash": "来源：WebSearch 结果，非官方原文。官方源/HN Algolia 本轮 EGRESS_BLOCKED。检索到 Slackbot universal router、会议中实时推荐。",
+   "last_seen_at": "2026-10-11T16:15:48Z",
+   "changes": [],
+   "key_findings": [],
+   "no_change_reason": "HN Algolia 与官方源本轮 DNS 不可达（ENOTFOUND）；本次未重新抓取，沿用 baseline，未做新 diff。"
+  },
+  {
+   "id": "reflect",
+   "name": "Reflect",
+   "category": "workspace",
+   "threat": "md",
+   "threat_changed": false,
+   "has_changes": false,
+   "fetch_status": "skipped",
+   "fetched_urls": [
+    "WebSearch兜底（HN Algolia/官方源 DNS 不可达）"
+   ],
+   "raw_snapshot": "来源：WebSearch 结果，非官方原文。官方源/HN Algolia 本轮 EGRESS_BLOCKED。检索到 Reflect Open(7月)、MCP server 可经 Claude/Codex 搜索与编辑笔记。",
+   "content_hash": "来源：WebSearch 结果，非官方原文。官方源/HN Algolia 本轮 EGRESS_BLOCKED。检索到 Reflect Open(7月)、MCP server 可经 Claude/Codex 搜索与编辑笔记。",
+   "last_seen_at": "2026-10-11T16:15:48Z",
+   "changes": [],
+   "key_findings": [],
+   "no_change_reason": "HN Algolia 与官方源本轮 DNS 不可达（ENOTFOUND）；本次未重新抓取，沿用 baseline，未做新 diff。"
+  },
+  {
+   "id": "raycast",
+   "name": "Raycast",
+   "category": "peripheral",
+   "threat": "md",
+   "threat_changed": false,
+   "has_changes": false,
+   "fetch_status": "skipped",
+   "fetched_urls": [
+    "WebSearch兜底（HN Algolia/官方源 DNS 不可达）"
+   ],
+   "raw_snapshot": "来源：WebSearch 结果，非官方原文。官方源/HN Algolia 本轮 EGRESS_BLOCKED。v2.3(9/11)、v2.5(9/28)、v2.6(10/5)。",
+   "content_hash": "来源：WebSearch 结果，非官方原文。官方源/HN Algolia 本轮 EGRESS_BLOCKED。v2.3(9/11)、v2.5(9/28)、v2.6(10/5)。",
+   "last_seen_at": "2026-10-11T16:15:48Z",
+   "changes": [],
+   "key_findings": [],
+   "no_change_reason": "HN Algolia 与官方源本轮 DNS 不可达（ENOTFOUND）；本次未重新抓取，沿用 baseline，未做新 diff。"
+  },
+  {
+   "id": "replit",
+   "name": "Replit",
+   "category": "orchestrator",
+   "threat": "md",
+   "threat_changed": false,
+   "has_changes": false,
+   "fetch_status": "skipped",
+   "fetched_urls": [
+    "WebSearch兜底（HN Algolia/官方源 DNS 不可达）"
+   ],
+   "raw_snapshot": "来源：WebSearch 结果，非官方原文。官方源/HN Algolia 本轮 EGRESS_BLOCKED。Agent 4 并行 agent、共享 skills、10月新增模型支持。",
+   "content_hash": "来源：WebSearch 结果，非官方原文。官方源/HN Algolia 本轮 EGRESS_BLOCKED。Agent 4 并行 agent、共享 skills、10月新增模型支持。",
+   "last_seen_at": "2026-10-11T16:15:48Z",
+   "changes": [],
+   "key_findings": [],
+   "no_change_reason": "HN Algolia 与官方源本轮 DNS 不可达（ENOTFOUND）；本次未重新抓取，沿用 baseline，未做新 diff。"
+  },
+  {
+   "id": "superwhisper",
+   "name": "Superwhisper",
+   "category": "peripheral",
+   "threat": "lo",
+   "threat_changed": false,
+   "has_changes": false,
+   "fetch_status": "skipped",
+   "fetched_urls": [
+    "WebSearch兜底（HN Algolia/官方源 DNS 不可达）"
+   ],
+   "raw_snapshot": "来源：WebSearch 结果，非官方原文。官方源/HN Algolia 本轮 EGRESS_BLOCKED。S1-mini 端侧模型、agent plugin、Grok 作为 coding agent。",
+   "content_hash": "来源：WebSearch 结果，非官方原文。官方源/HN Algolia 本轮 EGRESS_BLOCKED。S1-mini 端侧模型、agent plugin、Grok 作为 coding agent。",
+   "last_seen_at": "2026-10-11T16:15:48Z",
+   "changes": [],
+   "key_findings": [],
+   "no_change_reason": "HN Algolia 与官方源本轮 DNS 不可达（ENOTFOUND）；本次未重新抓取，沿用 baseline，未做新 diff。"
+  }
+ ],
+ "alerts": []
+}
