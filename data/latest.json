@@ -1,14 +1,15 @@
 {
-  "report_date": "2026-10-14",
-  "generated_at": "2026-10-14T16:15:14Z",
+  "report_date": "2026-10-15",
+  "generated_at": "2026-10-15T16:20:00Z",
   "summary": {
     "total_tracked": 15,
-    "fetched_ok": 5,
+    "fetched_ok": 4,
     "fetch_error": 0,
-    "has_changes": 3,
+    "has_changes": 0,
     "new_alerts": 0,
     "skipped": [
       "producthunt-ai",
+      "windsurf",
       "github-copilot",
       "gemini",
       "linear",
@@ -19,7 +20,7 @@
       "replit",
       "superwhisper"
     ],
-    "note": "GitHub API 可达（直取）；hn.algolia.com 与 openai.com DNS 失败。Cursor/OpenAI/Windsurf/Anthropic/Copilot 为 WebSearch 兜底，其余沿用 baseline。3 家有非预警变化，无 alert。"
+    "note": "hn.algolia.com DNS 失败；GitHub API 直取，Cursor/OpenAI/Anthropic 为 WebSearch 兜底。无新增变化，无 alert。"
   },
   "competitors": [
     {
@@ -38,7 +39,7 @@
       "last_seen_at": "2026-10-14T16:15:14Z",
       "changes": [],
       "key_findings": [],
-      "no_change_reason": "本轮未抓取（官方源/HN Algolia DNS 不可达，时间预算内优先 crit 与生态雷达）；沿用 baseline。"
+      "no_change_reason": "本轮未抓取（HN Algolia/多数官方源 DNS 不可达，优先 crit 与生态雷达）；沿用 baseline。"
     },
     {
       "id": "github-cc-ecosystem",
@@ -54,12 +55,12 @@
         "https://api.github.com/search/repositories?q=claude+code+cockpit+terminal&sort=stars&order=desc&per_page=25",
         "https://api.github.com/search/repositories?q=claude+code+meta-harness+agent+swarm&sort=stars&order=desc&per_page=20"
       ],
-      "raw_snapshot": "GitHub Search API 4/4 查询成功(拉取为截断页)。已报告(累计): handmux/handmux, Innovology/claude-dispatcher, alexjbarnes/cockpit, luojiahai/code-by-wire, cosmix/loom, iAmCorey/kooky, nashory/agent-cockpit, arcnid/peemux, stablyai/orca, trevormil/TerMinal, c4rl05/agent-race-control; wallacemartinss/cc-cockpit, emanuelrechsteiner/claude-rcode, alliecatowo/glassy；已报告(本轮新增): agentwire-dev, claude-code-chat-bridge, fanbox, cc-switch, claude-mem；baseline已知: dockterm, Surething-io/cockpit, OpenRig, Paseo, NovusEdge/glowup, wilsen0/moku, artengin/claude-starred；已报告(本轮新增): paperclipai/paperclip, affaan-m/ECC；本轮见但无重叠未报告: hermes-agent, ponytail, graphify, caveman, rtk, MetaAi ｜2026-10-14：4 查询中 GitHub API 直取，页面截断；新见 rea, ui-ux-pro-max-skill, agent-skills, Agent-Reach, taste-skill, Understand-Anything, archify, learn-claude-code, best-claude-hud, ruflo 均无 ≥2 关键词重叠，未报告。",
+      "raw_snapshot": "GitHub Search API 4/4 查询成功(拉取为截断页)。已报告(累计): handmux/handmux, Innovology/claude-dispatcher, alexjbarnes/cockpit, luojiahai/code-by-wire, cosmix/loom, iAmCorey/kooky, nashory/agent-cockpit, arcnid/peemux, stablyai/orca, trevormil/TerMinal, c4rl05/agent-race-control; wallacemartinss/cc-cockpit, emanuelrechsteiner/claude-rcode, alliecatowo/glassy；已报告(本轮新增): agentwire-dev, claude-code-chat-bridge, fanbox, cc-switch, claude-mem；baseline已知: dockterm, Surething-io/cockpit, OpenRig, Paseo, NovusEdge/glowup, wilsen0/moku, artengin/claude-starred；已报告(本轮新增): paperclipai/paperclip, affaan-m/ECC；本轮见但无重叠未报告: hermes-agent, ponytail, graphify, caveman, rtk, MetaAi ｜2026-10-14：4 查询中 GitHub API 直取，页面截断；新见 rea, ui-ux-pro-max-skill, agent-skills, Agent-Reach, taste-skill, Understand-Anything, archify, learn-claude-code, best-claude-hud, ruflo 均无 ≥2 关键词重叠，未报告。 ｜2026-10-15：GitHub API 直取 3/4 页(topic/cockpit/meta-harness/minimal 均成功，截断页)；无 baseline 以外的新活跃仓库，无翻倍 star 跃升。",
       "content_hash": "GitHub Search API 4/4 查询成功(拉取为截断页)。已报告(累计): handmux/handmux, Innovology/claude-dispatcher, alexjbarnes/cockpit, luojiahai/code-by-wire, cosmix/loom, iAmCorey/kooky, nashory/agent-cockpit, arcnid/peemu",
-      "last_seen_at": "2026-10-14T16:15:14Z",
+      "last_seen_at": "2026-10-15T16:20:00Z",
       "changes": [],
       "key_findings": [],
-      "no_change_reason": "本轮无与 meee2 高度重叠的新仓库（新见仓库多为 skill/统计栏/知识图谱类）"
+      "no_change_reason": "今日 GitHub 结果均为 baseline 已报告/已知仓库，无新增高重叠者。"
     },
     {
       "id": "cursor",
@@ -74,43 +75,14 @@
       ],
       "raw_snapshot": "来源：WebSearch 结果，非官方原文。WebSearch 仍仅见至9月初(3.19.7，9/3)，无10月条目，与 baseline 一致。",
       "content_hash": "来源：WebSearch 结果，非官方原文。WebSearch 仍仅见至9月初(3.19.7，9/3)，无10月条目，与 baseline 一致。",
-      "last_seen_at": "2026-10-14T16:15:14Z",
+      "last_seen_at": "2026-10-15T16:20:00Z",
       "changes": [],
       "key_findings": [],
-      "no_change_reason": "WebSearch 兜底（HN/官方源 DNS 不可达），无 10 月新条目，与 baseline 一致"
+      "no_change_reason": "WebSearch 兜底（hn.algolia.com DNS 不可达）；未见 10 月新条目，沿用 baseline。"
     },
     {
       "id": "openai",
       "name": "OpenAI / ChatGPT",
-      "category": "orchestrator",
-      "threat": "crit",
-      "threat_changed": false,
-      "has_changes": true,
-      "fetch_status": "ok",
-      "fetched_urls": [
-        "WebSearch兜底（HN Algolia / openai.com DNS 不可达）"
-      ],
-      "raw_snapshot": "来源：WebSearch 结果，非官方原文。openai.com DNS 失败；检索到 2026-04 workspace agents（ChatGPT Business/Enterprise 团队级持久 agent），无 10 月新条目。",
-      "content_hash": "来源：WebSearch 结果，非官方原文。openai.com DNS 失败；检索到 2026-04 workspace agents（ChatGPT Business/Enterprise 团队级持久 agent），无 10 月新条目。",
-      "last_seen_at": "2026-10-14T16:15:14Z",
-      "changes": [
-        {
-          "type": "new_feature",
-          "description": "首次纳入 baseline：ChatGPT workspace agents（4月发布，非本周新动态）",
-          "evidence": "「persistent assistants that can connect to external apps」（WebSearch 摘要，非官方原文）",
-          "source_url": "https://the-decoder.com/openai-launches-workspace-agents-that-turn-chatgpt-from-a-chatbot-into-a-team-automation-platform/",
-          "meee2_relevance": "锚点1（弱）：团队内共享 agent；推断，未见人=慢 session 同协议证据",
-          "threat_signal": false
-        }
-      ],
-      "key_findings": [
-        "首次纳入 baseline：ChatGPT workspace agents（4月发布，非本周新动态）（推断：与 meee2 锚点仅弱相关，未达 alert 门槛）"
-      ],
-      "no_change_reason": null
-    },
-    {
-      "id": "windsurf",
-      "name": "Windsurf (Codeium)",
       "category": "orchestrator",
       "threat": "crit",
       "threat_changed": false,
@@ -119,12 +91,30 @@
       "fetched_urls": [
         "WebSearch兜底（HN Algolia / openai.com DNS 不可达）"
       ],
+      "raw_snapshot": "来源：WebSearch 结果，非官方原文。openai.com DNS 失败；检索到 2026-04 workspace agents（ChatGPT Business/Enterprise 团队级持久 agent），无 10 月新条目。",
+      "content_hash": "来源：WebSearch 结果，非官方原文。openai.com DNS 失败；检索到 2026-04 workspace agents（ChatGPT Business/Enterprise 团队级持久 agent），无 10 月新条目。",
+      "last_seen_at": "2026-10-15T16:20:00Z",
+      "changes": [],
+      "key_findings": [],
+      "no_change_reason": "WebSearch 兜底（hn.algolia.com DNS 不可达）；未见 10 月新条目，沿用 baseline。"
+    },
+    {
+      "id": "windsurf",
+      "name": "Windsurf (Codeium)",
+      "category": "orchestrator",
+      "threat": "crit",
+      "threat_changed": false,
+      "has_changes": false,
+      "fetch_status": "skipped",
+      "fetched_urls": [
+        "WebSearch兜底（HN Algolia / openai.com DNS 不可达）"
+      ],
       "raw_snapshot": "来源：WebSearch 结果，非官方原文。WebSearch 仅见聚合/评测站，无新的官方动态，与 baseline 一致。",
       "content_hash": "来源：WebSearch 结果，非官方原文。WebSearch 仅见聚合/评测站，无新的官方动态，与 baseline 一致。",
       "last_seen_at": "2026-10-14T16:15:14Z",
       "changes": [],
       "key_findings": [],
-      "no_change_reason": "WebSearch 兜底（HN/官方源 DNS 不可达），无 10 月新条目，与 baseline 一致"
+      "no_change_reason": "WebSearch 兜底（hn.algolia.com DNS 不可达）；未见 10 月新条目，沿用 baseline。"
     },
     {
       "id": "claude-ai",
@@ -132,28 +122,17 @@
       "category": "orchestrator",
       "threat": "crit",
       "threat_changed": false,
-      "has_changes": true,
+      "has_changes": false,
       "fetch_status": "ok",
       "fetched_urls": [
         "WebSearch兜底（HN Algolia / openai.com DNS 不可达）"
       ],
       "raw_snapshot": "来源：WebSearch 结果，非官方原文。havoptic 聚合：Claude Code v2.1.287(10/1)'Claude Mods'、v2.1.288(10/2)、v2.1.292(10/6)插件市场直装/子 agent 强度、v2.1.293(10/7)。",
       "content_hash": "来源：WebSearch 结果，非官方原文。havoptic 聚合：Claude Code v2.1.287(10/1)'Claude Mods'、v2.1.288(10/2)、v2.1.292(10/6)插件市场直装/子 agent 强度、v2.1.293(10/7)。",
-      "last_seen_at": "2026-10-14T16:15:14Z",
-      "changes": [
-        {
-          "type": "new_feature",
-          "description": "Claude Code 10 月迭代：Mods 机制、插件市场直装、子 agent 强度可调",
-          "evidence": "「adds a 'Claude Mods' mechanism for deeper plugin behavior」（WebSearch 摘要，聚合站转述）",
-          "source_url": "https://www.havoptic.com/releases/claude-code/2026/10",
-          "meee2_relevance": null,
-          "threat_signal": false
-        }
-      ],
-      "key_findings": [
-        "Claude Code 10 月迭代：Mods 机制、插件市场直装、子 agent 强度可调（推断：与 meee2 锚点仅弱相关，未达 alert 门槛）"
-      ],
-      "no_change_reason": null
+      "last_seen_at": "2026-10-15T16:20:00Z",
+      "changes": [],
+      "key_findings": [],
+      "no_change_reason": "WebSearch 兜底（hn.algolia.com DNS 不可达）；未见 10 月新条目，沿用 baseline。"
     },
     {
       "id": "github-copilot",
@@ -161,7 +140,7 @@
       "category": "orchestrator",
       "threat": "hi",
       "threat_changed": false,
-      "has_changes": true,
+      "has_changes": false,
       "fetch_status": "skipped",
       "fetched_urls": [
         "WebSearch兜底（HN Algolia/官方源 DNS 不可达）"
@@ -169,20 +148,9 @@
       "raw_snapshot": "来源：WebSearch 结果，非官方原文。官方源/HN Algolia 本轮 EGRESS_BLOCKED。检索到 cross-agent memory、coding agent 可在任意 open PR 工作、CLI GA、Gemini 3.8 Flash。 ｜2026-10-14：另检索到 Copilot CLI /fleet 并行派发多 agent；10/28-29 GitHub Universe。",
       "content_hash": "来源：WebSearch 结果，非官方原文。官方源/HN Algolia 本轮 EGRESS_BLOCKED。检索到 cross-agent memory、coding agent 可在任意 open PR 工作、CLI GA、Gemini 3.8 Flash。 ｜2026-10-14：另检索到 Copilot CLI /fleet 并行派发多 agent；10/28-29 GitHub Univ",
       "last_seen_at": "2026-10-14T16:15:14Z",
-      "changes": [
-        {
-          "type": "new_feature",
-          "description": "Copilot CLI /fleet 并行派发多个 agent；GitHub Universe 10/28-29 将至",
-          "evidence": "「The /fleet command in Copilot CLI dispatches multiple agents in parallel.」（WebSearch 摘要）",
-          "source_url": "https://github.blog/tag/github-copilot-coding-agent/",
-          "meee2_relevance": "锚点1（弱）：多 agent 并行，但无人类同图证据；推断",
-          "threat_signal": false
-        }
-      ],
-      "key_findings": [
-        "Copilot CLI /fleet 并行派发多个 agent；GitHub Universe 10/28-29 将至（推断：与 meee2 锚点仅弱相关，未达 alert 门槛）"
-      ],
-      "no_change_reason": null
+      "changes": [],
+      "key_findings": [],
+      "no_change_reason": "本轮未抓取，沿用 baseline。"
     },
     {
       "id": "gemini",
@@ -200,7 +168,7 @@
       "last_seen_at": "2026-10-14T16:15:14Z",
       "changes": [],
       "key_findings": [],
-      "no_change_reason": "本轮未抓取（官方源/HN Algolia DNS 不可达，时间预算内优先 crit 与生态雷达）；沿用 baseline。"
+      "no_change_reason": "本轮未抓取（HN Algolia/多数官方源 DNS 不可达，优先 crit 与生态雷达）；沿用 baseline。"
     },
     {
       "id": "linear",
@@ -218,7 +186,7 @@
       "last_seen_at": "2026-10-14T16:15:14Z",
       "changes": [],
       "key_findings": [],
-      "no_change_reason": "本轮未抓取（官方源/HN Algolia DNS 不可达，时间预算内优先 crit 与生态雷达）；沿用 baseline。"
+      "no_change_reason": "本轮未抓取（HN Algolia/多数官方源 DNS 不可达，优先 crit 与生态雷达）；沿用 baseline。"
     },
     {
       "id": "notion-ai",
@@ -236,7 +204,7 @@
       "last_seen_at": "2026-10-14T16:15:14Z",
       "changes": [],
       "key_findings": [],
-      "no_change_reason": "本轮未抓取（官方源/HN Algolia DNS 不可达，时间预算内优先 crit 与生态雷达）；沿用 baseline。"
+      "no_change_reason": "本轮未抓取（HN Algolia/多数官方源 DNS 不可达，优先 crit 与生态雷达）；沿用 baseline。"
     },
     {
       "id": "slack",
@@ -254,7 +222,7 @@
       "last_seen_at": "2026-10-14T16:15:14Z",
       "changes": [],
       "key_findings": [],
-      "no_change_reason": "本轮未抓取（官方源/HN Algolia DNS 不可达，时间预算内优先 crit 与生态雷达）；沿用 baseline。"
+      "no_change_reason": "本轮未抓取（HN Algolia/多数官方源 DNS 不可达，优先 crit 与生态雷达）；沿用 baseline。"
     },
     {
       "id": "reflect",
@@ -272,7 +240,7 @@
       "last_seen_at": "2026-10-14T16:15:14Z",
       "changes": [],
       "key_findings": [],
-      "no_change_reason": "本轮未抓取（官方源/HN Algolia DNS 不可达，时间预算内优先 crit 与生态雷达）；沿用 baseline。"
+      "no_change_reason": "本轮未抓取（HN Algolia/多数官方源 DNS 不可达，优先 crit 与生态雷达）；沿用 baseline。"
     },
     {
       "id": "raycast",
@@ -290,7 +258,7 @@
       "last_seen_at": "2026-10-14T16:15:14Z",
       "changes": [],
       "key_findings": [],
-      "no_change_reason": "本轮未抓取（官方源/HN Algolia DNS 不可达，时间预算内优先 crit 与生态雷达）；沿用 baseline。"
+      "no_change_reason": "本轮未抓取（HN Algolia/多数官方源 DNS 不可达，优先 crit 与生态雷达）；沿用 baseline。"
     },
     {
       "id": "replit",
@@ -308,7 +276,7 @@
       "last_seen_at": "2026-10-14T16:15:14Z",
       "changes": [],
       "key_findings": [],
-      "no_change_reason": "本轮未抓取（官方源/HN Algolia DNS 不可达，时间预算内优先 crit 与生态雷达）；沿用 baseline。"
+      "no_change_reason": "本轮未抓取（HN Algolia/多数官方源 DNS 不可达，优先 crit 与生态雷达）；沿用 baseline。"
     },
     {
       "id": "superwhisper",
@@ -326,7 +294,7 @@
       "last_seen_at": "2026-10-14T16:15:14Z",
       "changes": [],
       "key_findings": [],
-      "no_change_reason": "本轮未抓取（官方源/HN Algolia DNS 不可达，时间预算内优先 crit 与生态雷达）；沿用 baseline。"
+      "no_change_reason": "本轮未抓取（HN Algolia/多数官方源 DNS 不可达，优先 crit 与生态雷达）；沿用 baseline。"
     }
   ],
   "alerts": []
