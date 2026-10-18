@@ -1,6 +1,6 @@
 {
-  "report_date": "2026-10-17",
-  "generated_at": "2026-10-17T16:15:08Z",
+  "report_date": "2026-10-18",
+  "generated_at": "2026-10-18T16:14:47Z",
   "summary": {
     "total_tracked": 15,
     "fetched_ok": 5,
@@ -19,7 +19,7 @@
       "replit",
       "superwhisper"
     ],
-    "note": "hn.algolia.com 及多数官方源 DNS 不可达；GitHub API 直取成功，其余 crit 竞品为 WebSearch 兜底。Cursor 有版本更新但无锚点重叠，无 alert。"
+    "note": "hn.algolia.com 及多数官方源 DNS 不可达；GitHub API 直取成功；cursor/openai/windsurf/claude-ai 为 WebSearch 兜底。Claude Code 有10月版本更新但无锚点重叠，无 alert。"
   },
   "competitors": [
     {
@@ -54,9 +54,9 @@
         "https://api.github.com/search/repositories?q=claude+code+cockpit+terminal&sort=stars&order=desc&per_page=25",
         "https://api.github.com/search/repositories?q=claude+code+meta-harness+agent+swarm&sort=stars&order=desc&per_page=20"
       ],
-      "raw_snapshot": "GitHub Search API 4/4 查询成功(拉取为截断页)。已报告(累计): handmux/handmux, Innovology/claude-dispatcher, alexjbarnes/cockpit, luojiahai/code-by-wire, cosmix/loom, iAmCorey/kooky, nashory/agent-cockpit, arcnid/peemux, stablyai/orca, trevormil/TerMinal, c4rl05/agent-race-control; wallacemartinss/cc-cockpit, emanuelrechsteiner/claude-rcode, alliecatowo/glassy；已报告(本轮新增): agentwire-dev, claude-code-chat-bridge, fanbox, cc-switch, claude-mem；baseline已知: dockterm, Surething-io/cockpit, OpenRig, Paseo, NovusEdge/glowup, wilsen0/moku, artengin/claude-starred；已报告(本轮新增): paperclipai/paperclip, affaan-m/ECC；本轮见但无重叠未报告: hermes-agent, ponytail, graphify, caveman, rtk, MetaAi ｜2026-10-14：4 查询中 GitHub API 直取，页面截断；新见 rea, ui-ux-pro-max-skill, agent-skills, Agent-Reach, taste-skill, Understand-Anything, archify, learn-claude-code, best-claude-hud, ruflo 均无 ≥2 关键词重叠，未报告。 ｜2026-10-15：GitHub API 直取 3/4 页(topic/cockpit/meta-harness/minimal 均成功，截断页)；无 baseline 以外的新活跃仓库，无翻倍 star 跃升。 ｜2026-10-16：GitHub API 直取 4/4(截断页)；无 baseline 以外的新活跃仓库(新见 Hemang2904/cockpit、jiliangarette/claude-code-pane、gitsidian、arikechen/ATF 均为 >30 天未推送的旧仓库，跳过)，无 star 翻倍。 ｜2026-10-17：GitHub API 直取 4/4(截断页)；无 baseline 以外的新活跃仓库，无 star 翻倍。",
+      "raw_snapshot": "GitHub Search API 4/4 查询成功(拉取为截断页)。已报告(累计): handmux/handmux, Innovology/claude-dispatcher, alexjbarnes/cockpit, luojiahai/code-by-wire, cosmix/loom, iAmCorey/kooky, nashory/agent-cockpit, arcnid/peemux, stablyai/orca, trevormil/TerMinal, c4rl05/agent-race-control; wallacemartinss/cc-cockpit, emanuelrechsteiner/claude-rcode, alliecatowo/glassy；已报告(本轮新增): agentwire-dev, claude-code-chat-bridge, fanbox, cc-switch, claude-mem；baseline已知: dockterm, Surething-io/cockpit, OpenRig, Paseo, NovusEdge/glowup, wilsen0/moku, artengin/claude-starred；已报告(本轮新增): paperclipai/paperclip, affaan-m/ECC；本轮见但无重叠未报告: hermes-agent, ponytail, graphify, caveman, rtk, MetaAi ｜2026-10-14：4 查询中 GitHub API 直取，页面截断；新见 rea, ui-ux-pro-max-skill, agent-skills, Agent-Reach, taste-skill, Understand-Anything, archify, learn-claude-code, best-claude-hud, ruflo 均无 ≥2 关键词重叠，未报告。 ｜2026-10-15：GitHub API 直取 3/4 页(topic/cockpit/meta-harness/minimal 均成功，截断页)；无 baseline 以外的新活跃仓库，无翻倍 star 跃升。 ｜2026-10-16：GitHub API 直取 4/4(截断页)；无 baseline 以外的新活跃仓库(新见 Hemang2904/cockpit、jiliangarette/claude-code-pane、gitsidian、arikechen/ATF 均为 >30 天未推送的旧仓库，跳过)，无 star 翻倍。 ｜2026-10-17：GitHub API 直取 4/4(截断页)；无 baseline 以外的新活跃仓库，无 star 翻倍。 ｜2026-10-18：GitHub API 直取 4/4(截断页)；无 baseline 以外的新活跃仓库(Aquaticats/Monochromatic 为2023创建、无关键词重叠)，无 star 翻倍。",
       "content_hash": "GitHub Search API 4/4 查询成功(拉取为截断页)。已报告(累计): handmux/handmux, Innovology/claude-dispatcher, alexjbarnes/cockpit, luojiahai/code-by-wire, cosmix/loom, iAmCorey/kooky, nashory/agent-cockpit, arcnid/peemu",
-      "last_seen_at": "2026-10-17T16:15:08Z",
+      "last_seen_at": "2026-10-18T16:14:47Z",
       "changes": [],
       "key_findings": [],
       "no_change_reason": "今日 GitHub 结果均为 baseline 已报告/已知仓库或陈旧仓库，无新增高重叠者。"
@@ -67,28 +67,19 @@
       "category": "orchestrator",
       "threat": "crit",
       "threat_changed": false,
-      "has_changes": true,
+      "has_changes": false,
       "fetch_status": "ok",
       "fetched_urls": [
         "WebSearch兜底（hn.algolia.com DNS 不可达）"
       ],
       "raw_snapshot": "来源：WebSearch 结果，非官方原文。WebSearch 见至9月初：3.19.7(9/3 latest channel，stable 3.18.25)；8/17 Origin 代码托管 early beta；7/29 Cursor for iPad；无10月条目。",
       "content_hash": "来源：WebSearch 结果，非官方原文。WebSearch 见至9月初：3.19.7(9/3 latest channel，stable 3.18.25)；8/17 Origin 代码托管 early beta；7/29 Cursor for iPad；无10月条目。",
-      "last_seen_at": "2026-10-17T16:15:08Z",
-      "changes": [
-        {
-          "type": "new_feature",
-          "description": "Cursor 版本推进至 3.19.7，新增 Mac computer-use、流式听写；8月出现 Origin 代码托管 beta（相比 baseline 仅见至 8 月中 3.16.17）",
-          "evidence": "「Mac computer-use support, a streaming-only dictation mode」（WebSearch 摘要转述）",
-          "source_url": "https://techdevnotes.com/releases/cursor-ide/20260903-020508Z-62f8c1c4a5ff",
-          "meee2_relevance": null,
-          "threat_signal": false
-        }
-      ],
+      "last_seen_at": "2026-10-18T16:14:47Z",
+      "changes": [],
       "key_findings": [
         "来源：WebSearch 结果，非官方原文。推断：Cursor 向代码托管/桌面操控延伸，未触碰 session 同构、live link、descriptive canvas 等锚点，威胁维持 crit（已有等级）无上调依据。"
       ],
-      "no_change_reason": null
+      "no_change_reason": "本轮 WebSearch 未见10月新条目，沿用 baseline。"
     },
     {
       "id": "openai",
@@ -103,10 +94,10 @@
       ],
       "raw_snapshot": "来源：WebSearch 结果，非官方原文。仅检索到 2026-04 workspace agents 报道，无10月新条目，与 baseline 一致。",
       "content_hash": "来源：WebSearch 结果，非官方原文。仅检索到 2026-04 workspace agents 报道，无10月新条目，与 baseline 一致。",
-      "last_seen_at": "2026-10-17T16:15:08Z",
+      "last_seen_at": "2026-10-18T16:14:47Z",
       "changes": [],
       "key_findings": [],
-      "no_change_reason": "官方源/HN Algolia DNS 不可达，本轮 WebSearch 未见10月新条目，沿用 baseline。"
+      "no_change_reason": "本轮 WebSearch 未见10月新条目，沿用 baseline。"
     },
     {
       "id": "windsurf",
@@ -121,10 +112,10 @@
       ],
       "raw_snapshot": "来源：WebSearch 结果，非官方原文。WebSearch 结果出现 Windsurf 'now Devin Desktop' 命名（第三方站点），无10月官方条目；无足够原文依据判断威胁变化。",
       "content_hash": "来源：WebSearch 结果，非官方原文。WebSearch 结果出现 Windsurf 'now Devin Desktop' 命名（第三方站点），无10月官方条目；无足够原文依据判断威胁变化。",
-      "last_seen_at": "2026-10-17T16:15:08Z",
+      "last_seen_at": "2026-10-18T16:14:47Z",
       "changes": [],
       "key_findings": [],
-      "no_change_reason": "官方源/HN Algolia DNS 不可达，本轮 WebSearch 未见10月新条目，沿用 baseline。"
+      "no_change_reason": "本轮 WebSearch 未见10月新条目，沿用 baseline。"
     },
     {
       "id": "claude-ai",
@@ -132,17 +123,28 @@
       "category": "orchestrator",
       "threat": "crit",
       "threat_changed": false,
-      "has_changes": false,
+      "has_changes": true,
       "fetch_status": "ok",
       "fetched_urls": [
-        "WebSearch兜底（HN Algolia / 官方源 DNS 不可达）"
+        "websearch:Anthropic Claude Code new features release October 2026"
       ],
-      "raw_snapshot": "来源：WebSearch 结果，非官方原文。WebSearch 本轮未见10月 Claude Code 发布条目，最新为7月(Opus 5, 7/24)，与 baseline 一致。",
-      "content_hash": "来源：WebSearch 结果，非官方原文。WebSearch 本轮未见10月 Claude Code 发布条目，最新为7月(Opus 5, 7/24)，与 baseline 一致。",
-      "last_seen_at": "2026-10-17T16:15:08Z",
-      "changes": [],
-      "key_findings": [],
-      "no_change_reason": "官方源/HN Algolia DNS 不可达，本轮 WebSearch 未见10月新条目，沿用 baseline。"
+      "raw_snapshot": "来源：WebSearch 结果，非官方原文。第三方聚合(havoptic)列出 Claude Code 10月发布：v2.1.296(10/9) 设置跨 Claude Desktop 同步；v2.1.295 hooks 失败可阻断；v2.1.293 Haiku 5.5 成默认模型；v2.1.292 插件直接从 marketplace 安装；v2.1.287(10/1) plugins 经 \"Claude Mods\" 改变更深行为。",
+      "content_hash": "来源：WebSearch 结果，非官方原文。第三方聚合(havoptic)列出 Claude Code 10月发布：v2.1.296(10/9) 设置跨 Claude Desktop 同步；v2.1.295 hooks 失败可阻断；v2.1.293 Haiku 5.5 成默认模型；v2.1.292 插件直接从 marketplace 安装；v2.1.287(10/1) plugins 经 \"Cla",
+      "last_seen_at": "2026-10-18T16:14:47Z",
+      "changes": [
+        {
+          "type": "new_feature",
+          "description": "Claude Code 10月连续发布：Mods 插件、跨 Desktop 设置同步、subagent 模型选择",
+          "evidence": "「settings syncing across Claude Desktop and the gateway」（WebSearch 摘要转述）",
+          "source_url": "https://www.havoptic.com/releases/claude-code/2026/10",
+          "meee2_relevance": null,
+          "threat_signal": false
+        }
+      ],
+      "key_findings": [
+        "推断：Claude Code 向插件化/Desktop 与 CLI 设置同步演进，但抓取内容未涉及人=慢 session、live link、descriptive canvas 或菜单栏锚点。"
+      ],
+      "no_change_reason": null
     },
     {
       "id": "github-copilot",
