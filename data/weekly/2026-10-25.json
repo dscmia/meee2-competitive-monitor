@@ -1,0 +1,20 @@
+{
+  "week_start": "2026-10-19",
+  "week_end": "2026-10-25",
+  "generated_at": "2026-10-26T00:00:00Z",
+  "narrative": "本周无结构性威胁变化：6 份日报（10/24 缺失）全部 0 条 alert，也没有竞品 threat 等级变动。有变化的竞品共 5 家：Raycast v2.8（10/20）、Linear、Notion AI、Slack（10/23）、Gemini（10/25），但日报均标注 threat_signal=false。最值得留意的是 Linear 与 Gemini 两个 hi 级竞品：Linear 日报引用「real-time diffs that update during coding sessions」，推断：这是 Linear 内部的 live 化，尚未延伸到跨工具 artifact live link；Gemini 日报引用「coordinate sub-agents」，推断：属多 agent 协调，无证据显示人在 agent 图内。两条都来自二手/单一未核实来源。另外本周多数官方源 DNS 不可达，大量竞品靠 WebSearch 兜底或沿用旧快照，推断：本周「无变化」的可信度有限，维持观察。",
+  "recommendations": [
+    {
+      "headline": "下周优先用官方原文核实 Linear 与 Gemini 的新动态",
+      "detail": "两条变化都来自第三方摘要或单一博客，目前只能判断「未触碰锚点」，不能判断「确实没有」。建议下轮日报优先抓 Linear 官方 changelog 和 Google 官方发布页，确认是否出现跨工具 live link 或人在 agent 图内的表述，再决定是否上调威胁。",
+      "priority": "md",
+      "basis": "依据：Linear 2026-10-23 的 real-time diffs（二手来源）；Gemini 2026-10-25 的 Workspace Gemini agent（单一博客，未核实）"
+    },
+    {
+      "headline": "修复抓取覆盖缺口，避免「无变化」被误读",
+      "detail": "本周多数日报的 note 记录 hn.algolia.com 及多个官方源 DNS 不可达，Product Hunt 雷达等 10 家竞品本周为 skipped 或沿用旧快照。建议检查 routine 的出站网络白名单，否则新入场者雷达基本处于失明状态。",
+      "priority": "md",
+      "basis": "依据：2026-10-19、10-22、10-23、10-25 日报 summary.note 中的 DNS 不可达记录；10-19 日报 producthunt-ai fetch_status=skipped"
+    }
+  ]
+}
