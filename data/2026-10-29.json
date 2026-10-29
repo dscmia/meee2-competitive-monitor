@@ -1,0 +1,313 @@
+{
+  "report_date": "2026-10-29",
+  "generated_at": "2026-10-29T16:19:31Z",
+  "summary": {
+    "total_tracked": 15,
+    "fetched_ok": 14,
+    "fetch_error": 0,
+    "has_changes": 2,
+    "new_alerts": 0,
+    "skipped": [
+      "superwhisper"
+    ],
+    "note": "hn.algolia.com / openai.com / producthunt.com / raycast.com 在本会话 DNS 不可达(需加入网络白名单)；GitHub API 4/4 成功；其余经 WebSearch 兜底。Slack、Copilot 有新条目，无 alert。"
+  },
+  "competitors": [
+    {
+      "id": "producthunt-ai",
+      "name": "Product Hunt AI 新品雷达",
+      "category": "new_entrant_watch",
+      "threat": "md",
+      "threat_changed": false,
+      "has_changes": false,
+      "fetch_status": "ok",
+      "fetched_urls": [
+        "WebSearch: producthunt-ai"
+      ],
+      "raw_snapshot": "来源：WebSearch 结果，非官方原文。PH feed/HN DNS 不可达；无10月确切日期的新上架条目。",
+      "content_hash": "来源：WebSearch 结果，非官方原文。PH feed/HN DNS 不可达；无10月确切日期的新上架条目。",
+      "last_seen_at": "2026-10-29T16:19:31Z",
+      "changes": [],
+      "key_findings": [],
+      "no_change_reason": "来源：WebSearch 结果，非官方原文。PH feed/HN DNS 不可达；无10月确切日期的新上架条目。"
+    },
+    {
+      "id": "github-cc-ecosystem",
+      "name": "GitHub Claude Code 生态雷达",
+      "category": "new_entrant_watch",
+      "threat": "md",
+      "threat_changed": false,
+      "has_changes": false,
+      "fetch_status": "ok",
+      "fetched_urls": [
+        "https://api.github.com/search/repositories?q=topic%3Aclaude-code",
+        "https://api.github.com/search/repositories?q=claude+code+terminal+minimal+coding",
+        "https://api.github.com/search/repositories?q=claude+code+cockpit+terminal",
+        "https://api.github.com/search/repositories?q=claude+code+meta-harness+agent+swarm"
+      ],
+      "raw_snapshot": "GitHub Search API 4/4 查询成功(拉取为截断页)。已报告(累计): handmux/handmux, Innovology/claude-dispatcher, alexjbarnes/cockpit, luojiahai/code-by-wire, cosmix/loom, iAmCorey/kooky, nashory/agent-cockpit, arcnid/peemux, stablyai/orca, trevormil/TerMinal, c4rl05/agent-race-control; wallacemartinss/cc-cockpit, emanuelrechsteiner/claude-rcode, alliecatowo/glassy；已报告(本轮新增): agentwire-dev, claude-code-chat-bridge, fanbox, cc-switch, claude-mem；baseline已知: dockterm, Surething-io/cockpit, OpenRig, Paseo, NovusEdge/glowup, wilsen0/moku, artengin/claude-starred；已报告(本轮新增): paperclipai/paperclip, affaan-m/ECC；本轮见但无重叠未报告: hermes-agent, ponytail, graphify, caveman, rtk, MetaAi ｜2026-10-14：4 查询中 GitHub API 直取，页面截断；新见 rea, ui-ux-pro-max-skill, agent-skills, Agent-Reach, taste-skill, Understand-Anything, archify, learn-claude-code, best-claude-hud, ruflo 均无 ≥2 关键词重叠，未报告。 ｜2026-10-15：GitHub API 直取 3/4 页(topic/cockpit/meta-harness/minimal 均成功，截断页)；无 baseline 以外的新活跃仓库，无翻倍 star 跃升。 ｜2026-10-16：GitHub API 直取 4/4(截断页)；无 baseline 以外的新活跃仓库(新见 Hemang2904/cockpit、jiliangarette/claude-code-pane、gitsidian、arikechen/ATF 均为 >30 天未推送的旧仓库，跳过)，无 star 翻倍。 ｜2026-10-17：GitHub API 直取 4/4(截断页)；无 baseline 以外的新活跃仓库，无 star 翻倍。 ｜2026-10-18：GitHub API 直取 4/4(截断页)；无 baseline 以外的新活跃仓库(Aquaticats/Monochromatic 为2023创建、无关键词重叠)，无 star 翻倍。 ｜2026-10-19：GitHub API 直取 4/4(截断页)；无 baseline 以外的新活跃仓库，无 star 翻倍。 ｜2026-10-20：GitHub API 直取 4/4(截断页)；无 baseline 以外的新活跃仓库(rayngnpc/mkcrew 位于截断处，未能读取详情)，无 star 翻倍。 ｜2026-10-21：GitHub API 直取 4/4(截断页)；无 baseline 以外的新活跃仓库(新见 RiceGrainRain/alfred-tui 为 session 浏览器、7 star，仅单关键词重叠，未报告)，无 star 翻倍。 ｜2026-10-22：GitHub API 直取 1/4(topic 查询，截断页)；无 baseline 以外的新活跃仓库，无 star 翻倍。 ｜2026-10-23：GitHub API 直取 4/4(截断页)；无 baseline 以外的新活跃仓库(rurutia 为 FanBox fork、7月后无推送，跳过)，无 star 翻倍。 ｜2026-10-25：GitHub API 直取 4/4(截断页)；无 baseline 以外的新活跃仓库(pushed 近期者均已见：rea、ECC、orca、paperclip、claude-mem 等)，无 star 翻倍。 ｜2026-10-26：GitHub API 直取 4/4(截断页)；本轮活跃仓库(alfred-tui、kooky、fanbox、agentwire-dev、cosmix/loom 等)均已在 baseline 出现，无新增，无 star 翻倍。 ｜2026-10-27：GitHub API 1/4(topic)，429 限流；无 baseline 以外新活跃仓库，无 star 翻倍。 ｜2026-10-28：GitHub API 直取 4/4(截断页)；无 baseline 以外的新活跃仓库(本轮活跃者 rea、hermes-agent、orca、paperclip、archify、alfred-tui、kooky、fanbox、agentwire-dev、cosmix/loom 等均已见)，baseline 无 star 数故无法判定翻倍。 ｜2026-10-29：GitHub API 直取 4/4(截断页)；活跃仓库(rea、ECC、orca、paperclip、cc-switch、Surething-io/cockpit、agentwire-dev、alexjbarnes/cockpit、claude-dispatcher、shehab267/ccbrief[statusline,单关键词]等)均已见或无≥2关键词重叠，无新增报告，无可判定 star 翻倍。",
+      "content_hash": "GitHub Search API 4/4 查询成功(拉取为截断页)。已报告(累计): handmux/handmux, Innovology/claude-dispatcher, alexjbarnes/cockpit, luojiahai/code-by-wire, cosmix/loom, iAmCorey/kooky, nashory/agent-cockpit, arcnid/peemu",
+      "last_seen_at": "2026-10-29T16:19:31Z",
+      "changes": [],
+      "key_findings": [],
+      "no_change_reason": "来源：GitHub 开源仓库，非官方。4/4 查询成功；活跃仓库均已在 baseline 出现，无新增。"
+    },
+    {
+      "id": "cursor",
+      "name": "Cursor",
+      "category": "orchestrator",
+      "threat": "crit",
+      "threat_changed": false,
+      "has_changes": false,
+      "fetch_status": "ok",
+      "fetched_urls": [
+        "WebSearch: cursor"
+      ],
+      "raw_snapshot": "来源：WebSearch 结果，非官方原文。仍仅至9月初(3.19.7 9/3)；无10月条目。",
+      "content_hash": "来源：WebSearch 结果，非官方原文。仍仅至9月初(3.19.7 9/3)；无10月条目。",
+      "last_seen_at": "2026-10-29T16:19:31Z",
+      "changes": [],
+      "key_findings": [],
+      "no_change_reason": "来源：WebSearch 结果，非官方原文。仍仅至9月初(3.19.7 9/3)；无10月条目。"
+    },
+    {
+      "id": "openai",
+      "name": "OpenAI / ChatGPT",
+      "category": "orchestrator",
+      "threat": "crit",
+      "threat_changed": false,
+      "has_changes": false,
+      "fetch_status": "ok",
+      "fetched_urls": [
+        "WebSearch: openai"
+      ],
+      "raw_snapshot": "来源：WebSearch 结果，非官方原文。仅检索到2026-04 workspace agents；无10月条目。",
+      "content_hash": "来源：WebSearch 结果，非官方原文。仅检索到2026-04 workspace agents；无10月条目。",
+      "last_seen_at": "2026-10-29T16:19:31Z",
+      "changes": [],
+      "key_findings": [],
+      "no_change_reason": "来源：WebSearch 结果，非官方原文。仅检索到2026-04 workspace agents；无10月条目。"
+    },
+    {
+      "id": "windsurf",
+      "name": "Windsurf (Codeium)",
+      "category": "orchestrator",
+      "threat": "crit",
+      "threat_changed": false,
+      "has_changes": false,
+      "fetch_status": "ok",
+      "fetched_urls": [
+        "WebSearch: windsurf"
+      ],
+      "raw_snapshot": "来源：WebSearch 结果，非官方原文。最新仍见 Windsurf 2.0(2026-04)；无10月条目。",
+      "content_hash": "来源：WebSearch 结果，非官方原文。最新仍见 Windsurf 2.0(2026-04)；无10月条目。",
+      "last_seen_at": "2026-10-29T16:19:31Z",
+      "changes": [],
+      "key_findings": [],
+      "no_change_reason": "来源：WebSearch 结果，非官方原文。最新仍见 Windsurf 2.0(2026-04)；无10月条目。"
+    },
+    {
+      "id": "claude-ai",
+      "name": "Claude.ai / Anthropic",
+      "category": "orchestrator",
+      "threat": "crit",
+      "threat_changed": false,
+      "has_changes": false,
+      "fetch_status": "ok",
+      "fetched_urls": [
+        "WebSearch: claude-ai"
+      ],
+      "raw_snapshot": "来源：WebSearch 结果，非官方原文。无10月新条目。",
+      "content_hash": "来源：WebSearch 结果，非官方原文。无10月新条目。",
+      "last_seen_at": "2026-10-29T16:19:31Z",
+      "changes": [],
+      "key_findings": [],
+      "no_change_reason": "来源：WebSearch 结果，非官方原文。无10月新条目。"
+    },
+    {
+      "id": "github-copilot",
+      "name": "GitHub Copilot",
+      "category": "orchestrator",
+      "threat": "hi",
+      "threat_changed": false,
+      "has_changes": true,
+      "fetch_status": "ok",
+      "fetched_urls": [
+        "WebSearch: GitHub Copilot coding agent new features October 2026"
+      ],
+      "raw_snapshot": "来源：WebSearch 结果，非官方原文。VS Code 扩展 v1.142(截至10/14)harness 基于 Copilot SDK；GitHub Universe 10/28-29；cloud agent 不再限于 PR 流程(无日期)；跨 agent memory。",
+      "content_hash": "来源：WebSearch 结果，非官方原文。VS Code 扩展 v1.142(截至10/14)harness 基于 Copilot SDK；GitHub Universe 10/28-29；cloud agent 不再限于 PR 流程(无日期)；跨 agent memory。",
+      "last_seen_at": "2026-10-29T16:19:31Z",
+      "changes": [
+        {
+          "type": "new_feature",
+          "description": "Copilot cloud agent 不再限于 pull-request 工作流；跨 agent 共享 memory（coding agent、CLI、code review）",
+          "evidence": "「no longer restricted to pull-request workflows」(WebSearch 摘要转述，页面未注明日期)",
+          "source_url": "https://github.blog/tag/github-copilot-coding-agent/",
+          "meee2_relevance": "推断：跨 agent memory 邻近锚点4(跨 session/工具 artifact pull)，但为单厂商内 memory，非跨 owner 的 live link；日期未证实，不升级威胁",
+          "threat_signal": false
+        }
+      ],
+      "key_findings": [
+        "Copilot 出现跨 agent memory 与 cloud agent 脱离 PR 的描述（无日期）；Universe 10/28-29 期间值得下轮复查官方发布"
+      ],
+      "no_change_reason": null
+    },
+    {
+      "id": "gemini",
+      "name": "Google Gemini / AI Studio",
+      "category": "orchestrator",
+      "threat": "hi",
+      "threat_changed": false,
+      "has_changes": false,
+      "fetch_status": "ok",
+      "fetched_urls": [
+        "WebSearch: gemini"
+      ],
+      "raw_snapshot": "来源：WebSearch 结果，非官方原文。无10月新增。",
+      "content_hash": "来源：WebSearch 结果，非官方原文。无10月新增。",
+      "last_seen_at": "2026-10-29T16:19:31Z",
+      "changes": [],
+      "key_findings": [],
+      "no_change_reason": "来源：WebSearch 结果，非官方原文。无10月新增。"
+    },
+    {
+      "id": "linear",
+      "name": "Linear",
+      "category": "workspace",
+      "threat": "hi",
+      "threat_changed": false,
+      "has_changes": false,
+      "fetch_status": "ok",
+      "fetched_urls": [
+        "WebSearch: linear"
+      ],
+      "raw_snapshot": "来源：WebSearch 结果，非官方原文。最新仍见 2026-06-11 coding sessions；无10月条目。",
+      "content_hash": "来源：WebSearch 结果，非官方原文。最新仍见 2026-06-11 coding sessions；无10月条目。",
+      "last_seen_at": "2026-10-29T16:19:31Z",
+      "changes": [],
+      "key_findings": [],
+      "no_change_reason": "来源：WebSearch 结果，非官方原文。最新仍见 2026-06-11 coding sessions；无10月条目。"
+    },
+    {
+      "id": "notion-ai",
+      "name": "Notion AI",
+      "category": "workspace",
+      "threat": "md",
+      "threat_changed": false,
+      "has_changes": false,
+      "fetch_status": "ok",
+      "fetched_urls": [
+        "WebSearch: notion-ai"
+      ],
+      "raw_snapshot": "来源：WebSearch 结果，非官方原文。本轮无10月新条目(仅旧 Custom Agents GA 等)；与上轮一致。",
+      "content_hash": "来源：WebSearch 结果，非官方原文。本轮无10月新条目(仅旧 Custom Agents GA 等)；与上轮一致。",
+      "last_seen_at": "2026-10-29T16:19:31Z",
+      "changes": [],
+      "key_findings": [],
+      "no_change_reason": "来源：WebSearch 结果，非官方原文。本轮无10月新条目(仅旧 Custom Agents GA 等)；与上轮一致。"
+    },
+    {
+      "id": "slack",
+      "name": "Slack",
+      "category": "comms",
+      "threat": "md",
+      "threat_changed": false,
+      "has_changes": true,
+      "fetch_status": "ok",
+      "fetched_urls": [
+        "WebSearch: Slack AI agent new features October 2026"
+      ],
+      "raw_snapshot": "来源：WebSearch 结果，非官方原文。Slack changelog：10月 workflow 可自动发起与 Slackbot/agent 的对话；9月 Activity 可按人/agent 过滤、agent 经 MCP 管理 files/lists。",
+      "content_hash": "来源：WebSearch 结果，非官方原文。Slack changelog：10月 workflow 可自动发起与 Slackbot/agent 的对话；9月 Activity 可按人/agent 过滤、agent 经 MCP 管理 files/lists。",
+      "last_seen_at": "2026-10-29T16:19:31Z",
+      "changes": [
+        {
+          "type": "new_feature",
+          "description": "Slack workflow 可自动启动与 Slackbot 或其他 agent 的对话；agent 经 Slack MCP server 可管理文件与 lists",
+          "evidence": "「a workflow can now automatically start a conversation with Slackbot or another agent」(WebSearch 摘要转述，非官方原文)",
+          "source_url": "https://slack.com/help/articles/115004846068",
+          "meee2_relevance": "推断：agent 作为 Slack 内一等参与者，邻近锚点1(人与 agent 同图)，但仍是 chat 内 bot 范式，无 session 同构/live link；未明确触及差异化锚点",
+          "threat_signal": false
+        }
+      ],
+      "key_findings": [
+        "Slack 10月 changelog 新增 workflow→agent 对话触发，无威胁信号"
+      ],
+      "no_change_reason": null
+    },
+    {
+      "id": "reflect",
+      "name": "Reflect",
+      "category": "workspace",
+      "threat": "md",
+      "threat_changed": false,
+      "has_changes": false,
+      "fetch_status": "ok",
+      "fetched_urls": [
+        "WebSearch: reflect"
+      ],
+      "raw_snapshot": "来源：WebSearch 结果，非官方原文。Reflect Open；无新条目。",
+      "content_hash": "来源：WebSearch 结果，非官方原文。Reflect Open；无新条目。",
+      "last_seen_at": "2026-10-29T16:19:31Z",
+      "changes": [],
+      "key_findings": [],
+      "no_change_reason": "来源：WebSearch 结果，非官方原文。Reflect Open；无新条目。"
+    },
+    {
+      "id": "raycast",
+      "name": "Raycast",
+      "category": "peripheral",
+      "threat": "md",
+      "threat_changed": false,
+      "has_changes": false,
+      "fetch_status": "ok",
+      "fetched_urls": [
+        "WebSearch: raycast"
+      ],
+      "raw_snapshot": "来源：WebSearch 结果，非官方原文。v2.9(10/22)已在上轮报告；无更新版本。",
+      "content_hash": "来源：WebSearch 结果，非官方原文。v2.9(10/22)已在上轮报告；无更新版本。",
+      "last_seen_at": "2026-10-29T16:19:31Z",
+      "changes": [],
+      "key_findings": [],
+      "no_change_reason": "无新版本，v2.9 已于上轮报告"
+    },
+    {
+      "id": "replit",
+      "name": "Replit",
+      "category": "orchestrator",
+      "threat": "md",
+      "threat_changed": false,
+      "has_changes": false,
+      "fetch_status": "ok",
+      "fetched_urls": [
+        "WebSearch: replit"
+      ],
+      "raw_snapshot": "来源：WebSearch 结果，非官方原文。havoptic：10/16 Haiku 5.5、10/9 Windows 桌面私测、10/2 Jev；已在 baseline。",
+      "content_hash": "来源：WebSearch 结果，非官方原文。havoptic：10/16 Haiku 5.5、10/9 Windows 桌面私测、10/2 Jev；已在 baseline。",
+      "last_seen_at": "2026-10-29T16:19:31Z",
+      "changes": [],
+      "key_findings": [],
+      "no_change_reason": "来源：WebSearch 结果，非官方原文。havoptic：10/16 Haiku 5.5、10/9 Windows 桌面私测、10/2 Jev；已在 baseline。"
+    },
+    {
+      "id": "superwhisper",
+      "name": "Superwhisper",
+      "category": "peripheral",
+      "threat": "lo",
+      "threat_changed": false,
+      "has_changes": false,
+      "fetch_status": "skipped",
+      "fetched_urls": [
+        "(未抓取，本轮 lo 级跳过)"
+      ],
+      "raw_snapshot": "来源：WebSearch 结果，非官方原文。最新仍至7月下旬(Cohere Transcribe、CLI+MCP)；无新条目。",
+      "content_hash": "来源：WebSearch 结果，非官方原文。最新仍至7月下旬(Cohere Transcribe、CLI+MCP)；无新条目。",
+      "last_seen_at": "2026-10-29T16:19:31Z",
+      "changes": [],
+      "key_findings": [],
+      "no_change_reason": "lo 级竞品，本轮因官方源不可达且为节省时间跳过，沿用上次 baseline。"
+    }
+  ],
+  "alerts": []
+}
