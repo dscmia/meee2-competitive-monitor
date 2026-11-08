@@ -1,13 +1,13 @@
 {
-  "report_date": "2026-11-07",
-  "generated_at": "2026-11-07T16:14:22Z",
+  "report_date": "2026-11-08",
+  "generated_at": "2026-11-08T16:14:22Z",
   "summary": {
     "total_tracked": 15,
     "fetched_ok": 8,
     "fetch_error": 0,
-    "has_changes": 0,
+    "has_changes": 1,
     "new_alerts": 0,
-    "note": "hn.algolia.com / openai.com 等 DNS 不可达(需加入网络白名单)；仅 api.github.com 可用；crit/hi 经 WebSearch 复查无 11 月新条目；producthunt/notion/slack/reflect/raycast/replit/superwhisper 本次未复查(skipped)，沿用 baseline。"
+    "note": "hn.algolia.com 等域名 DNS 不可达(需加入网络白名单)；仅 api.github.com 可用。cursor WebSearch 复查无 11 月新条目；其余竞品沿用 baseline(skipped/未复查)，无新 alert。"
   },
   "competitors": [
     {
@@ -34,17 +34,44 @@
       "category": "new_entrant_watch",
       "threat": "md",
       "threat_changed": false,
-      "has_changes": false,
+      "has_changes": true,
       "fetch_status": "ok",
       "fetched_urls": [
         "api.github.com/search/repositories x4 (WebFetch)"
       ],
-      "raw_snapshot": "GitHub API 4/4 成功(截断页)。本轮新增报告: kounetsuman/zashiki。其余沿用 baseline 已报告列表(handmux, claude-dispatcher, cockpit, loom, orca, paperclip, ECC, cc-switch, alfred-tui 等)；新见 OmniRoute、career-ops、headroom、hyperframes 等为通用/求职/网关工具，无锚点重叠未报告。 ｜GitHub API 4/4 成功(截断页)。已报告(累计，含此前全部): handmux/handmux, Innovology/claude-dispatcher, alexjbarnes/cockpit, luojiahai/code-by-wire, cosmix/loom, iAmCorey/kooky, nashory/agent-cockpit, arcnid/peemux, sta | 11/05新增见: NovusEdge/glowup",
-      "content_hash": "GitHub API 4/4 成功(截断页)。本轮新增报告: NovusEdge/glowup。其余沿用 baseline 已报告列表；新见 cc-cockpit(用量面板)、claude-starred、agent-race-control 为 session 浏览/用量工具，无锚点重叠未报告。",
-      "last_seen_at": "2026-11-07T16:14:22Z",
-      "changes": [],
-      "key_findings": [],
-      "no_change_reason": "GitHub API 4/4 成功(截断页)；活跃仓库均已在历史报告中出现，无新仓库、无 star 翻倍"
+      "raw_snapshot": "GitHub API 4/4 成功(截断页)。本轮新增报告: dotdevdotdev/agentwire-dev, trevormil/TerMinal, alchaincyf/fanbox。已报告累计: handmux/handmux, Innovology/claude-dispatcher, alexjbarnes/cockpit, luojiahai/code-by-wire, cosmix/loom, iAmCorey/kooky, nashory/agent-cockpit, arcnid/peemux, NovusEdge/glowup, kounetsuman/zashiki, stablyai/orca, paperclipai/paperclip, farion1231/cc-switch, 等(沿用 baseline)。",
+      "content_hash": "GitHub API 4/4 成功(截断页)。本轮新增报告: dotdevdotdev/agentwire-dev, trevormil/TerMinal, alchaincyf/fanbox。已报告累计: handmux/handmux, Innovology/claude-dispatcher, alexjbarnes/cockpit, luojiahai/code-by-wire, cosm",
+      "last_seen_at": "2026-11-08T16:14:22Z",
+      "changes": [
+        {
+          "type": "other",
+          "description": "新出现的 cockpit 类活跃仓库：dotdevdotdev/agentwire-dev",
+          "evidence": "「Self-hosted, keyboard-driven cockpit for running many Claude Code agents」(WebFetch 转述的仓库描述，非逐字原文)",
+          "source_url": "https://github.com/dotdevdotdev/agentwire-dev",
+          "meee2_relevance": "部分触碰锚点1/5(多 agent session 的 cockpit/监控)，但无人=慢 session 或 live link 信号；推断：范式为 agent 监控面板，威胁 md。pushed 2026-11-07, 23★, created 2025-12-31",
+          "threat_signal": false
+        },
+        {
+          "type": "other",
+          "description": "新出现的 cockpit 类活跃仓库：trevormil/TerMinal",
+          "evidence": "「Local-first coding-agent environment with a live cockpit and autonomous build loop」(WebFetch 转述的仓库描述，非逐字原文)",
+          "source_url": "https://github.com/trevormil/TerMinal",
+          "meee2_relevance": "部分触碰锚点1/5(多 agent session 的 cockpit/监控)，但无人=慢 session 或 live link 信号；推断：范式为 agent 监控面板，威胁 md。pushed 2026-10-31, 8★",
+          "threat_signal": false
+        },
+        {
+          "type": "other",
+          "description": "新出现的 cockpit 类活跃仓库：alchaincyf/fanbox",
+          "evidence": "「Vibe-coding cockpit with file browser, terminal, and change tracking」(WebFetch 转述的仓库描述，非逐字原文)",
+          "source_url": "https://github.com/alchaincyf/fanbox",
+          "meee2_relevance": "部分触碰锚点1/5(多 agent session 的 cockpit/监控)，但无人=慢 session 或 live link 信号；推断：范式为 agent 监控面板，威胁 md。pushed 2026-10-30, 1068★, created 2026-06-10",
+          "threat_signal": false
+        }
+      ],
+      "key_findings": [
+        "来源：GitHub 开源仓库，非官方。3 个新活跃 cockpit 类仓库，均无 live link / 人机同构信号；建议观察 agentwire-dev。martinbon39/agora(无限画布+cockpit)已不满足活跃过滤，未报告。"
+      ],
+      "no_change_reason": null
     },
     {
       "id": "cursor",
