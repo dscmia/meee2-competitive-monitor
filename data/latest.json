@@ -1,13 +1,13 @@
 {
-  "report_date": "2026-11-08",
-  "generated_at": "2026-11-08T16:14:22Z",
+  "report_date": "2026-11-09",
+  "generated_at": "2026-11-09T16:30:00Z",
   "summary": {
     "total_tracked": 15,
     "fetched_ok": 8,
-    "fetch_error": 0,
+    "fetch_error": 1,
     "has_changes": 1,
     "new_alerts": 0,
-    "note": "hn.algolia.com 等域名 DNS 不可达(需加入网络白名单)；仅 api.github.com 可用。cursor WebSearch 复查无 11 月新条目；其余竞品沿用 baseline(skipped/未复查)，无新 alert。"
+    "note": "hn.algolia.com / openai.com 等域名 DNS 不可达(需加入网络白名单)；仅 api.github.com 可用。crit/hi 竞品用 WebSearch 兜底，均无 11 月新增可对比动态；md/lo 中 6 个未复查。无新 alert。"
   },
   "competitors": [
     {
@@ -17,7 +17,7 @@
       "threat": "md",
       "threat_changed": false,
       "has_changes": false,
-      "fetch_status": "skipped",
+      "fetch_status": "error",
       "fetched_urls": [
         "WebSearch 兜底(PH feed/HN DNS 不可达)"
       ],
@@ -26,7 +26,7 @@
       "last_seen_at": "2026-11-06T16:17:47Z",
       "changes": [],
       "key_findings": [],
-      "no_change_reason": "本次未复查(HN/官方源 DNS 不可达，时间取舍)；沿用 baseline，无新动态"
+      "no_change_reason": "PH feed / HN Algolia 域名 DNS 不可达，未做 WebSearch 复查；沿用 baseline，无新动态"
     },
     {
       "id": "github-cc-ecosystem",
@@ -37,39 +37,39 @@
       "has_changes": true,
       "fetch_status": "ok",
       "fetched_urls": [
-        "api.github.com/search/repositories x4 (WebFetch)"
+        "api.github.com/search/repositories x4 (WebFetch, 前3个页面被截断)"
       ],
-      "raw_snapshot": "GitHub API 4/4 成功(截断页)。本轮新增报告: dotdevdotdev/agentwire-dev, trevormil/TerMinal, alchaincyf/fanbox。已报告累计: handmux/handmux, Innovology/claude-dispatcher, alexjbarnes/cockpit, luojiahai/code-by-wire, cosmix/loom, iAmCorey/kooky, nashory/agent-cockpit, arcnid/peemux, NovusEdge/glowup, kounetsuman/zashiki, stablyai/orca, paperclipai/paperclip, farion1231/cc-switch, 等(沿用 baseline)。",
-      "content_hash": "GitHub API 4/4 成功(截断页)。本轮新增报告: dotdevdotdev/agentwire-dev, trevormil/TerMinal, alchaincyf/fanbox。已报告累计: handmux/handmux, Innovology/claude-dispatcher, alexjbarnes/cockpit, luojiahai/code-by-wire, cosm",
-      "last_seen_at": "2026-11-08T16:14:22Z",
+      "raw_snapshot": "GitHub API 4/4 成功(截断页)。本轮新增报告: lordon1a/foxpit, c4rl05/agent-race-control, Surething-io/cockpit。已报告累计: dotdevdotdev/agentwire-dev, trevormil/TerMinal, alchaincyf/fanbox, handmux/handmux, Innovology/claude-dispatcher, alexjbarnes/cockpit, luojiahai/code-by-wire, cosmix/loom, iAmCorey/kooky, nashory/agent-cockpit, arcnid/peemux, NovusEdge/glowup, kounetsuman/zashiki, stablyai/orca, paperclipai/paperclip, farion1231/cc-switch, 等(沿用 baseline)。",
+      "content_hash": "GitHub API 4/4 成功(截断页)。本轮新增报告: lordon1a/foxpit, c4rl05/agent-race-control, Surething-io/cockpit。已报告累计: dotdevdotdev/agentwire-dev, trevormil/TerMinal, alchaincyf/fanbox, handmux/handmux, Innovology/cl",
+      "last_seen_at": "2026-11-09T16:30:00Z",
       "changes": [
         {
           "type": "other",
-          "description": "新出现的 cockpit 类活跃仓库：dotdevdotdev/agentwire-dev",
-          "evidence": "「Self-hosted, keyboard-driven cockpit for running many Claude Code agents」(WebFetch 转述的仓库描述，非逐字原文)",
-          "source_url": "https://github.com/dotdevdotdev/agentwire-dev",
-          "meee2_relevance": "部分触碰锚点1/5(多 agent session 的 cockpit/监控)，但无人=慢 session 或 live link 信号；推断：范式为 agent 监控面板，威胁 md。pushed 2026-11-07, 23★, created 2025-12-31",
+          "description": "新出现的 cockpit 类活跃仓库：lordon1a/foxpit",
+          "evidence": "「Multi-agent cockpit for Claude Code, Codex, and OpenCode with git worktrees」(WebFetch 转述的仓库描述，非逐字原文)",
+          "source_url": "https://github.com/lordon1a/foxpit",
+          "meee2_relevance": "部分触碰锚点1(多 agent session 管理)，无人=慢 session / live link 信号；推断：agent 监控/多开面板范式，威胁 md。pushed 2026-11-08, 10★, created 2026-10-04",
           "threat_signal": false
         },
         {
           "type": "other",
-          "description": "新出现的 cockpit 类活跃仓库：trevormil/TerMinal",
-          "evidence": "「Local-first coding-agent environment with a live cockpit and autonomous build loop」(WebFetch 转述的仓库描述，非逐字原文)",
-          "source_url": "https://github.com/trevormil/TerMinal",
-          "meee2_relevance": "部分触碰锚点1/5(多 agent session 的 cockpit/监控)，但无人=慢 session 或 live link 信号；推断：范式为 agent 监控面板，威胁 md。pushed 2026-10-31, 8★",
+          "description": "新出现的 cockpit 类活跃仓库：c4rl05/agent-race-control",
+          "evidence": "「Terminal cockpit for Claude Code and Codex on Windows and Mac」(WebFetch 转述的仓库描述，非逐字原文)",
+          "source_url": "https://github.com/c4rl05/agent-race-control",
+          "meee2_relevance": "部分触碰锚点1(多 agent session 管理)，无人=慢 session / live link 信号；推断：agent 监控/多开面板范式，威胁 md。pushed 2026-11-08, 3★, created 2026-07-11",
           "threat_signal": false
         },
         {
           "type": "other",
-          "description": "新出现的 cockpit 类活跃仓库：alchaincyf/fanbox",
-          "evidence": "「Vibe-coding cockpit with file browser, terminal, and change tracking」(WebFetch 转述的仓库描述，非逐字原文)",
-          "source_url": "https://github.com/alchaincyf/fanbox",
-          "meee2_relevance": "部分触碰锚点1/5(多 agent session 的 cockpit/监控)，但无人=慢 session 或 live link 信号；推断：范式为 agent 监控面板，威胁 md。pushed 2026-10-30, 1068★, created 2026-06-10",
+          "description": "新出现的 cockpit 类活跃仓库：Surething-io/cockpit",
+          "evidence": "「Open, self-hosted GUI for Claude Code that works with many LLMs」(WebFetch 转述的仓库描述，非逐字原文)",
+          "source_url": "https://github.com/Surething-io/cockpit",
+          "meee2_relevance": "部分触碰锚点1(多 agent session 管理)，无人=慢 session / live link 信号；推断：agent 监控/多开面板范式，威胁 md。pushed 2026-11-09, 44★, created 2026-02-06",
           "threat_signal": false
         }
       ],
       "key_findings": [
-        "来源：GitHub 开源仓库，非官方。3 个新活跃 cockpit 类仓库，均无 live link / 人机同构信号；建议观察 agentwire-dev。martinbon39/agora(无限画布+cockpit)已不满足活跃过滤，未报告。"
+        "来源：GitHub 开源仓库，非官方。3 个未见于 baseline 可见名单的活跃 cockpit 类仓库，均无 live link / 人机同构信号。baseline 名单有「等」截断，去重可能不完整。"
       ],
       "no_change_reason": null
     },
@@ -82,14 +82,14 @@
       "has_changes": false,
       "fetch_status": "ok",
       "fetched_urls": [
-        "WebSearch 兜底(HN/官方源 DNS 不可达)"
+        "WebSearch 兜底(HN Algolia / 官方域名 DNS 不可达)"
       ],
-      "raw_snapshot": "来源：WebSearch 结果，非官方原文。仍仅至9月初(3.19.7 9/3: Mac computer-use、BYOK、Origin/app sharing)；无10月条目。",
-      "content_hash": "来源：WebSearch 结果，非官方原文。仍仅至9月初(3.19.7 9/3: Mac computer-use、BYOK、Origin/app sharing)；无10月条目。",
-      "last_seen_at": "2026-11-07T16:14:22Z",
+      "raw_snapshot": "来源：WebSearch 结果，非官方原文。无 11 月条目；最新可见为 2026-07 的 3.11 (Side Chats, Conversation Search)，来源不一，无法与 baseline 对比",
+      "content_hash": "来源：WebSearch 结果，非官方原文。无 11 月条目；最新可见为 2026-07 的 3.11 (Side Chats, Conversation Search)，来源不一，无法与 baseline 对比",
+      "last_seen_at": "2026-11-09T16:30:00Z",
       "changes": [],
       "key_findings": [],
-      "no_change_reason": "来源：WebSearch 结果，非官方原文。本次检索无 11 月新条目，较 baseline 无新动态"
+      "no_change_reason": "来源：WebSearch 结果，非官方原文。无 11 月条目；最新可见为 2026-07 的 3.11 (Side Chats, Conversation Search)，来源不一，无法与 baseline 对比"
     },
     {
       "id": "openai",
@@ -100,14 +100,14 @@
       "has_changes": false,
       "fetch_status": "ok",
       "fetched_urls": [
-        "WebSearch 兜底(HN/官方源 DNS 不可达)"
+        "WebSearch 兜底(HN Algolia / 官方域名 DNS 不可达)"
       ],
-      "raw_snapshot": "来源：WebSearch 结果，非官方原文。OpenAI Help Center 发布记录(二手检索)：10/29 Pro/Business Premium 的 Codex 与 More Work 用量扩容；10/27 iCloud Mail/Calendar 插件；10/26 GPT-6.1 Terra；10/16 幻灯片创建与协作；10/7 GPT-6 + Intelligent UI。未见 Canvas/Projects 新条目。",
-      "content_hash": "来源：WebSearch 结果，非官方原文。OpenAI Help Center 发布记录(二手检索)：10/29 Pro/Business Premium 的 Codex 与 More Work 用量扩容；10/27 iCloud Mail/Calendar 插件；10/26 GPT-6.1 Terra；10/16 幻灯片创建与协作；10/7 GPT-6 + Intelligent UI。未见 Canvas/Projects 新条目。",
-      "last_seen_at": "2026-11-07T16:14:22Z",
+      "raw_snapshot": "来源：WebSearch 结果，非官方原文。WebSearch 未发现 2026-11 官方动态，结果多为 2024 年 Canvas 旧闻",
+      "content_hash": "来源：WebSearch 结果，非官方原文。WebSearch 未发现 2026-11 官方动态，结果多为 2024 年 Canvas 旧闻",
+      "last_seen_at": "2026-11-09T16:30:00Z",
       "changes": [],
       "key_findings": [],
-      "no_change_reason": "来源：WebSearch 结果，非官方原文。本次检索无 11 月新条目，较 baseline 无新动态"
+      "no_change_reason": "来源：WebSearch 结果，非官方原文。WebSearch 未发现 2026-11 官方动态，结果多为 2024 年 Canvas 旧闻"
     },
     {
       "id": "windsurf",
@@ -118,14 +118,14 @@
       "has_changes": false,
       "fetch_status": "ok",
       "fetched_urls": [
-        "WebSearch 兜底(HN/官方源 DNS 不可达)"
+        "WebSearch 兜底(HN Algolia / 官方域名 DNS 不可达)"
       ],
-      "raw_snapshot": "来源：WebSearch 结果，非官方原文。最新仍见 Windsurf 2.0(2026-04，Agent Command Center/Spaces/Devin)、6/2 更名 Devin Desktop(二手)；无10月条目。",
-      "content_hash": "来源：WebSearch 结果，非官方原文。最新仍见 Windsurf 2.0(2026-04，Agent Command Center/Spaces/Devin)、6/2 更名 Devin Desktop(二手)；无10月条目。",
-      "last_seen_at": "2026-11-07T16:14:22Z",
+      "raw_snapshot": "来源：WebSearch 结果，非官方原文。WebSearch 未发现 11 月动态；最新为 2026-04 Windsurf 2.0 / 6 月更名 Devin Desktop(单一来源)",
+      "content_hash": "来源：WebSearch 结果，非官方原文。WebSearch 未发现 11 月动态；最新为 2026-04 Windsurf 2.0 / 6 月更名 Devin Desktop(单一来源)",
+      "last_seen_at": "2026-11-09T16:30:00Z",
       "changes": [],
       "key_findings": [],
-      "no_change_reason": "来源：WebSearch 结果，非官方原文。本次检索无 11 月新条目，较 baseline 无新动态"
+      "no_change_reason": "来源：WebSearch 结果，非官方原文。WebSearch 未发现 11 月动态；最新为 2026-04 Windsurf 2.0 / 6 月更名 Devin Desktop(单一来源)"
     },
     {
       "id": "claude-ai",
@@ -136,14 +136,14 @@
       "has_changes": false,
       "fetch_status": "ok",
       "fetched_urls": [
-        "WebSearch 兜底(HN/官方源 DNS 不可达)"
+        "WebSearch 兜底(HN Algolia / 官方域名 DNS 不可达)"
       ],
-      "raw_snapshot": "来源：WebSearch 结果，非官方原文。新闻索引(blog.mean.ceo/orcarouter，质量弱)列10/7-10/22 公告：Claude Haiku 5.5(10/7)、Claude Security 企业 public beta(10/21)、Agent Skills 移交基金会(10/22)。未见 projects/artifacts/routines 新条目。",
-      "content_hash": "来源：WebSearch 结果，非官方原文。新闻索引(blog.mean.ceo/orcarouter，质量弱)列10/7-10/22 公告：Claude Haiku 5.5(10/7)、Claude Security 企业 public beta(10/21)、Agent Skills 移交基金会(10/22)。未见 projects/artifacts/routines 新条目。",
-      "last_seen_at": "2026-11-07T16:14:22Z",
+      "raw_snapshot": "来源：WebSearch 结果，非官方原文。WebSearch 显示 claude.com product-updates 近期条目(Nov 2-5: Message threads in Messages API、Personal Finance、Enterprise 安全控制；Oct: Claude Duet 主动型 agent)，均非 session 同构/live link 直接信号",
+      "content_hash": "来源：WebSearch 结果，非官方原文。WebSearch 显示 claude.com product-updates 近期条目(Nov 2-5: Message threads in Messages API、Personal Finance、Enterprise 安全控制；Oct: Claude Duet 主动型 agent)，均非 session 同构/live link 直接信号",
+      "last_seen_at": "2026-11-09T16:30:00Z",
       "changes": [],
       "key_findings": [],
-      "no_change_reason": "来源：WebSearch 结果，非官方原文。本次检索无 11 月新条目，较 baseline 无新动态"
+      "no_change_reason": "来源：WebSearch 结果，非官方原文。WebSearch 显示 claude.com product-updates 近期条目(Nov 2-5: Message threads in Messages API、Personal Finance、Enterprise 安全控制；Oct: Claude Duet 主动型 agent)，均非 session 同构/live link 直接信号"
     },
     {
       "id": "github-copilot",
@@ -154,14 +154,14 @@
       "has_changes": false,
       "fetch_status": "ok",
       "fetched_urls": [
-        "WebSearch 兜底(HN/官方源 DNS 不可达)"
+        "WebSearch 兜底(HN Algolia / 官方域名 DNS 不可达)"
       ],
-      "raw_snapshot": "来源：WebSearch 结果，非官方原文。VS Code v1.142(10/14，harness 基于 Copilot SDK)；Automations(v1.137, 9/9)、agent host(v1.135, 8/26)；Agents panel 无日期。无 baseline 以外新条目。",
-      "content_hash": "来源：WebSearch 结果，非官方原文。VS Code v1.142(10/14，harness 基于 Copilot SDK)；Automations(v1.137, 9/9)、agent host(v1.135, 8/26)；Agents panel 无日期。无 baseline 以外新条目。",
-      "last_seen_at": "2026-11-07T16:14:22Z",
+      "raw_snapshot": "来源：WebSearch 结果，非官方原文。WebSearch 显示 2026-10-28 VS Code 版本含 Agent Host(会话在窗口关闭后继续、可从 GitHub Mobile 查看进度)；无 11 月新条目；无法与 baseline 对比",
+      "content_hash": "来源：WebSearch 结果，非官方原文。WebSearch 显示 2026-10-28 VS Code 版本含 Agent Host(会话在窗口关闭后继续、可从 GitHub Mobile 查看进度)；无 11 月新条目；无法与 baseline 对比",
+      "last_seen_at": "2026-11-09T16:30:00Z",
       "changes": [],
       "key_findings": [],
-      "no_change_reason": "来源：WebSearch 结果，非官方原文。本次检索无 11 月新条目，较 baseline 无新动态"
+      "no_change_reason": "来源：WebSearch 结果，非官方原文。WebSearch 显示 2026-10-28 VS Code 版本含 Agent Host(会话在窗口关闭后继续、可从 GitHub Mobile 查看进度)；无 11 月新条目；无法与 baseline 对比"
     },
     {
       "id": "gemini",
@@ -172,14 +172,14 @@
       "has_changes": false,
       "fetch_status": "ok",
       "fetched_urls": [
-        "WebSearch 兜底(HN/官方源 DNS 不可达)"
+        "WebSearch 兜底(HN Algolia / 官方域名 DNS 不可达)"
       ],
-      "raw_snapshot": "来源：WebSearch 结果，非官方原文。无已确认10月发布；仅 Canvas(2025-03)旧报道与 AI Studio 3月视频摘要。Gems→Skills 传闻见 baseline。",
-      "content_hash": "来源：WebSearch 结果，非官方原文。无已确认10月发布；仅 Canvas(2025-03)旧报道与 AI Studio 3月视频摘要。Gems→Skills 传闻见 baseline。",
-      "last_seen_at": "2026-11-07T16:14:22Z",
+      "raw_snapshot": "来源：WebSearch 结果，非官方原文。WebSearch 未发现 11 月 AI Studio/Gemini 动态",
+      "content_hash": "来源：WebSearch 结果，非官方原文。WebSearch 未发现 11 月 AI Studio/Gemini 动态",
+      "last_seen_at": "2026-11-09T16:30:00Z",
       "changes": [],
       "key_findings": [],
-      "no_change_reason": "来源：WebSearch 结果，非官方原文。本次检索无 11 月新条目，较 baseline 无新动态"
+      "no_change_reason": "来源：WebSearch 结果，非官方原文。WebSearch 未发现 11 月 AI Studio/Gemini 动态"
     },
     {
       "id": "linear",
@@ -190,14 +190,14 @@
       "has_changes": false,
       "fetch_status": "ok",
       "fetched_urls": [
-        "WebSearch 兜底(HN/官方源 DNS 不可达)"
+        "WebSearch 兜底(HN Algolia / 官方域名 DNS 不可达)"
       ],
-      "raw_snapshot": "来源：WebSearch 结果，非官方原文。最新官方条目至 2026-06(Coding Sessions)；二手 pricingsaas：Coding Sessions GA(W29)、Code Intelligence Business GA(W35)、Loops 取代 Agent automations(W31)；无10月官方条目。",
-      "content_hash": "来源：WebSearch 结果，非官方原文。最新官方条目至 2026-06(Coding Sessions)；二手 pricingsaas：Coding Sessions GA(W29)、Code Intelligence Business GA(W35)、Loops 取代 Agent automations(W31)；无10月官方条目。",
-      "last_seen_at": "2026-11-07T16:14:22Z",
+      "raw_snapshot": "来源：WebSearch 结果，非官方原文。WebSearch 最新可见为 2026-09 (priority inbox、agent 项目起草)，无 11 月条目",
+      "content_hash": "来源：WebSearch 结果，非官方原文。WebSearch 最新可见为 2026-09 (priority inbox、agent 项目起草)，无 11 月条目",
+      "last_seen_at": "2026-11-09T16:30:00Z",
       "changes": [],
       "key_findings": [],
-      "no_change_reason": "来源：WebSearch 结果，非官方原文。本次检索无 11 月新条目，较 baseline 无新动态"
+      "no_change_reason": "来源：WebSearch 结果，非官方原文。WebSearch 最新可见为 2026-09 (priority inbox、agent 项目起草)，无 11 月条目"
     },
     {
       "id": "notion-ai",
@@ -215,7 +215,7 @@
       "last_seen_at": "2026-11-06T16:17:47Z",
       "changes": [],
       "key_findings": [],
-      "no_change_reason": "本次未复查(HN/官方源 DNS 不可达，时间取舍)；沿用 baseline，无新动态"
+      "no_change_reason": "官方源/HN DNS 不可达，本次未做 WebSearch(时间取舍)；沿用 baseline，无新动态"
     },
     {
       "id": "slack",
@@ -233,7 +233,7 @@
       "last_seen_at": "2026-11-06T16:17:47Z",
       "changes": [],
       "key_findings": [],
-      "no_change_reason": "本次未复查(HN/官方源 DNS 不可达，时间取舍)；沿用 baseline，无新动态"
+      "no_change_reason": "官方源/HN DNS 不可达，本次未做 WebSearch(时间取舍)；沿用 baseline，无新动态"
     },
     {
       "id": "reflect",
@@ -251,7 +251,7 @@
       "last_seen_at": "2026-11-06T16:17:47Z",
       "changes": [],
       "key_findings": [],
-      "no_change_reason": "本次未复查(HN/官方源 DNS 不可达，时间取舍)；沿用 baseline，无新动态"
+      "no_change_reason": "官方源/HN DNS 不可达，本次未做 WebSearch(时间取舍)；沿用 baseline，无新动态"
     },
     {
       "id": "raycast",
@@ -269,7 +269,7 @@
       "last_seen_at": "2026-11-06T16:17:47Z",
       "changes": [],
       "key_findings": [],
-      "no_change_reason": "本次未复查(HN/官方源 DNS 不可达，时间取舍)；沿用 baseline，无新动态"
+      "no_change_reason": "官方源/HN DNS 不可达，本次未做 WebSearch(时间取舍)；沿用 baseline，无新动态"
     },
     {
       "id": "replit",
@@ -287,7 +287,7 @@
       "last_seen_at": "2026-11-06T16:17:47Z",
       "changes": [],
       "key_findings": [],
-      "no_change_reason": "本次未复查(HN/官方源 DNS 不可达，时间取舍)；沿用 baseline，无新动态"
+      "no_change_reason": "官方源/HN DNS 不可达，本次未做 WebSearch(时间取舍)；沿用 baseline，无新动态"
     },
     {
       "id": "superwhisper",
@@ -305,7 +305,7 @@
       "last_seen_at": "2026-11-06T16:17:47Z",
       "changes": [],
       "key_findings": [],
-      "no_change_reason": "本次未复查(HN/官方源 DNS 不可达，时间取舍)；沿用 baseline，无新动态"
+      "no_change_reason": "官方源/HN DNS 不可达，本次未做 WebSearch(时间取舍)；沿用 baseline，无新动态"
     }
   ],
   "alerts": []
