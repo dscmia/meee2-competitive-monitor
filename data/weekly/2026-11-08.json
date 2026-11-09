@@ -1,0 +1,20 @@
+{
+  "week_start": "2026-11-02",
+  "week_end": "2026-11-08",
+  "generated_at": "2026-11-09T15:12:00Z",
+  "narrative": "本周无 alert、无威胁等级变动，无结构性威胁变化，维持观察。唯一有信号的是 github-cc-ecosystem：11-03 的 kounetsuman/zashiki（「orchestration cockpit for visualizing Claude Code sessions」）、11-05 的 NovusEdge/glowup（「live cockpit pane」）、11-08 的 agentwire-dev、TerMinal、fanbox 三个 cockpit 类仓库，日报均判定为 md、threat_signal 为 false。推断：Claude Code 生态里「多 agent session 的 cockpit/监控面板」正在扎堆出现，但日报原文均未见「人作为慢 session」或跨工具 live link 信号，目前只是品类拥挤，而非对 meee2 核心抽象的逼近。另需注意：本周多日 hn/openai/raycast 等域名 DNS 不可达，多数竞品靠 WebSearch 兜底或沿用 baseline（11-07、11-08 尚有竞品未复查），「无新动态」的置信度有限。",
+  "recommendations": [
+    {
+      "headline": "把 hn.algolia.com、openai.com、raycast.com 等域名加入 routine 网络白名单",
+      "detail": "本周日报多次注明这些域名 DNS 不可达，仅 api.github.com 可用，导致官方原文取证缺失、11-07/11-08 部分竞品被跳过。不修复则「无新动态」的结论不可靠。",
+      "priority": "hi",
+      "basis": "依据：日报 summary.note 2026-11-02、11-03、11-05、11-06、11-07、11-08 均记录 DNS 不可达/跳过竞品"
+    },
+    {
+      "headline": "在对外叙事中强化 meee2 与 cockpit 类工具的区隔：人在 agent 图内 + 跨工具 live link + peripheral 层",
+      "detail": "本周 zashiki、glowup、agentwire-dev、TerMinal、fanbox 等均以「cockpit」自称，meee2 菜单栏/board 易被归为同类。建议梳理一页对比说明，突出这些仓库原文未触及的锚点（人=慢 session、跨工具 live link）。",
+      "priority": "md",
+      "basis": "依据：github-cc-ecosystem 2026-11-03 zashiki、2026-11-05 glowup、2026-11-08 agentwire-dev/TerMinal/fanbox（均 threat_signal=false，部分触碰锚点 1/5）"
+    }
+  ]
+}
