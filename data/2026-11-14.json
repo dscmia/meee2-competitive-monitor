@@ -1,0 +1,345 @@
+{
+  "report_date": "2026-11-14",
+  "generated_at": "2026-11-14T16:15:48Z",
+  "summary": {
+    "total_tracked": 15,
+    "fetched_ok": 15,
+    "fetch_error": 0,
+    "has_changes": 2,
+    "new_alerts": 1,
+    "skipped": 0,
+    "note": "hn.algolia.com / openai.com / producthunt / itunes / 各 RSS 仍被网络策略拒绝(ENOTFOUND，需加入白名单)；仅 api.github.com 可用。其余源用 WebSearch 兜底，内容为第三方转述。本轮变化：claude-ai(Claude Code v2.1.321)、slack(Slackbot Mini 菜单栏 + agent 进 DM 侧栏，md→hi，1 条 alert)。"
+  },
+  "competitors": [
+    {
+      "id": "cursor",
+      "name": "Cursor",
+      "category": "orchestrator",
+      "threat": "crit",
+      "threat_changed": false,
+      "has_changes": false,
+      "fetch_status": "ok",
+      "fetched_urls": [
+        "WebSearch"
+      ],
+      "raw_snapshot": "来源：WebSearch 结果，非官方原文。仍无 11 月条目；最新可见 cursor.com 2026-08-19 changelog(Agent 可监控 PR、跟随 Slack 线程、定时任务)；havoptic latest 2026.10.16；v3.11(7/10) Side Chats/Conversation Search。",
+      "content_hash": "来源：WebSearch 结果，非官方原文。仍无 11 月条目；最新可见 cursor.com 2026-08-19 changelog(Agent 可监控 PR、跟随 Slack 线程、定时任务)；havoptic latest 2026.10.16；v3.11(7/10) Side Chats/Conversation Search。",
+      "last_seen_at": "2026-11-14T16:15:48Z",
+      "changes": [],
+      "key_findings": [],
+      "no_change_reason": "来源：WebSearch 结果，非官方原文。未发现 11 月 changelog，与 baseline 一致"
+    },
+    {
+      "id": "openai",
+      "name": "OpenAI / ChatGPT",
+      "category": "orchestrator",
+      "threat": "crit",
+      "threat_changed": false,
+      "has_changes": false,
+      "fetch_status": "ok",
+      "fetched_urls": [
+        "WebSearch"
+      ],
+      "raw_snapshot": "来源：WebSearch 结果，非官方原文。ChatGPT release notes 最新仍为 2026-11-04 ChatGPT Images 2.6；10/29 Pro/Business Premium 增加 Work 与 Codex 用量；10/26 GPT-6.1 Terra；10/15 GPT-Live-1.1；10/7 GPT-6 与 Intelligent UI。未见 11/04 之后条目。",
+      "content_hash": "来源：WebSearch 结果，非官方原文。ChatGPT release notes 最新仍为 2026-11-04 ChatGPT Images 2.6；10/29 Pro/Business Premium 增加 Work 与 Codex 用量；10/26 GPT-6.1 Terra；10/15 GPT-Live-1.1；10/7 GPT-6 与 Intelligent UI。未见 11/04",
+      "last_seen_at": "2026-11-14T16:15:48Z",
+      "changes": [],
+      "key_findings": [],
+      "no_change_reason": "来源：WebSearch 结果，非官方原文。最新仍为 11/04 Images 2.6，与 baseline 一致"
+    },
+    {
+      "id": "windsurf",
+      "name": "Windsurf (Codeium)",
+      "category": "orchestrator",
+      "threat": "crit",
+      "threat_changed": false,
+      "has_changes": false,
+      "fetch_status": "ok",
+      "fetched_urls": [
+        "WebSearch"
+      ],
+      "raw_snapshot": "来源：WebSearch 结果，非官方原文。docs.devin.ai Desktop changelog 最新仍为 11/07：Agent Command Center session 菜单查看/开关/重新认证 MCP servers；private preview 连接 Devin Cloud 远程 MCP。changelog-next 11/9 有 Changed 条目(内容不可见)；Devin CLI 11/9 image_size、GPT 模型更少中断询问。docs.devin.ai 不在网络白名单。",
+      "content_hash": "来源：WebSearch 结果，非官方原文。docs.devin.ai Desktop changelog 最新仍为 11/07：Agent Command Center session 菜单查看/开关/重新认证 MCP servers；private preview 连接 Devin Cloud 远程 MCP。changelog-next 11/9 有 Changed 条目(内容不可见)；Dev",
+      "last_seen_at": "2026-11-14T16:15:48Z",
+      "changes": [],
+      "key_findings": [],
+      "no_change_reason": "来源：WebSearch 结果，非官方原文。仍为 11/07 Desktop 与 11/9 CLI 条目，baseline 已记录"
+    },
+    {
+      "id": "claude-ai",
+      "name": "Claude.ai / Anthropic",
+      "category": "orchestrator",
+      "threat": "crit",
+      "threat_changed": false,
+      "has_changes": true,
+      "fetch_status": "ok",
+      "fetched_urls": [
+        "WebSearch"
+      ],
+      "raw_snapshot": "来源：WebSearch 结果，非官方原文。Claude Code v2.1.321(labmemo/newreleases，npm 11/10 JST 发布；v2.1.320 跳号)：默认 Fable 模型更新为 Claude Fable 5.2；remote-control 可读取 settings 文件；修复 MCP OAuth 重定向泄露 refresh token、只读 Bash 在沙箱外无提示运行；修复 Claude Desktop Code tab session 输入后在其他 session 中消息保持暂停。",
+      "content_hash": "来源：WebSearch 结果，非官方原文。Claude Code v2.1.321(labmemo/newreleases，npm 11/10 JST 发布；v2.1.320 跳号)：默认 Fable 模型更新为 Claude Fable 5.2；remote-control 可读取 settings 文件；修复 MCP OAuth 重定向泄露 refresh token、只读 Bash 在沙箱",
+      "last_seen_at": "2026-11-14T16:15:48Z",
+      "changes": [
+        {
+          "type": "new_feature",
+          "description": "Claude Code v2.1.321 发布：默认 Fable 模型切到 Fable 5.2，remote-control 支持 settings 文件，并修复一批权限/安全问题",
+          "evidence": "「the default Fable model was updated to Claude Fable 5.2… remote-control takes a settings file」(二手转述)",
+          "source_url": "https://labmemo.com/claude-code-v2-1-321-fable-5-2-default-security-fixes-2026-11/",
+          "meee2_relevance": "推断：remote-control 与跨 session 消息修复轻触锚点 5(peripheral 戳 session)，但属既有能力的配置/修复，非新范式",
+          "threat_signal": false
+        },
+        {
+          "type": "other",
+          "description": "修复 Desktop Code tab session 中途输入后，在其他 session 中消息一直暂停的问题",
+          "evidence": "「Messages from a Claude Desktop Code tab session no longer stay paused in your other sessions」(二手转述)",
+          "source_url": "https://newreleases.io/project/github/anthropics/claude-code/release/v2.1.321",
+          "meee2_relevance": "推断：说明 Claude Desktop 已在多 session 间同步消息状态，与锚点 1 的多 session 协同相关，但仍是 bug 修复",
+          "threat_signal": false
+        }
+      ],
+      "key_findings": [
+        "推断：v2.1.321 主要是模型默认值与安全修复，无新协同抽象；remote-control 配置化值得持续观察"
+      ],
+      "no_change_reason": null
+    },
+    {
+      "id": "github-copilot",
+      "name": "GitHub Copilot",
+      "category": "orchestrator",
+      "threat": "hi",
+      "threat_changed": false,
+      "has_changes": false,
+      "fetch_status": "ok",
+      "fetched_urls": [
+        "WebSearch"
+      ],
+      "raw_snapshot": "来源：WebSearch 结果，非官方原文。未发现 11/06 之后新条目。Copilot CLI 1.0.107(11/6)：终端内联图片、/code 在 VS Code 打开当前 session、Fusion tier 配置；10/09 weekly 本地沙箱 GA；10/01 从 agent session 开 PR 表单。",
+      "content_hash": "来源：WebSearch 结果，非官方原文。未发现 11/06 之后新条目。Copilot CLI 1.0.107(11/6)：终端内联图片、/code 在 VS Code 打开当前 session、Fusion tier 配置；10/09 weekly 本地沙箱 GA；10/01 从 agent session 开 PR 表单。",
+      "last_seen_at": "2026-11-14T16:15:48Z",
+      "changes": [],
+      "key_findings": [],
+      "no_change_reason": "来源：WebSearch 结果，非官方原文。未发现 11/06 之后条目，与 baseline 一致"
+    },
+    {
+      "id": "gemini",
+      "name": "Google Gemini / AI Studio",
+      "category": "orchestrator",
+      "threat": "hi",
+      "threat_changed": false,
+      "has_changes": false,
+      "fetch_status": "ok",
+      "fetched_urls": [
+        "WebSearch"
+      ],
+      "raw_snapshot": "来源：WebSearch 结果，非官方原文。11/10 起 November Pixel Drop：Gemini Intelligence(含 Rambler)，仅 Pixel 10/11。仍未找到 2026-11 Gemini Drop；11/18 Fast/Thinking 模式条目年份未知(疑为 2025)。",
+      "content_hash": "来源：WebSearch 结果，非官方原文。11/10 起 November Pixel Drop：Gemini Intelligence(含 Rambler)，仅 Pixel 10/11。仍未找到 2026-11 Gemini Drop；11/18 Fast/Thinking 模式条目年份未知(疑为 2025)。",
+      "last_seen_at": "2026-11-14T16:15:48Z",
+      "changes": [],
+      "key_findings": [],
+      "no_change_reason": "来源：WebSearch 结果，非官方原文。仅 Pixel Drop(baseline 已记录)，无新 Gemini Drop"
+    },
+    {
+      "id": "linear",
+      "name": "Linear",
+      "category": "workspace",
+      "threat": "hi",
+      "threat_changed": false,
+      "has_changes": false,
+      "fetch_status": "ok",
+      "fetched_urls": [
+        "WebSearch"
+      ],
+      "raw_snapshot": "来源：WebSearch 结果，非官方原文。最新仍为 2026-11-04 'mobile diffs'：Diffs 上 iOS/Android；Linear Agent 分支名遵循 workspace 格式、记住上次 coding 环境、issue 链接转 customer requests；Jira sync 标签修复；Linear Mobile 1.107.0。",
+      "content_hash": "来源：WebSearch 结果，非官方原文。最新仍为 2026-11-04 'mobile diffs'：Diffs 上 iOS/Android；Linear Agent 分支名遵循 workspace 格式、记住上次 coding 环境、issue 链接转 customer requests；Jira sync 标签修复；Linear Mobile 1.107.0。",
+      "last_seen_at": "2026-11-14T16:15:48Z",
+      "changes": [],
+      "key_findings": [],
+      "no_change_reason": "来源：WebSearch 结果，非官方原文。最新仍为 11/04 mobile diffs，与 baseline 一致"
+    },
+    {
+      "id": "producthunt-ai",
+      "name": "Product Hunt AI 新品雷达",
+      "category": "new_entrant_watch",
+      "threat": "md",
+      "threat_changed": false,
+      "has_changes": false,
+      "fetch_status": "ok",
+      "fetched_urls": [
+        "WebSearch"
+      ],
+      "raw_snapshot": "来源：WebSearch 结果，非官方原文。Product Hunt feed/HN 不可达。搜索结果：Ambiguous Workspace(18 款应用，团队与 agent 间流转)、Agently(agent 运行于完整业务上下文，Cohort 2 开放 250 团队)、NapsixB2B、Kollab(团队与 agent 共享 workspace)、Quantvest Engine；PH Weekly 2026-10-22。均为历史报告已出现条目，无法确认 11 月发布日期。",
+      "content_hash": "来源：WebSearch 结果，非官方原文。Product Hunt feed/HN 不可达。搜索结果：Ambiguous Workspace(18 款应用，团队与 agent 间流转)、Agently(agent 运行于完整业务上下文，Cohort 2 开放 250 团队)、NapsixB2B、Kollab(团队与 agent 共享 workspace)、Quantvest Engine；PH ",
+      "last_seen_at": "2026-11-14T16:15:48Z",
+      "changes": [],
+      "key_findings": [],
+      "no_change_reason": "今日可见上新约 5 款，均已在历史报告出现，无新的与 meee2 高度重叠者(来源：WebSearch 结果，非官方原文)"
+    },
+    {
+      "id": "github-cc-ecosystem",
+      "name": "GitHub Claude Code 生态雷达",
+      "category": "new_entrant_watch",
+      "threat": "md",
+      "threat_changed": false,
+      "has_changes": false,
+      "fetch_status": "ok",
+      "fetched_urls": [
+        "https://api.github.com/search/repositories?q=topic%3Aclaude-code&sort=stars&order=desc&per_page=25",
+        "https://api.github.com/search/repositories?q=claude+code+terminal+minimal+coding&sort=stars&order=desc&per_page=20",
+        "https://api.github.com/search/repositories?q=claude+code+cockpit+terminal&sort=stars&order=desc&per_page=25",
+        "https://api.github.com/search/repositories?q=claude+code+meta-harness+agent+swarm&sort=stars&order=desc&per_page=20"
+      ],
+      "raw_snapshot": "来源：GitHub 开源仓库，非官方。GitHub API 4/4 成功(25+20+25+4)，合并去重 73 个仓库；近期活跃且未在历史报告中出现的仓库：0。本次 full_name: morluto/rea, affaan-m/ECC, NousResearch/hermes-agent, DietrichGebert/ponytail, farion1231/cc-switch, nextlevelbuilder/ui-ux-pro-max-skill, Graphify-Labs/graphify, stablyai/orca, JuliusBrussee/caveman, addyosmani/agent-skills, thedotmack/claude-mem, Leonxlnx/taste-skill, paperclipai/paperclip, Panniantong/Agent-Reach, ruvnet/RuView, tt-a1i/archify, Egonex-AI/Understand-Anything, cheaper-inference/OmniRoute, rtk-ai/rtk, heygen-com/hyperframes, career-ops-hq/career-ops, ruvnet/ruflo, shareAI-lab/learn-claude-code, headroomlabs-ai/headroom, ComposioHQ/awesome-claude-skills, GaoSSR/best-claude-hud, iAmCorey/kooky, bitcoin21ideas/claude-statusline, lldong/tiny-trae, RiceGrainRain/alfred-tui, Aquaticats/Monochromatic, levibe/claude-code-statusline, artengin/claude-starred, TurboKach/claude-code-statusline, Postmodum37/simple-claude-code-statusline, ferreirafabio/tailgrid, shehab267/ccbrief, JoaoHenriqueBarbosa/agent-42, alliecatowo/glassy, atxtechbro/test-ink-flickering, foolish-dev/teleia, c4rl05/agent-race-control, startupfundraising/claude-code-chat-bridge, Abhishek-Chougule/claude-cli-statusline, 5c077m4n/cli-harness-statusline, alchaincyf/fanbox, handmux/handmux, luojiahai/code-by-wire, Surething-io/cockpit, NovusEdge/glowup, wilsen0/moku, dotdevdotdev/agentwire-dev, alexjbarnes/cockpit, Innovology/claude-dispatcher, trevormil/TerMinal, arikechen/ATF, nashory/agent-cockpit, wallacemar",
+      "content_hash": "来源：GitHub 开源仓库，非官方。GitHub API 4/4 成功(25+20+25+4)，合并去重 73 个仓库；近期活跃且未在历史报告中出现的仓库：0。本次 full_name: morluto/rea, affaan-m/ECC, NousResearch/hermes-agent, DietrichGebert/ponytail, farion1231/cc-switch, next",
+      "last_seen_at": "2026-11-14T16:15:48Z",
+      "changes": [],
+      "key_findings": [],
+      "no_change_reason": "合并 73 个仓库，近期活跃的新仓库 0 个；其余均已在历史报告中出现且无显著 star 跃升"
+    },
+    {
+      "id": "notion-ai",
+      "name": "Notion AI",
+      "category": "workspace",
+      "threat": "md",
+      "threat_changed": false,
+      "has_changes": false,
+      "fetch_status": "ok",
+      "fetched_urls": [
+        "WebSearch"
+      ],
+      "raw_snapshot": "来源：WebSearch 结果，非官方原文。未发现 11 月官方 release；最新编号版本仍为 3.8(10/13) Context for your agents；10/19 Agents 重构；Business/Enterprise AI credits 11/2 切换(历史已记录)；Notion Mail 9/22 关停(二手)。",
+      "content_hash": "来源：WebSearch 结果，非官方原文。未发现 11 月官方 release；最新编号版本仍为 3.8(10/13) Context for your agents；10/19 Agents 重构；Business/Enterprise AI credits 11/2 切换(历史已记录)；Notion Mail 9/22 关停(二手)。",
+      "last_seen_at": "2026-11-14T16:15:48Z",
+      "changes": [],
+      "key_findings": [],
+      "no_change_reason": "来源：WebSearch 结果，非官方原文。无 11 月 release，与 baseline 一致"
+    },
+    {
+      "id": "slack",
+      "name": "Slack",
+      "category": "comms",
+      "threat": "hi",
+      "threat_changed": true,
+      "has_changes": true,
+      "fetch_status": "ok",
+      "fetched_urls": [
+        "WebSearch"
+      ],
+      "raw_snapshot": "来源：WebSearch 结果，非官方原文。Slack 官方博客 10/30 Feature Drop 新识别细节：Slackbot Mini——完整 Slackbot 以浮动窗口常驻菜单栏，可从文档/通话/其他 app 唤起而无需打开 Slack 客户端；标记为 agent 的 app 与 Slackbot 出现在 DM 侧栏、与同事并列；事件触发 Slackbot 任务(Salesforce 阶段变更即自动执行)；Channel Insights；Slack Code API；Workflow Builder 两个新步骤发起与 Slackbot/agent 对话。",
+      "content_hash": "来源：WebSearch 结果，非官方原文。Slack 官方博客 10/30 Feature Drop 新识别细节：Slackbot Mini——完整 Slackbot 以浮动窗口常驻菜单栏，可从文档/通话/其他 app 唤起而无需打开 Slack 客户端；标记为 agent 的 app 与 Slackbot 出现在 DM 侧栏、与同事并列；事件触发 Slackbot 任务(Salesforce ",
+      "last_seen_at": "2026-11-14T16:15:48Z",
+      "changes": [
+        {
+          "type": "new_feature",
+          "description": "Slackbot Mini：完整 Slackbot 以浮动窗口进入 macOS 菜单栏，不打开 Slack 客户端即可在任意 app 中调用",
+          "evidence": "「Full Slackbot now lives in a floating window on your menu bar. Reach it from a doc, a call, or another app without opening the Slack client.」",
+          "source_url": "https://slack.com/intl/de-de/blog/news/slack-feature-drop-october2026",
+          "meee2_relevance": "锚点 5(Peripheral 层：菜单栏、不切焦点)",
+          "threat_signal": true
+        },
+        {
+          "type": "positioning",
+          "description": "agent 与同事并列出现在 DM 侧栏与 Home 的 DM 区",
+          "evidence": "「Your agents now sit right next to your teammates. Apps marked as agents, plus Slackbot, show up in the DM sidebar」",
+          "source_url": "https://slack.com/intl/de-de/blog/news/slack-feature-drop-october2026",
+          "meee2_relevance": "锚点 1(人与 AI 同列于同一通讯图) — 推断：仍是 IM 隐喻而非同一 session 协议",
+          "threat_signal": true
+        },
+        {
+          "type": "new_feature",
+          "description": "Slackbot 可由外部工具事件触发自动执行，无需 prompt",
+          "evidence": "「Slackbot now acts the moment something happens, no prompt needed.」",
+          "source_url": "https://slack.com/intl/de-de/blog/news/slack-feature-drop-october2026",
+          "meee2_relevance": null,
+          "threat_signal": false
+        }
+      ],
+      "key_findings": [
+        "推断：Slack 同时向菜单栏 peripheral 层(锚点 5)与\"agent 即同事\"(锚点 1 的弱形式)延伸，威胁由 md 上调为 hi",
+        "推断：Slackbot Mini 仍需打开浮窗交互，未见\"5 字戳任意 session\"式的无焦点切换；需观察是否支持跨工具 session"
+      ],
+      "no_change_reason": null
+    },
+    {
+      "id": "reflect",
+      "name": "Reflect",
+      "category": "workspace",
+      "threat": "md",
+      "threat_changed": false,
+      "has_changes": false,
+      "fetch_status": "ok",
+      "fetched_urls": [
+        "WebSearch"
+      ],
+      "raw_snapshot": "来源：WebSearch 结果，非官方原文。Reflect Open(7月，MIT，1,400+ stars)、MCP server(3月)、MCP 编辑笔记(4月)；iOS 最后更新 6/9；无新条目。",
+      "content_hash": "来源：WebSearch 结果，非官方原文。Reflect Open(7月，MIT，1,400+ stars)、MCP server(3月)、MCP 编辑笔记(4月)；iOS 最后更新 6/9；无新条目。",
+      "last_seen_at": "2026-11-14T16:15:48Z",
+      "changes": [],
+      "key_findings": [],
+      "no_change_reason": "来源：WebSearch 结果，非官方原文。无新条目"
+    },
+    {
+      "id": "raycast",
+      "name": "Raycast",
+      "category": "peripheral",
+      "threat": "md",
+      "threat_changed": false,
+      "has_changes": false,
+      "fetch_status": "ok",
+      "fetched_urls": [
+        "WebSearch"
+      ],
+      "raw_snapshot": "来源：WebSearch 结果，非官方原文。(官方 changelog 页标题) macOS v2.11(11/4)：Dictate to AI、菜单栏 AI 用量、PAC 代理；iOS v1.5.3(11/6)：键盘内翻译/文本样式、组织账号 web search 修复。无 11/6 之后条目。",
+      "content_hash": "来源：WebSearch 结果，非官方原文。(官方 changelog 页标题) macOS v2.11(11/4)：Dictate to AI、菜单栏 AI 用量、PAC 代理；iOS v1.5.3(11/6)：键盘内翻译/文本样式、组织账号 web search 修复。无 11/6 之后条目。",
+      "last_seen_at": "2026-11-14T16:15:48Z",
+      "changes": [],
+      "key_findings": [],
+      "no_change_reason": "来源：WebSearch 结果，非官方原文。仍为 v2.11 / iOS 1.5.3，与 baseline 一致"
+    },
+    {
+      "id": "replit",
+      "name": "Replit",
+      "category": "orchestrator",
+      "threat": "md",
+      "threat_changed": false,
+      "has_changes": false,
+      "fetch_status": "ok",
+      "fetched_urls": [
+        "WebSearch"
+      ],
+      "raw_snapshot": "来源：WebSearch 结果，非官方原文。docs.replit.com 11/06 changelog 页存在但摘要仍无内容(不在网络白名单)；可读条目仍为 8 月(8/28 Intelligent Model Routing 默认、8/21 Steer/routines/安全扫描、8/14 Agent MCP 连接)；havoptic latest 2026.10.16。",
+      "content_hash": "来源：WebSearch 结果，非官方原文。docs.replit.com 11/06 changelog 页存在但摘要仍无内容(不在网络白名单)；可读条目仍为 8 月(8/28 Intelligent Model Routing 默认、8/21 Steer/routines/安全扫描、8/14 Agent MCP 连接)；havoptic latest 2026.10.16。",
+      "last_seen_at": "2026-11-14T16:15:48Z",
+      "changes": [],
+      "key_findings": [],
+      "no_change_reason": "来源：WebSearch 结果，非官方原文。11/06 页内容仍不可读，可读条目与 baseline 一致"
+    },
+    {
+      "id": "superwhisper",
+      "name": "Superwhisper",
+      "category": "peripheral",
+      "threat": "lo",
+      "threat_changed": false,
+      "has_changes": false,
+      "fetch_status": "ok",
+      "fetched_urls": [
+        "WebSearch"
+      ],
+      "raw_snapshot": "来源：WebSearch 结果，非官方原文。官方 changelog 摘要至 2.15.0(5/29 无音频警告)；Releasebot 列 2.19.0(10 月初)；S1-mini(8/20)；与 Cohere 本地会议录音(仅标题)。均为历史报告已出现条目。",
+      "content_hash": "来源：WebSearch 结果，非官方原文。官方 changelog 摘要至 2.15.0(5/29 无音频警告)；Releasebot 列 2.19.0(10 月初)；S1-mini(8/20)；与 Cohere 本地会议录音(仅标题)。均为历史报告已出现条目。",
+      "last_seen_at": "2026-11-14T16:15:48Z",
+      "changes": [],
+      "key_findings": [],
+      "no_change_reason": "来源：WebSearch 结果，非官方原文。无新条目(2.19/Cohere 历史已记录)"
+    }
+  ],
+  "alerts": [
+    {
+      "competitor_id": "slack",
+      "competitor_name": "Slack",
+      "severity": "hi",
+      "headline": "Slackbot Mini 进驻 macOS 菜单栏，agent 与同事并列于 DM 侧栏",
+      "evidence": "「Full Slackbot now lives in a floating window on your menu bar. Reach it from a doc, a call, or another app without opening the Slack client.」",
+      "action_suggestion": "把 meee2 菜单栏差异点讲清：不切焦点、5 字戳任意 session、跨工具 live link，而非单一 IM 的 bot 浮窗；评估是否将 sources.json 中 Slack 威胁上调为 hi 并加入 slack.com feature-drop 源"
+    }
+  ]
+}
