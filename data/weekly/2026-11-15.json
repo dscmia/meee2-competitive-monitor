@@ -1,0 +1,26 @@
+{
+  "week_start": "2026-11-09",
+  "week_end": "2026-11-15",
+  "generated_at": "2026-11-16T15:15:00Z",
+  "narrative": "本周最值得注意的是 Slack：11-14 日报记录 Slackbot Mini「Full Slackbot now lives in a floating window on your menu bar... without opening the Slack client」，同时「Your agents now sit right next to your teammates」，Slack 威胁由 md 上调为 hi，这是本周唯一的威胁等级变动。推断：大厂 IM 正同时逼近 meee2 的两个锚点——菜单栏 peripheral 层（锚点 5）与人和 agent 同列（锚点 1），但日报判断其仍是 IM 隐喻、并非同一 session 协议。第二件事是 GitHub Copilot（11-10 alert）：Copilot app 定位为「desktop home for AI coding agents」并新增 Projects 与 computer use，11-11 又有 /code 把 CLI session 交接到 VS Code；推断：Copilot 在往桌面常驻 agent 工作台延伸，但跨 session 接续仍限于自家工具。其余变化多为小步迭代（claude-ai、windsurf Agent Command Center、openai dots 企业 GA），github-cc-ecosystem 继续涌现 cockpit 类小仓库（HiveForge、CodeCockpit、antiroute 等，均 threat_signal=false），Product Hunt 出现自称「humans and AI」同处一个 workspace 的 Ambiguous Workspace（11-11，md 级信号）。另需注意：本周日报仍注明 openai.com、producthunt 等域名被网络策略拒绝，多数证据为 WebSearch 第三方转述，置信度有限。",
+  "recommendations": [
+    {
+      "headline": "针对 Slackbot Mini 写清 meee2 菜单栏的差异化叙事",
+      "detail": "Slack 已把完整 Slackbot 放进 macOS 菜单栏、agent 进 DM 侧栏，meee2 的菜单栏形态容易被类比成「又一个 bot 浮窗」。建议本周产出一页对比：不切焦点、5 字戳任意 session、跨工具 live link、人作为慢 session 在 agent 图内——这些是 Slack 原文未触及的部分。",
+      "priority": "hi",
+      "basis": "依据：Slack 2026-11-14 alert「Slackbot Mini 进驻 macOS 菜单栏，agent 与同事并列于 DM 侧栏」，threat md→hi"
+    },
+    {
+      "headline": "核实 Copilot app Projects 是否带跨 session artifact / 人类参与者",
+      "detail": "Copilot app 定位为桌面 agent 工作台并新增 Projects，加上 CLI→VS Code 的 /code session 交接，方向贴近锚点 1/4/5。当前证据均为第三方标题转述，建议安排人工试用一次 Copilot app，确认 Projects 是否共享 artifact、是否有人作为 session 节点。",
+      "priority": "md",
+      "basis": "依据：GitHub Copilot 2026-11-10 alert「Copilot app 定位为桌面 AI agent 工作台，新增 Projects 与 computer use」；2026-11-11 change「/code 把当前 CLI session 交接到 VS Code」"
+    },
+    {
+      "headline": "把 openai.com、producthunt.com 等域名加入 routine 网络白名单，并将 Ambiguous Workspace 加入观察源",
+      "detail": "本周每日 summary.note 都记录官方源被网络策略拒绝，证据只能靠第三方转述；Ambiguous Workspace 自称让「humans and AI」处于同一 workspace，触碰锚点 1 但发布细节未确认，需要稳定原文源跟踪。",
+      "priority": "md",
+      "basis": "依据：日报 summary.note 2026-11-09 至 11-15 均记录域名被拒/DNS 不可达；producthunt-ai 2026-11-11 new_entrant「Ambiguous Workspace」(threat_signal=true)"
+    }
+  ]
+}
