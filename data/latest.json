@@ -1,14 +1,14 @@
 {
-  "report_date": "2026-11-17",
-  "generated_at": "2026-11-17T16:16:22Z",
+  "report_date": "2026-11-18",
+  "generated_at": "2026-11-18T09:00:00Z",
   "summary": {
     "total_tracked": 15,
     "fetched_ok": 15,
     "fetch_error": 0,
-    "has_changes": 3,
-    "new_alerts": 0,
+    "has_changes": 2,
+    "new_alerts": 1,
     "skipped": 0,
-    "note": "hn.algolia.com / openai.com / producthunt / itunes / 各 RSS 仍被网络策略拒绝(ENOTFOUND，需在环境网络设置中加入白名单)；仅 api.github.com 可用。其余源用 WebSearch 兜底，内容为第三方转述。本轮变化：claude-ai(Claude Code v2.1.323 Code Mode)、producthunt-ai(新出现 Teamily AI)、notion-ai(第三方解读 context layer 定位)。无 alert。"
+    "note": "hn.algolia.com / openai.com / producthunt / itunes / github.blog / 各 RSS 仍被网络策略拒绝(ENOTFOUND，需在环境网络设置中加入白名单)；仅 api.github.com 可用。其余源用 WebSearch 兜底，内容为第三方转述。本轮变化：github-copilot(11/16 weekly：agent session 注意力排序、手机续接)、claude-ai(Claude Code v2.1.325 安全修复)。1 条 hi alert。"
   },
   "competitors": [
     {
@@ -22,12 +22,12 @@
       "fetched_urls": [
         "WebSearch"
       ],
-      "raw_snapshot": "来源：WebSearch 结果，非官方原文。仍无 11 月条目；最新可见 cursor.com 2026-08-19 changelog(Agent 可监控 PR、跟随 Slack 线程、定时任务；运行中 agent 可 steer)；havoptic latest 2026.10.16；v3.11(7/10)。",
-      "content_hash": "来源：WebSearch 结果，非官方原文。仍无 11 月条目；最新可见 cursor.com 2026-08-19 changelog(Agent 可监控 PR、跟随 Slack 线程、定时任务；运行中 agent 可 steer)；havoptic latest 2026.10.16；v3.11(7/10)。",
-      "last_seen_at": "2026-11-17T16:16:22Z",
+      "raw_snapshot": "来源：WebSearch 结果，非官方原文。仍无 11 月条目；最新可见 cursor.com 2026-08-19 changelog(steer 运行中 agent、PR label API)；havoptic 最新 v3.11(7/10)，2026.10.16 为页面生成日期。",
+      "content_hash": "来源：WebSearch 结果，非官方原文。仍无 11 月条目；最新可见 cursor.com 2026-08-19 changelog(steer 运行中 agent、PR label API)；havoptic 最新 v3.11(7/10)，2026.10.16 为页面生成日期。",
+      "last_seen_at": "2026-11-18T09:00:00Z",
       "changes": [],
       "key_findings": [],
-      "no_change_reason": "WebSearch 仍无 11 月 changelog，最新内容与基线一致"
+      "no_change_reason": "搜索结果与 11/17 基线一致，无 11 月新 changelog"
     },
     {
       "id": "openai",
@@ -40,12 +40,12 @@
       "fetched_urls": [
         "WebSearch"
       ],
-      "raw_snapshot": "来源：WebSearch 结果，非官方原文。未发现 11/13 之后新条目。11/13 ChatGPT Wallet(dot 代购，GA)；11/12 Admin Console 改用户邮箱；11/10 Business Hub GA；12/11 退役高级与标准语音模式；11/04 Images 2.6。均已在 11/16 报告。",
-      "content_hash": "来源：WebSearch 结果，非官方原文。未发现 11/13 之后新条目。11/13 ChatGPT Wallet(dot 代购，GA)；11/12 Admin Console 改用户邮箱；11/10 Business Hub GA；12/11 退役高级与标准语音模式；11/04 Images 2.6。均已在 11/16 报告。",
-      "last_seen_at": "2026-11-17T16:16:22Z",
+      "raw_snapshot": "来源：WebSearch 结果，非官方原文。未发现 11/13 之后新条目。11/10 Business Agents beta(与已报告的 Business Hub 同期)；ChatGPT Work(已于 11/10 报告)；11/04 Images 2.6；10/27 iCloud Mail/Calendar 插件。",
+      "content_hash": "来源：WebSearch 结果，非官方原文。未发现 11/13 之后新条目。11/10 Business Agents beta(与已报告的 Business Hub 同期)；ChatGPT Work(已于 11/10 报告)；11/04 Images 2.6；10/27 iCloud Mail/Calendar 插件。",
+      "last_seen_at": "2026-11-18T09:00:00Z",
       "changes": [],
       "key_findings": [],
-      "no_change_reason": "未发现 11/13 之后新 release notes，条目均已在基线中"
+      "no_change_reason": "搜索到的 ChatGPT Work / 11-10 business 功能均已在此前报告中出现，无新条目"
     },
     {
       "id": "windsurf",
@@ -58,12 +58,12 @@
       "fetched_urls": [
         "WebSearch"
       ],
-      "raw_snapshot": "来源：WebSearch 结果，非官方原文。docs.devin.ai changelog-next：11/9 build 3.12.1043 Changed；11/8 Agent Command Center session「…」菜单 MCP server 开关/重新认证；havoptic v3.12.17(11/6)、v3.12.28(ACC Markdown 预览)、v3.12.43(11/9)。与 11/16 基线一致。",
-      "content_hash": "来源：WebSearch 结果，非官方原文。docs.devin.ai changelog-next：11/9 build 3.12.1043 Changed；11/8 Agent Command Center session「…」菜单 MCP server 开关/重新认证；havoptic v3.12.17(11/6)、v3.12.28(ACC Markdown 预览)、v3.12.43(11/",
-      "last_seen_at": "2026-11-17T16:16:22Z",
+      "raw_snapshot": "来源：WebSearch 结果，非官方原文。docs.devin.ai：stable CLI 11/9 image_size 参数(默认缩放 70%)；next 11/8 Agent Command Center session「…」菜单 MCP 开关/重新认证；11/9 build 3.12.1043。与 11/17 基线一致。",
+      "content_hash": "来源：WebSearch 结果，非官方原文。docs.devin.ai：stable CLI 11/9 image_size 参数(默认缩放 70%)；next 11/8 Agent Command Center session「…」菜单 MCP 开关/重新认证；11/9 build 3.12.1043。与 11/17 基线一致。",
+      "last_seen_at": "2026-11-18T09:00:00Z",
       "changes": [],
       "key_findings": [],
-      "no_change_reason": "11/8 ACC MCP 控制与 11/9 build 已在基线中，无新条目"
+      "no_change_reason": "Devin Desktop changelog 最新仍为 11/8–11/9 条目，已在基线中"
     },
     {
       "id": "claude-ai",
@@ -74,24 +74,25 @@
       "has_changes": true,
       "fetch_status": "ok",
       "fetched_urls": [
-        "WebSearch"
+        "https://raw.githubusercontent.com/anthropics/claude-code/v2.1.325/CHANGELOG.md",
+        "https://smartscope.blog/en/blog/claude-code-2-1-321-2-1-325-2026/"
       ],
-      "raw_snapshot": "来源：WebSearch 结果，非官方原文。第三方追踪(claudekit/havoptic)：Claude Code v2.1.323(11/12)——实验性 opt-in Code Mode(Claude 写 JavaScript 调用工具，而非逐个调用)、plugin 版本范围、TypeScript hook 校验。此前 v2.1.321(11/10)、v2.1.319(~11/6)、v2.1.317(11/2)；Opus 4.8 fast mode 11/30 结束。官方 changelog 未直接抓取。",
-      "content_hash": "来源：WebSearch 结果，非官方原文。第三方追踪(claudekit/havoptic)：Claude Code v2.1.323(11/12)——实验性 opt-in Code Mode(Claude 写 JavaScript 调用工具，而非逐个调用)、plugin 版本范围、TypeScript hook 校验。此前 v2.1.321(11/10)、v2.1.319(~11/6)、v2.",
-      "last_seen_at": "2026-11-17T16:16:22Z",
+      "raw_snapshot": "来源：WebSearch 结果，非官方原文。Claude Code v2.1.325(~11/13，官方 CHANGELOG 摘要)：修复 zstd 压缩响应解码安全问题；VS Code/集成终端新增 Jupyter notebook 重跑 cell 提示。第三方(smartscope)称 sandboxed Bash 默认改走常规权限流程，需 sandbox.autoAllowBashIfSandboxed:true 才免确认(未经官方核实)。此前 v2.1.323(11/12) Code Mode。",
+      "content_hash": "来源：WebSearch 结果，非官方原文。Claude Code v2.1.325(~11/13，官方 CHANGELOG 摘要)：修复 zstd 压缩响应解码安全问题；VS Code/集成终端新增 Jupyter notebook 重跑 cell 提示。第三方(smartscope)称 sandboxed Bash 默认改走常规权限流程，需 sandbox.autoAllowBashIfSan",
+      "last_seen_at": "2026-11-18T09:00:00Z",
       "changes": [
         {
-          "type": "new_feature",
-          "description": "Claude Code v2.1.323 加入实验性 opt-in Code Mode：Claude 编写 JavaScript 批量调用工具",
-          "evidence": "「an experimental opt-in Code Mode, where Claude writes JavaScript to call its tools instead of invoking them one at a time」(第三方转述)",
-          "source_url": "https://claudekit.io/en/updates/claude-code-2-1-323/",
+          "type": "other",
+          "description": "Claude Code v2.1.325：zstd 解码安全修复 + Jupyter notebook 重跑提示；第三方称 sandboxed Bash 默认改走权限流程",
+          "evidence": "「Fixed a security issue in how zstd-compressed responses are decoded」(官方 CHANGELOG 摘要，经 WebSearch)",
+          "source_url": "https://raw.githubusercontent.com/anthropics/claude-code/v2.1.325/CHANGELOG.md",
           "meee2_relevance": null,
           "threat_signal": false
         }
       ],
       "key_findings": [
-        "Claude Code v2.1.323(11/12)：实验性 Code Mode、plugin 版本范围、TS hook 校验(第三方转述)",
-        "推断：工具调用效率优化，未触碰 meee2 差异化锚点"
+        "v2.1.325 为安全/体验修复版本，未触碰 meee2 锚点",
+        "推断：sandbox 权限默认收紧属于安全治理方向，与 session 协议无关"
       ],
       "no_change_reason": null
     },
@@ -101,17 +102,29 @@
       "category": "orchestrator",
       "threat": "hi",
       "threat_changed": false,
-      "has_changes": false,
+      "has_changes": true,
       "fetch_status": "ok",
       "fetched_urls": [
-        "WebSearch"
+        "https://github.blog/changelog/2026-11-16-github-copilot-weekly-releases-november-9"
       ],
-      "raw_snapshot": "来源：WebSearch 结果，非官方原文。未发现 11/06 之后新条目。TechBytes 11/06 weekly：JetBrains Air 与 Xcode 27.3 beta、Agent Merge PR 自动化、VS Code 1.145 scheduled cron tasks、上下文窗口 compact；10 月 Copilot app 分离 license/仓库账号，CLI /model 发现本地 Ollama。",
-      "content_hash": "来源：WebSearch 结果，非官方原文。未发现 11/06 之后新条目。TechBytes 11/06 weekly：JetBrains Air 与 Xcode 27.3 beta、Agent Merge PR 自动化、VS Code 1.145 scheduled cron tasks、上下文窗口 compact；10 月 Copilot app 分离 license/仓库账号，CLI /m",
-      "last_seen_at": "2026-11-17T16:16:22Z",
-      "changes": [],
-      "key_findings": [],
-      "no_change_reason": "未发现 11/06 之后新条目"
+      "raw_snapshot": "来源：WebSearch 结果，非官方原文。github.blog changelog 2026-11-16「GitHub Copilot weekly releases: November 9」(正文未直接抓取，github.blog 被网络策略拒绝)：Copilot app 可接入 GHES 仓库；session 可在手机上继续(GitHub Mobile 二维码)；VS Code 1.146 标出哪些 agent session 最需要你先处理；新模型 Claude Fable 5.2、Gemini 4 Carbon。背景：10/28 Agent Host 让 session 在 VS Code 窗口关闭后继续运行。",
+      "content_hash": "来源：WebSearch 结果，非官方原文。github.blog changelog 2026-11-16「GitHub Copilot weekly releases: November 9」(正文未直接抓取，github.blog 被网络策略拒绝)：Copilot app 可接入 GHES 仓库；session 可在手机上继续(GitHub Mobile 二维码)；VS Code 1.146",
+      "last_seen_at": "2026-11-18T09:00:00Z",
+      "changes": [
+        {
+          "type": "new_feature",
+          "description": "VS Code 1.146 中 Copilot 对多个 agent session 做注意力排序，标出最需要人介入的 session；session 可跨设备(手机)续接",
+          "evidence": "「see which agent sessions need you first in VS Code」(changelog 摘要，经 WebSearch 转述)",
+          "source_url": "https://github.blog/changelog/2026-11-16-github-copilot-weekly-releases-november-9",
+          "meee2_relevance": "推断：触碰锚点 1(人在 agent 图内，人作为多个 AI session 的调度/响应者)与锚点 5(peripheral 层提示哪个 session 需要人)；但仍限于 IDE 内，未见菜单栏/跨工具形态",
+          "threat_signal": true
+        }
+      ],
+      "key_findings": [
+        "Copilot 开始把「人需要先处理哪个 agent session」作为一等功能",
+        "推断：多 session 注意力管理正成为 IDE 标配，meee2 的差异需落在跨工具 + 菜单栏不切焦点"
+      ],
+      "no_change_reason": null
     },
     {
       "id": "gemini",
@@ -124,12 +137,12 @@
       "fetched_urls": [
         "WebSearch"
       ],
-      "raw_snapshot": "来源：WebSearch 结果，非官方原文。仍未找到 2026-11 Gemini app Drop。11/10 November Pixel Drop：Gemini Intelligence(含 Rambler，仅 Pixel 10/11)、Pixel Tag($29)。I/O 2026：重设计界面、proactive agents、Gemini Omni。",
-      "content_hash": "来源：WebSearch 结果，非官方原文。仍未找到 2026-11 Gemini app Drop。11/10 November Pixel Drop：Gemini Intelligence(含 Rambler，仅 Pixel 10/11)、Pixel Tag($29)。I/O 2026：重设计界面、proactive agents、Gemini Omni。",
-      "last_seen_at": "2026-11-17T16:16:22Z",
+      "raw_snapshot": "来源：WebSearch 结果，非官方原文。仍未找到 2026-11 Gemini app Drop。11/10 November Pixel Drop：Gemini app automation(订餐/打车等，Pixel 10)、Gemini Intelligence(仅 Pixel 10/11)、Nano Banana 自定义图标。",
+      "content_hash": "来源：WebSearch 结果，非官方原文。仍未找到 2026-11 Gemini app Drop。11/10 November Pixel Drop：Gemini app automation(订餐/打车等，Pixel 10)、Gemini Intelligence(仅 Pixel 10/11)、Nano Banana 自定义图标。",
+      "last_seen_at": "2026-11-18T09:00:00Z",
       "changes": [],
       "key_findings": [],
-      "no_change_reason": "仍无 2026-11 Gemini app Drop，Pixel Drop 已在基线中"
+      "no_change_reason": "仅见已报告的 11/10 Pixel Drop，无 Gemini app 新条目"
     },
     {
       "id": "linear",
@@ -142,12 +155,12 @@
       "fetched_urls": [
         "WebSearch"
       ],
-      "raw_snapshot": "来源：WebSearch 结果，非官方原文。最新仍为 2026-11-04 mobile diffs：Diffs 上 iOS/Android；Linear Agent 分支名遵循 workspace 格式、记住上次 coding 环境、链接转 customer requests；Jira sync 修复。10/08 stacked PRs。",
-      "content_hash": "来源：WebSearch 结果，非官方原文。最新仍为 2026-11-04 mobile diffs：Diffs 上 iOS/Android；Linear Agent 分支名遵循 workspace 格式、记住上次 coding 环境、链接转 customer requests；Jira sync 修复。10/08 stacked PRs。",
-      "last_seen_at": "2026-11-17T16:16:22Z",
+      "raw_snapshot": "来源：WebSearch 结果，非官方原文。最新仍为 2026-11-04 mobile diffs：Diffs 上移动端；Linear Agent 分支名遵循 workspace 格式、链接转 customer requests。10/08 stacked PRs。",
+      "content_hash": "来源：WebSearch 结果，非官方原文。最新仍为 2026-11-04 mobile diffs：Diffs 上移动端；Linear Agent 分支名遵循 workspace 格式、链接转 customer requests。10/08 stacked PRs。",
+      "last_seen_at": "2026-11-18T09:00:00Z",
       "changes": [],
       "key_findings": [],
-      "no_change_reason": "最新仍为 11/04 mobile diffs，与基线一致"
+      "no_change_reason": "无 11/04 之后的 changelog 条目"
     },
     {
       "id": "slack",
@@ -160,12 +173,12 @@
       "fetched_urls": [
         "WebSearch"
       ],
-      "raw_snapshot": "来源：WebSearch 结果，非官方原文。未发现 11 月条目。最新仍为 10 月 Feature Drop(Slackbot Mini 菜单栏浮窗、agent 进 DM 侧栏、Workflow Builder 发起 Slackbot/agent 对话、Slack Code API、Skills)与 Slackbot 事件触发；8 月 Big Mode/Skill Sets。",
-      "content_hash": "来源：WebSearch 结果，非官方原文。未发现 11 月条目。最新仍为 10 月 Feature Drop(Slackbot Mini 菜单栏浮窗、agent 进 DM 侧栏、Workflow Builder 发起 Slackbot/agent 对话、Slack Code API、Skills)与 Slackbot 事件触发；8 月 Big Mode/Skill Sets。",
-      "last_seen_at": "2026-11-17T16:16:22Z",
+      "raw_snapshot": "来源：WebSearch 结果，非官方原文。未发现 11 月条目。最新仍为 10 月 Feature Drop(Slackbot Mini 菜单栏浮窗、agent 进 DM 侧栏、Workflow Builder 发起 Slackbot/agent 对话、Slack Code API)与 10/28 Slackbot 事件触发；8 月 Big Mode/Skill Sets。",
+      "content_hash": "来源：WebSearch 结果，非官方原文。未发现 11 月条目。最新仍为 10 月 Feature Drop(Slackbot Mini 菜单栏浮窗、agent 进 DM 侧栏、Workflow Builder 发起 Slackbot/agent 对话、Slack Code API)与 10/28 Slackbot 事件触发；8 月 Big Mode/Skill Sets。",
+      "last_seen_at": "2026-11-18T09:00:00Z",
       "changes": [],
       "key_findings": [],
-      "no_change_reason": "未发现 11 月条目，与基线一致"
+      "no_change_reason": "无 11 月新条目，内容与基线一致"
     },
     {
       "id": "producthunt-ai",
@@ -173,29 +186,17 @@
       "category": "new_entrant_watch",
       "threat": "md",
       "threat_changed": false,
-      "has_changes": true,
+      "has_changes": false,
       "fetch_status": "ok",
       "fetched_urls": [
         "WebSearch"
       ],
-      "raw_snapshot": "来源：WebSearch 结果，非官方原文。Product Hunt feed/HN 不可达。搜索结果：Ambiguous Workspace、Agently、NapsixB2B、Quantvest Engine(均为历史条目)；新出现：Teamily AI(shareuhack PH 周报 2026-11-05 #7，371 upvotes)——把人、agents、文档、workflow 放进同一个 messenger。",
-      "content_hash": "来源：WebSearch 结果，非官方原文。Product Hunt feed/HN 不可达。搜索结果：Ambiguous Workspace、Agently、NapsixB2B、Quantvest Engine(均为历史条目)；新出现：Teamily AI(shareuhack PH 周报 2026-11-05 #7，371 upvotes)——把人、agents、文档、workflow 放进同",
-      "last_seen_at": "2026-11-17T16:16:22Z",
-      "changes": [
-        {
-          "type": "new_entrant",
-          "description": "Teamily AI：把人、agents、文档与 workflow 放进同一个 messenger(PH 周报 11/05 #7，371 upvotes)；建议考虑加入 sources.json 观察",
-          "evidence": "「puts people, agents, documents, and workflows in one messenger」(WebSearch 摘要转述)",
-          "source_url": "https://www.shareuhack.com/zh-TW/posts/product-hunt-weekly-2026-11-05",
-          "meee2_relevance": "推断：人与 agent 同处一个协作面，弱触碰锚点 1(人在 agent 图内)；但仍为消息流范式，未见 session 同构或 live link 证据",
-          "threat_signal": false
-        }
-      ],
-      "key_findings": [
-        "新出现 Teamily AI：人 + agents + 文档 + workflow 同一 messenger",
-        "推断：human-AI 同空间协作品类继续扩张，属 md 级观察"
-      ],
-      "no_change_reason": null
+      "raw_snapshot": "来源：WebSearch 结果，非官方原文。Product Hunt feed/HN 不可达。shareuhack PH 周报 11/05(Empacer、Teamily AI、UnleashX、Scalekit、beacon.sh、Floot Payments)与 11/12(Tobira、Product Hunt MCP、AXL)；首页快照(无日期)：Kilo Code v7(并行 agents、diff reviewer)、Cosine Swarm(并行 agent 长任务)。",
+      "content_hash": "来源：WebSearch 结果，非官方原文。Product Hunt feed/HN 不可达。shareuhack PH 周报 11/05(Empacer、Teamily AI、UnleashX、Scalekit、beacon.sh、Floot Payments)与 11/12(Tobira、Product Hunt MCP、AXL)；首页快照(无日期)：Kilo Code v7(并行 agent",
+      "last_seen_at": "2026-11-18T09:00:00Z",
+      "changes": [],
+      "key_findings": [],
+      "no_change_reason": "今日上新(可见)约 10 款，无与 meee2 高度重叠者；Teamily AI 已于 11/17 报告，其余仅命中 agent 单一关键词"
     },
     {
       "id": "github-cc-ecosystem",
@@ -211,12 +212,12 @@
         "https://api.github.com/search/repositories?q=claude+code+cockpit+terminal&sort=stars&order=desc&per_page=25",
         "https://api.github.com/search/repositories?q=claude+code+meta-harness+agent+swarm&sort=stars&order=desc&per_page=20"
       ],
-      "raw_snapshot": "来源：GitHub 开源仓库，非官方。GitHub API 4/4 成功(25+20+25+4)，合并去重 73 个仓库；近期活跃且未在历史报告中出现的新仓库：0。本次 full_name: morluto/rea, affaan-m/ECC, NousResearch/hermes-agent, DietrichGebert/ponytail, farion1231/cc-switch, nextlevelbuilder/ui-ux-pro-max-skill, Graphify-Labs/graphify, stablyai/orca, JuliusBrussee/caveman, addyosmani/agent-skills, thedotmack/claude-mem, Leonxlnx/taste-skill, paperclipai/paperclip, Panniantong/Agent-Reach, ruvnet/RuView, tt-a1i/archify, Egonex-AI/Understand-Anything, cheaper-inference/OmniRoute, rtk-ai/rtk, heygen-com/hyperframes, career-ops-hq/career-ops, ruvnet/ruflo, shareAI-lab/learn-claude-code, headroomlabs-ai/headroom, ComposioHQ/awesome-claude-skills, GaoSSR/best-claude-hud, iAmCorey/kooky, bitcoin21ideas/claude-statusline, lldong/tiny-trae, RiceGrainRain/alfred-tui, Aquaticats/Monochromatic, levibe/claude-code-statusline, artengin/claude-starred, TurboKach/claude-code-statusline, Postmodum37/simple-claude-code-statusline, ferreirafabio/tailgrid, shehab267/ccbrief, JoaoHenriqueBarbosa/agent-42, alliecatowo/glassy, atxtechbro/test-ink-flickering, IWhitebird/claude-jr, foolish-dev/teleia, c4rl05/agent-race-control, startupfundraising/claude-code-chat-bridge, Abhishek-Chougule/claude-cli-statusline, alchaincyf/fanbox, handmux/handmux, luojiahai/code-by-wire, Surething-io/cockpit, NovusEdge/glowup, wilsen0/moku, dotdevdotdev/agentwire-dev, alexjbarnes/cockpit, Innovology/claude-dispatcher, trevormil/TerMinal, arikechen/ATF, nashory/agent-cockpit, wallacemartinss/cc-c",
+      "raw_snapshot": "来源：GitHub 开源仓库，非官方。GitHub API 4/4 成功(25+20+25+4)，合并去重 73 个仓库；近期活跃且未在历史报告中出现的新仓库：0。本次 full_name: morluto/rea, affaan-m/ECC, NousResearch/hermes-agent, DietrichGebert/ponytail, farion1231/cc-switch, nextlevelbuilder/ui-ux-pro-max-skill, Graphify-Labs/graphify, stablyai/orca, JuliusBrussee/caveman, addyosmani/agent-skills, Leonxlnx/taste-skill, thedotmack/claude-mem, paperclipai/paperclip, Panniantong/Agent-Reach, ruvnet/RuView, tt-a1i/archify, Egonex-AI/Understand-Anything, cheaper-inference/OmniRoute, rtk-ai/rtk, heygen-com/hyperframes, career-ops-hq/career-ops, ruvnet/ruflo, shareAI-lab/learn-claude-code, headroomlabs-ai/headroom, ComposioHQ/awesome-claude-skills, GaoSSR/best-claude-hud, iAmCorey/kooky, bitcoin21ideas/claude-statusline, lldong/tiny-trae, RiceGrainRain/alfred-tui, Aquaticats/Monochromatic, levibe/claude-code-statusline, artengin/claude-starred, TurboKach/claude-code-statusline, Postmodum37/simple-claude-code-statusline, ferreirafabio/tailgrid, shehab267/ccbrief, JoaoHenriqueBarbosa/agent-42, alliecatowo/glassy, atxtechbro/test-ink-flickering, IWhitebird/claude-jr, foolish-dev/teleia, c4rl05/agent-race-control, startupfundraising/claude-code-chat-bridge, Abhishek-Chougule/claude-cli-statusline, alchaincyf/fanbox, handmux/handmux, luojiahai/code-by-wire, Surething-io/cockpit, NovusEdge/glowup, wilsen0/moku, dotdevdotdev/agentwire-dev, alexjbarnes/cockpit, Innovology/claude-dispatcher, trevormil/TerMinal, arikechen/ATF, nashory/agent-cockpit, wallacemartinss/cc-c",
       "content_hash": "来源：GitHub 开源仓库，非官方。GitHub API 4/4 成功(25+20+25+4)，合并去重 73 个仓库；近期活跃且未在历史报告中出现的新仓库：0。本次 full_name: morluto/rea, affaan-m/ECC, NousResearch/hermes-agent, DietrichGebert/ponytail, farion1231/cc-switch, nex",
-      "last_seen_at": "2026-11-17T16:16:22Z",
+      "last_seen_at": "2026-11-18T09:00:00Z",
       "changes": [],
       "key_findings": [],
-      "no_change_reason": "73 个仓库中近期活跃且未在历史报告出现的新仓库为 0"
+      "no_change_reason": "73 个仓库中近期活跃者均已在历史报告中出现，无新仓库"
     },
     {
       "id": "notion-ai",
@@ -224,29 +225,17 @@
       "category": "workspace",
       "threat": "md",
       "threat_changed": false,
-      "has_changes": true,
+      "has_changes": false,
       "fetch_status": "ok",
       "fetched_urls": [
         "WebSearch"
       ],
-      "raw_snapshot": "来源：WebSearch 结果，非官方原文。未发现 11 月官方 release；最新仍为 3.8(10/13) 与 10/19 credit 体系(11/2 切换)。新：11/11 第三方 newsletter(Madison's Morning Memo)标题称 Notion 押注成为 agents 的 context layer。",
-      "content_hash": "来源：WebSearch 结果，非官方原文。未发现 11 月官方 release；最新仍为 3.8(10/13) 与 10/19 credit 体系(11/2 切换)。新：11/11 第三方 newsletter(Madison's Morning Memo)标题称 Notion 押注成为 agents 的 context layer。",
-      "last_seen_at": "2026-11-17T16:16:22Z",
-      "changes": [
-        {
-          "type": "positioning",
-          "description": "第三方 newsletter 解读 Notion 定位为 agents 的 context layer，而非另一个 agent",
-          "evidence": "「Notion bets on being the context layer for agents」(newsletter 标题，11/11)",
-          "source_url": "https://buttondown.com/madsford22/archive/notion-bets-on-being-the-context-layer-for-agents/",
-          "meee2_relevance": "推断：若 Notion 成为跨工具 agent 的上下文源，与锚点 4(跨工具 artifact pull)方向相邻；仅二手解读，未见官方原文",
-          "threat_signal": false
-        }
-      ],
-      "key_findings": [
-        "11/11 第三方 newsletter：Notion 定位 agents 的 context layer",
-        "推断：方向与 meee2 跨工具 artifact pull 相邻，待官方原文确认"
-      ],
-      "no_change_reason": null
+      "raw_snapshot": "来源：WebSearch 结果，非官方原文。未发现 11 月官方 release；最新仍为 10/19「Agents, rebuilt to do more for less」(agent 自带电脑与浏览器、Review for me、ChatGPT 计划接入、AI Command Center coming soon)、3.8(10/13) Context for your agents。",
+      "content_hash": "来源：WebSearch 结果，非官方原文。未发现 11 月官方 release；最新仍为 10/19「Agents, rebuilt to do more for less」(agent 自带电脑与浏览器、Review for me、ChatGPT 计划接入、AI Command Center coming soon)、3.8(10/13) Context for your agents。",
+      "last_seen_at": "2026-11-18T09:00:00Z",
+      "changes": [],
+      "key_findings": [],
+      "no_change_reason": "无 11 月官方 release，内容与基线一致"
     },
     {
       "id": "reflect",
@@ -259,12 +248,12 @@
       "fetched_urls": [
         "WebSearch"
       ],
-      "raw_snapshot": "来源：WebSearch 结果，非官方原文。未发现 11 月条目。Reflect Open(7月，MIT，本地 Markdown，BYO AI，iCloud/Git 同步，CLI)、MCP 编辑笔记(4月)；yespress 资料最后更新 9 月。",
-      "content_hash": "来源：WebSearch 结果，非官方原文。未发现 11 月条目。Reflect Open(7月，MIT，本地 Markdown，BYO AI，iCloud/Git 同步，CLI)、MCP 编辑笔记(4月)；yespress 资料最后更新 9 月。",
-      "last_seen_at": "2026-11-17T16:16:22Z",
+      "raw_snapshot": "来源：WebSearch 结果，非官方原文。未发现 11 月条目。Reflect Open(7月，MIT，本地 Markdown，BYO AI，iCloud/Git 同步，CLI)、MCP 编辑笔记(4月)、MCP server(3月)。",
+      "content_hash": "来源：WebSearch 结果，非官方原文。未发现 11 月条目。Reflect Open(7月，MIT，本地 Markdown，BYO AI，iCloud/Git 同步，CLI)、MCP 编辑笔记(4月)、MCP server(3月)。",
+      "last_seen_at": "2026-11-18T09:00:00Z",
       "changes": [],
       "key_findings": [],
-      "no_change_reason": "未发现新条目"
+      "no_change_reason": "无新条目"
     },
     {
       "id": "raycast",
@@ -277,12 +266,12 @@
       "fetched_urls": [
         "WebSearch"
       ],
-      "raw_snapshot": "来源：WebSearch 结果，非官方原文。(官方 changelog 页标题) macOS v2.11(11/4)：Dictate to AI、菜单栏 AI Usage、PAC 代理；Windows v2.11(11/4) 稳定性修复；iOS v1.5.3(11/6)。无 11/6 之后条目。",
-      "content_hash": "来源：WebSearch 结果，非官方原文。(官方 changelog 页标题) macOS v2.11(11/4)：Dictate to AI、菜单栏 AI Usage、PAC 代理；Windows v2.11(11/4) 稳定性修复；iOS v1.5.3(11/6)。无 11/6 之后条目。",
-      "last_seen_at": "2026-11-17T16:16:22Z",
+      "raw_snapshot": "来源：WebSearch 结果，非官方原文。(官方 changelog 页标题) macOS v2.11(11/4)：Dictate to AI、菜单栏 AI Usage、PAC 代理；Windows v2.11(11/4) 修复；iOS v1.5.3(11/6) 键盘翻译。无 11/6 之后条目。",
+      "content_hash": "来源：WebSearch 结果，非官方原文。(官方 changelog 页标题) macOS v2.11(11/4)：Dictate to AI、菜单栏 AI Usage、PAC 代理；Windows v2.11(11/4) 修复；iOS v1.5.3(11/6) 键盘翻译。无 11/6 之后条目。",
+      "last_seen_at": "2026-11-18T09:00:00Z",
       "changes": [],
       "key_findings": [],
-      "no_change_reason": "最新仍为 11/4 macOS v2.11 与 11/6 iOS v1.5.3，与基线一致"
+      "no_change_reason": "最新仍为 11/4–11/6 版本，已在基线中"
     },
     {
       "id": "replit",
@@ -295,12 +284,12 @@
       "fetched_urls": [
         "WebSearch"
       ],
-      "raw_snapshot": "来源：WebSearch 结果，非官方原文。docs.replit.com 11/06 changelog 页存在但摘要无内容；可读条目仍为 9/25、8/28 Intelligent Model Routing、8/21 Free Mode/安全扫描/Steer。",
-      "content_hash": "来源：WebSearch 结果，非官方原文。docs.replit.com 11/06 changelog 页存在但摘要无内容；可读条目仍为 9/25、8/28 Intelligent Model Routing、8/21 Free Mode/安全扫描/Steer。",
-      "last_seen_at": "2026-11-17T16:16:22Z",
+      "raw_snapshot": "来源：WebSearch 结果，非官方原文。docs.replit.com 11/06 changelog 页存在但摘要无内容；可读条目仍为 9/25、8/28 Intelligent Model Routing、8/21 Steer/routines/Free Mode。",
+      "content_hash": "来源：WebSearch 结果，非官方原文。docs.replit.com 11/06 changelog 页存在但摘要无内容；可读条目仍为 9/25、8/28 Intelligent Model Routing、8/21 Steer/routines/Free Mode。",
+      "last_seen_at": "2026-11-18T09:00:00Z",
       "changes": [],
       "key_findings": [],
-      "no_change_reason": "11/06 changelog 仍无可读内容，其余与基线一致"
+      "no_change_reason": "无可读的新 changelog 内容"
     },
     {
       "id": "superwhisper",
@@ -313,13 +302,22 @@
       "fetched_urls": [
         "WebSearch"
       ],
-      "raw_snapshot": "来源：WebSearch 结果，非官方原文。未发现 11 月条目。Releasebot：10 月更新安装卡住修复、会议浏览器通知修复、2.19.0(~10/2)；S1(8月)、Cohere Transcribe/CLI+MCP(7月)。",
-      "content_hash": "来源：WebSearch 结果，非官方原文。未发现 11 月条目。Releasebot：10 月更新安装卡住修复、会议浏览器通知修复、2.19.0(~10/2)；S1(8月)、Cohere Transcribe/CLI+MCP(7月)。",
-      "last_seen_at": "2026-11-17T16:16:22Z",
+      "raw_snapshot": "来源：WebSearch 结果，非官方原文。未发现 11 月条目。Releasebot：10/15 会议通知修复、10/13 更新卡住修复、2.19.0(~10/2)；S1(8/19)、Cohere Transcribe(7/28)。",
+      "content_hash": "来源：WebSearch 结果，非官方原文。未发现 11 月条目。Releasebot：10/15 会议通知修复、10/13 更新卡住修复、2.19.0(~10/2)；S1(8/19)、Cohere Transcribe(7/28)。",
+      "last_seen_at": "2026-11-18T09:00:00Z",
       "changes": [],
       "key_findings": [],
-      "no_change_reason": "未发现 11 月条目"
+      "no_change_reason": "无 11 月新条目"
     }
   ],
-  "alerts": []
+  "alerts": [
+    {
+      "competitor_id": "github-copilot",
+      "competitor_name": "GitHub Copilot",
+      "severity": "hi",
+      "headline": "Copilot 在 VS Code 中标出「最需要你先处理」的 agent session，并支持手机续接 session",
+      "evidence": "「see which agent sessions need you first in VS Code」(changelog 摘要，经 WebSearch 转述)",
+      "action_suggestion": "把 meee2「菜单栏 5 字戳任何 session、不切焦点、跨工具」的差异写进对外叙事；评估 board 上的 session 注意力排序是否要提前做"
+    }
+  ]
 }
