@@ -1,0 +1,26 @@
+{
+  "week_start": "2026-11-16",
+  "week_end": "2026-11-22",
+  "generated_at": "2026-11-23T15:10:00Z",
+  "narrative": "本周无威胁等级变动（各日报 threat_changed 均为 false），但有两条 hi 级 alert 同时指向 meee2 的 peripheral 层与「人在 agent 图内」：GitHub Copilot（11-18）在 VS Code 中「see which agent sessions need you first」并支持手机续接 session；Cursor（11-19，第三方 tracker 转述）上线与 coding agent 的实时语音对话，可「hear progress updates, and direct changes by voice」。推断：大厂正在降低「人响应/指挥运行中 agent session」的成本（锚点 1 与 5），但两者日报判断均仍限于单一工具/编辑器内，未见菜单栏或跨工具形态。第二件事是 Raycast（11-20）推出本地 MCP server，让「agents like Claude, Codex and Cursor use Raycast」，日报标记 threat_signal=true；推断：peripheral 入口正从「人调用 AI」扩展为「AI 反向调用 peripheral」，但未见 session 同构或 live artifact 证据。claude-ai 本周持续打磨 Remote Control、跨 session 消息与 /tasks 统一视图（11-19、11-20），日报判断均为修复或单 session 范围的增量。Product Hunt 出现 Teamily AI（11-17）与 S.Space（11-21）两个「人与 agent 同一 workspace」的新入场者，均为 md 级、仅见周报摘要。另需注意：本周多数证据为 WebSearch 第三方转述，置信度有限。",
+  "recommendations": [
+    {
+      "headline": "把「跨工具 + 不切焦点」写进对外叙事，应对 Copilot/Cursor 的 session 注意力与语音入口",
+      "detail": "Copilot 与 Cursor 都在单一编辑器内优化人对运行中 agent 的响应。meee2 的差异在于菜单栏 5 字戳任何 session、跨工具、人作为慢 session 节点，建议本周产出一页对比，明确这些是两者原文未触及的部分。",
+      "priority": "hi",
+      "basis": "依据：GitHub Copilot 2026-11-18 alert（agent session 注意力排序、手机续接）；Cursor 2026-11-19 alert（实时语音指挥 coding agent，待官方核实）"
+    },
+    {
+      "headline": "评估 session 注意力排序是否提前进入 board 路线图",
+      "detail": "Copilot 已把「最需要人先处理的 session」做成显性能力，board 上若无类似排序，人作为慢 session 的价值难以体现。建议先做最小版本评估，不必追语音。",
+      "priority": "md",
+      "basis": "依据：GitHub Copilot 2026-11-18 的 action_suggestion 与 change（「see which agent sessions need you first in VS Code」）"
+    },
+    {
+      "headline": "跟进 Raycast MCP，评估 meee2 是否作为 agent 可调用的外设层互通",
+      "detail": "Raycast 已让 agent 反向调用其能力，peripheral 层可能成为跨工具 agent 的工具层。建议下周核实官方原文，并判断 meee2 是否需要对应的 MCP 暴露面。",
+      "priority": "lo",
+      "basis": "依据：Raycast 2026-11-20 的 change（v2.13 本地 Raycast MCP server，threat_signal=true）"
+    }
+  ]
+}
