@@ -1,14 +1,14 @@
 {
- "report_date": "2026-11-24",
- "generated_at": "2026-11-24T16:16:00Z",
+ "report_date": "2026-11-26",
+ "generated_at": "2026-11-26T16:14:00Z",
  "summary": {
   "total_tracked": 15,
   "fetched_ok": 8,
   "fetch_error": 0,
-  "has_changes": 4,
-  "new_alerts": 1,
+  "has_changes": 2,
+  "new_alerts": 0,
   "skipped": 7,
-  "note": "hn.algolia.com / raycast.com 不可达（需加入网络白名单）；api.github.com 直连，crit/hi 用 WebSearch 兜底（第三方转述）；md/lo 7 个本次未抓取，沿用 baseline。"
+  "note": "hn.algolia.com / openai.com / producthunt.com 等不可达（sandbox 网络白名单仅放行 api.github.com），crit/hi 用 WebSearch 兜底（第三方转述）；md/lo 7 个本次未抓取，沿用 baseline。"
  },
  "competitors": [
   {
@@ -17,28 +17,17 @@
    "category": "orchestrator",
    "threat": "crit",
    "threat_changed": false,
-   "has_changes": true,
+   "has_changes": false,
    "fetch_status": "ok",
    "fetched_urls": [
-    "WebSearch: Cursor IDE changelog new features November 2026"
+    "WebSearch: Cursor IDE new features changelog November 2026"
    ],
    "raw_snapshot": "来源：WebSearch 结果，非官方原文。第三方 havoptic 称 11/06 上线 Realtime voice chat（Agents Window/IDE/web/iOS 与 agent 实时语音通话，Grok Voice）；11/05 Live app build 同前。",
    "content_hash": "来源：WebSearch 结果，非官方原文。第三方 havoptic 称 11/06 上线 Realtime voice chat（Agents Window/IDE/web/iOS 与 agent 实时语音通话，Grok Voice）；11/05 Live app build 同前。",
-   "last_seen_at": "2026-11-24T16:16:00Z",
-   "changes": [
-    {
-     "type": "new_feature",
-     "description": "新增与 agent 的实时语音通话（跨 Agents Window/IDE/web/iOS）",
-     "evidence": "「voice chat lets you talk to an agent in a realtime call in the Agents Window, the IDE, on web and in Cursor for iOS」（搜索摘要转述 havoptic）",
-     "source_url": "https://www.havoptic.com/releases/cursor/2026/11",
-     "meee2_relevance": null,
-     "threat_signal": false
-    }
-   ],
-   "key_findings": [
-    "推断：语音入口是人与 agent 交互通道扩展，但未见 session 同构/live link 信号；官方 changelog 未能抓取，需核实"
-   ],
-   "no_change_reason": null
+   "last_seen_at": "2026-11-26T16:14:00Z",
+   "changes": [],
+   "key_findings": [],
+   "no_change_reason": "WebSearch 仍只见 11/05 Live app、11/06 voice chat（baseline 已覆盖），无新条目"
   },
   {
    "id": "openai",
@@ -46,36 +35,17 @@
    "category": "orchestrator",
    "threat": "crit",
    "threat_changed": false,
-   "has_changes": true,
+   "has_changes": false,
    "fetch_status": "ok",
    "fetched_urls": [
     "WebSearch: OpenAI ChatGPT new features agent projects canvas November 2026"
    ],
    "raw_snapshot": "来源：WebSearch 结果，非官方原文。DevDay 2026 recap：ChatGPT Space 取代 Library，团队与 AI agent 在 Pages 中实时共同编辑；Personal dots 可在对话之间持续工作（admin preview 至 11/18）；ChatGPT Work(7/09)。",
    "content_hash": "来源：WebSearch 结果，非官方原文。DevDay 2026 recap：ChatGPT Space 取代 Library，团队与 AI agent 在 Pages 中实时共同编辑；Personal dots 可在对话之间持续工作（admin preview 至 11/18）；ChatGPT Work(7/09)。",
-   "last_seen_at": "2026-11-24T16:16:00Z",
-   "changes": [
-    {
-     "type": "new_feature",
-     "description": "ChatGPT Space：团队与 AI agent 在同一共享工作区实时创建/编辑 Pages",
-     "evidence": "「a shared workspace where teams and AI agents can create, edit, and organize Pages in real time」（搜索摘要转述 DevDay 2026）",
-     "source_url": "https://openai.com/index/devday-2026-recap/",
-     "meee2_relevance": "锚点1（人与 AI 同处一个协作图）；锚点2 部分（Pages 为单产品内实时协作，非跨工具 live link）",
-     "threat_signal": true
-    },
-    {
-     "type": "new_feature",
-     "description": "Personal dots：可在对话之间持续后台工作的 agent",
-     "evidence": "「Personal dots can continue working on tasks between conversations」",
-     "source_url": "https://help.openai.com/en/articles/10128477-chatgpt-enterprise-edu-release-notes",
-     "meee2_relevance": "锚点1（慢/快 session 异步协作）",
-     "threat_signal": false
-    }
-   ],
-   "key_findings": [
-    "推断：OpenAI 正把\"人+agent 同一工作区实时协作\"产品化，但限于 ChatGPT 内部，无跨工具 artifact live link、无 descriptive-first 迹象；DevDay 日期本次未确认"
-   ],
-   "no_change_reason": null
+   "last_seen_at": "2026-11-26T16:14:00Z",
+   "changes": [],
+   "key_findings": [],
+   "no_change_reason": "WebSearch 新见条目（Projects 桌面端 7/23、Images 2.6 11/4、Enterprise 11/16 healthcare plugins）与 meee2 差异化锚点无明确触点；Space/dots 已在 baseline"
   },
   {
    "id": "windsurf",
@@ -86,14 +56,14 @@
    "has_changes": false,
    "fetch_status": "ok",
    "fetched_urls": [
-    "WebSearch"
+    "WebSearch: Windsurf Codeium AI editor new features November 2026"
    ],
    "raw_snapshot": "来源：WebSearch 结果，非官方原文。Devin Desktop 官方 changelog 最新仍为 11/17 (v3.13.4，Agent Command Center tabs)；11/12、11/8 条目基线已覆盖。",
    "content_hash": "来源：WebSearch 结果，非官方原文。Devin Desktop 官方 changelog 最新仍为 11/17 (v3.13.4，Agent Command Center tabs)；11/12、11/8 条目基线已覆盖。",
-   "last_seen_at": "2026-11-24T16:16:00Z",
+   "last_seen_at": "2026-11-26T16:14:00Z",
    "changes": [],
    "key_findings": [],
-   "no_change_reason": "WebSearch 兜底：本次所见条目（Windsurf/Devin Desktop 11/17 Agent Command Center tabs，Copilot 11/09 weekly，Linear 11/12 BYOK，Gemini 无 11 月 Drop）均与上次基线一致，无新动态"
+   "no_change_reason": "WebSearch 未发现 2026-11 新条目，结果均为 2024-25 旧内容"
   },
   {
    "id": "claude-ai",
@@ -104,23 +74,39 @@
    "has_changes": true,
    "fetch_status": "ok",
    "fetched_urls": [
-    "WebSearch: Anthropic Claude Code new release routines projects November 2026"
+    "WebSearch: Anthropic Claude new features projects artifacts routines agent November 2026"
    ],
-   "raw_snapshot": "来源：WebSearch 结果，非官方原文。Claude Code 近期版本：v2.1.326（Code Mode 支持 agent teams，/rewind 与后台 session 修复）、v2.1.328（11/19，140+ 变更）。官方 changelog 未能直接抓取，各第三方来源版本信息互相不一致。",
+   "raw_snapshot": "来源：WebSearch 结果，非官方原文。support.claude.com release notes 摘要：11/12 Claude Meetings（Claude 以可见参与者加入 Google Meet，记笔记并生成 artifact，Team/Enterprise beta）；11/06 Claude Duet（Pro/Max 研究预览，Claude 作为主动 agent 的新 app）；11/17 Desktop release channels；Chat 与 Cowork 共享一个 projects/artifacts 入口。",
    "content_hash": "来源：WebSearch 结果，非官方原文。Claude Code 近期版本：v2.1.326（Code Mode 支持 agent teams，/rewind 与后台 session 修复）、v2.1.328（11/19，140+ 变更）。官方 changelog 未能直接抓取，各第三方来源版本信息互相不一致。",
-   "last_seen_at": "2026-11-24T16:16:00Z",
+   "last_seen_at": "2026-11-26T16:14:00Z",
    "changes": [
     {
      "type": "new_feature",
-     "description": "Claude Code 迭代至 v2.1.328：Code Mode 与 agent teams 结合、后台 session 修复（第三方转述）",
-     "evidence": "「Code Mode now works with agent teams」（搜索摘要转述 havoptic）",
-     "source_url": "https://www.havoptic.com/r/claude-code-2.1.326",
+     "description": "Claude Meetings：Claude 作为可见参与者加入会议并在会中生成 artifact（beta）",
+     "evidence": "「Claude can join a Google Meet call as a visible participant that takes notes, answers questions, and builds artifacts」（搜索摘要转述，非官方原文）",
+     "source_url": "https://support.claude.com/articles/12138966-release-notes",
+     "meee2_relevance": "弱触及锚点1（AI 作为参与者进入人的协作场景）",
+     "threat_signal": false
+    },
+    {
+     "type": "new_feature",
+     "description": "Claude Duet：以主动 agent 形态运行的新 app（研究预览）",
+     "evidence": "「a new app where Claude works as a proactive agent」（搜索摘要转述，非官方原文）",
+     "source_url": "https://support.claude.com/articles/12138966-release-notes",
+     "meee2_relevance": null,
+     "threat_signal": false
+    },
+    {
+     "type": "positioning",
+     "description": "Chat 与 Cowork 合并为统一的 projects/artifacts 入口",
+     "evidence": "「Chat and Cowork now share one home, with one place for projects and artifacts across both」（搜索摘要转述）",
+     "source_url": "https://support.claude.com/articles/12138966-release-notes",
      "meee2_relevance": null,
      "threat_signal": false
     }
    ],
    "key_findings": [
-    "推断：持续强化多 agent/后台 session，但本次无来自官方的新定位信号；需核实版本号"
+    "推断：Meetings 是 AI 进入人类同步协作场景，但未见 session 同构或跨工具 live link 的表述；Duet 细节不足，需读官方 release notes 核实"
    ],
    "no_change_reason": null
   },
@@ -133,14 +119,14 @@
    "has_changes": false,
    "fetch_status": "ok",
    "fetched_urls": [
-    "WebSearch"
+    "WebSearch: GitHub Copilot new features agent workspace background tasks November 2026"
    ],
    "raw_snapshot": "来源：WebSearch 结果，非官方原文。仍只见 11/16 weekly releases Nov 9 及 10 月底 Universe(Copilot Fusion、Projects)；无 11/17 之后新条目。",
    "content_hash": "来源：WebSearch 结果，非官方原文。仍只见 11/16 weekly releases Nov 9 及 10 月底 Universe(Copilot Fusion、Projects)；无 11/17 之后新条目。",
-   "last_seen_at": "2026-11-24T16:16:00Z",
+   "last_seen_at": "2026-11-26T16:14:00Z",
    "changes": [],
    "key_findings": [],
-   "no_change_reason": "WebSearch 兜底：本次所见条目（Windsurf/Devin Desktop 11/17 Agent Command Center tabs，Copilot 11/09 weekly，Linear 11/12 BYOK，Gemini 无 11 月 Drop）均与上次基线一致，无新动态"
+   "no_change_reason": "WebSearch 仍为 11/02、11/09 周报（JetBrains Air/Xcode、VS Code agent session 优先级）及 10 月 Universe 内容，baseline 已覆盖"
   },
   {
    "id": "gemini",
@@ -151,14 +137,14 @@
    "has_changes": false,
    "fetch_status": "ok",
    "fetched_urls": [
-    "WebSearch"
+    "WebSearch: Google Gemini AI Studio new features agent canvas November 2026"
    ],
    "raw_snapshot": "来源：WebSearch 结果，非官方原文。仍未找到 2026-11 Gemini app Drop；可见 10/08 企业版 Gemini agent 预览、11 月 Pixel Drop，基线已覆盖。",
    "content_hash": "来源：WebSearch 结果，非官方原文。仍未找到 2026-11 Gemini app Drop；可见 10/08 企业版 Gemini agent 预览、11 月 Pixel Drop，基线已覆盖。",
-   "last_seen_at": "2026-11-24T16:16:00Z",
+   "last_seen_at": "2026-11-26T16:14:00Z",
    "changes": [],
    "key_findings": [],
-   "no_change_reason": "WebSearch 兜底：本次所见条目（Windsurf/Devin Desktop 11/17 Agent Command Center tabs，Copilot 11/09 weekly，Linear 11/12 BYOK，Gemini 无 11 月 Drop）均与上次基线一致，无新动态"
+   "no_change_reason": "WebSearch 未发现 2026-11 Gemini/AI Studio 新条目（仅 I/O 2026 与 2025 旧内容）"
   },
   {
    "id": "linear",
@@ -169,14 +155,14 @@
    "has_changes": false,
    "fetch_status": "ok",
    "fetched_urls": [
-    "WebSearch"
+    "WebSearch: Linear app changelog new features AI agent November 2026"
    ],
    "raw_snapshot": "来源：WebSearch 结果，非官方原文。11 月仍只见 11/12 BYOK(含 Linear Agent 小修复)与 11/04-05 Mobile Diffs，无新条目。",
    "content_hash": "来源：WebSearch 结果，非官方原文。11 月仍只见 11/12 BYOK(含 Linear Agent 小修复)与 11/04-05 Mobile Diffs，无新条目。",
-   "last_seen_at": "2026-11-24T16:16:00Z",
+   "last_seen_at": "2026-11-26T16:14:00Z",
    "changes": [],
    "key_findings": [],
-   "no_change_reason": "WebSearch 兜底：本次所见条目（Windsurf/Devin Desktop 11/17 Agent Command Center tabs，Copilot 11/09 weekly，Linear 11/12 BYOK，Gemini 无 11 月 Drop）均与上次基线一致，无新动态"
+   "no_change_reason": "WebSearch 仍只见 11/12 BYOK/Agent 小修复与 11/05 Mobile Diffs，baseline 已覆盖"
   },
   {
    "id": "producthunt-ai",
@@ -208,37 +194,29 @@
     "https://api.github.com/search/repositories?q=claude+code+cockpit+terminal&sort=stars&order=desc&per_page=25",
     "https://api.github.com/search/repositories?q=claude+code+meta-harness+agent+swarm&sort=stars&order=desc&per_page=20"
    ],
-   "raw_snapshot": "来源：GitHub 开源仓库，非官方。GitHub API 4/4 成功(各查询仅读取前约 100k 字符)。近期活跃仓库 full_name: morluto/rea, affaan-m/ECC, NousResearch/hermes-agent, DietrichGebert/ponytail, farion1231/cc-switch, stablyai/orca, paperclipai/paperclip, thedotmack/claude-mem, alchaincyf/fanbox, realZillionX/InspireSkill, luojiahai/code-by-wire, Surething-io/cockpit, dotdevdotdev/agentwire-dev, alexjbarnes/cockpit, Innovology/claude-dispatcher, trevormil/TerMinal, martinbon39/agora, itguyvv/CodeCockpit, cosmix/loom, iAmCorey/kooky, c4rl05/agent-race-control, rayngnpc/mkcrew, Sumit4codes/antiroute, alliecatowo/glassy",
+   "raw_snapshot": "来源：GitHub 开源仓库，非官方。GitHub API 4/4 成功(各查询仅读取前约 100k 字符)。近期活跃仓库 full_name: morluto/rea, affaan-m/ECC, NousResearch/hermes-agent, DietrichGebert/ponytail, farion1231/cc-switch, stablyai/orca, paperclipai/paperclip, thedotmack/claude-mem, alchaincyf/fanbox, realZillionX/InspireSkill, luojiahai/code-by-wire, Surething-io/cockpit, dotdevdotdev/agentwire-dev, alexjbarnes/cockpit, Innovology/claude-dispatcher, trevormil/TerMinal, martinbon39/agora, itguyvv/CodeCockpit, cosmix/loom, iAmCorey/kooky, c4rl05/agent-race-control, rayngnpc/mkcrew, Sumit4codes/antiroute, alliecatowo/glassy, artengin/claude-starred, IWhitebird/claude-jr, nextlevelbuilder/ui-ux-pro-max-skill, Graphify-Labs/graphify, JuliusBrussee/caveman, Leonxlnx/taste-skill, addyosmani/agent-skills, Panniantong/Agent-Reach, tt-a1i/archify, Egonex-AI/Understand-Anything, heygen-com/hyperframes, ruvnet/RuView",
    "content_hash": "来源：GitHub 开源仓库，非官方。GitHub API 4/4 成功(各查询仅读取前约 100k 字符)。近期活跃仓库 full_name: morluto/rea, affaan-m/ECC, NousResearch/hermes-agent, DietrichGebert/ponytail, farion1231/cc-switch, stablyai/orca, paperclipai",
-   "last_seen_at": "2026-11-24T16:16:00Z",
+   "last_seen_at": "2026-11-26T16:14:00Z",
    "changes": [
     {
-     "type": "new_entrant",
-     "description": "新增近期活跃的小型 cockpit/终端类仓库 c4rl05/agent-race-control（均 ≤3★，低重叠）",
-     "evidence": "「A minimal terminal cockpit for Claude Code and Codex on Windows and Mac」(3★，pushed 11/08)",
-     "source_url": "https://api.github.com/search/repositories?q=claude+code+cockpit+terminal&sort=stars&order=desc&per_page=25",
+     "type": "other",
+     "description": "新增近期活跃的小型 session 浏览类仓库 artengin/claude-starred（6★，低重叠）",
+     "evidence": "「Star and browse Claude Code sessions in a terminal tree」（仓库描述，pushed 2026-11-25）",
+     "source_url": "https://github.com/artengin/claude-starred",
      "meee2_relevance": null,
      "threat_signal": false
     },
     {
-     "type": "new_entrant",
-     "description": "新增近期活跃的小型 cockpit/终端类仓库 rayngnpc/mkcrew（均 ≤3★，低重叠）",
-     "evidence": "「Your AI coding crew in one Windows terminal」(3★，pushed 11/18)",
-     "source_url": "https://api.github.com/search/repositories?q=claude+code+cockpit+terminal&sort=stars&order=desc&per_page=25",
-     "meee2_relevance": null,
-     "threat_signal": false
-    },
-    {
-     "type": "new_entrant",
-     "description": "新增近期活跃的小型 cockpit/终端类仓库 Sumit4codes/antiroute（均 ≤3★，低重叠）",
-     "evidence": "「open-source gateway and interactive terminal cockpit」(3★，pushed 11/15)",
-     "source_url": "https://api.github.com/search/repositories?q=claude+code+cockpit+terminal&sort=stars&order=desc&per_page=25",
+     "type": "other",
+     "description": "本次新见高星仓库（skills/知识图谱/视频/diagram 类，如 graphify、archify、Understand-Anything、caveman）均与 meee2 核心抽象无结构重叠",
+     "evidence": "「Turns code into an explorable interactive knowledge graph」（Understand-Anything 描述）",
+     "source_url": "https://github.com/Egonex-AI/Understand-Anything",
      "meee2_relevance": null,
      "threat_signal": false
     }
    ],
    "key_findings": [
-    "source：GitHub 开源仓库，非官方。均为多 CLI agent 终端 cockpit，无跨工具 live link/人作为 session 信号"
+    "推断：未见同时命中 ≥2 个 meee2 锚点的新进入者"
    ],
    "no_change_reason": null
   },
@@ -339,14 +317,5 @@
    "no_change_reason": "本次未重新抓取（hn.algolia.com/raycast.com 等主域名不可达，md/lo 优先级低，未做 WebSearch）；沿用上次 baseline"
   }
  ],
- "alerts": [
-  {
-   "competitor_id": "openai",
-   "competitor_name": "OpenAI / ChatGPT",
-   "severity": "hi",
-   "headline": "ChatGPT Space：团队与 AI agent 在共享工作区实时协作 Pages（触碰锚点1）",
-   "evidence": "「a shared workspace where teams and AI agents can create, edit, and organize Pages in real time」",
-   "action_suggestion": "核实 DevDay 原文与发布日期；评估其是否支持跨工具 live link（目前仅见产品内协作），强化 meee2「人=慢 session、同一协议」与跨工具 live link 的差异化叙事"
-  }
- ]
+ "alerts": []
 }
