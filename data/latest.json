@@ -1,14 +1,14 @@
 {
- "report_date": "2026-11-26",
- "generated_at": "2026-11-26T16:14:00Z",
+ "report_date": "2026-11-27",
+ "generated_at": "2026-11-27T16:14:44Z",
  "summary": {
   "total_tracked": 15,
   "fetched_ok": 8,
   "fetch_error": 0,
-  "has_changes": 2,
+  "has_changes": 1,
   "new_alerts": 0,
   "skipped": 7,
-  "note": "hn.algolia.com / openai.com / producthunt.com 等不可达（sandbox 网络白名单仅放行 api.github.com），crit/hi 用 WebSearch 兜底（第三方转述）；md/lo 7 个本次未抓取，沿用 baseline。"
+  "note": "hn.algolia.com / openai.com / producthunt.com 等不可达（需在环境网络设置中放行），仅 api.github.com 可用；crit/hi 用 WebSearch 兜底（第三方转述）；md/lo 其余 8 个本次未抓取，沿用 baseline。"
  },
  "competitors": [
   {
@@ -24,10 +24,10 @@
    ],
    "raw_snapshot": "来源：WebSearch 结果，非官方原文。第三方 havoptic 称 11/06 上线 Realtime voice chat（Agents Window/IDE/web/iOS 与 agent 实时语音通话，Grok Voice）；11/05 Live app build 同前。",
    "content_hash": "来源：WebSearch 结果，非官方原文。第三方 havoptic 称 11/06 上线 Realtime voice chat（Agents Window/IDE/web/iOS 与 agent 实时语音通话，Grok Voice）；11/05 Live app build 同前。",
-   "last_seen_at": "2026-11-26T16:14:00Z",
+   "last_seen_at": "2026-11-27T16:14:44Z",
    "changes": [],
    "key_findings": [],
-   "no_change_reason": "WebSearch 仍只见 11/05 Live app、11/06 voice chat（baseline 已覆盖），无新条目"
+   "no_change_reason": "WebSearch（第三方转述，非官方原文）本次未见 baseline 之外的新条目"
   },
   {
    "id": "openai",
@@ -42,10 +42,10 @@
    ],
    "raw_snapshot": "来源：WebSearch 结果，非官方原文。DevDay 2026 recap：ChatGPT Space 取代 Library，团队与 AI agent 在 Pages 中实时共同编辑；Personal dots 可在对话之间持续工作（admin preview 至 11/18）；ChatGPT Work(7/09)。",
    "content_hash": "来源：WebSearch 结果，非官方原文。DevDay 2026 recap：ChatGPT Space 取代 Library，团队与 AI agent 在 Pages 中实时共同编辑；Personal dots 可在对话之间持续工作（admin preview 至 11/18）；ChatGPT Work(7/09)。",
-   "last_seen_at": "2026-11-26T16:14:00Z",
+   "last_seen_at": "2026-11-27T16:14:44Z",
    "changes": [],
    "key_findings": [],
-   "no_change_reason": "WebSearch 新见条目（Projects 桌面端 7/23、Images 2.6 11/4、Enterprise 11/16 healthcare plugins）与 meee2 差异化锚点无明确触点；Space/dots 已在 baseline"
+   "no_change_reason": "WebSearch（第三方转述，非官方原文）本次未见 baseline 之外的新条目"
   },
   {
    "id": "windsurf",
@@ -60,10 +60,10 @@
    ],
    "raw_snapshot": "来源：WebSearch 结果，非官方原文。Devin Desktop 官方 changelog 最新仍为 11/17 (v3.13.4，Agent Command Center tabs)；11/12、11/8 条目基线已覆盖。",
    "content_hash": "来源：WebSearch 结果，非官方原文。Devin Desktop 官方 changelog 最新仍为 11/17 (v3.13.4，Agent Command Center tabs)；11/12、11/8 条目基线已覆盖。",
-   "last_seen_at": "2026-11-26T16:14:00Z",
+   "last_seen_at": "2026-11-27T16:14:44Z",
    "changes": [],
    "key_findings": [],
-   "no_change_reason": "WebSearch 未发现 2026-11 新条目，结果均为 2024-25 旧内容"
+   "no_change_reason": "WebSearch（第三方转述，非官方原文）本次未见 baseline 之外的新条目"
   },
   {
    "id": "claude-ai",
@@ -71,44 +71,17 @@
    "category": "orchestrator",
    "threat": "crit",
    "threat_changed": false,
-   "has_changes": true,
+   "has_changes": false,
    "fetch_status": "ok",
    "fetched_urls": [
     "WebSearch: Anthropic Claude new features projects artifacts routines agent November 2026"
    ],
    "raw_snapshot": "来源：WebSearch 结果，非官方原文。support.claude.com release notes 摘要：11/12 Claude Meetings（Claude 以可见参与者加入 Google Meet，记笔记并生成 artifact，Team/Enterprise beta）；11/06 Claude Duet（Pro/Max 研究预览，Claude 作为主动 agent 的新 app）；11/17 Desktop release channels；Chat 与 Cowork 共享一个 projects/artifacts 入口。",
    "content_hash": "来源：WebSearch 结果，非官方原文。Claude Code 近期版本：v2.1.326（Code Mode 支持 agent teams，/rewind 与后台 session 修复）、v2.1.328（11/19，140+ 变更）。官方 changelog 未能直接抓取，各第三方来源版本信息互相不一致。",
-   "last_seen_at": "2026-11-26T16:14:00Z",
-   "changes": [
-    {
-     "type": "new_feature",
-     "description": "Claude Meetings：Claude 作为可见参与者加入会议并在会中生成 artifact（beta）",
-     "evidence": "「Claude can join a Google Meet call as a visible participant that takes notes, answers questions, and builds artifacts」（搜索摘要转述，非官方原文）",
-     "source_url": "https://support.claude.com/articles/12138966-release-notes",
-     "meee2_relevance": "弱触及锚点1（AI 作为参与者进入人的协作场景）",
-     "threat_signal": false
-    },
-    {
-     "type": "new_feature",
-     "description": "Claude Duet：以主动 agent 形态运行的新 app（研究预览）",
-     "evidence": "「a new app where Claude works as a proactive agent」（搜索摘要转述，非官方原文）",
-     "source_url": "https://support.claude.com/articles/12138966-release-notes",
-     "meee2_relevance": null,
-     "threat_signal": false
-    },
-    {
-     "type": "positioning",
-     "description": "Chat 与 Cowork 合并为统一的 projects/artifacts 入口",
-     "evidence": "「Chat and Cowork now share one home, with one place for projects and artifacts across both」（搜索摘要转述）",
-     "source_url": "https://support.claude.com/articles/12138966-release-notes",
-     "meee2_relevance": null,
-     "threat_signal": false
-    }
-   ],
-   "key_findings": [
-    "推断：Meetings 是 AI 进入人类同步协作场景，但未见 session 同构或跨工具 live link 的表述；Duet 细节不足，需读官方 release notes 核实"
-   ],
-   "no_change_reason": null
+   "last_seen_at": "2026-11-27T16:14:44Z",
+   "changes": [],
+   "key_findings": [],
+   "no_change_reason": "WebSearch（第三方转述，非官方原文）本次未见 baseline 之外的新条目"
   },
   {
    "id": "github-copilot",
@@ -123,10 +96,10 @@
    ],
    "raw_snapshot": "来源：WebSearch 结果，非官方原文。仍只见 11/16 weekly releases Nov 9 及 10 月底 Universe(Copilot Fusion、Projects)；无 11/17 之后新条目。",
    "content_hash": "来源：WebSearch 结果，非官方原文。仍只见 11/16 weekly releases Nov 9 及 10 月底 Universe(Copilot Fusion、Projects)；无 11/17 之后新条目。",
-   "last_seen_at": "2026-11-26T16:14:00Z",
+   "last_seen_at": "2026-11-27T16:14:44Z",
    "changes": [],
    "key_findings": [],
-   "no_change_reason": "WebSearch 仍为 11/02、11/09 周报（JetBrains Air/Xcode、VS Code agent session 优先级）及 10 月 Universe 内容，baseline 已覆盖"
+   "no_change_reason": "WebSearch（第三方转述，非官方原文）本次未见 baseline 之外的新条目"
   },
   {
    "id": "gemini",
@@ -141,10 +114,10 @@
    ],
    "raw_snapshot": "来源：WebSearch 结果，非官方原文。仍未找到 2026-11 Gemini app Drop；可见 10/08 企业版 Gemini agent 预览、11 月 Pixel Drop，基线已覆盖。",
    "content_hash": "来源：WebSearch 结果，非官方原文。仍未找到 2026-11 Gemini app Drop；可见 10/08 企业版 Gemini agent 预览、11 月 Pixel Drop，基线已覆盖。",
-   "last_seen_at": "2026-11-26T16:14:00Z",
+   "last_seen_at": "2026-11-27T16:14:44Z",
    "changes": [],
    "key_findings": [],
-   "no_change_reason": "WebSearch 未发现 2026-11 Gemini/AI Studio 新条目（仅 I/O 2026 与 2025 旧内容）"
+   "no_change_reason": "WebSearch（第三方转述，非官方原文）本次未见 baseline 之外的新条目"
   },
   {
    "id": "linear",
@@ -159,10 +132,10 @@
    ],
    "raw_snapshot": "来源：WebSearch 结果，非官方原文。11 月仍只见 11/12 BYOK(含 Linear Agent 小修复)与 11/04-05 Mobile Diffs，无新条目。",
    "content_hash": "来源：WebSearch 结果，非官方原文。11 月仍只见 11/12 BYOK(含 Linear Agent 小修复)与 11/04-05 Mobile Diffs，无新条目。",
-   "last_seen_at": "2026-11-26T16:14:00Z",
+   "last_seen_at": "2026-11-27T16:14:44Z",
    "changes": [],
    "key_findings": [],
-   "no_change_reason": "WebSearch 仍只见 11/12 BYOK/Agent 小修复与 11/05 Mobile Diffs，baseline 已覆盖"
+   "no_change_reason": "WebSearch（第三方转述，非官方原文）本次未见 baseline 之外的新条目"
   },
   {
    "id": "producthunt-ai",
@@ -178,7 +151,7 @@
    "last_seen_at": "2026-11-23T16:16:16Z",
    "changes": [],
    "key_findings": [],
-   "no_change_reason": "本次未重新抓取（hn.algolia.com/raycast.com 等主域名不可达，md/lo 优先级低，未做 WebSearch）；沿用上次 baseline"
+   "no_change_reason": "本次未抓取（hn.algolia.com 等不可达，md/lo 未做 WebSearch），沿用 baseline"
   },
   {
    "id": "github-cc-ecosystem",
@@ -194,29 +167,21 @@
     "https://api.github.com/search/repositories?q=claude+code+cockpit+terminal&sort=stars&order=desc&per_page=25",
     "https://api.github.com/search/repositories?q=claude+code+meta-harness+agent+swarm&sort=stars&order=desc&per_page=20"
    ],
-   "raw_snapshot": "来源：GitHub 开源仓库，非官方。GitHub API 4/4 成功(各查询仅读取前约 100k 字符)。近期活跃仓库 full_name: morluto/rea, affaan-m/ECC, NousResearch/hermes-agent, DietrichGebert/ponytail, farion1231/cc-switch, stablyai/orca, paperclipai/paperclip, thedotmack/claude-mem, alchaincyf/fanbox, realZillionX/InspireSkill, luojiahai/code-by-wire, Surething-io/cockpit, dotdevdotdev/agentwire-dev, alexjbarnes/cockpit, Innovology/claude-dispatcher, trevormil/TerMinal, martinbon39/agora, itguyvv/CodeCockpit, cosmix/loom, iAmCorey/kooky, c4rl05/agent-race-control, rayngnpc/mkcrew, Sumit4codes/antiroute, alliecatowo/glassy, artengin/claude-starred, IWhitebird/claude-jr, nextlevelbuilder/ui-ux-pro-max-skill, Graphify-Labs/graphify, JuliusBrussee/caveman, Leonxlnx/taste-skill, addyosmani/agent-skills, Panniantong/Agent-Reach, tt-a1i/archify, Egonex-AI/Understand-Anything, heygen-com/hyperframes, ruvnet/RuView",
+   "raw_snapshot": "来源：GitHub 开源仓库，非官方。GitHub API 4/4 成功(各查询仅读取前约 100k 字符)。近期活跃仓库 full_name: morluto/rea, affaan-m/ECC, NousResearch/hermes-agent, DietrichGebert/ponytail, farion1231/cc-switch, stablyai/orca, paperclipai/paperclip, thedotmack/claude-mem, alchaincyf/fanbox, realZillionX/InspireSkill, luojiahai/code-by-wire, Surething-io/cockpit, dotdevdotdev/agentwire-dev, alexjbarnes/cockpit, Innovology/claude-dispatcher, trevormil/TerMinal, martinbon39/agora, itguyvv/CodeCockpit, cosmix/loom, iAmCorey/kooky, c4rl05/agent-race-control, rayngnpc/mkcrew, Sumit4codes/antiroute, alliecatowo/glassy, artengin/claude-starred, IWhitebird/claude-jr, nextlevelbuilder/ui-ux-pro-max-skill, Graphify-Labs/graphify, JuliusBrussee/caveman, Leonxlnx/taste-skill, addyosmani/agent-skills, Panniantong/Agent-Reach, tt-a1i/archify, Egonex-AI/Understand-Anything, heygen-com/hyperframes, ruvnet/RuView, NovusEdge/glowup, Aquaticats/Monochromatic, foolish-dev/teleia, Postmodum37/simple-claude-code-statusline, shehab267/ccbrief",
    "content_hash": "来源：GitHub 开源仓库，非官方。GitHub API 4/4 成功(各查询仅读取前约 100k 字符)。近期活跃仓库 full_name: morluto/rea, affaan-m/ECC, NousResearch/hermes-agent, DietrichGebert/ponytail, farion1231/cc-switch, stablyai/orca, paperclipai",
-   "last_seen_at": "2026-11-26T16:14:00Z",
+   "last_seen_at": "2026-11-27T16:14:44Z",
    "changes": [
     {
-     "type": "other",
-     "description": "新增近期活跃的小型 session 浏览类仓库 artengin/claude-starred（6★，低重叠）",
-     "evidence": "「Star and browse Claude Code sessions in a terminal tree」（仓库描述，pushed 2026-11-25）",
-     "source_url": "https://github.com/artengin/claude-starred",
-     "meee2_relevance": null,
-     "threat_signal": false
-    },
-    {
-     "type": "other",
-     "description": "本次新见高星仓库（skills/知识图谱/视频/diagram 类，如 graphify、archify、Understand-Anything、caveman）均与 meee2 核心抽象无结构重叠",
-     "evidence": "「Turns code into an explorable interactive knowledge graph」（Understand-Anything 描述）",
-     "source_url": "https://github.com/Egonex-AI/Understand-Anything",
+     "type": "new_entrant",
+     "description": "新见近 60 天内创建的小型 cockpit 类仓库 NovusEdge/glowup（42★），命中 live/cockpit 两个关键词，但仅为 Claude Code 附加 pane，重叠低；暂不建议加入 sources.json",
+     "evidence": "「Claude Code add-on with a live cockpit pane, themes, and a pixel pet」（仓库描述，created 2026-10-04）",
+     "source_url": "https://github.com/NovusEdge/glowup",
      "meee2_relevance": null,
      "threat_signal": false
     }
    ],
    "key_findings": [
-    "推断：未见同时命中 ≥2 个 meee2 锚点的新进入者"
+    "推断：未见同时命中 ≥2 个 meee2 差异化锚点的新进入者；其余新增仓库为 statusline/通用工具，无结构重叠"
    ],
    "no_change_reason": null
   },
@@ -234,7 +199,7 @@
    "last_seen_at": "2026-11-23T16:16:16Z",
    "changes": [],
    "key_findings": [],
-   "no_change_reason": "本次未重新抓取（hn.algolia.com/raycast.com 等主域名不可达，md/lo 优先级低，未做 WebSearch）；沿用上次 baseline"
+   "no_change_reason": "本次未抓取（hn.algolia.com 等不可达，md/lo 未做 WebSearch），沿用 baseline"
   },
   {
    "id": "slack",
@@ -250,7 +215,7 @@
    "last_seen_at": "2026-11-23T16:16:16Z",
    "changes": [],
    "key_findings": [],
-   "no_change_reason": "本次未重新抓取（hn.algolia.com/raycast.com 等主域名不可达，md/lo 优先级低，未做 WebSearch）；沿用上次 baseline"
+   "no_change_reason": "本次未抓取（hn.algolia.com 等不可达，md/lo 未做 WebSearch），沿用 baseline"
   },
   {
    "id": "reflect",
@@ -266,7 +231,7 @@
    "last_seen_at": "2026-11-23T16:16:16Z",
    "changes": [],
    "key_findings": [],
-   "no_change_reason": "本次未重新抓取（hn.algolia.com/raycast.com 等主域名不可达，md/lo 优先级低，未做 WebSearch）；沿用上次 baseline"
+   "no_change_reason": "本次未抓取（hn.algolia.com 等不可达，md/lo 未做 WebSearch），沿用 baseline"
   },
   {
    "id": "raycast",
@@ -282,7 +247,7 @@
    "last_seen_at": "2026-11-23T16:16:16Z",
    "changes": [],
    "key_findings": [],
-   "no_change_reason": "本次未重新抓取（hn.algolia.com/raycast.com 等主域名不可达，md/lo 优先级低，未做 WebSearch）；沿用上次 baseline"
+   "no_change_reason": "本次未抓取（hn.algolia.com 等不可达，md/lo 未做 WebSearch），沿用 baseline"
   },
   {
    "id": "replit",
@@ -298,7 +263,7 @@
    "last_seen_at": "2026-11-23T16:16:16Z",
    "changes": [],
    "key_findings": [],
-   "no_change_reason": "本次未重新抓取（hn.algolia.com/raycast.com 等主域名不可达，md/lo 优先级低，未做 WebSearch）；沿用上次 baseline"
+   "no_change_reason": "本次未抓取（hn.algolia.com 等不可达，md/lo 未做 WebSearch），沿用 baseline"
   },
   {
    "id": "superwhisper",
@@ -314,7 +279,7 @@
    "last_seen_at": "2026-11-23T16:16:16Z",
    "changes": [],
    "key_findings": [],
-   "no_change_reason": "本次未重新抓取（hn.algolia.com/raycast.com 等主域名不可达，md/lo 优先级低，未做 WebSearch）；沿用上次 baseline"
+   "no_change_reason": "本次未抓取（hn.algolia.com 等不可达，md/lo 未做 WebSearch），沿用 baseline"
   }
  ],
  "alerts": []
